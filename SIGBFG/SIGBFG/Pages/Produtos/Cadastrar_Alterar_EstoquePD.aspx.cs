@@ -24,17 +24,17 @@ public partial class Pages_Alterar_Estoque_Produtos : System.Web.UI.Page
 
     protected void btnCadastrar_Click(object sender, EventArgs e)
     {
-        Response.Redirect("Cadastrar.aspx");
+        Response.Redirect("CadastrarPD.aspx");
     }
 
     protected void btnListar_Click(object sender, EventArgs e)
     {
-        Response.Redirect("Listar.aspx");
+        Response.Redirect("ListarPD.aspx");
     }
 
     protected void btnEstoqueAtual_Click(object sender, EventArgs e)
     {
-        Response.Redirect("Estoque_Produtos.aspx");
+        Response.Redirect("Estoque_ProdutosPD.aspx");
     }
 
     protected void btnSalvar_Click(object sender, EventArgs e)

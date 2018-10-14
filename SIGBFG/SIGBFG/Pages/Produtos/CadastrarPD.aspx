@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Cadastrar.aspx.cs" Inherits="Pages_Cadastrar" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="CadastrarPD.aspx.cs" Inherits="Pages_Cadastrar" %>
 
 <!DOCTYPE html>
 
@@ -66,8 +66,9 @@
     <div class="container-fluid">
 
         <br />
-        <a class="btn btn-primary" href="Listar.aspx">Listar Produtos</a>
-        <a class="btn btn-primary" href="Estoque_Produtos.aspx">Estoque Atual de Produtos</a>
+        <a class="btn btn-primary" href="../ADM/Administrador.aspx">Inicio</a>
+        <a class="btn btn-primary" href="ListarPD.aspx">Listar Produtos</a>
+        <a class="btn btn-primary" href="Estoque_ProdutosPD.aspx">Estoque Atual de Produtos</a>
 
             <form id="form1" runat="server">
                 <br />

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Estoque_Produtos.aspx.cs" Inherits="Pages_Estoque_Produtos" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Estoque_ProdutosPD.aspx.cs" Inherits="Pages_Estoque_Produtos" %>
 
 <!DOCTYPE html>
 
@@ -17,6 +17,7 @@
             <form id="form1" runat="server">
                 <div>
                     <br />
+                    <a class="btn btn-primary" href="../ADM/Administrador.aspx">Inicio</a>
                     <asp:Button class="btn btn-primary" ID="btnCadastrar" runat="server" OnClick="btnCadastrar_Click1" Text="Cadastrar Produtos" />
                     <asp:Button class="btn btn-primary" ID="btnListar" runat="server" OnClick="btnListar_Click1" Text="Listar Produtos" />
                     <br />

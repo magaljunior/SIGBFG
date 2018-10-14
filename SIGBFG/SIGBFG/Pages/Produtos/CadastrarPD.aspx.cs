@@ -63,11 +63,11 @@ public partial class Pages_Cadastrar : System.Web.UI.Page
     }
     protected void btnListar_Click(object sender, EventArgs e)
     {
-        Response.Redirect("Listar.aspx");
+        Response.Redirect("ListarPD.aspx");
     }
 
     protected void btnEstoque_Click(object sender, EventArgs e)
     {
-        Response.Redirect("Estoque_Produtos.aspx");
+        Response.Redirect("Estoque_ProdutosPD.aspx");
     }
 }

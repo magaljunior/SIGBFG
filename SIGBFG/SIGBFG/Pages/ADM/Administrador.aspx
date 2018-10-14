@@ -11,13 +11,30 @@
             margin-left: 480px;
         }
     </style>
+
+    <link href="../../Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="../../Scripts/jquery-3.3.1.min.js"></script>
+    <script src="../../Scripts/bootstrap.min.js"></script>
+    <script src="../../Scripts/Validacao/jquery.validate.min.js"></script>
+    <script src="../../Scripts/Validacao/localization/messages_pt_PT.min.js"></script>
+    <script src="../../Scripts/jquery.mask.min.js"></script>
+
 </head>
 <body>
-    <form id="form1" runat="server">
+    <div class="container-fluid">
         <div>
-            <p class="auto-style1">
-                Bem Vindo ao Sistema</p>
+           <br />
+        <a class="btn btn-primary" href="../Produtos/ListarPD.aspx">Produtos</a>
+
+
+        <form id="form1" runat="server">
+            <div>
+                <p class="auto-style1">
+                    Bem Vindo ao Sistema</p>
+            </div>
+        </form>
+
         </div>
-    </form>
+    </div>
 </body>
 </html>

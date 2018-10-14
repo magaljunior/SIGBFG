@@ -29,7 +29,7 @@ public partial class Pages_Estoque_Produtos : System.Web.UI.Page
             case "Alterar":
                 codigo = Convert.ToInt32(e.CommandArgument);
                 Session["ID"] = codigo;
-                Response.Redirect("Cadastrar_Alterar_Estoque.aspx");
+                Response.Redirect("Cadastrar_Alterar_EstoquePD.aspx");
                 break;
             case "Deletar":
                 codigo = Convert.ToInt32(e.CommandArgument);
@@ -44,12 +44,12 @@ public partial class Pages_Estoque_Produtos : System.Web.UI.Page
 
     protected void btnCadastrar_Click1(object sender, EventArgs e)
     {
-        Response.Redirect("Cadastrar.aspx");
+        Response.Redirect("CadastrarPD.aspx");
     }
 
     protected void btnListar_Click1(object sender, EventArgs e)
     {
-        Response.Redirect("Listar.aspx");
+        Response.Redirect("ListarPD.aspx");
     }
 
     protected void fotoProduto_RowDataBound(object sender, GridViewRowEventArgs e)
