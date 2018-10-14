@@ -6,7 +6,7 @@ using System.Data;
 using System.Configuration;
 
 
-namespace LoginPI
+namespace FATEC
 {
     /// <summary>
     /// Summary description for Mapped
