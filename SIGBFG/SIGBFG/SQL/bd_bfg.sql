@@ -32,7 +32,7 @@ CREATE TABLE `met_metas` (
   `met_produto` varchar(45) NOT NULL,
   `met_descricao` varchar(45) NOT NULL,
   PRIMARY KEY (`met_codigo`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -43,6 +43,34 @@ LOCK TABLES `met_metas` WRITE;
 /*!40000 ALTER TABLE `met_metas` DISABLE KEYS */;
 INSERT INTO `met_metas` VALUES (1,'abril-2','2018-2',3332,'Estrutural-2','Bloco perfeito para construção de paredes 2');
 /*!40000 ALTER TABLE `met_metas` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `tbl_os`
+--
+
+DROP TABLE IF EXISTS `tbl_os`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `tbl_os` (
+  `os_codigo` int(11) NOT NULL AUTO_INCREMENT,
+  `os_quantidade` int(11) NOT NULL,
+  `os_produto` varchar(45) NOT NULL,
+  `os_dataInicio` varchar(45) NOT NULL,
+  `os_dataExpiracao` varchar(45) NOT NULL,
+  `os_descricao` varchar(255) NOT NULL,
+  PRIMARY KEY (`os_codigo`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tbl_os`
+--
+
+LOCK TABLES `tbl_os` WRITE;
+/*!40000 ALTER TABLE `tbl_os` DISABLE KEYS */;
+INSERT INTO `tbl_os` VALUES (1,1000,'Estrutural','01','02','paredes'),(2,4000,'Estrutural','01','02','paredes'),(3,1000,'Estrutural','01','02','compor paredes'),(4,1000,'Estrutural','01','02','excelente para compor paredes');
+/*!40000 ALTER TABLE `tbl_os` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -90,7 +118,7 @@ CREATE TABLE `tbl_produto` (
   `pro_foto` varchar(255) DEFAULT NULL,
   `pro_ativo` int(1) NOT NULL,
   PRIMARY KEY (`pro_codigo`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -99,7 +127,6 @@ CREATE TABLE `tbl_produto` (
 
 LOCK TABLES `tbl_produto` WRITE;
 /*!40000 ALTER TABLE `tbl_produto` DISABLE KEYS */;
-INSERT INTO `tbl_produto` VALUES (2,'Bloco Estrutural-2',2,0,'compor paredes-2',2002,'bloco-estrutural-D_NQ_NP_718635-MLB25886747314_082017-F.jpg',1);
 /*!40000 ALTER TABLE `tbl_produto` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -112,4 +139,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-10-14  1:44:22
+-- Dump completed on 2018-10-14 20:27:32
