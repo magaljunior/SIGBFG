@@ -19,9 +19,9 @@
                     <br />
                     <a class="btn btn-primary" href="../ADM/Administrador.aspx">Inicio</a>
 
-                    <asp:Button class="btn btn-primary" ID="btnCadastrar" runat="server" OnClick="btnCadastrar_Click" Style="margin-left: 3px" Text="Cadastrar Produtos" />
+                    <a class="btn btn-primary" href="CadastrarPD.aspx">Cadastrar Produtos</a>
 
-                    <asp:Button class="btn btn-primary" ID="btnEstoque" runat="server" OnClick="btnEstoque_Click" Text="Estoque Atual de Produtos" />
+                    <a class="btn btn-primary" href="Estoque_ProdutosPD.aspx">Estoque Atual de Produtos</a>
                     <br />
                     <br />
                     <center><h1>Lista de Produtos</h1></center>
