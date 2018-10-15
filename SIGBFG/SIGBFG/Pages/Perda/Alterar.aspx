@@ -15,9 +15,8 @@
         
         <p>
            <a class="btn btn-primary" href="../ADM/Administrador.aspx">Inicio</a>
-           <asp:Button CssClass="btn btn-primary" ID="btnCadastrar" runat="server" ClientIDMode="Inherit" Text="Cadastrar" OnClick="btnCadastrar_Click"></asp:Button>
-            <asp:Button class="btn btn-primary" ID="btnListar" runat="server" Text="Listar"></asp:Button>
-         
+            <a class="btn btn-primary" href="Cadastrar.aspx">Cadastrar Perdas</a>
+            <a class="btn btn-primary" href="Listar.aspx">Lista de Perdas</a>
         </p>
                <p>
                    <asp:Label ID="Label" runat="server" Text="Ordem de Serviço:"></asp:Label>
