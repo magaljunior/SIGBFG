@@ -25,10 +25,9 @@
         <div>
            <br />
             <a class="btn btn-primary" href="../Produtos/ListarPD.aspx">Produtos</a>
-            
             <a class="btn btn-primary" href="../Metas/Listar.aspx">Metas</a>
-
             <a class="btn btn-primary" href="../Perda/Listar.aspx">Perdas</a>
+
 
         <form id="form1" runat="server">
             <div>
