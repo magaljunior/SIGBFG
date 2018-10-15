@@ -6,19 +6,19 @@
 <head runat="server">
     <title></title>
 
-    <link href="../Content/css/bootstrap.min.css" rel="stylesheet" />
-    <script src="../Scripts/bootstrap.min.js"></script>
-    <script src="../Scripts/Validacao/jquery.validate.min.js"></script>
-    <script src="../Scripts/Validacao/localization/messages_pt_PT.min.js"></script>
-    <script src="../Scripts/jquery.mask.min.js"></script>
-    <script src="../Scripts/jquery-3.3.1.min.js"></script>
+    <link href="../../Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="../../Scripts/jquery-3.3.1.min.js"></script>
+    <script src="../../Scripts/bootstrap.min.js"></script>
+    <script src="../../Scripts/Validacao/jquery.validate.min.js"></script>
+    <script src="../../Scripts/Validacao/localization/messages_pt_PT.min.js"></script>
+    <script src="../../Scripts/jquery.mask.min.js"></script>
 
 </head>
 <body>
 
     <div class="container-fluid">
         <br />
-         <a class="btn btn-dark" href="Cadastrar.aspx">Cadastrar Metas</a>
+         <a class="btn btn-primary" href="Cadastrar.aspx">Cadastrar Metas</a>
         
          <br />
 

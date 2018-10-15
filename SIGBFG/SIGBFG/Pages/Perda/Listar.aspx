@@ -5,7 +5,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <link href="../../Content/bootstrap.min.css" rel="stylesheet" />
+
     <script src="../Scripts/jquery-3.3.1.min.js"></script>
+
+    <script src="../../Scripts/bootstrap.min.js"></script>
+
     <title></title>
 </head>
 <body>
@@ -25,7 +29,8 @@
              <asp:TemplateField HeaderText="Alterar">
                  <ItemTemplate>
              
-                         <asp:ImageButton ID="lbAlterar" runat="server" CommandName="Alterar" ImageUrl="../../Images/editar.jpg"  CommandArgument='<%# Bind("per_codigo")%>'></asp:ImageButton>
+                         <asp:ImageButton ID="lbAlterar" runat="server" CommandName="Alterar" ImageUrl="../../Images/editar.jpg"  CommandArgument='<%# Bind("per_codigo")%>'></asp:ImageButton>
+
             
                  </ItemTemplate>
             </asp:TemplateField>

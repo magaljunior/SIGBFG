@@ -46,6 +46,32 @@ INSERT INTO `met_metas` VALUES (1,'abril-2','2018-2',3332,'Estrutural-2','Bloco 
 UNLOCK TABLES;
 
 --
+-- Table structure for table `per_perda`
+--
+
+DROP TABLE IF EXISTS `per_perda`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `per_perda` (
+  `per_codigo` int(11) NOT NULL AUTO_INCREMENT,
+  `per_ordem` int(11) NOT NULL,
+  `per_produto` varchar(45) NOT NULL,
+  `per_quantidade` int(11) NOT NULL,
+  `per_motivo` varchar(255) NOT NULL,
+  PRIMARY KEY (`per_codigo`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `per_perda`
+--
+
+LOCK TABLES `per_perda` WRITE;
+/*!40000 ALTER TABLE `per_perda` DISABLE KEYS */;
+/*!40000 ALTER TABLE `per_perda` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `tbl_os`
 --
 
@@ -139,6 +165,7 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
+<<<<<<< HEAD
 -- Dump completed on 2018-10-14 20:27:32
 
 -- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
@@ -195,3 +222,6 @@ UNLOCK TABLES;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
 -- Dump completed on 2018-10-04 19:41:03
+=======
+-- Dump completed on 2018-10-14 22:26:53
+>>>>>>> 756bd54a1126ea422e22f223dded9085342a8c02
