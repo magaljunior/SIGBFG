@@ -28,7 +28,7 @@
             
             <a class="btn btn-primary" href="../Metas/Listar.aspx">Metas</a>
 
-            <a class="btn btn-primary" href="../Perda/Alterar.aspx">Perdas</a>
+            <a class="btn btn-primary" href="../Perda/Cadastrar.aspx">Perdas</a>
 
         <form id="form1" runat="server">
             <div>
