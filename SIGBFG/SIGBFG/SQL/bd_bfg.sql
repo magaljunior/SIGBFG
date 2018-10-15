@@ -140,8 +140,7 @@ UNLOCK TABLES;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
 -- Dump completed on 2018-10-14 20:27:32
-CREATE DATABASE  IF NOT EXISTS `bd_perda` /*!40100 DEFAULT CHARACTER SET latin1 */;
-USE `bd_perda`;
+
 -- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
 --
 -- Host: localhost    Database: bd_perda
