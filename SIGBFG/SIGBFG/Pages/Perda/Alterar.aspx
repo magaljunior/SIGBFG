@@ -4,8 +4,8 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <link href="../Content/css/bootstrap.min.css" rel="stylesheet" />
-    <script src="../Scripts/jquery-3.3.1.min.js"></script>
+    <link href="../../Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="../../Scripts/jquery-3.3.1.min.js"></script>
      <title></title>
 </head>
 <body>
@@ -15,7 +15,7 @@
         
         <p>
            <asp:Button CssClass="btn btn-primary" ID="btnCadastrar" runat="server" ClientIDMode="Inherit" Text="Cadastrar" OnClick="btnCadastrar_Click"></asp:Button>
-            <asp:Button class="btn btn-primary" ID="btnListar" runat="server" Text="Listar"></asp:Button>
+            <asp:Button class="btn btn-primary" ID="btnListar" runat="server" Text="Listar" ClientIDMode="Inherit"  OnClick="btnListar_Click"></asp:Button>
          
         </p>
                <p>
