@@ -25,14 +25,14 @@
              <asp:TemplateField HeaderText="Alterar">
                  <ItemTemplate>
              
-                         <asp:ImageButton ID="lbAlterar" runat="server" CommandName="Alterar" ImageUrl="~/imagem/editar.jpg" CommandArgument='<%# Bind("per_codigo")%>'></asp:ImageButton>
+                         <asp:ImageButton ID="lbAlterar" runat="server" CommandName="Alterar" ImageUrl="../../Images/editar.jpg"  CommandArgument='<%# Bind("per_codigo")%>'></asp:ImageButton>
             
                  </ItemTemplate>
             </asp:TemplateField>
              <asp:TemplateField HeaderText="Excluir">
                  <ItemTemplate>
      
-                         <asp:ImageButton ID="lbDeletar" runat="server" CommandName="Deletar" ImageUrl="~/imagem/del.jpg" CommandArgument='<%# Bind("per_codigo")%>'></asp:ImageButton>
+                         <asp:ImageButton ID="lbDeletar" runat="server" CommandName="Deletar" ImageUrl="../../Images/del.jpg" CommandArgument='<%# Bind("per_codigo")%>'></asp:ImageButton>
 
     
                  </ItemTemplate>
