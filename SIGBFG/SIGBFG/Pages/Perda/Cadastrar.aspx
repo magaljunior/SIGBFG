@@ -12,6 +12,7 @@
     <form id="form1" runat="server">
         <div class="container" style="height: 397px">
             <center> <h1>Perda de Produto</h1>
+                 <a class="btn btn-primary" href="../ADM/Administrador.aspx">Inicio</a>
         <asp:Button ID="btnListar" class="btn btn-primary" runat="server" Text="Lista de Perdas" OnClick="Button1_Click"></asp:Button>
         
             

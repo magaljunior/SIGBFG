@@ -14,6 +14,7 @@
            <center> <h1>Alterar perda de Produto</h1>
         
         <p>
+             <a class="btn btn-primary" href="../ADM/Administrador.aspx">Inicio</a>
            <asp:Button CssClass="btn btn-primary" ID="btnCadastrar" runat="server" ClientIDMode="Inherit" Text="Cadastrar" OnClick="btnCadastrar_Click"></asp:Button>
             <asp:Button class="btn btn-primary" ID="btnListar" runat="server" Text="Listar" ClientIDMode="Inherit"  OnClick="btnListar_Click"></asp:Button>
          
