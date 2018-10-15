@@ -13,7 +13,8 @@
 </head>
 <body style="height: 569px">
     <div class="container-fluid">
-        <div class="form-group">
+        <center>
+                    <div class="form-group">
             <form id="form1" runat="server">
                 <div>
                     <br />
@@ -43,6 +44,7 @@
                 </div>
             </form>
         </div>
+        </center>
     </div>
 </body>
 </html>

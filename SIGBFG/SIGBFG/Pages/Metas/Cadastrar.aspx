@@ -22,6 +22,7 @@
 <body style="height: 294px">
     <div class="container-fluid">
         <br />
+        <a class="btn btn-primary" href="../ADM/Administrador.aspx">Inicio</a>
          <a class="btn btn-primary" href="Listar.aspx">Lista de Metas</a>
          
 

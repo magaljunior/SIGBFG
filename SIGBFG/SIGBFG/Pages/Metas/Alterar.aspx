@@ -18,6 +18,7 @@
 
      <div class="container-fluid">
         <br />
+         <a class="btn btn-primary" href="../ADM/Administrador.aspx">Inicio</a>
          <a class="btn btn-primary" href="Cadastrar.aspx">Cadastrar Metas</a>
          <a class="btn btn-primary" href="Listar.aspx">Lista de Metas</a>
          

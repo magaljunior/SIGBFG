@@ -12,13 +12,14 @@
     <form id="form1" runat="server">
         <div class="container" style="height: 397px">
             <center> <h1>Perda de Produto</h1>
+        <a class="btn btn-primary" href="../ADM/Administrador.aspx">Inicio</a>
         <asp:Button ID="btnListar" class="btn btn-primary" runat="server" Text="Lista de Perdas" OnClick="Button1_Click"></asp:Button>
         
             
               <br />
               <br />
               <asp:Label ID="Label5" runat="server" Text="Ordem de Serviço:"></asp:Label>
-              <asp:TextBox ID="txtOrdem" runat="server" Height="17px" style="margin-left: 19px" Width="100px"></asp:TextBox>
+              <asp:TextBox ID="txtOrdem" runat="server" Height="17px" style="margin-left: 16px" Width="100px"></asp:TextBox>
             <br /><br />
             <asp:Label ID="Label2" runat="server" Text="Produto:"></asp:Label>
             <asp:TextBox ID="txtProduto" runat="server" style="margin-left: 30px" Width="151px"></asp:TextBox>
