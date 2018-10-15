@@ -13,7 +13,8 @@
 </head>
 <body style="height: 420px">
     <div class="container-fluid">
-        <div class="form-group">
+    <center>
+                <div class="form-group">
             <form id="form1" runat="server">
                 <div>
                     <br />
@@ -22,7 +23,10 @@
                     <a class="btn btn-primary" href="ListarPD.aspx">Listar Produtos</a>
                     <br />
                     <br />
-                    <center><h1>Estoque Atual de Produtos</h1></center>
+                    <h1>Estoque Atual de Produtos</h1>
+                   
+                    <asp:Label ID="lblMensagem" runat="server"></asp:Label>
+                    <br />
                     <br />
                 </div>
                 <asp:GridView ID="GridView1" runat="server" OnRowCommand="GridView1_RowCommand" AutoGenerateColumns="False" Height="100px" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black" Width="100%" OnRowDataBound="fotoProduto_RowDataBound">
@@ -51,7 +55,8 @@
                     <SortedDescendingHeaderStyle BackColor="#383838" />
                 </asp:GridView>
             </form>
-        </div>
+        </div>  
+    </center>
     </div>
 </body>
 </html>

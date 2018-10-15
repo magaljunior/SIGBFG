@@ -5,19 +5,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <link href="../../Content/bootstrap.min.css" rel="stylesheet" />
-
-    <script src="../Scripts/jquery-3.3.1.min.js"></script>
-
     <script src="../../Scripts/bootstrap.min.js"></script>
-
     <title></title>
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
             <center><h1>Lista de Perda de Produto</h1>
-                 <a class="btn btn-primary" href="../ADM/Administrador.aspx">Inicio</a>
-            <asp:Button CssClass="btn btn-primary" ID="btnCadastrar" runat="server" Text="Cadastrar" OnClick="btnCadastrar_Click"></asp:Button>
+                <a class="btn btn-primary" href="../ADM/Administrador.aspx">Inicio</a>
+                <a class="btn btn-primary" href="Cadastrar.aspx">Cadastrar Perdas</a>
               <br /><br />
                 <asp:Label ID="lblMensagem" runat="server" Text="" ></asp:Label>
           
