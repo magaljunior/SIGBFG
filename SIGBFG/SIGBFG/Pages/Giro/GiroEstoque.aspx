@@ -43,7 +43,7 @@
             <br />
             <br />
 &nbsp;&nbsp;&nbsp;
-            <asp:Label ID="lblEstoqueMax" runat="server" Text="Estoque Máximo:" Font-Bold="True"></asp:Label>
+            <asp:Label ID="lblEstoqueMax" runat="server" Text="Estoque:" Font-Bold="True"></asp:Label>
             <br />
 &nbsp;&nbsp;&nbsp;
             <asp:TextBox ID="txtEstoqueMaximo" runat="server" OnTextChanged="txtEstoqueMaximo_TextChanged" Width="86px"></asp:TextBox>
