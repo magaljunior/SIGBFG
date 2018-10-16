@@ -1,3 +1,5 @@
+CREATE DATABASE  IF NOT EXISTS `bd_bfg` /*!40100 DEFAULT CHARACTER SET latin1 */;
+USE `bd_bfg`;
 -- MySQL dump 10.13  Distrib 5.6.41, for Win64 (x86_64)
 --
 -- Host: localhost    Database: bd_bfg
@@ -59,7 +61,7 @@ CREATE TABLE `met_metas` (
   `met_produto` varchar(45) NOT NULL,
   `met_descricao` varchar(45) NOT NULL,
   PRIMARY KEY (`met_codigo`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -68,7 +70,7 @@ CREATE TABLE `met_metas` (
 
 LOCK TABLES `met_metas` WRITE;
 /*!40000 ALTER TABLE `met_metas` DISABLE KEYS */;
-INSERT INTO `met_metas` VALUES (1,'abril','2018',333,'Estrutural','Bloco perfeito para construção de paredes');
+INSERT INTO `met_metas` VALUES (6,'abril','2018',333,'Estrutural','Bloco perfeito para construção de paredes');
 /*!40000 ALTER TABLE `met_metas` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -86,7 +88,7 @@ CREATE TABLE `per_perda` (
   `per_quantidade` int(11) NOT NULL,
   `per_motivo` varchar(255) NOT NULL,
   PRIMARY KEY (`per_codigo`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -95,7 +97,6 @@ CREATE TABLE `per_perda` (
 
 LOCK TABLES `per_perda` WRITE;
 /*!40000 ALTER TABLE `per_perda` DISABLE KEYS */;
-INSERT INTO `per_perda` VALUES (1,1,'Estrutural',1000,'o funcionário Felipe quebrou os blocos ');
 /*!40000 ALTER TABLE `per_perda` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -113,6 +114,7 @@ CREATE TABLE `tbl_os` (
   `os_dataInicio` varchar(45) NOT NULL,
   `os_dataExpiracao` varchar(45) NOT NULL,
   `os_descricao` varchar(255) NOT NULL,
+  `os_funcionario` varchar(45) NOT NULL,
   PRIMARY KEY (`os_codigo`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -123,7 +125,7 @@ CREATE TABLE `tbl_os` (
 
 LOCK TABLES `tbl_os` WRITE;
 /*!40000 ALTER TABLE `tbl_os` DISABLE KEYS */;
-INSERT INTO `tbl_os` VALUES (1,1000,'Estrutural','01','02','paredes'),(2,4000,'Estrutural','01','02','paredes'),(3,1000,'Estrutural','01','02','compor paredes'),(4,1000,'Estrutural','01','02','excelente para compor paredes');
+INSERT INTO `tbl_os` VALUES (1,1000,'Estrutural','01','02','paredes',''),(2,4000,'Estrutural','01','02','paredes',''),(3,1000,'Estrutural','01','02','compor paredes',''),(4,1000,'Estrutural','01','02','excelente para compor paredes','');
 /*!40000 ALTER TABLE `tbl_os` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -172,7 +174,7 @@ CREATE TABLE `tbl_produto` (
   `pro_foto` varchar(255) DEFAULT NULL,
   `pro_ativo` int(1) NOT NULL,
   PRIMARY KEY (`pro_codigo`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -181,6 +183,7 @@ CREATE TABLE `tbl_produto` (
 
 LOCK TABLES `tbl_produto` WRITE;
 /*!40000 ALTER TABLE `tbl_produto` DISABLE KEYS */;
+INSERT INTO `tbl_produto` VALUES (12,'Bloco Estrutural',0.95,5500,'compor paredes',2000,'bloco-estrutural-D_NQ_NP_718635-MLB25886747314_082017-F.jpg',1),(13,'Bloco Estrutural',0.85,550,'Bloco perfeito para construção de paredes',2000,'bloco-estrutural-D_NQ_NP_718635-MLB25886747314_082017-F.jpg',1);
 /*!40000 ALTER TABLE `tbl_produto` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -193,4 +196,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-10-16 13:20:05
+-- Dump completed on 2018-10-16 20:08:32

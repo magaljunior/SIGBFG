@@ -34,10 +34,19 @@
 
                 <asp:GridView ID="GridView1" runat="server" OnRowCommand="GridView1_RowCommand" AutoGenerateColumns="False" Style="margin-right: 5px" Width="100%" Height="100px" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black" OnRowDataBound="imgProdutos_RowDataBound">
                     <Columns>
-                        <asp:BoundField DataField="pro_foto" HeaderText="Foto" />
-                        <asp:BoundField DataField="pro_nome" HeaderText="Nome" />
-                        <asp:BoundField DataField="pro_preco" HeaderText="Preço" />
-                        <asp:BoundField DataField="pro_quantidadeMinima" HeaderText="Quantidade Minima" />
+                        <asp:BoundField DataField="pro_foto" HeaderText="Foto" >
+                        <HeaderStyle HorizontalAlign="Center" />
+                        <ItemStyle HorizontalAlign="Center" />
+                        </asp:BoundField>
+                        <asp:BoundField DataField="pro_nome" HeaderText="Nome" >
+                        <ItemStyle HorizontalAlign="Center" />
+                        </asp:BoundField>
+                        <asp:BoundField DataField="pro_preco" HeaderText="Preço" >
+                        <ItemStyle HorizontalAlign="Center" />
+                        </asp:BoundField>
+                        <asp:BoundField DataField="pro_quantidadeMinima" HeaderText="Quantidade Minima" >
+                        <ItemStyle HorizontalAlign="Center" />
+                        </asp:BoundField>
                         <asp:BoundField DataField="pro_quantidade" HeaderText="Quantidade" />
                         <asp:BoundField DataField="pro_descricao" HeaderText="Descrição" />
 

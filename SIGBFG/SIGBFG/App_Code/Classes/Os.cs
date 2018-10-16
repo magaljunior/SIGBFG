@@ -3,22 +3,26 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace OrdemServico.Classes
+/// <summary>
+/// Descrição resumida de os
+/// </summary>
+namespace Os.Classes
 {
 
     public class Os
     {
         public int Codigo { get; set; }
-        public int Quantidade { get; set; }
-        public string Produto { get; set; }
-        public string DataInicio { get; set; }
-        public string DataExpiracao { get; set; }
-        public string Descricao { get; set; }
+        public String Funcionario { get; set; }
+        public String Produto { get; set; }
+        public String Quantidade { get; set; }
+        public String Descricao { get; set; }
+        public String Datainicio { get; set; }
+        public String Dataexpiracao { get; set; }
 
         public Os()
         {
             //
-            // TODO: Add constructor logic here
+            // TODO: Adicionar lógica do construtor aqui
             //
         }
     }
