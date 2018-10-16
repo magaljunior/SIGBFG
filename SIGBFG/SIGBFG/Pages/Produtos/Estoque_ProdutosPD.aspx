@@ -36,10 +36,10 @@
                         <asp:BoundField DataField="pro_quantidade" HeaderText="Quantidade" />
                         <asp:BoundField DataField="pro_quantidadeMinima" HeaderText="Quantidade Mínima" />
 
-                        <asp:TemplateField>
+                        <asp:TemplateField HeaderText="Cadastrar ou Alterar">
                             <ItemTemplate>
-                                <asp:LinkButton ID="lbAlterar" runat="server" CommandName="Alterar"
-                                    CommandArgument='<%# Bind("pro_codigo")%>'>Cadastrar ou Alterar</asp:LinkButton>
+                                <asp:ImageButton ID="lbAlterar" runat="server" CommandName="Alterar"
+                                    ImageUrl="../../Images/cadastrar%20ou%20alterar.png" CommandArgument='<%# Bind("pro_codigo")%>'></asp:ImageButton>
                             </ItemTemplate>
                         </asp:TemplateField>
 

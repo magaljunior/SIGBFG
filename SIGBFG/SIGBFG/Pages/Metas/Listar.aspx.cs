@@ -36,12 +36,29 @@ public partial class Paginas_Listar : System.Web.UI.Page
     }
     protected void Page_Load(object sender, EventArgs e)
     {
-        Carrega();
+        if (!Page.IsPostBack)
+        {
+            Carrega();
+        }
     }
 
     protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
     {
-        int codigo = 0; switch (e.CommandName) { case "Alterar": codigo = Convert.ToInt32(e.CommandArgument); Session["ID"] = codigo; Response.Redirect("Alterar.aspx"); break; case "Deletar": codigo = Convert.ToInt32(e.CommandArgument); MetasBD bd = new MetasBD(); bd.Delete(codigo); Carrega(); break; default: break; }
+        int codigo = 0;
+        switch (e.CommandName)
+        {
+            case "Alterar": codigo = Convert.ToInt32(e.CommandArgument);
+                Session["ID"] = codigo; Response.Redirect("Alterar.aspx");
+                break;
+
+            case "Deletar": codigo = Convert.ToInt32(e.CommandArgument);
+                MetasBD bd = new MetasBD();
+                bd.Delete(codigo);
+                Carrega();
+                break;
+                default:
+                break;
+        }
 
     }
 

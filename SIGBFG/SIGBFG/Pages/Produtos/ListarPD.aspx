@@ -11,7 +11,7 @@
     <script src="../../Scripts/jquery-3.3.1.min.js"></script>
 
 </head>
-<body style="height: 528px">
+<body style="height: 416px">
     <div class="container-fluid">
        <center>
             <div class="form-group">

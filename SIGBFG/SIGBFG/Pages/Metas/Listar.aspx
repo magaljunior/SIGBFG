@@ -43,19 +43,19 @@
                             <asp:BoundField DataField="met_produto" HeaderText="Produto" />
                             <asp:BoundField DataField="met_descricao" HeaderText="Descrição" />
 
-                            <asp:TemplateField HeaderText="Alterar">
-                                <ItemTemplate>
-                                    <asp:LinkButton ID="lbAlterar" runat="server" CommandName="Alterar"
-                                        CommandArgument='<%# Bind("met_codigo")%>'>Alterar</asp:LinkButton>
-                                </ItemTemplate>
-                            </asp:TemplateField>
+                        <asp:TemplateField HeaderText="Alterar">
+                            <ItemTemplate>
+                                <asp:ImageButton ID="lbAlterar" runat="server" CommandName="Alterar" 
+                                    ImageUrl="../../Images/editar.jpg"  CommandArgument='<%# Bind("met_codigo")%>'></asp:ImageButton>
+                            </ItemTemplate>
+                        </asp:TemplateField>
 
-                            <asp:TemplateField HeaderText="Excluir">
-                                <ItemTemplate>
-                                    <asp:LinkButton ID="lbDeletar" runat="server" CommandName="Deletar"
-                                        CommandArgument='<%# Bind("met_codigo")%>'>Excluir</asp:LinkButton>
-                                </ItemTemplate>
-                            </asp:TemplateField>
+                        <asp:TemplateField HeaderText="Excluir">
+                             <ItemTemplate>     
+                                    <asp:ImageButton ID="lbDeletar" runat="server" CommandName="Deletar"
+                                        ImageUrl="../../Images/del.jpg" CommandArgument='<%# Bind("met_codigo")%>'></asp:ImageButton>
+                             </ItemTemplate>
+                       </asp:TemplateField>
 
                         </Columns>
                         <FooterStyle BackColor="#CCCCCC" />
