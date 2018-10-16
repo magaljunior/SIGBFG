@@ -88,7 +88,7 @@ CREATE TABLE `per_perda` (
   `per_quantidade` int(11) NOT NULL,
   `per_motivo` varchar(255) NOT NULL,
   PRIMARY KEY (`per_codigo`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -183,8 +183,33 @@ CREATE TABLE `tbl_produto` (
 
 LOCK TABLES `tbl_produto` WRITE;
 /*!40000 ALTER TABLE `tbl_produto` DISABLE KEYS */;
-INSERT INTO `tbl_produto` VALUES (12,'Bloco Estrutural',0.95,5500,'compor paredes',2000,'bloco-estrutural-D_NQ_NP_718635-MLB25886747314_082017-F.jpg',1),(13,'Bloco Estrutural',0.85,550,'Bloco perfeito para construção de paredes',2000,'bloco-estrutural-D_NQ_NP_718635-MLB25886747314_082017-F.jpg',1);
 /*!40000 ALTER TABLE `tbl_produto` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `usuario`
+--
+
+DROP TABLE IF EXISTS `usuario`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `usuario` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT,
+  `Nome` varchar(255) NOT NULL,
+  `Sobrenome` varchar(45) NOT NULL,
+  `Senha` varchar(45) NOT NULL,
+  `Status_usuario` varchar(45) NOT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `usuario`
+--
+
+LOCK TABLES `usuario` WRITE;
+/*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
+/*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -196,4 +221,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-10-16 20:08:32
+-- Dump completed on 2018-10-16 20:22:46
