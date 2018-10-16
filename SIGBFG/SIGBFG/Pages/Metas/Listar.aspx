@@ -28,7 +28,10 @@
             <form id="form1" runat="server">
                 <div style="height: 199px">
                     <br />
-                    <center><h1>Lista de Metas</h1></center>
+                    <center><h1>Lista de Metas</h1>
+                        <p>
+                            <asp:Label ID="lblMensagem" runat="server"></asp:Label>
+                        </p></center>
                     <br />
                     <asp:GridView ID="GridView1" runat="server" OnRowCommand="GridView1_RowCommand" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" ForeColor="Black" GridLines="Vertical" Height="50px" Width="100%">
                         <AlternatingRowStyle BackColor="#CCCCCC" />

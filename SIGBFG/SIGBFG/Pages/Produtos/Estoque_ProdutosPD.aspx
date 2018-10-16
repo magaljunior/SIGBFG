@@ -11,11 +11,11 @@
     <script src="../../Scripts/jquery-3.3.1.min.js"></script>
 
 </head>
-<body style="height: 420px">
+<body style="height: 568px">
     <div class="container-fluid">
     <center>
                 <div class="form-group">
-            <form id="form1" runat="server">
+            <form id="form1" runat="server" aria-atomic="False">
                 <div>
                     <br />
                     <a class="btn btn-primary" href="../ADM/Administrador.aspx">Inicio</a>
@@ -54,6 +54,10 @@
                     <SortedDescendingCellStyle BackColor="#CAC9C9" />
                     <SortedDescendingHeaderStyle BackColor="#383838" />
                 </asp:GridView>
+                <br />
+                <br />
+                <h2>Total de Produtos em Estoque</h2>
+                <asp:Label ID="txtTotal" runat="server"></asp:Label>
             </form>
         </div>  
     </center>

@@ -36,6 +36,19 @@ public partial class Pages_Estoque_Produtos : System.Web.UI.Page
         {
             Carrega();
         }
+
+        decimal ValorTotal = 0;
+
+        foreach (GridViewRow row in GridView1.Rows)
+        {
+            if (row.RowType == DataControlRowType.DataRow)
+            {
+                if (!String.IsNullOrEmpty(row.Cells[2].Text))
+                    ValorTotal += Decimal.Parse(row.Cells[2].Text);
+            }
+        }
+
+        txtTotal.Text = ValorTotal.ToString("");
     }
 
     protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)

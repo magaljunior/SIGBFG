@@ -11,6 +11,7 @@
 <body>
     <form id="form1" runat="server">
        <div>
+           <br />
            <center> <h1>Alterar perda de Produto</h1>
         
         <p>
@@ -18,6 +19,7 @@
             <a class="btn btn-primary" href="Cadastrar.aspx">Cadastrar Perdas</a>
             <a class="btn btn-primary" href="Listar.aspx">Lista de Perdas</a>
         </p>
+
                <p>
                    <asp:Label ID="Label" runat="server" Text="Ordem de Serviço:"></asp:Label>
                    <asp:TextBox ID="txtOrdem" runat="server" Width="117px"></asp:TextBox>

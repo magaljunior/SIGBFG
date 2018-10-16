@@ -21,7 +21,7 @@
         }
 
         #form1 {
-            height: 655px;
+            height: 568px;
         }
     </style>
 
@@ -62,7 +62,7 @@
     </script>
 
 </head>
-<body style="height: 720px">
+<body style="height: 631px">
     <div class="container-fluid">
             <div class="form-group">
                 <br />
@@ -109,8 +109,7 @@
                         <asp:TextBox ID="txtDescricao" runat="server" Height="92px" Width="270px"></asp:TextBox>
                     </p>
 
-                    <asp:Button ID="btnSalvar" class="btn btn-primary" runat="server" OnClick="btnSalvar_Click" Text="Salvar" />
-                    <br />
+                    <asp:Button ID="btnSalvar" class="btn btn-primary" runat="server" OnClick="btnSalvar_Click" Text="Salvar" Width="110px" />
                     <br />
                     <br />
                 <asp:Label ID="lblMensagem" runat="server"></asp:Label>

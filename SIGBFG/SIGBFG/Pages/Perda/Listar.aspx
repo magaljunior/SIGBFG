@@ -11,10 +11,13 @@
 <body>
     <form id="form1" runat="server">
         <div>
+            <br />
             <center><h1>Lista de Perda de Produto</h1>
+              <br />
                 <a class="btn btn-primary" href="../ADM/Administrador.aspx">Inicio</a>
                 <a class="btn btn-primary" href="Cadastrar.aspx">Cadastrar Perdas</a>
-              <br /><br />
+              <br />
+              <br />
                 <asp:Label ID="lblMensagem" runat="server" Text="" ></asp:Label>
           
      <asp:GridView ID="GridView1" runat="server" OnRowCommand="GridView1_RowCommand"  Width="100%" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black" >

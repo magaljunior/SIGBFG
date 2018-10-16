@@ -17,6 +17,22 @@ public partial class Paginas_Listar : System.Web.UI.Page
         DataSet ds = bd.SelectAll();
         GridView1.DataSource = ds.Tables[0].DefaultView;
         GridView1.DataBind();
+
+        int rows = ds.Tables[0].Rows.Count;
+
+        if (rows > 0)
+        {
+            GridView1.DataSource = ds.Tables[0].DefaultView;
+            GridView1.DataBind();
+            lblMensagem.Text = "Metas encontradas : " + rows.ToString();
+            GridView1.Visible = true;
+        }
+        else
+        {
+            lblMensagem.Text = "Nenhuma meta encontrada";
+            GridView1.Visible = false;
+        }
+
     }
     protected void Page_Load(object sender, EventArgs e)
     {

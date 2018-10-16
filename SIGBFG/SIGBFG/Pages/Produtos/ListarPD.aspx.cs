@@ -30,6 +30,7 @@ public partial class Pages_Listar : System.Web.UI.Page
             lblMensagem.Text = "Nenhum produto encontrado";
             GridView1.Visible = false;
         }
+
     }
 
     protected void Page_Load(object sender, EventArgs e)

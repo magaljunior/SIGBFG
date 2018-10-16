@@ -35,26 +35,27 @@
                    <h1>Cadastro de Metas</h1>
                     <br />
                    
-                    <asp:Label runat="server" Text="Mês"></asp:Label>
+                    <asp:Label runat="server" Text="Mês:"></asp:Label>
                     <asp:TextBox ID="txtMes" runat="server"></asp:TextBox>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Label runat="server" Text="Ano"></asp:Label>
+            <asp:Label runat="server" Text="Ano:"></asp:Label>
                     <asp:TextBox ID="txtAno" runat="server"></asp:TextBox>
                     <br />
                     <br />
-                    <asp:Label runat="server" Text="Meta"></asp:Label>
+                    <asp:Label runat="server" Text="Meta:"></asp:Label>
                     <asp:TextBox ID="txtMeta" runat="server"></asp:TextBox>
                     <br />
                     <br />
-                    <asp:Label runat="server" Text="Produto"></asp:Label>
+                    <asp:Label runat="server" Text="Produto:"></asp:Label>
                     <asp:TextBox ID="txtProduto" runat="server"></asp:TextBox>
                     <br />
                     <br />
-                    <asp:Label runat="server" Text="Descrição"></asp:Label>
+                    <asp:Label runat="server" Text="Descrição:"></asp:Label>
                     <asp:TextBox ID="txtDescricao" runat="server" Height="68px" Width="322px"></asp:TextBox>
                     <br />
     <br />
             <asp:Button class="btn btn-primary" ID="btnSalvar" runat="server" Text="Salvar" OnClick="btnSalvar_Click" />
+                    <br />
                     <br />
                     
                     <asp:Label ID="lblMensagem" runat="server"></asp:Label>
