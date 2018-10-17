@@ -16,12 +16,14 @@
             <br />
             <a class="btn btn-primary" href="Cadastrar.aspx">Cadastrar</a>
             <br />
-               
+            <br />   
           
             <h1>Lista de Ordem de Serviço</h1>
-                
+                <br />
                 <asp:Label ID="lblMensagem" runat="server" Text="" ></asp:Label>
-          
+          <br />
+                
+                <br />
                 
             <asp:GridView ID="GridView1" runat="server" OnRowCommand="GridView1_RowCommand"  Width="100%" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="1" CellSpacing="2" ForeColor="Black">
          <Columns>

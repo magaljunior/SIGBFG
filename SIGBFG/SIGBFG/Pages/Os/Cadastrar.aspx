@@ -9,17 +9,16 @@
     <script src="../../Scripts/jquery-3.3.1.min.js"></script>
     <title></title>
 </head>
-<body style="height: 551px">
-    <div class="container" style="height: 553px">
+<body style="height: 575px">
+    <div class="container" style="height: 580px">
     <form id="form1" runat="server">
         
         <div id="iblMensagem" style="margin-left: 40px">
-            <center>
+            <center style="height: 578px">
                    <br />
             <a class="btn btn-primary" href="../ADM/Administrador.aspx">Inicio</a>
-            <a class="btn btn-primary" href="Listar.aspx">Lista de O.S</a>
-            
-            <h1>Cadastro Ordem de Serviço</h1>
+            <a class="btn btn-primary" href="Listar.aspx">Lista de O.S</a><br />
+&nbsp;<h1>Cadastro Ordem de Serviço</h1>
                      <br />
             
             <asp:Label ID="Label2" runat="server" Text="Funcionario: "></asp:Label>
@@ -47,6 +46,7 @@
                 <br />
             <br />
             <asp:Button CssClass="btn btn-primary" ID="btnSalvar" runat="server" OnClick="btnSalvar_Click" Text="Salvar" />
+                   <br />
             <br />
             <asp:Label ID="lblMensagem" runat="server"></asp:Label>
             <br />
