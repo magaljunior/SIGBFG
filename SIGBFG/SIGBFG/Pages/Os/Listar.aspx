@@ -16,6 +16,7 @@
             <br />
                  <div id="logo" style="width: 100%; background-color: #000066; height:70px" >
                      <br />
+            <a class="btn btn-primary" href="../ADM/Administrador.aspx">Inicio</a>
             <a class="btn btn-primary" href="Cadastrar.aspx">Cadastrar</a>
                      </div>
             <br />

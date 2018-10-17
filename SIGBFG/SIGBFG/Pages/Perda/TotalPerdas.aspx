@@ -20,11 +20,14 @@
             <center>
                 <div id="logo" style="width: 100%; background-color: #000066; height:70px" >
                      <br />
+            <a class="btn btn-primary" href="../ADM/Administrador.aspx">Inicio</a>
             <a class="btn btn-primary" href="Cadastrar.aspx">Cadastrar</a>
             <a class="btn btn-primary" href="Listar.aspx">Listar</a>
             <br />
+                    <br />
                     </div>
-            <h1>Total de Perdas Cadastradas</h1>
+                <br />
+                <h1>Total de Perdas Cadastradas</h1>
             <br />
                 <asp:Label ID="Label1" runat="server" Text="Total:"></asp:Label>
 &nbsp;<asp:Label ID="txtTotal" runat="server"></asp:Label>

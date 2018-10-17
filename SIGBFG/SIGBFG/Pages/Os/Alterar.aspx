@@ -15,13 +15,12 @@
             <br />
              <div id="logo" style="width: 100%; background-color: #000066; height:70px" >
                      <br />
+        <a class="btn btn-primary" href="../ADM/Administrador.aspx">Inicio</a>
         <a class="btn btn-primary" href="Cadastrar.aspx">Cadastrar</a>
         <a class="btn btn-primary" href="Listar.aspx">Listar</a>
-<<<<<<< HEAD
+
                  </div>
-=======
             <br />
->>>>>>> b19ec6c5db82a17dc900a0579ffcb0b98ad41461
         <br />
         <h1>
             Alteração de Ordem de Serviço

@@ -80,14 +80,9 @@
             <a class="btn btn-primary" href="Listar.aspx">Lista de Perdas</a>
             <a class="btn btn-primary" href="TotalPerdas.aspx">Total de Perdas Cadastradas</a>
         </div>
+               <br />
                <h1>Alterar perda de Produto</h1>
-        
-              
-
-            
-        
-
-               <p>
+               <br />
 
                    <asp:Label ID="Label" runat="server" Text="Ordem de Serviço:"></asp:Label>
                    <asp:TextBox ID="txtOrdem" runat="server" Width="117px"></asp:TextBox>
