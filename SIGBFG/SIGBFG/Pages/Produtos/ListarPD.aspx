@@ -35,6 +35,7 @@
                 <asp:GridView ID="GridView1" runat="server" OnRowCommand="GridView1_RowCommand" AutoGenerateColumns="False" Style="margin-right: 5px" Width="100%" Height="100px" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black" OnRowDataBound="imgProdutos_RowDataBound">
                     <Columns>
                         <asp:BoundField DataField="pro_foto" HeaderText="Foto" >
+                        <FooterStyle HorizontalAlign="Center" />
                         <HeaderStyle HorizontalAlign="Center" />
                         <ItemStyle HorizontalAlign="Center" />
                         </asp:BoundField>
@@ -47,14 +48,20 @@
                         <asp:BoundField DataField="pro_quantidadeMinima" HeaderText="Quantidade Minima" >
                         <ItemStyle HorizontalAlign="Center" />
                         </asp:BoundField>
-                        <asp:BoundField DataField="pro_quantidade" HeaderText="Quantidade" />
-                        <asp:BoundField DataField="pro_descricao" HeaderText="Descrição" />
+                        <asp:BoundField DataField="pro_quantidade" HeaderText="Quantidade" >
+                        <ItemStyle HorizontalAlign="Center" />
+                        </asp:BoundField>
+                        <asp:BoundField DataField="pro_descricao" HeaderText="Descrição" >
+
+                        <ItemStyle HorizontalAlign="Center" />
+                        </asp:BoundField>
 
                         <asp:TemplateField HeaderText="Desativar">
                             <ItemTemplate>
                                 <asp:LinkButton ID="lbDesativar" runat="server" CommandName="Desativar"
                                     CommandArgument='<%# Bind("pro_codigo")%>'>Desativar</asp:LinkButton>
                             </ItemTemplate>
+                            <ItemStyle HorizontalAlign="Center" />
                         </asp:TemplateField>
 
                         <asp:TemplateField HeaderText="Alterar">
@@ -62,6 +69,7 @@
                                 <asp:ImageButton ID="lbAlterar" runat="server" CommandName="Alterar" 
                                     ImageUrl="../../Images/editar.jpg"  CommandArgument='<%# Bind("pro_codigo")%>'></asp:ImageButton>
                             </ItemTemplate>
+                            <ItemStyle HorizontalAlign="Center" />
                         </asp:TemplateField>
 
                         <asp:TemplateField HeaderText="Excluir">
@@ -69,6 +77,7 @@
                                     <asp:ImageButton ID="lbDeletar" runat="server" CommandName="Deletar"
                                         ImageUrl="../../Images/del.jpg" CommandArgument='<%# Bind("pro_codigo")%>'></asp:ImageButton>
                              </ItemTemplate>
+                             <ItemStyle HorizontalAlign="Center" />
                        </asp:TemplateField>
                     </Columns>
 

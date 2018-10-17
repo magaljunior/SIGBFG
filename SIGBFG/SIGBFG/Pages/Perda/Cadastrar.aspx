@@ -8,18 +8,17 @@
     <script src="../../Scripts/jquery-3.3.1.min.js"></script>
     <title></title>
 </head>
-<body style="height: 473px">
+<body style="height: 551px">
     <form id="form1" runat="server">
-        <div class="container" style="height: 397px">
-            <br />
-            <center> <h1>Perda de Produto</h1>
+        <div class="container" style="height: 553px">
+            <center>
             <br />
             <a class="btn btn-primary" href="../ADM/Administrador.aspx">Inicio</a>
             <a class="btn btn-primary" href="Listar.aspx">Lista de Perdas</a>
-         
-            
-              <br />
-              <br />
+            <br />
+                <br />
+                <h1>Perda de Produto</h1>
+
               <br />
               <asp:Label ID="Label5" runat="server" Text="Ordem de Serviço:"></asp:Label>
               <asp:TextBox ID="txtOrdem" runat="server" Height="27px" style="margin-left: 16px" Width="112px"></asp:TextBox>

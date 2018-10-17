@@ -11,12 +11,13 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <br />
-            <center><h1>Lista de Perda de Produto</h1>
+            <center>
               <br />
                 <a class="btn btn-primary" href="../ADM/Administrador.aspx">Inicio</a>
                 <a class="btn btn-primary" href="Cadastrar.aspx">Cadastrar Perdas</a>
               <br />
+                <br />
+                <h1>Lista de Perda de Produto</h1>
               <br />
                 <asp:Label ID="lblMensagem" runat="server" Text="" ></asp:Label>
           

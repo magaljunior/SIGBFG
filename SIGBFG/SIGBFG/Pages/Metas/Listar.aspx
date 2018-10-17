@@ -37,7 +37,6 @@
                     <asp:GridView ID="GridView1" runat="server" OnRowCommand="GridView1_RowCommand" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" ForeColor="Black" GridLines="Vertical" Height="50px" Width="100%">
                         <AlternatingRowStyle BackColor="#CCCCCC" />
                         <Columns>
-                            <asp:BoundField DataField="met_codigo" HeaderText="Código" />
                             <asp:BoundField DataField="met_mes" HeaderText="Mês" />
                             <asp:BoundField DataField="met_ano" HeaderText="Ano" />
                             <asp:BoundField DataField="met_meta" HeaderText="Meta" />
