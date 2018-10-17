@@ -5,43 +5,62 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title></title>
+       <link href="../../Content/bootstrap.min.css" rel="stylesheet" />
     <script src="../../Scripts/jquery-3.3.1.min.js"></script>
-    <script src="../../Scripts/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title></title>
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
+            <center>
             <br />
-            <a class="btn btn-primary" href="Cadastrar.aspx" role="button">Cadastrar</a>
+            <a class="btn btn-primary" href="Cadastrar.aspx">Cadastrar</a>
             <br />
-            <br />
-            <asp:GridView ID="GridView1" runat="server" OnRowCommand="GridView1_RowCommand" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" HorizontalAlign="Center">
-                <Columns>
-                    <asp:TemplateField>
-                        <ItemTemplate>
-                            <asp:LinkButton ID="lbAlterar" runat="server" CommandName="Alterar"
-                                CommandArgument='<%# Bind("os_codigo")%>'>Alterar</asp:LinkButton>
-                        </ItemTemplate>
-                    </asp:TemplateField>
-                    <asp:TemplateField>
-                        <ItemTemplate>
-                            <asp:LinkButton ID="lbDeletar" runat="server" CommandName="Deletar"
-                                CommandArgument='<%# Bind("os_codigo")%>'>Excluir</asp:LinkButton>
-                        </ItemTemplate>
-                    </asp:TemplateField>
-                </Columns>
-                <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
-                <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
-                <PagerStyle BackColor="White" ForeColor="Black" HorizontalAlign="Right" />
-                <SelectedRowStyle BackColor="#CC3333" Font-Bold="True" ForeColor="White" />
-                <SortedAscendingCellStyle BackColor="#F7F7F7" />
-                <SortedAscendingHeaderStyle BackColor="#4B4B4B" />
-                <SortedDescendingCellStyle BackColor="#E5E5E5" />
-                <SortedDescendingHeaderStyle BackColor="#242121" />
-            </asp:GridView>
+            <br />   
+          
+            <h1>Lista de Ordem de Serviço</h1>
+                <br />
+                <asp:Label ID="lblMensagem" runat="server" Text="" ></asp:Label>
+          <br />
+                
+                <br />
+                
+            <asp:GridView ID="GridView1" runat="server" OnRowCommand="GridView1_RowCommand"  Width="100%" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="1" CellSpacing="2" ForeColor="Black">
+         <Columns>
+              <asp:BoundField DataField="os_funcionario" HeaderText="Funcionário" />
+             <asp:BoundField DataField="os_produto" HeaderText="Produto" />
+             <asp:BoundField DataField="os_quantidade" HeaderText="Quantidade" />
+             <asp:BoundField DataField="os_descricao" HeaderText="Descrição" /> 
+              <asp:BoundField DataField="os_dataInicio" HeaderText="Data de Inicio" />
+              <asp:BoundField DataField="os_dataExpiracao" HeaderText="Data de Expiração" />
+             <asp:TemplateField HeaderText="Alterar">
+                 <ItemTemplate>
+             
+                         <asp:ImageButton ID="lbAlterar" runat="server" CommandName="Alterar" ImageUrl="../../Images/editar.jpg"  CommandArgument='<%# Bind("os_codigo")%>'></asp:ImageButton>
 
+            
+                 </ItemTemplate>
+            </asp:TemplateField>
+             <asp:TemplateField HeaderText="Excluir">
+                 <ItemTemplate>
+     
+                         <asp:ImageButton ID="lbDeletar" runat="server" CommandName="Deletar" ImageUrl="../../Images/del.jpg" CommandArgument='<%# Bind("os_codigo")%>'></asp:ImageButton>
+
+    
+                 </ItemTemplate>
+             </asp:TemplateField>
+         </Columns>
+         <FooterStyle BackColor="#CCCCCC" />
+         <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
+         <PagerStyle BackColor="#CCCCCC" ForeColor="Black" HorizontalAlign="Left" />
+         <RowStyle BackColor="White" />
+         <SelectedRowStyle BackColor="#000099" Font-Bold="True" ForeColor="White" />
+         <SortedAscendingCellStyle BackColor="#F1F1F1" />
+         <SortedAscendingHeaderStyle BackColor="#808080" />
+         <SortedDescendingCellStyle BackColor="#CAC9C9" />
+         <SortedDescendingHeaderStyle BackColor="#383838" />
+        </asp:GridView>
+            </center>
         </div>
     </form>
 </body>

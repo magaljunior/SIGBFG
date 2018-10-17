@@ -17,6 +17,7 @@ public partial class Paginas_Alterar : System.Web.UI.Page
         {
             PerdaBD bd = new PerdaBD();
             Perdas perdas = bd.Select(Convert.ToInt32(Session["ID"]));
+            txtOrdem.Text = perdas.Ordem.ToString();
             txtProduto.Text = perdas.Produto;
             txtQuantidade.Text = perdas.Quantidade.ToString();
             txtMotivo.Text = perdas.Motivo;

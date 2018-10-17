@@ -14,14 +14,29 @@ public partial class Paginas_Listar : System.Web.UI.Page
     {
         OrdemServicoBD bd = new OrdemServicoBD();
         DataSet ds = bd.SelectAll();
-        GridView1.DataSource = ds.Tables[0].DefaultView;
-        GridView1.DataBind();
-    }
-    protected void Page_Load(object sender, EventArgs e)
-    {
-        Carrega();
+        int rows = ds.Tables[0].Rows.Count;
+
+        if (rows > 0)
+        {
+            GridView1.DataSource = ds.Tables[0].DefaultView;
+            GridView1.DataBind();
+            lblMensagem.Text = "Ordem de servio(s) encontrada(s) : " + rows.ToString();
+            GridView1.Visible = true;
+        }
+        else
+        {
+            lblMensagem.Text = "Nenhuma Ordem de serviço encontrada";
+            GridView1.Visible = false;
+        }
     }
 
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        if (!Page.IsPostBack)
+        {
+            Carrega();
+        }
+    }
     protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
     {
         int codigo = 0;
@@ -41,5 +56,15 @@ public partial class Paginas_Listar : System.Web.UI.Page
             default:
                 break;
         }
+    }
+
+
+
+
+    protected void btnCadastrar_Click(object sender, EventArgs e)
+    {
+        Response.Redirect(
+         "Cadastrar.aspx"
+         );
     }
 }
