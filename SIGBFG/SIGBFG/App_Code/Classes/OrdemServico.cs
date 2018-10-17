@@ -9,12 +9,12 @@ namespace SIGBFG.Classes
     public class OrdemServico
     {
         public int Codigo { get; set; }
-        public string Funcionario { get; set; }
-        public string Produto { get; set; }
+        public String Funcionario { get; set; }
+        public String Produto { get; set; }
         public int Quantidade { get; set; }
-        public string DataInicio { get; set; }
-        public string DataExpiracao { get; set; }
-        public string Descricao { get; set; }
+        public String DataInicio { get; set; }
+        public String DataExpiracao { get; set; }
+        public String Descricao { get; set; }
 
         public OrdemServico()
         {
