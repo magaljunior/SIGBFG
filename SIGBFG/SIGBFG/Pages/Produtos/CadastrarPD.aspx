@@ -67,10 +67,12 @@
         <center>
             <div class="form-group">
                 <br />
+                <div id="logo" style="width: 100%; background-color: #000066; height:70px" >
+                     <br />
                         <a class="btn btn-primary" href="../ADM/Administrador.aspx">Inicio</a>
                         <a class="btn btn-primary" href="ListarPD.aspx">Listar Produtos</a>
                         <a class="btn btn-primary" href="Estoque_ProdutosPD.aspx">Estoque Atual de Produtos</a>
-
+                    </div>
             <form id="form1" runat="server">
                 <br />
 

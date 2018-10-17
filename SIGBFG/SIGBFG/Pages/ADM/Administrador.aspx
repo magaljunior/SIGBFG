@@ -22,20 +22,23 @@
 </head>
 <body>
     <div class="container-fluid">
-        <div>
+       
             <center>
            <br />
+                 <div id="logo" style="width: 100%; background-color: #000066; height:70px" >
+                     <br />
             <a class="btn btn-primary" href="../Usuario/Listar_usuario.aspx">Usuários</a>
             <a class="btn btn-primary" href="../Produtos/ListarPD.aspx">Produtos</a>
             <a class="btn btn-primary" href="../Metas/Listar.aspx">Metas</a>
             <a class="btn btn-primary" href="../Perda/Listar.aspx">Perdas</a>
-
+              </div>
+                
             <div>
                 <p class="auto-style1">
                     Bem Vindo ao Sistema</p>
             </div>
 
-        </div>
+        
     </div>
 </body>
 </html>

@@ -18,11 +18,14 @@
             <form id="form1" runat="server">
                 <div>
                     <br />
+                    <div id="logo" style="width: 100%; background-color: #000066; height:70px" >
+                     <br />
                     <a class="btn btn-primary" href="../ADM/Administrador.aspx">Inicio</a>
 
                     <a class="btn btn-primary" href="CadastrarPD.aspx">Cadastrar Produtos</a>
 
                     <a class="btn btn-primary" href="Estoque_ProdutosPD.aspx">Estoque Atual de Produtos</a>
+                        </div>
                     <br />
                     <br />
                     <h1>Lista de Produtos</h1>

@@ -10,15 +10,17 @@
     <title></title>
 </head>
 <body style="height: 551px">
-    <div class="container" style="height: 553px">
+    <div class="container-fluid">
     <form id="form1" runat="server">
         
         <div id="iblMensagem" style="margin-left: 40px">
             <center>
                    <br />
+                 <div id="logo" style="width: 100%; background-color: #000066; height:70px" >
+                     <br />
             <a class="btn btn-primary" href="../ADM/Administrador.aspx">Inicio</a>
             <a class="btn btn-primary" href="Listar.aspx">Lista de O.S</a>
-            
+            </div>
             <h1>Cadastro Ordem de Serviço</h1>
                      <br />
             
