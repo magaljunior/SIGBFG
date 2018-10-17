@@ -23,7 +23,7 @@
                 <asp:Label ID="lblMensagem" runat="server" Text="" ></asp:Label>
           
                 
-            <asp:GridView ID="GridView1" runat="server" OnRowCommand="GridView1_RowCommand"  Width="100%" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="1" CellSpacing="2" ForeColor="Black" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" >
+            <asp:GridView ID="GridView1" runat="server" OnRowCommand="GridView1_RowCommand"  Width="100%" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="1" CellSpacing="2" ForeColor="Black">
          <Columns>
               <asp:BoundField DataField="os_funcionario" HeaderText="Funcionário" />
              <asp:BoundField DataField="os_produto" HeaderText="Produto" />
