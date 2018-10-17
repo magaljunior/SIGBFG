@@ -9,9 +9,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
 </head>
-<body style="height: 208px">
+<body style="height: 401px">
     <form id="form1" runat="server">
-        <div style="height: 251px; width: 832px">
+        <div style="height: 393px; width: 832px">
             <asp:Label ID="Label1" runat="server" Text="Alterar Usuário" Font-Size="X-Large" Height="44px" Width="295px"></asp:Label>
             <br />
             <br />
@@ -24,10 +24,7 @@
             <br />
             &nbsp;<asp:TextBox ID="txtSobrenome" runat="server"></asp:TextBox>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:DropDownList ID="DropDownList1" runat="server" Height="22px" Width="101px">
-                <asp:ListItem>Ativo</asp:ListItem>
-                <asp:ListItem>Inativo</asp:ListItem>
-            </asp:DropDownList>
+            <br />
             <br />
             <br />
             &nbsp;<asp:Button ID="Button1" runat="server" Text="Salvar" OnClick="Button1_Click" />

@@ -1,6 +1,6 @@
 ﻿using System;
-using pi3semestre.Classes;
-using pi3semestre.Persistencia;
+using SIGBFG.Classes;
+using SIGBFG.Persistencia;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -20,14 +20,13 @@ public partial class Paginas_Cadastro_usuario : System.Web.UI.Page
         if (txtconfirmaSenha.Text.Equals (txtsenha.Text))
         {
                 
-            usuario usuario = new usuario();
+            Usuario usuario = new Usuario();
             usuario.Nome = txtNome.Text;
             usuario.Sobrenome = txtSobrenome.Text;
             usuario.Senha = txtconfirmaSenha.Text;
-            usuario.Status = "Ativo";
 
 
-            usuarioBD bd = new usuarioBD();
+            UsuarioBD bd = new UsuarioBD();
 
             if (bd.Insert(usuario))
             {
@@ -48,12 +47,6 @@ public partial class Paginas_Cadastro_usuario : System.Web.UI.Page
         {
             Response.Write("<script>alert('As senhas não conferem')</script>");
         }
-
-
-
-
-
-
     }
 
 

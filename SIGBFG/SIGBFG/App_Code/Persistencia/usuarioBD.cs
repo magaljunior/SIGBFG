@@ -1,157 +1,133 @@
 ﻿using FATEC;
 using System;
 using System.Collections.Generic;
-using pi3semestre.Classes;
+using SIGBFG.Classes;
 using System.Data;
 using System.Web;
 
-
-/// <summary>
-/// Descrição resumida de usuarioBD
-/// </summary>
-
-namespace pi3semestre.Persistencia
+namespace SIGBFG.Persistencia
 {
 
 
 
-    public class usuarioBD
+    public class UsuarioBD
     {
-
-        public bool Insert(usuario usuario)
+        //insert
+        public bool Insert(Usuario usuario)
         {
-
             System.Data.IDbConnection objConexao;
             System.Data.IDbCommand objCommand;
-
-            string sql = "INSERT INTO usuario(Nome,Sobrenome,Senha,Status_usuario) VALUES (?Nome, ?Sobrenome, ?Senha, ?Status )";
-
+            string sql = "INSERT INTO tbl_usuario(usu_nome, usu_sobreNome, usu_senha, usu_ativo) VALUES (?nome, ?sobreNome, ?senha, ?ativo)";
             objConexao = Mapped.Connection();
             objCommand = Mapped.Command(sql, objConexao);
-
-            objCommand.Parameters.Add(Mapped.Parameter("?Nome", usuario.Nome));
-            objCommand.Parameters.Add(Mapped.Parameter("?Sobrenome", usuario.Sobrenome));
-            objCommand.Parameters.Add(Mapped.Parameter("?Senha", usuario.Senha));
-            objCommand.Parameters.Add(Mapped.Parameter("?Status", usuario.Status));
-
+            objCommand.Parameters.Add(Mapped.Parameter("?nome", usuario.Nome));
+            objCommand.Parameters.Add(Mapped.Parameter("?sobreNome", usuario.Sobrenome));
+            objCommand.Parameters.Add(Mapped.Parameter("?senha", usuario.Senha));
+            objCommand.Parameters.Add(Mapped.Parameter("?ativo", true));
             objCommand.ExecuteNonQuery();
             objConexao.Close();
             objCommand.Dispose();
             objConexao.Dispose();
-
             return true;
-
         }
-
-        // selectAll
-
+        //selectall
         public DataSet SelectAll()
         {
             DataSet ds = new DataSet();
             System.Data.IDbConnection objConexao;
             System.Data.IDbCommand objCommand;
             System.Data.IDataAdapter objDataAdapter;
-
             objConexao = Mapped.Connection();
-            objCommand = Mapped.Command("SELECT * FROM usuario", objConexao);
+            objCommand = Mapped.Command("SELECT * FROM tbl_usuario", objConexao);
             objDataAdapter = Mapped.Adapter(objCommand);
             objDataAdapter.Fill(ds);
-
             objConexao.Close();
-            objCommand.Dispose(); objConexao.Dispose();
+            objCommand.Dispose();
+            objConexao.Dispose();
             return ds;
-
         }
-
-        // Select 
-
-        public usuario Select(int id)
+        //select
+        public Usuario Select(int id)
         {
-
-            usuario obj = null;
-
+            Usuario obj = null;
             System.Data.IDbConnection objConexao;
             System.Data.IDbCommand objCommand;
             System.Data.IDataReader objDataReader;
             objConexao = Mapped.Connection();
-            objCommand = Mapped.Command("SELECT * FROM usuario WHERE ID = ?codigo", objConexao);
+            objCommand = Mapped.Command("SELECT * FROM tbl_usuario WHERE usu_codigo = ?codigo", objConexao);
             objCommand.Parameters.Add(Mapped.Parameter("?codigo", id));
-
             objDataReader = objCommand.ExecuteReader();
             while (objDataReader.Read())
             {
-                obj = new usuario();
-                obj.Nome= Convert.ToString(objDataReader["Nome"]);
-                obj.Sobrenome= Convert.ToString(objDataReader["Sobrenome"]);
-                obj.Senha= Convert.ToString(objDataReader["Senha"]);
-                obj.Status= Convert.ToString(objDataReader["Status_usuario"]);
+                obj = new Usuario();
+                obj.Codigo = Convert.ToInt32(objDataReader["usu_codigo"]);
+                obj.Nome = Convert.ToString(objDataReader["usu_nome"]);
+                obj.Sobrenome = Convert.ToString(objDataReader["usu_sobreNome"]);
+                obj.Senha = Convert.ToString(objDataReader["usu_senha"]);
+                obj.Ativo = Convert.ToBoolean(objDataReader["usu_ativo"]);
             }
-
+            objDataReader.Close();
+            objConexao.Close();
+            objCommand.Dispose();
+            objConexao.Dispose();
+            objDataReader.Dispose();
             return obj;
         }
-
-
         //update
-        public bool Update(usuario usuario)
+        public bool Update(Usuario usuario)
         {
             System.Data.IDbConnection objConexao;
             System.Data.IDbCommand objCommand;
-            string sql = "UPDATE usuario SET Nome=?Nome, Sobrenome=?Sobrenome, Status_usuario=?Status WHERE ID=?codigo";
-
-            
+            string sql = "UPDATE tbl_usuario SET usu_nome=?nome, usu_sobreNome=?sobreNome, usu_senha=?senha WHERE usu_codigo=?codigo";
             objConexao = Mapped.Connection();
             objCommand = Mapped.Command(sql, objConexao);
-
-            objCommand.Parameters.Add(Mapped.Parameter("?Nome", usuario.Nome));
-            objCommand.Parameters.Add(Mapped.Parameter("?Sobrenome", usuario.Sobrenome));
-            objCommand.Parameters.Add(Mapped.Parameter("?Status", usuario.Status));
+            objCommand.Parameters.Add(Mapped.Parameter("?nome", usuario.Nome));
+            objCommand.Parameters.Add(Mapped.Parameter("?sobreNome", usuario.Sobrenome));
+            objCommand.Parameters.Add(Mapped.Parameter("?senha", usuario.Senha));
             objCommand.Parameters.Add(Mapped.Parameter("?codigo", usuario.Codigo));
-
-
-
-
             objCommand.ExecuteNonQuery();
             objConexao.Close();
             objCommand.Dispose();
             objConexao.Dispose();
-
-
-
             return true;
-
         }
-
         //delete
-        
-            public bool Delete(int id)
+        public bool Delete(int id)
         {
             System.Data.IDbConnection objConexao;
             System.Data.IDbCommand objCommand;
-
-            string sql = "DELETE FROM usuario WHERE ID=?codigo";
-
+            string sql = "DELETE FROM tbl_usuario WHERE usu_codigo=?codigo";
             objConexao = Mapped.Connection();
             objCommand = Mapped.Command(sql, objConexao);
-
             objCommand.Parameters.Add(Mapped.Parameter("?codigo", id));
 
             objCommand.ExecuteNonQuery();
             objConexao.Close();
             objCommand.Dispose();
             objConexao.Dispose();
-
-
+            return true;
+        }
+        //desativar
+        public bool Desativar(int codigo, bool ativo)
+        {
+            System.Data.IDbConnection objConexao;
+            System.Data.IDbCommand objCommand;
+            string sql = "UPDATE tbl_usuario SET usu_ativo=?status WHERE usu_codigo=?codigo";
+            objConexao = Mapped.Connection();
+            objCommand = Mapped.Command(sql, objConexao);
+            objCommand.Parameters.Add(Mapped.Parameter("?status", ativo));
+            objCommand.Parameters.Add(Mapped.Parameter("?codigo", codigo));
+            objCommand.ExecuteNonQuery();
+            objConexao.Close();
+            objCommand.Dispose();
+            objConexao.Dispose();
             return true;
         }
 
-
-
-
-            public usuarioBD()
+        public UsuarioBD()
         {
-            //
-            // TODO: Adicionar lógica do construtor aqui
-            //
+
+
         }
 
     }

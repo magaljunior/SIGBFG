@@ -8,21 +8,21 @@ using System.Web;
 /// </summary>
 
 
-namespace pi3semestre.Classes
+namespace SIGBFG.Classes
 {
 
-    public class usuario
+    public class Usuario
     {
 
         //propriedades 
         public string Nome { get; set; }
         public string Sobrenome { get; set; }
         public string Senha { get; set; }
-        public string Status { get; set; }
+        public bool Ativo { get; set; }
         public int Codigo { get; set; }
 
 
-        public usuario()
+        public Usuario()
         {
 
             //

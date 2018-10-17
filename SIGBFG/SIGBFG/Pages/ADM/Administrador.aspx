@@ -25,6 +25,7 @@
         <div>
             <center>
            <br />
+            <a class="btn btn-primary" href="../Usuario/Listar_usuario.aspx">Usuários</a>
             <a class="btn btn-primary" href="../Produtos/ListarPD.aspx">Produtos</a>
             <a class="btn btn-primary" href="../Metas/Listar.aspx">Metas</a>
             <a class="btn btn-primary" href="../Perda/Listar.aspx">Perdas</a>
