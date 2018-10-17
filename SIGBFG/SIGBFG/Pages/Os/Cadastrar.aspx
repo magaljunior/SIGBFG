@@ -9,7 +9,11 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div id="iblMensagem">
+        <div id="iblMensagem" style="margin-left: 40px">
+            <a href="Listar.aspx">Listar</a>
+            <br />
+            <br />
+            <br />
             <asp:Label ID="Label1" runat="server" Text="Cadastro Ordem de Serviço"></asp:Label>
             <br />
             <asp:Label ID="Label2" runat="server" Text="Funcionario: "></asp:Label>
@@ -32,7 +36,7 @@
             <br />
             <asp:Button ID="btnSalvar" runat="server" OnClick="btnSalvar_Click" Text="Salvar" />
             <br />
-            <asp:Label ID="IblMensagem" runat="server"></asp:Label>
+            <asp:Label ID="lblMensagem" runat="server"></asp:Label>
             <br />
             </div>
     </form>

@@ -24,7 +24,8 @@ public partial class Pages_Cadastrar : System.Web.UI.Page
             {
                 string arquivo = FileUpload1.FileName;
                 //caminho onde a foto será salva
-                FileUpload1.SaveAs(ConfigurationManager.AppSettings["uploadServer"] + arquivo);
+                FileUpload1.SaveAs(ConfigurationManager.AppSettings["uploadServer"] + arquivo);
+
 
                 Produto produto = new Produto();
                 produto.Nome = txtNome.Text;

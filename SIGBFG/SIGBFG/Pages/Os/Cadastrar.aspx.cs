@@ -4,38 +4,40 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using os.Classes;
-using os.persistencia;
+using SIGBFG.Classes;
+using SIGBFG.Persistencia;
 
 public partial class Paginas_Cadastrar : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        txtFuncionario.Focus();
     }
 
     protected void btnSalvar_Click(object sender, EventArgs e)
     {
-        Os ordemServico = new Os();
-        Os.Funcionario = txtFuncionario.Text;        Os.Produto = txtProduto.Text;
-        Os.Quantidade = txtQuantidade.Text;
-        Os.Descricao = txtDescricao.Text;
-        Os.Datainicio = txtDatainicio.Text;
-        Os.Dataexpiracao = txtDataexpiracao.Text;
+        OrdemServico ordemServico = new OrdemServico();
+        ordemServico.Funcionario = txtFuncionario.Text;        ordemServico.Produto = txtProduto.Text;
+        ordemServico.Quantidade = Convert.ToInt32(txtQuantidade.Text);
+        ordemServico.DataInicio = txtDatainicio.Text;
+        ordemServico.DataExpiracao = txtDataexpiracao.Text;
+        ordemServico.Descricao = txtDescricao.Text;
 
-        OsBD bd = new OsBD();
+        OrdemServicoBD bd = new OrdemServicoBD();
         if (bd.Insert(ordemServico))
         {
-            lblMensagem.Text = "Funcionário cadastrado com sucesso";
-            txtNome.Text = "";
-            txtCracha.Text = "";
-            txtSalario.Text = "";
-            txtNome.Focus();
+            lblMensagem.Text = "Ordem de Serviço cadastrada com sucesso";
+            txtFuncionario.Text = "";
+            txtProduto.Text = "";
+            txtQuantidade.Text = "";
+            txtDatainicio.Text = "";
+            txtDataexpiracao.Text = "";
+            txtDescricao.Text = "";
+            txtFuncionario.Focus();
         }
         else
         {
             lblMensagem.Text = "Erro ao salvar.";
-        }
-
+        }
     }
 }
