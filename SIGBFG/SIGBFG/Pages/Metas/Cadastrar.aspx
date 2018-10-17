@@ -15,6 +15,28 @@
 
 </head>
 
+<!--VALIDAÇÃO-->
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $("#form1").validate({
+            rules: {
+                txtMes: {
+                    required: true,
+                },
+                txtMeta: {
+                    required: true
+                },
+                txtProduto: {
+                    required: true,
+                    maxlength: 11
+                }
+            }
+        })
+
+
+    })
+</script>
 
 
 
@@ -23,18 +45,18 @@
     <div class="container-fluid">
         <br />
         <a class="btn btn-primary" href="../ADM/Administrador.aspx">Inicio</a>
-         <a class="btn btn-primary" href="Listar.aspx">Lista de Metas</a>
-         
+        <a class="btn btn-primary" href="Listar.aspx">Lista de Metas</a>
+
 
         <div class="form-group">
             <br />
-           
+
 
             <form id="form1" runat="server">
                 <div style="height: 349px">
-                   <h1>Cadastro de Metas</h1>
+                    <h1>Cadastro de Metas</h1>
                     <br />
-                   
+
                     <asp:Label runat="server" Text="Mês:"></asp:Label>
                     <asp:TextBox ID="txtMes" runat="server"></asp:TextBox>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -53,11 +75,11 @@
                     <asp:Label runat="server" Text="Descrição:"></asp:Label>
                     <asp:TextBox ID="txtDescricao" runat="server" Height="68px" Width="322px"></asp:TextBox>
                     <br />
-    <br />
-            <asp:Button class="btn btn-primary" ID="btnSalvar" runat="server" Text="Salvar" OnClick="btnSalvar_Click" />
+                    <br />
+                    <asp:Button class="btn btn-primary" ID="btnSalvar" runat="server" Text="Salvar" OnClick="btnSalvar_Click" />
                     <br />
                     <br />
-                    
+
                     <asp:Label ID="lblMensagem" runat="server"></asp:Label>
                 </div>
             </form>
