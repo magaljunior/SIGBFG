@@ -10,16 +10,21 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
+        <div class="container-fluid">
             <center>
               <br />
                 <a class="btn btn-primary" href="../ADM/Administrador.aspx">Inicio</a>
                 <a class="btn btn-primary" href="Cadastrar.aspx">Cadastrar Perdas</a>
+                <a class="btn btn-primary" href="TotalPerdas.aspx">Total de Perdas Cadastradas</a>
               <br />
                 <br />
-                <h1>Lista de Perda de Produto</h1>
+                <h1>Lista de Perdas de Produto</h1>
               <br />
                 <asp:Label ID="lblMensagem" runat="server" Text="" ></asp:Label>
+          
+                <br />
+          
+                <br />
           
      <asp:GridView ID="GridView1" runat="server" OnRowCommand="GridView1_RowCommand"  Width="100%" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black" >
          <Columns>
@@ -54,6 +59,8 @@
          <SortedDescendingCellStyle BackColor="#CAC9C9" />
          <SortedDescendingHeaderStyle BackColor="#383838" />
         </asp:GridView>
+                <br />
+                <br />
             </center>
         </div>
     </form>
