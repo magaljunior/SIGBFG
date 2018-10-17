@@ -21,7 +21,7 @@
         }
 
         #form1 {
-            height: 655px;
+            height: 568px;
         }
     </style>
 
@@ -62,53 +62,61 @@
     </script>
 
 </head>
-<body style="height: 653px">
+<body style="height: 631px">
     <div class="container-fluid">
-
-        <br />
-        <a class="btn btn-primary" href="../ADM/Administrador.aspx">Inicio</a>
-        <a class="btn btn-primary" href="ListarPD.aspx">Listar Produtos</a>
-        <a class="btn btn-primary" href="Estoque_ProdutosPD.aspx">Estoque Atual de Produtos</a>
+        <center>
+            <div class="form-group">
+                <br />
+                        <a class="btn btn-primary" href="../ADM/Administrador.aspx">Inicio</a>
+                        <a class="btn btn-primary" href="ListarPD.aspx">Listar Produtos</a>
+                        <a class="btn btn-primary" href="Estoque_ProdutosPD.aspx">Estoque Atual de Produtos</a>
 
             <form id="form1" runat="server">
                 <br />
-                <h1>Cadastro de Produtos</h1>
-                <br />
 
-                <div class="form-group">
+                    <h1>Cadastro de Produtos</h1>
+                    <br />
+
                     <asp:Label ID="Label1" runat="server" Text="Nome:"></asp:Label>
-                    <asp:TextBox ID="txtNome" runat="server" Style="margin-left: 18px" Width="300px"></asp:TextBox>
-                </div>
+                    <asp:TextBox ID="txtNome" runat="server" Style="margin-left: 18px" Width="291px"></asp:TextBox>
 
-                <div class="form-group">
+                     <br />
+                     <br />
+
                     <asp:Label ID="Label2" runat="server" Text="Preço:"></asp:Label>
-                    <asp:TextBox ID="txtPreco" runat="server" Style="margin-left: 19px"></asp:TextBox>
-                </div>
 
-                 <div class="form-group">
+                    <asp:TextBox ID="txtPreco" runat="server" Style="margin-left: 107px" Width="209px" Height="25px"></asp:TextBox>
+
+                    <br />
+
+                    <br />
+
                     <asp:Label ID="Label3" runat="server" Text="Quantidade Mínima:"></asp:Label>
-                    <asp:TextBox ID="txtQuantidadeMinima" runat="server" Style="margin-left: 22px"></asp:TextBox>
-                </div>
+                    <asp:TextBox ID="txtQuantidadeMinima" runat="server" Style="margin-left: 16px" Width="200px"></asp:TextBox>
 
-                <div class="form-group">
+                     <br />
+
+                     <br />
+
                      <asp:Label runat="server" Text="Foto:"></asp:Label>
-                     <asp:FileUpload ID="FileUpload1" runat="server" Style="margin-left: 15px" />
-                </div>
+                     <asp:FileUpload ID="FileUpload1" runat="server" Style="margin-left: 15px" Width="318px" />
 
-                <div class="form-group">
-                <asp:Label ID="Label5" runat="server" Text="Descrição:"></asp:Label>
+                     <br />
+
+                     <br />
+
+                    <asp:Label ID="Label5" runat="server" Text="Descrição:"></asp:Label>
                     <p style="margin-left: 80px">
                         <asp:TextBox ID="txtDescricao" runat="server" Height="92px" Width="270px"></asp:TextBox>
                     </p>
-                </div>
 
-                <asp:Button ID="btnSalvar" class="btn btn-primary" runat="server" OnClick="btnSalvar_Click" Text="Salvar" />
-                <br />
-                <br />
-                <p>
-                    <asp:Label ID="lblMensagem" runat="server"></asp:Label>
-                </p>
+                    <asp:Button ID="btnSalvar" class="btn btn-primary" runat="server" OnClick="btnSalvar_Click" Text="Salvar" Width="110px" />
+                    <br />
+                    <br />
+                <asp:Label ID="lblMensagem" runat="server"></asp:Label>
             </form>
+        </div>
+            </center>
     </div>
 </body>
 </html>

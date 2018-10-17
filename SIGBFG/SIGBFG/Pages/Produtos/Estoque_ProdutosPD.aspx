@@ -11,10 +11,11 @@
     <script src="../../Scripts/jquery-3.3.1.min.js"></script>
 
 </head>
-<body style="height: 420px">
+<body style="height: 568px">
     <div class="container-fluid">
-        <div class="form-group">
-            <form id="form1" runat="server">
+    <center>
+                <div class="form-group">
+            <form id="form1" runat="server" aria-atomic="False">
                 <div>
                     <br />
                     <a class="btn btn-primary" href="../ADM/Administrador.aspx">Inicio</a>
@@ -22,7 +23,10 @@
                     <a class="btn btn-primary" href="ListarPD.aspx">Listar Produtos</a>
                     <br />
                     <br />
-                    <center><h1>Estoque Atual de Produtos</h1></center>
+                    <h1>Estoque Atual de Produtos</h1>
+                   
+                    <asp:Label ID="lblMensagem" runat="server"></asp:Label>
+                    <br />
                     <br />
                 </div>
                 <asp:GridView ID="GridView1" runat="server" OnRowCommand="GridView1_RowCommand" AutoGenerateColumns="False" Height="100px" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black" Width="100%" OnRowDataBound="fotoProduto_RowDataBound">
@@ -32,10 +36,10 @@
                         <asp:BoundField DataField="pro_quantidade" HeaderText="Quantidade" />
                         <asp:BoundField DataField="pro_quantidadeMinima" HeaderText="Quantidade Mínima" />
 
-                        <asp:TemplateField>
+                        <asp:TemplateField HeaderText="Cadastrar ou Alterar">
                             <ItemTemplate>
-                                <asp:LinkButton ID="lbAlterar" runat="server" CommandName="Alterar"
-                                    CommandArgument='<%# Bind("pro_codigo")%>'>Cadastrar ou Alterar</asp:LinkButton>
+                                <asp:ImageButton ID="lbAlterar" runat="server" CommandName="Alterar"
+                                    ImageUrl="../../Images/cadastrar%20ou%20alterar.png" CommandArgument='<%# Bind("pro_codigo")%>'></asp:ImageButton>
                             </ItemTemplate>
                         </asp:TemplateField>
 
@@ -50,8 +54,13 @@
                     <SortedDescendingCellStyle BackColor="#CAC9C9" />
                     <SortedDescendingHeaderStyle BackColor="#383838" />
                 </asp:GridView>
+                <br />
+                <br />
+                <h2>Total de Produtos em Estoque</h2>
+                <asp:Label ID="txtTotal" runat="server"></asp:Label>
             </form>
-        </div>
+        </div>  
+    </center>
     </div>
 </body>
 </html>

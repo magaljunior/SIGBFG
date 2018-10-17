@@ -11,14 +11,15 @@
 <body>
     <form id="form1" runat="server">
        <div>
+           <br />
            <center> <h1>Alterar perda de Produto</h1>
         
         <p>
-             <a class="btn btn-primary" href="../ADM/Administrador.aspx">Inicio</a>
-           <asp:Button CssClass="btn btn-primary" ID="btnCadastrar" runat="server" ClientIDMode="Inherit" Text="Cadastrar" OnClick="btnCadastrar_Click"></asp:Button>
-            <asp:Button class="btn btn-primary" ID="btnListar" runat="server" Text="Listar" ClientIDMode="Inherit"  OnClick="btnListar_Click"></asp:Button>
-         
+           <a class="btn btn-primary" href="../ADM/Administrador.aspx">Inicio</a>
+            <a class="btn btn-primary" href="Cadastrar.aspx">Cadastrar Perdas</a>
+            <a class="btn btn-primary" href="Listar.aspx">Lista de Perdas</a>
         </p>
+
                <p>
                    <asp:Label ID="Label" runat="server" Text="Ordem de Serviço:"></asp:Label>
                    <asp:TextBox ID="txtOrdem" runat="server" Width="117px"></asp:TextBox>
@@ -35,7 +36,7 @@
             <br />
             <asp:TextBox ID="txtMotivo" runat="server" Height="71px" Width="232px" style="margin-left: 0px"></asp:TextBox>
             <br /> <br /> <br />
-            <asp:Button class="btn btn-success" ID="btnSalvar" runat="server" Text="Alterar" OnClick="btnSalvar_Click1" />
+            <asp:Button class="btn btn-primary" ID="btnSalvar" runat="server" Text="Alterar" OnClick="btnSalvar_Click1" />
             <br />
                 <br/>
         <asp:Label ID="lblMensagem" runat="server"></asp:Label></center>

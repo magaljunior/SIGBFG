@@ -9,25 +9,22 @@
     <link href="../../Content/bootstrap.min.css" rel="stylesheet" />
     <script src="../../Scripts/bootstrap.min.js"></script>
     <script src="../../Scripts/jquery-3.0.0.min.js"></script>
-    <style type="text/css">
-        .auto-style1 {
-            margin-left: 400px;
-        }
-        </style>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <div class="auto-style1">
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/BFG.jpg" />
+    </head>
+
+<body style="height: 100%;">
+    <div class="container-fluid">
+
+            <div id="logo" style="width: 100%; margin-top: 50px; background-color: #000066">
+                <center><img alt="Logo" class="auto-style2" longdesc="LogoBFG" src="../../Images/BFG.jpg" /></center>
+            </div>
+
+            <center>
+                <a style="margin-top: 30px;" class="btn btn-primary" href="../Login.aspx">Acesso ao Sistema</a>
+            </center>
+
+            <div>
+                <center><img style="margin-top: 30px;" alt="CasaCharmosa" class="auto-style1" longdesc="Bloco" src="../../Images/Bloco.png" /></center>
+            </div>
         </div>
-    <div class="navbar">
-        <div class="dropdown">
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Button ID="btnAcesso" runat="server" Text="Acesso ao Sistema" Class="btn btn-primary" OnClick="btnAcesso_Click" />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-        </div>
-    </form>
-    </div>
-</body>
+    </body>
 </html>

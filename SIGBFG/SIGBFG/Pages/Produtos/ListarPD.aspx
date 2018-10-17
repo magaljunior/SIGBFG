@@ -13,7 +13,8 @@
 </head>
 <body style="height: 416px">
     <div class="container-fluid">
-        <div class="form-group">
+       <center>
+            <div class="form-group">
             <form id="form1" runat="server">
                 <div>
                     <br />
@@ -24,16 +25,28 @@
                     <a class="btn btn-primary" href="Estoque_ProdutosPD.aspx">Estoque Atual de Produtos</a>
                     <br />
                     <br />
-                    <center><h1>Lista de Produtos</h1></center>
-                    <p>&nbsp;</p>
+                    <h1>Lista de Produtos</h1>
                 </div>
+
+                &nbsp;<asp:Label ID="lblMensagem" runat="server"></asp:Label>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
                 <asp:GridView ID="GridView1" runat="server" OnRowCommand="GridView1_RowCommand" AutoGenerateColumns="False" Style="margin-right: 5px" Width="100%" Height="100px" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black" OnRowDataBound="imgProdutos_RowDataBound">
                     <Columns>
-                        <asp:BoundField DataField="pro_foto" HeaderText="Foto" />
-                        <asp:BoundField DataField="pro_nome" HeaderText="Nome" />
-                        <asp:BoundField DataField="pro_preco" HeaderText="Preço" />
-                        <asp:BoundField DataField="pro_quantidadeMinima" HeaderText="Quantidade Minima" />
+                        <asp:BoundField DataField="pro_foto" HeaderText="Foto" >
+                        <HeaderStyle HorizontalAlign="Center" />
+                        <ItemStyle HorizontalAlign="Center" />
+                        </asp:BoundField>
+                        <asp:BoundField DataField="pro_nome" HeaderText="Nome" >
+                        <ItemStyle HorizontalAlign="Center" />
+                        </asp:BoundField>
+                        <asp:BoundField DataField="pro_preco" HeaderText="Preço" >
+                        <ItemStyle HorizontalAlign="Center" />
+                        </asp:BoundField>
+                        <asp:BoundField DataField="pro_quantidadeMinima" HeaderText="Quantidade Minima" >
+                        <ItemStyle HorizontalAlign="Center" />
+                        </asp:BoundField>
                         <asp:BoundField DataField="pro_quantidade" HeaderText="Quantidade" />
                         <asp:BoundField DataField="pro_descricao" HeaderText="Descrição" />
 
@@ -46,17 +59,17 @@
 
                         <asp:TemplateField HeaderText="Alterar">
                             <ItemTemplate>
-                                <asp:LinkButton ID="lbAlterar" runat="server" CommandName="Alterar"
-                                    CommandArgument='<%# Bind("pro_codigo")%>'>Alterar</asp:LinkButton>
+                                <asp:ImageButton ID="lbAlterar" runat="server" CommandName="Alterar" 
+                                    ImageUrl="../../Images/editar.jpg"  CommandArgument='<%# Bind("pro_codigo")%>'></asp:ImageButton>
                             </ItemTemplate>
                         </asp:TemplateField>
 
                         <asp:TemplateField HeaderText="Excluir">
-                            <ItemTemplate>
-                                <asp:LinkButton ID="lbDeletar" runat="server" CommandName="Deletar"
-                                    CommandArgument='<%# Bind("pro_codigo")%>'>Excluir</asp:LinkButton>
-                            </ItemTemplate>
-                        </asp:TemplateField>
+                             <ItemTemplate>     
+                                    <asp:ImageButton ID="lbDeletar" runat="server" CommandName="Deletar"
+                                        ImageUrl="../../Images/del.jpg" CommandArgument='<%# Bind("pro_codigo")%>'></asp:ImageButton>
+                             </ItemTemplate>
+                       </asp:TemplateField>
                     </Columns>
 
                     <FooterStyle BackColor="#CCCCCC" />
@@ -70,10 +83,9 @@
                     <SortedDescendingHeaderStyle BackColor="#383838" />
                 </asp:GridView>
 
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
             </form>
         </div>
+       </center>
     </div>
 </body>
 </html>

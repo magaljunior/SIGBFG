@@ -18,6 +18,35 @@ USE `bd_bfg`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `giro`
+--
+
+DROP TABLE IF EXISTS `giro`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `giro` (
+  `gir_codigo` int(11) NOT NULL AUTO_INCREMENT,
+  `gir_produto` varchar(255) NOT NULL,
+  `gir_estoqueMaximo` int(11) NOT NULL,
+  `gir_estoqueMinimo` int(11) DEFAULT NULL,
+  `gir_estoqueMedio` int(11) DEFAULT NULL,
+  `gir_estoqueAtual` int(11) DEFAULT NULL,
+  `gir_vendas` int(11) NOT NULL,
+  PRIMARY KEY (`gir_codigo`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `giro`
+--
+
+LOCK TABLES `giro` WRITE;
+/*!40000 ALTER TABLE `giro` DISABLE KEYS */;
+INSERT INTO `giro` VALUES (1,'Bloco de Vedação',100,NULL,NULL,NULL,50);
+/*!40000 ALTER TABLE `giro` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `met_metas`
 --
 
@@ -32,7 +61,7 @@ CREATE TABLE `met_metas` (
   `met_produto` varchar(45) NOT NULL,
   `met_descricao` varchar(45) NOT NULL,
   PRIMARY KEY (`met_codigo`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -41,7 +70,7 @@ CREATE TABLE `met_metas` (
 
 LOCK TABLES `met_metas` WRITE;
 /*!40000 ALTER TABLE `met_metas` DISABLE KEYS */;
-INSERT INTO `met_metas` VALUES (1,'abril-2','2018-2',3332,'Estrutural-2','Bloco perfeito para construção de paredes 2');
+INSERT INTO `met_metas` VALUES (6,'abril','2018',333,'Estrutural','Bloco perfeito para construção de paredes');
 /*!40000 ALTER TABLE `met_metas` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -59,7 +88,7 @@ CREATE TABLE `per_perda` (
   `per_quantidade` int(11) NOT NULL,
   `per_motivo` varchar(255) NOT NULL,
   PRIMARY KEY (`per_codigo`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -85,6 +114,7 @@ CREATE TABLE `tbl_os` (
   `os_dataInicio` varchar(45) NOT NULL,
   `os_dataExpiracao` varchar(45) NOT NULL,
   `os_descricao` varchar(255) NOT NULL,
+  `os_funcionario` varchar(45) NOT NULL,
   PRIMARY KEY (`os_codigo`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -95,7 +125,7 @@ CREATE TABLE `tbl_os` (
 
 LOCK TABLES `tbl_os` WRITE;
 /*!40000 ALTER TABLE `tbl_os` DISABLE KEYS */;
-INSERT INTO `tbl_os` VALUES (1,1000,'Estrutural','01','02','paredes'),(2,4000,'Estrutural','01','02','paredes'),(3,1000,'Estrutural','01','02','compor paredes'),(4,1000,'Estrutural','01','02','excelente para compor paredes');
+INSERT INTO `tbl_os` VALUES (1,1000,'Estrutural','01','02','paredes',''),(2,4000,'Estrutural','01','02','paredes',''),(3,1000,'Estrutural','01','02','compor paredes',''),(4,1000,'Estrutural','01','02','excelente para compor paredes','');
 /*!40000 ALTER TABLE `tbl_os` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -144,7 +174,7 @@ CREATE TABLE `tbl_produto` (
   `pro_foto` varchar(255) DEFAULT NULL,
   `pro_ativo` int(1) NOT NULL,
   PRIMARY KEY (`pro_codigo`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -155,61 +185,31 @@ LOCK TABLES `tbl_produto` WRITE;
 /*!40000 ALTER TABLE `tbl_produto` DISABLE KEYS */;
 /*!40000 ALTER TABLE `tbl_produto` ENABLE KEYS */;
 UNLOCK TABLES;
-/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
-
-/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
-/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
-/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
-
-<<<<<<< HEAD
--- Dump completed on 2018-10-14 20:27:32
-
--- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
---
--- Host: localhost    Database: bd_perda
--- ------------------------------------------------------
--- Server version	5.7.22-log
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
-/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
-/*!40103 SET TIME_ZONE='+00:00' */;
-/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
-/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
-/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
-/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `per_perda`
+-- Table structure for table `usuario`
 --
 
-DROP TABLE IF EXISTS `per_perda`;
+DROP TABLE IF EXISTS `usuario`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `per_perda` (
-  `per_codigo` int(11) NOT NULL AUTO_INCREMENT,
-  `per_ordem` int(10) NOT NULL,
-  `per_produto` varchar(45) NOT NULL,
-  `per_quantidade` int(4) NOT NULL,
-  `per_motivo` varchar(200) NOT NULL,
-  PRIMARY KEY (`per_codigo`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+CREATE TABLE `usuario` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT,
+  `Nome` varchar(255) NOT NULL,
+  `Sobrenome` varchar(45) NOT NULL,
+  `Senha` varchar(45) NOT NULL,
+  `Status_usuario` varchar(45) NOT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `per_perda`
+-- Dumping data for table `usuario`
 --
 
-LOCK TABLES `per_perda` WRITE;
-/*!40000 ALTER TABLE `per_perda` DISABLE KEYS */;
-INSERT INTO `per_perda` VALUES (1,'bloco x',100,'qualquer');
-/*!40000 ALTER TABLE `per_perda` ENABLE KEYS */;
+LOCK TABLES `usuario` WRITE;
+/*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
+/*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -221,7 +221,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-10-04 19:41:03
-=======
--- Dump completed on 2018-10-14 22:26:53
->>>>>>> 756bd54a1126ea422e22f223dded9085342a8c02
+-- Dump completed on 2018-10-16 20:32:02

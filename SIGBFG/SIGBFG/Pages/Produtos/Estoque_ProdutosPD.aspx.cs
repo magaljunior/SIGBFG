@@ -14,13 +14,43 @@ public partial class Pages_Estoque_Produtos : System.Web.UI.Page
     {
         ProdutoBD bd = new ProdutoBD();
         DataSet ds = bd.SelectAll();
-        GridView1.DataSource = ds.Tables[0].DefaultView;
-        GridView1.DataBind();
+        int rows = ds.Tables[0].Rows.Count;
+
+        if (rows > 0)
+        {
+            GridView1.DataSource = ds.Tables[0].DefaultView;
+            GridView1.DataBind();
+            lblMensagem.Text = "Produtos encontrados : " + rows.ToString();
+            GridView1.Visible = true;
+        }
+        else
+        {
+            lblMensagem.Text = "Nenhum produto encontrado";
+            GridView1.Visible = false;
+        }
     }
+
     protected void Page_Load(object sender, EventArgs e)
     {
-        Carrega();
+        if (!Page.IsPostBack)
+        {
+            Carrega();
+        }
+
+        decimal ValorTotal = 0;
+
+        foreach (GridViewRow row in GridView1.Rows)
+        {
+            if (row.RowType == DataControlRowType.DataRow)
+            {
+                if (!String.IsNullOrEmpty(row.Cells[2].Text))
+                    ValorTotal += Decimal.Parse(row.Cells[2].Text);
+            }
+        }
+
+        txtTotal.Text = ValorTotal.ToString("");
     }
+
     protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
     {
         int codigo = 0;

@@ -7,7 +7,7 @@
     <title></title>
     <style type="text/css">
         #form1 {
-            height: 558px;
+            height: 617px;
         }
 
         #TextArea1 {
@@ -59,28 +59,31 @@
     </script>
 
 </head>
-<body style="height: 564px">
+<body style="height: 620px">
     <div class="container-fluid">
         <div class="form-group">
             <form id="form1" runat="server">
-                <div>
+                <div style="height: 150px">
                     <br />
                     <a class="btn btn-primary" href="../ADM/Administrador.aspx">Inicio</a>
-                    <asp:Button class="btn btn-primary" ID="btnCadastrar" runat="server" OnClick="btnCadastrar_Click" Style="margin-left: 2px" Text="Cadastrar Produtos" />
-                    <asp:Button class="btn btn-primary"  ID="btnListar" runat="server" OnClick="btnListar_Click" Style="margin-left: 0px" Text="Listar Produtos" />
-                    <asp:Button class="btn btn-primary"  ID="btnEstoqueAtual" runat="server" Text="Estoque Atual de Produtos" OnClick="btnEstoqueAtual_Click" />
+                    <a class="btn btn-primary" href="CadastrarPD.aspx">Cadastrar Produtos</a>
+                    <a class="btn btn-primary" href="ListarPD.aspx">Listar Produtos</a>
+                    <a class="btn btn-primary" href="Estoque_ProdutosPD.aspx">Estoque Atual de Produtos</a>
                     <br />
                     <br />
                     <h1>Alteração de Produtos</h1>
                     <br />
                 </div>
+                    <br />
                 <p>
                     <asp:Label runat="server" Text="Nome:"></asp:Label>
                     <asp:TextBox ID="txtNome" runat="server" Style="margin-left: 23px" Width="362px"></asp:TextBox>
                     &nbsp;&nbsp;&nbsp;
                 </p>
-                <asp:Label ID="Label2" runat="server" Text="Preço:"></asp:Label>
+&nbsp;<asp:Label ID="Label2" runat="server" Text="Preço:"></asp:Label>
                 <asp:TextBox ID="txtPreco" runat="server" Style="margin-left: 24px"></asp:TextBox>
+                <br />
+                <br />
                 <p>
                     <asp:Label ID="Label3" runat="server" Text="Quantidade Mínima:"></asp:Label>
                     <asp:TextBox ID="txtQuantidadeMinima" runat="server" Style="margin-left: 25px"></asp:TextBox>
@@ -90,7 +93,9 @@
                 </p>
                 <div style="margin-left: 80px">
                     <asp:TextBox ID="txtDescricao" runat="server" Height="93px" Width="290px"></asp:TextBox>
+                    <br />
                 </div>
+                    <br />
                 <asp:Button class="btn btn-primary"  ID="btnSalvar" runat="server" OnClick="btnSalvar_Click" Text="Salvar" />
                 <br />
                 <br />

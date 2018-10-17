@@ -23,11 +23,27 @@
 <body>
     <div class="container-fluid">
         <div>
+            <center>
            <br />
             <a class="btn btn-primary" href="../Produtos/ListarPD.aspx">Produtos</a>
             <a class="btn btn-primary" href="../Metas/Listar.aspx">Metas</a>
             <a class="btn btn-primary" href="../Perda/Listar.aspx">Perdas</a>
+                </center>
 
+            <div>
+                <ul class="nav nav-tabs">
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#">Separated link</a>
+                    </div>
+                  </li>
+                </ul>
+            </div>
 
         <form id="form1" runat="server">
             <div>
@@ -35,7 +51,7 @@
                     Bem Vindo ao Sistema</p>
             </div>
         </form>
-
+           
         </div>
     </div>
 </body>
