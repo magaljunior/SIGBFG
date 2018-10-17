@@ -6,11 +6,13 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
+    <script src="../../Scripts/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
 <body>
     <form id="form1" runat="server">
         <div id="iblMensagem" style="margin-left: 40px">
-            <a href="Listar.aspx">Listar</a>
+            <a class="btn btn-primary" href="Listar.aspx" role="button">Listar</a>
             <br />
             <br />
             <br />
@@ -34,7 +36,7 @@
             <asp:Label ID="Label7" runat="server" Text="Data de Expiração: "></asp:Label>
             <asp:TextBox ID="txtDataexpiracao" runat="server"></asp:TextBox>
             <br />
-            <asp:Button ID="btnSalvar" runat="server" OnClick="btnSalvar_Click" Text="Salvar" />
+            <asp:Button ID="btnSalvar" class="btn btn-primary" runat="server" OnClick="btnSalvar_Click" Text="Salvar" />
             <br />
             <asp:Label ID="lblMensagem" runat="server"></asp:Label>
             <br />
