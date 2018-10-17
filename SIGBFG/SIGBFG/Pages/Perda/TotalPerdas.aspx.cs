@@ -4,10 +4,11 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using WebSitePi.Classes;
 using WebSitePi.Persistencia;
 using System.Data;
 
-public partial class Paginas_Listar : System.Web.UI.Page
+public partial class Pages_Perda_TotalPerdas : System.Web.UI.Page
 {
     private void Carrega()
     {
@@ -35,31 +36,18 @@ public partial class Paginas_Listar : System.Web.UI.Page
         {
             Carrega();
         }
-    }
 
-        protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
+        decimal ValorTotal = 0;
+
+        foreach (GridViewRow row in GridView1.Rows)
         {
-            int codigo = 0;
-            switch (e.CommandName)
+            if (row.RowType == DataControlRowType.DataRow)
             {
-                case "Alterar":
-                    codigo = Convert.ToInt32(e.CommandArgument);
-                    Session["ID"] = codigo;
-                    Response.Redirect("Alterar.aspx");
-                    break;
-                case "Deletar":
-                    codigo = Convert.ToInt32(e.CommandArgument);
-                    PerdaBD bd = new PerdaBD();
-                    bd.Delete(codigo);
-                    Carrega();
-                    break;
-                default:
-                    break;
+                if (!String.IsNullOrEmpty(row.Cells[2].Text))
+                    ValorTotal += Decimal.Parse(row.Cells[2].Text);
             }
         }
 
-    protected void btnCadastrar_Click(object sender, EventArgs e)
-    {
-        Response.Redirect("Cadastrar.aspx");
+        txtTotal.Text = ValorTotal.ToString("");
     }
 }

@@ -12,6 +12,31 @@
     <script src="../../Scripts/jquery.mask.min.js"></script>
 
      <title></title>
+
+            <!--VALIDAÇÃO-->
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $("#form1").validate({
+                rules: {
+                    txtOrdem: {
+                        required: true,
+                    },
+                    txtProduto: {
+                        required: true
+                    },
+                    txtQuantidade: {
+                        required: true,
+                        maxlength: 11
+                    },
+                    txtMotivo: {
+                        required: true
+                    }
+                }
+            })
+        })
+    </script>
+
 </head>
 
 
@@ -53,10 +78,17 @@
            <a class="btn btn-primary" href="../ADM/Administrador.aspx">Inicio</a>
             <a class="btn btn-primary" href="Cadastrar.aspx">Cadastrar Perdas</a>
             <a class="btn btn-primary" href="Listar.aspx">Lista de Perdas</a>
+            <a class="btn btn-primary" href="TotalPerdas.aspx">Total de Perdas Cadastradas</a>
         </div>
                <h1>Alterar perda de Produto</h1>
         
               
+
+            
+        
+
+               <p>
+
                    <asp:Label ID="Label" runat="server" Text="Ordem de Serviço:"></asp:Label>
                    <asp:TextBox ID="txtOrdem" runat="server" Width="117px"></asp:TextBox>
                <br />
@@ -64,10 +96,10 @@
        
          
             <asp:Label runat="server" Text="Produto:"></asp:Label>
-            <asp:TextBox ID="txtProduto" runat="server" Width="151px" style="margin-left: 31px"></asp:TextBox>
+            <asp:TextBox ID="txtProduto" runat="server" Width="162px" style="margin-left: 31px"></asp:TextBox>
             <br/><br/>
             <asp:Label runat="server" Text="Quantidade:"></asp:Label>
-            <asp:TextBox ID="txtQuantidade" runat="server" style="margin-left: 13px" Width="145px"></asp:TextBox>
+            <asp:TextBox ID="txtQuantidade" runat="server" style="margin-left: 13px" Width="155px"></asp:TextBox>
             <br/><br/>
             <asp:Label runat="server" Text="Motivo:"></asp:Label>
             <br />

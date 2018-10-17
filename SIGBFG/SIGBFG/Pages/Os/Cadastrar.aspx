@@ -9,19 +9,29 @@
     <script src="../../Scripts/jquery-3.3.1.min.js"></script>
     <title></title>
 </head>
+<<<<<<< HEAD
 <body style="height: 551px">
     <div class="container-fluid">
+=======
+<body style="height: 575px">
+    <div class="container" style="height: 580px">
+>>>>>>> b19ec6c5db82a17dc900a0579ffcb0b98ad41461
     <form id="form1" runat="server">
         
         <div id="iblMensagem" style="margin-left: 40px">
-            <center>
+            <center style="height: 578px">
                    <br />
                  <div id="logo" style="width: 100%; background-color: #000066; height:70px" >
                      <br />
             <a class="btn btn-primary" href="../ADM/Administrador.aspx">Inicio</a>
+<<<<<<< HEAD
             <a class="btn btn-primary" href="Listar.aspx">Lista de O.S</a>
             </div>
             <h1>Cadastro Ordem de Serviço</h1>
+=======
+            <a class="btn btn-primary" href="Listar.aspx">Lista de O.S</a><br />
+&nbsp;<h1>Cadastro Ordem de Serviço</h1>
+>>>>>>> b19ec6c5db82a17dc900a0579ffcb0b98ad41461
                      <br />
             
             <asp:Label ID="Label2" runat="server" Text="Funcionario: "></asp:Label>
@@ -49,6 +59,7 @@
                 <br />
             <br />
             <asp:Button CssClass="btn btn-primary" ID="btnSalvar" runat="server" OnClick="btnSalvar_Click" Text="Salvar" />
+                   <br />
             <br />
             <asp:Label ID="lblMensagem" runat="server"></asp:Label>
             <br />

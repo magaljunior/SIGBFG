@@ -11,7 +11,33 @@
     <script src="../../Scripts/Validacao/localization/messages_pt_PT.min.js"></script>
     <script src="../../Scripts/jquery.mask.min.js"></script>
 
+
     <title></title>
+
+        <!--VALIDAÇÃO-->
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $("#form1").validate({
+                rules: {
+                    txtOrdem: {
+                        required: true,
+                    },
+                    txtProduto: {
+                        required: true
+                    },
+                    txtQuantidade: {
+                        required: true,
+                        maxlength: 11
+                    },
+                    txtMotivo: {
+                        required: true
+                    }
+                }
+            })
+        })
+    </script>
+
 </head>
 
 
@@ -54,7 +80,11 @@
                      <br />
             <a class="btn btn-primary" href="../ADM/Administrador.aspx">Inicio</a>
             <a class="btn btn-primary" href="Listar.aspx">Lista de Perdas</a>
+            <a class="btn btn-primary" href="TotalPerdas.aspx">Total de Perdas Cadastradas</a
                     </div>
+
+            >
+
             <br />
                 <br />
                 <h1>Perda de Produto</h1>

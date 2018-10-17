@@ -31,6 +31,7 @@
             <a class="btn btn-primary" href="../Produtos/ListarPD.aspx">Produtos</a>
             <a class="btn btn-primary" href="../Metas/Listar.aspx">Metas</a>
             <a class="btn btn-primary" href="../Perda/Listar.aspx">Perdas</a>
+<a class="btn btn-primary" href="../Os/Listar.aspx">Ordem de Serviço</a>
               </div>
                 
             <div>
@@ -38,6 +39,9 @@
                     Bem Vindo ao Sistema</p>
             </div>
 
+        
+
+            
         
     </div>
 </body>

@@ -17,7 +17,11 @@
                      <br />
         <a class="btn btn-primary" href="Cadastrar.aspx">Cadastrar</a>
         <a class="btn btn-primary" href="Listar.aspx">Listar</a>
+<<<<<<< HEAD
                  </div>
+=======
+            <br />
+>>>>>>> b19ec6c5db82a17dc900a0579ffcb0b98ad41461
         <br />
         <h1>
             Alteração de Ordem de Serviço
@@ -49,6 +53,7 @@
         <br />
         <br />
         <asp:Button CssClass="btn btn-primary" ID="btnSalvar" runat="server" OnClick="btnSalvar_Click" Text="Salvar" />
+            <br />
         <br />
        
         <asp:Label ID="lblMensagem" runat="server"></asp:Label>

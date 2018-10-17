@@ -28,6 +28,7 @@ public partial class Pages_Estoque_Produtos : System.Web.UI.Page
             lblMensagem.Text = "Nenhum produto encontrado";
             GridView1.Visible = false;
         }
+
     }
 
     protected void Page_Load(object sender, EventArgs e)
