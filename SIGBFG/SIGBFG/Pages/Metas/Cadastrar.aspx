@@ -43,6 +43,7 @@
 
 <body style="height: 294px">
     <div class="container-fluid">
+        <center>
         <br />
         <a class="btn btn-primary" href="../ADM/Administrador.aspx">Inicio</a>
         <a class="btn btn-primary" href="Listar.aspx">Lista de Metas</a>
@@ -58,22 +59,23 @@
                     <br />
 
                     <asp:Label runat="server" Text="Mês:"></asp:Label>
-                    <asp:TextBox ID="txtMes" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtMes" runat="server" Width="109px"></asp:TextBox>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Label runat="server" Text="Ano:"></asp:Label>
-                    <asp:TextBox ID="txtAno" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtAno" runat="server" Width="71px"></asp:TextBox>
                     <br />
                     <br />
                     <asp:Label runat="server" Text="Meta:"></asp:Label>
-                    <asp:TextBox ID="txtMeta" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtMeta" runat="server" Width="127px"></asp:TextBox>
                     <br />
                     <br />
                     <asp:Label runat="server" Text="Produto:"></asp:Label>
-                    <asp:TextBox ID="txtProduto" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtProduto" runat="server" Width="105px"></asp:TextBox>
                     <br />
                     <br />
                     <asp:Label runat="server" Text="Descrição:"></asp:Label>
-                    <asp:TextBox ID="txtDescricao" runat="server" Height="68px" Width="322px"></asp:TextBox>
+                    <br />
+                    <asp:TextBox ID="txtDescricao" runat="server" Height="56px" Width="246px"></asp:TextBox>
                     <br />
                     <br />
                     <asp:Button class="btn btn-primary" ID="btnSalvar" runat="server" Text="Salvar" OnClick="btnSalvar_Click" />
@@ -86,7 +88,7 @@
 
         </div>
 
-
+            </center>
     </div>
 
 </body>

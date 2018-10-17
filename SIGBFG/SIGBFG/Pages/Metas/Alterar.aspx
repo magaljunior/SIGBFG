@@ -17,6 +17,7 @@
 <body>
 
      <div class="container-fluid">
+         <center>
         <br />
          <a class="btn btn-primary" href="../ADM/Administrador.aspx">Inicio</a>
          <a class="btn btn-primary" href="Cadastrar.aspx">Cadastrar Metas</a>
@@ -34,21 +35,21 @@
                 <h1>Alterar Meta</h1>
             <br />
             <asp:Label runat="server" Text="Mês:"></asp:Label>
-            <asp:TextBox ID="txtMes" runat="server"></asp:TextBox>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:TextBox ID="txtMes" runat="server" Width="110px"></asp:TextBox>
+                &nbsp
             <asp:Label runat="server" Text="Ano:"></asp:Label>
-            <asp:TextBox ID="txtAno" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txtAno" runat="server" Width="95px"></asp:TextBox>
             <br />
             <br />
             <asp:Label runat="server" Text="Meta:"></asp:Label>
-            <asp:TextBox ID="txtMeta" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txtMeta" runat="server" ></asp:TextBox>
             <br />
             <br />
             <asp:Label runat="server" Text="Produto:"></asp:Label>
-            <asp:TextBox ID="txtProduto" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txtProduto" runat="server" Width="163px"></asp:TextBox>
             <br />
             <br />
-            <asp:Label runat="server" Text="Descrição:"></asp:Label>
+            <asp:Label runat="server" Text="Descrição:"></asp:Label><br />
             <asp:TextBox ID="txtDescricao" runat="server" Height="68px" Width="322px"></asp:TextBox>
                 <br />
             <br />
@@ -60,6 +61,7 @@
         </div>
     </form>
             </div>
+             </center>
          </div>
 </body>
 </html>

@@ -46,7 +46,7 @@
         
             <br />
             <br/>
-           <asp:Button CssClass="btn btn-success" ID="btnSalvar" runat="server" OnClick="btnSalvar_Click" Text="Salvar"  />
+           <asp:Button CssClass="btn btn-primary" ID="btnSalvar" runat="server" OnClick="btnSalvar_Click" Text="Salvar"  />
             <br/>
         <asp:Label ID="lblMensagem" runat="server"></asp:Label></center>
         </div>

@@ -64,6 +64,7 @@
 </head>
 <body style="height: 631px">
     <div class="container-fluid">
+        <center>
             <div class="form-group">
                 <br />
                         <a class="btn btn-primary" href="../ADM/Administrador.aspx">Inicio</a>
@@ -77,28 +78,28 @@
                     <br />
 
                     <asp:Label ID="Label1" runat="server" Text="Nome:"></asp:Label>
-                    <asp:TextBox ID="txtNome" runat="server" Style="margin-left: 18px" Width="300px"></asp:TextBox>
+                    <asp:TextBox ID="txtNome" runat="server" Style="margin-left: 18px" Width="291px"></asp:TextBox>
 
                      <br />
                      <br />
 
                     <asp:Label ID="Label2" runat="server" Text="Preço:"></asp:Label>
 
-                    <asp:TextBox ID="txtPreco" runat="server" Style="margin-left: 24px" Width="188px"></asp:TextBox>
+                    <asp:TextBox ID="txtPreco" runat="server" Style="margin-left: 107px" Width="209px" Height="25px"></asp:TextBox>
 
                     <br />
 
                     <br />
 
                     <asp:Label ID="Label3" runat="server" Text="Quantidade Mínima:"></asp:Label>
-                    <asp:TextBox ID="txtQuantidadeMinima" runat="server" Style="margin-left: 22px"></asp:TextBox>
+                    <asp:TextBox ID="txtQuantidadeMinima" runat="server" Style="margin-left: 16px" Width="200px"></asp:TextBox>
 
                      <br />
 
                      <br />
 
                      <asp:Label runat="server" Text="Foto:"></asp:Label>
-                     <asp:FileUpload ID="FileUpload1" runat="server" Style="margin-left: 15px" />
+                     <asp:FileUpload ID="FileUpload1" runat="server" Style="margin-left: 15px" Width="318px" />
 
                      <br />
 
@@ -115,6 +116,7 @@
                 <asp:Label ID="lblMensagem" runat="server"></asp:Label>
             </form>
         </div>
+            </center>
     </div>
 </body>
 </html>

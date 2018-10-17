@@ -17,6 +17,7 @@
 <body>
 
     <div class="container-fluid">
+        <center>
         <br />
         <a class="btn btn-primary" href="../ADM/Administrador.aspx">Inicio</a>
         <a class="btn btn-primary" href="Cadastrar.aspx">Cadastrar Metas</a>
@@ -28,10 +29,10 @@
             <form id="form1" runat="server">
                 <div style="height: 199px">
                     <br />
-                    <center><h1>Lista de Metas</h1>
+                    <h1>Lista de Metas</h1>
                         <p>
                             <asp:Label ID="lblMensagem" runat="server"></asp:Label>
-                        </p></center>
+                        </p>
                     <br />
                     <asp:GridView ID="GridView1" runat="server" OnRowCommand="GridView1_RowCommand" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" ForeColor="Black" GridLines="Vertical" Height="50px" Width="100%">
                         <AlternatingRowStyle BackColor="#CCCCCC" />
@@ -72,6 +73,7 @@
                 </div>
             </form>
         </div>
+                </center>
     </div>
 </body>
 </html>

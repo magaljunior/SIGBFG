@@ -36,7 +36,7 @@
             <br />
             <asp:TextBox ID="txtMotivo" runat="server" Height="71px" Width="232px" style="margin-left: 0px"></asp:TextBox>
             <br /> <br /> <br />
-            <asp:Button class="btn btn-success" ID="btnSalvar" runat="server" Text="Alterar" OnClick="btnSalvar_Click1" />
+            <asp:Button class="btn btn-primary" ID="btnSalvar" runat="server" Text="Alterar" OnClick="btnSalvar_Click1" />
             <br />
                 <br/>
         <asp:Label ID="lblMensagem" runat="server"></asp:Label></center>
