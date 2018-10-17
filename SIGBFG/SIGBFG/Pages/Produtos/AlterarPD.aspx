@@ -62,6 +62,7 @@
 <body style="height: 620px">
     <div class="container-fluid">
         <div class="form-group">
+            <center>
             <form id="form1" runat="server">
                 <div style="height: 150px">
                     <br />
@@ -77,16 +78,16 @@
                     <br />
                 <p>
                     <asp:Label runat="server" Text="Nome:"></asp:Label>
-                    <asp:TextBox ID="txtNome" runat="server" Style="margin-left: 23px" Width="362px"></asp:TextBox>
+                    <asp:TextBox ID="txtNome" runat="server" Style="margin-left: 23px" Width="255px"></asp:TextBox>
                     &nbsp;&nbsp;&nbsp;
                 </p>
 &nbsp;<asp:Label ID="Label2" runat="server" Text="Preço:"></asp:Label>
-                <asp:TextBox ID="txtPreco" runat="server" Style="margin-left: 24px"></asp:TextBox>
+                <asp:TextBox ID="txtPreco" runat="server" Style="margin-left: 22px" Width="157px"></asp:TextBox>
                 <br />
                 <br />
                 <p>
                     <asp:Label ID="Label3" runat="server" Text="Quantidade Mínima:"></asp:Label>
-                    <asp:TextBox ID="txtQuantidadeMinima" runat="server" Style="margin-left: 25px"></asp:TextBox>
+                    <asp:TextBox ID="txtQuantidadeMinima" runat="server" Style="margin-left: 25px" Width="57px"></asp:TextBox>
                 </p>
                 <p>
                     <asp:Label ID="Label5" runat="server" Text="Descrição:"></asp:Label>
@@ -102,6 +103,7 @@
                 <asp:Label ID="lblMensagem" runat="server"></asp:Label>
             </form>
         </div>
+        </center>
     </div>
 </body>
 </html>
