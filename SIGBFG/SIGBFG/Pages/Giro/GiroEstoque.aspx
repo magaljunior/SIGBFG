@@ -57,6 +57,12 @@
             <br />
             <br />
 &nbsp;&nbsp;&nbsp;
+            <asp:Label ID="lblEstoqueAtual0" runat="server" Text="Estoque Máximo:" Font-Bold="True"></asp:Label>
+            <br />
+            <asp:TextBox ID="estoqueMaximo" runat="server" OnTextChanged="txtVendas_TextChanged" Width="86px" style="margin-left: 18px"></asp:TextBox>
+            <br />
+            <br />
+&nbsp;&nbsp;&nbsp;
             <asp:Label ID="lblEstoqueAtual" runat="server" Text="Estoque Atual:" Font-Bold="True"></asp:Label>
             <br />
             &nbsp;&nbsp;&nbsp;
