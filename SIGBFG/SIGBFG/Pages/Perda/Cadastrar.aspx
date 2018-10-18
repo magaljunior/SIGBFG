@@ -10,6 +10,8 @@
     <script src="../../Scripts/Validacao/jquery.validate.min.js"></script>
     <script src="../../Scripts/Validacao/localization/messages_pt_PT.min.js"></script>
     <script src="../../Scripts/jquery.mask.min.js"></script>
+
+
     <title></title>
 
         <!--VALIDAÇÃO-->
@@ -37,14 +39,52 @@
     </script>
 
 </head>
+
+
+    <!--VALIDAÇÃO-->
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $("#form1").validate({
+            rules: {
+                txtOrdem: {
+                    required: true,
+                },
+                txtQuantidade: {
+                    required: true
+                },
+                txtProduto: {
+                    required: true,
+                    maxlength: 11
+                },
+                txtMotivo: {
+                    required: true,
+                    minlength: 10
+                }
+            }
+        })
+
+
+    })
+</script>
+
+
+
+
 <body style="height: 551px">
     <form id="form1" runat="server">
-        <div class="container" style="height: 553px">
+        <div class="container-fluid">
             <center>
             <br />
+        <div id="logo" style="width: 100%; background-color: #000066; height:70px" >
+                     <br />
             <a class="btn btn-primary" href="../ADM/Administrador.aspx">Inicio</a>
             <a class="btn btn-primary" href="Listar.aspx">Lista de Perdas</a>
-            <a class="btn btn-primary" href="TotalPerdas.aspx">Total de Perdas Cadastradas</a>
+            <a class="btn btn-primary" href="TotalPerdas.aspx">Total de Perdas Cadastradas</a
+                    </div>
+
+            >
+
             <br />
                 <br />
                 <h1>Perda de Produto</h1>

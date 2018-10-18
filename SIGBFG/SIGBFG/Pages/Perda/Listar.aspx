@@ -13,10 +13,13 @@
         <div class="container-fluid">
             <center>
               <br />
+                <div id="logo" style="width: 100%; background-color: #000066; height:70px" >
+                     <br />
                 <a class="btn btn-primary" href="../ADM/Administrador.aspx">Inicio</a>
                 <a class="btn btn-primary" href="Cadastrar.aspx">Cadastrar Perdas</a>
                 <a class="btn btn-primary" href="TotalPerdas.aspx">Total de Perdas Cadastradas</a>
-              <br />
+                    </div>
+<br />
                 <br />
                 <h1>Lista de Perdas de Produto</h1>
               <br />

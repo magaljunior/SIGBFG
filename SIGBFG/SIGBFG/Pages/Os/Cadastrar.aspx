@@ -9,16 +9,22 @@
     <script src="../../Scripts/jquery-3.3.1.min.js"></script>
     <title></title>
 </head>
-<body style="height: 575px">
-    <div class="container" style="height: 580px">
+<body>
+    <div class="container-fluid">
+
     <form id="form1" runat="server">
         
-        <div id="iblMensagem" style="margin-left: 40px">
+        
             <center style="height: 578px">
                    <br />
+                 <div id="logo" style="width: 100%; background-color: #000066; height:70px" >
+                     <br />
             <a class="btn btn-primary" href="../ADM/Administrador.aspx">Inicio</a>
-            <a class="btn btn-primary" href="Listar.aspx">Lista de O.S</a><br />
-&nbsp;<h1>Cadastro Ordem de Serviço</h1>
+            <a class="btn btn-primary" href="Listar.aspx">Lista de O.S</a>
+            </div>
+                <br />
+            <h1>Cadastro Ordem de Serviço</h1>
+
                      <br />
             
             <asp:Label ID="Label2" runat="server" Text="Funcionario: "></asp:Label>
@@ -51,7 +57,7 @@
             <asp:Label ID="lblMensagem" runat="server"></asp:Label>
             <br />
                 </center>
-            </div>
+            
     </form>
         </div>
 </body>

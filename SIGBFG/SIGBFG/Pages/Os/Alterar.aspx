@@ -10,10 +10,16 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div class="container-fluid"><br />
+    <div class="container-fluid">
         <center>
+            <br />
+             <div id="logo" style="width: 100%; background-color: #000066; height:70px" >
+                     <br />
+        <a class="btn btn-primary" href="../ADM/Administrador.aspx">Inicio</a>
         <a class="btn btn-primary" href="Cadastrar.aspx">Cadastrar</a>
         <a class="btn btn-primary" href="Listar.aspx">Listar</a>
+
+                 </div>
             <br />
         <br />
         <h1>

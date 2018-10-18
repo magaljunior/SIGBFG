@@ -19,6 +19,7 @@ public partial class Pages_GiroEstoque : System.Web.UI.Page
         int EstoqueAtual = Convert.ToInt32(txtEstoqueMaximo.Text) - Convert.ToInt32(txtVendas.Text);
         txtEstoqueAtual.Text = EstoqueAtual.ToString();
         return;
+       
     }
 
 
@@ -40,5 +41,10 @@ public partial class Pages_GiroEstoque : System.Web.UI.Page
     protected void btnOS_Click(object sender, EventArgs e)
     {
         Response.Redirect("ADM/OS.aspx");
+    }
+
+    protected void btnInicio_Click(object sender, EventArgs e)
+    {
+       
     }
 }

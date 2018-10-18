@@ -18,11 +18,14 @@
             <form id="form1" runat="server">
                 <div>
                     <br />
+                    <div id="logo" style="width: 100%; background-color: #000066; height:70px" >
+                     <br />
                     <a class="btn btn-primary" href="../ADM/Administrador.aspx">Inicio</a>
                     <asp:Button class="btn btn-primary" ID="btnCadastrar" runat="server" OnClick="btnCadastrar_Click" Text="Cadastrar Produtos" />
                     <asp:Button class="btn btn-primary" ID="btnListar" runat="server" OnClick="btnListar_Click" Text="Listar Produtos" />
                     <asp:Button class="btn btn-primary" ID="btnEstoqueAtual" runat="server" OnClick="btnEstoqueAtual_Click" Text="Estoque Atual de Produtos" />
-                    <br />
+                   </div>
+                        <br />
                     <br />
                     <h1>Cadastrar ou Alterar de Estoque</h1>
                     <p>&nbsp;</p>

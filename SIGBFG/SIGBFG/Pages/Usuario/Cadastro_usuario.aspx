@@ -4,14 +4,28 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <link href="../Content/Themes/bootstrap.css" rel="stylesheet" />
-    <script src="../Scripts/bootstrap.js"></script>
+   
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link href="../../Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="../../Scripts/jquery-3.3.1.min.js"></script>
+    <script src="../../Scripts/bootstrap.min.js"></script>
+    <script src="../../Scripts/Validacao/jquery.validate.min.js"></script>
+    <script src="../../Scripts/Validacao/localization/messages_pt_PT.min.js"></script>
+    <script src="../../Scripts/jquery.mask.min.js"></script>
+
     <title></title>
 </head>
-<body>
-    <form id="form1" runat="server" style="font-family: Arial, Helvetica, sans-serif; font-size: large; font-weight: normal; font-style: normal">
-        <div style="font-family: Arial, Helvetica, sans-serif; font-size: xx-large; font-weight: normal; font-style: normal; font-variant: normal" id="lbltitulo">
+<body style="height: 577px">
+    <br />
+    <div class="container-fluid">
+        <center>
+            <form id="form1" runat="server" style="font-family: Arial, Helvetica, sans-serif; font-size: large; font-weight: normal; font-style: normal; height: 555px;">
+        <div id="logo" style="width: 100%; background-color: #000066; height:70px" >
+                     <br />
+                <a class="btn btn-primary" href="../ADM/Administrador.aspx">Inicio</a>
+                <a class="btn btn-primary" href="Listar_usuario.aspx">Listar Usuários</a>
+            </div>
+&nbsp;<div style="font-family: Arial, Helvetica, sans-serif; font-size: xx-large; font-weight: normal; font-style: normal; font-variant: normal" id="lbltitulo">
             &nbsp;
             Cadastro de usuários:</div>
         <br />
@@ -35,10 +49,12 @@
         &nbsp;<asp:TextBox ID="txtconfirmaSenha" runat="server" Width="223px" TextMode="Password" ></asp:TextBox>
         <br />
         <br />
-        &nbsp;<asp:Button ID="btnSalvar" runat="server" Text="Salvar" OnClick="btnSalvar_Click" />
+        &nbsp;<asp:Button class="btn btn-primary" ID="btnSalvar" runat="server" Text="Salvar" OnClick="btnSalvar_Click" />
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="btnEditar" runat="server" OnClick="btnEditar_Click" Text="Editar" />
         <br />
     </form>
+            </center>
+
+        </div>
 </body>
 </html>

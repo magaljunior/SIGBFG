@@ -4,37 +4,57 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <link href="../Content/Themes/bootstrap.css" rel="stylesheet" />
-    <script src="../Scripts/bootstrap.js"></script>
+    <link href="../../Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="../../Scripts/bootstrap.min.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
 </head>
-<body style="height: 401px">
+<body style="height: 499px">
+
+    <div class=" container-fluid">
     <form id="form1" runat="server">
-        <div style="height: 393px; width: 832px">
+        <center>
+             <br />
+                <div id="logo" style="width: 100%; background-color: #000066; height:70px" >
+                     <br />
+                <a class="btn btn-primary" href="../ADM/Administrador.aspx">Inicio</a>
+                <a class="btn btn-primary" href="Cadastro_usuario.aspx">Cadastrar Usuário</a>
+                
+                    </div>
+            <br />
+        
             <asp:Label ID="Label1" runat="server" Text="Alterar Usuário" Font-Size="X-Large" Height="44px" Width="295px"></asp:Label>
             <br />
             <br />
-            &nbsp;<asp:Label ID="Label2" runat="server" Text="Nome"></asp:Label>
+           <asp:Label ID="Label2" runat="server" Text="Nome"></asp:Label>
             <br />
-            &nbsp;<asp:TextBox ID="txtNome" runat="server"></asp:TextBox>
-            <br />
-            <br />
-            &nbsp;<asp:Label ID="Label3" runat="server" Text="Sobrenome"></asp:Label>
-            <br />
-            &nbsp;<asp:TextBox ID="txtSobrenome" runat="server"></asp:TextBox>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+           <asp:TextBox ID="txtNome" runat="server"></asp:TextBox>
             <br />
             <br />
+            <asp:Label ID="Label3" runat="server" Text="Sobrenome"></asp:Label>
             <br />
-            &nbsp;<asp:Button ID="Button1" runat="server" Text="Salvar" OnClick="Button1_Click" />
+            <asp:TextBox ID="txtSobrenome" runat="server" Width="179px"></asp:TextBox>
+            
+             <br />
+             <br />
+            <asp:Label ID="Label4" runat="server" Text="Senha"></asp:Label>
+            
+            <br />
+            <asp:TextBox ID="txtSenha" runat="server" Width="179px"></asp:TextBox>
+            
+             <br />
+            <br />
+            <br />
+            <asp:Button CssClass="btn btn-primary" ID="Button1" runat="server" Text="Salvar" OnClick="Button1_Click" />
             <br />
             <br />
             <br />
             <br />
             <br />
             <br />
-        </div>
+       
     </form>
+        </center>
+        </div>
 </body>
 </html>

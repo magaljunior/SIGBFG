@@ -4,16 +4,30 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+    <link href="../../Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="../../Scripts/jquery-3.3.1.min.js"></script>
+    <script src="../../Scripts/bootstrap.min.js"></script>
+    <script src="../../Scripts/Validacao/jquery.validate.min.js"></script>
+    <script src="../../Scripts/Validacao/localization/messages_pt_PT.min.js"></script>
+    <script src="../../Scripts/jquery.mask.min.js"></script>
+
     <title></title>
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
+        <div class="container-fluid">
             <br />
-            <center><a href="Cadastrar.aspx">Cadastrar</a>
-            <a href="Listar.aspx">Listar</a>
+            <center>
+                <div id="logo" style="width: 100%; background-color: #000066; height:70px" >
+                     <br />
+            <a class="btn btn-primary" href="../ADM/Administrador.aspx">Inicio</a>
+            <a class="btn btn-primary" href="Cadastrar.aspx">Cadastrar</a>
+            <a class="btn btn-primary" href="Listar.aspx">Listar</a>
             <br />
-            <h1>Total de Perdas Cadastradas</h1>
+                    <br />
+                    </div>
+                <br />
+                <h1>Total de Perdas Cadastradas</h1>
             <br />
                 <asp:Label ID="Label1" runat="server" Text="Total:"></asp:Label>
 &nbsp;<asp:Label ID="txtTotal" runat="server"></asp:Label>

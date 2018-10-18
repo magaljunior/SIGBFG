@@ -10,6 +10,7 @@
     <script src="../../Scripts/Validacao/jquery.validate.min.js"></script>
     <script src="../../Scripts/Validacao/localization/messages_pt_PT.min.js"></script>
     <script src="../../Scripts/jquery.mask.min.js"></script>
+
      <title></title>
 
             <!--VALIDAÇÃO-->
@@ -37,30 +38,63 @@
     </script>
 
 </head>
+
+
+      <!--VALIDAÇÃO-->
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $("#form1").validate({
+            rules: {
+                txtOrdem: {
+                    required: true,
+                },
+                txtQuantidade: {
+                    required: true
+                },
+                txtProduto: {
+                    required: true,
+                    maxlength: 11
+                },
+                txtMotivo: {
+                    required: true,
+                    minlength: 10
+                }
+            }
+        })
+
+
+    })
+</script>
+
+
 <body>
     <form id="form1" runat="server">
-       <div>
+       <div class="container-fluid">
            <br />
-           <center> <h1>Alterar perda de Produto</h1>
-        
-        <p>
+           <center> 
+        <div id="logo" style="width: 100%; background-color: #000066; height:70px" >
+                     <br />
            <a class="btn btn-primary" href="../ADM/Administrador.aspx">Inicio</a>
             <a class="btn btn-primary" href="Cadastrar.aspx">Cadastrar Perdas</a>
             <a class="btn btn-primary" href="Listar.aspx">Lista de Perdas</a>
             <a class="btn btn-primary" href="TotalPerdas.aspx">Total de Perdas Cadastradas</a>
-        </p>
+        </div>
+               <br />
+               <h1>Alterar perda de Produto</h1>
+               <br />
 
-               <p>
                    <asp:Label ID="Label" runat="server" Text="Ordem de Serviço:"></asp:Label>
                    <asp:TextBox ID="txtOrdem" runat="server" Width="117px"></asp:TextBox>
+               <br />
+         <br />
+       
          
-        </p> 
-        
             <asp:Label runat="server" Text="Produto:"></asp:Label>
-            <asp:TextBox ID="txtProduto" runat="server" Width="151px" style="margin-left: 31px"></asp:TextBox>
+            <asp:TextBox ID="txtProduto" runat="server" Width="162px" style="margin-left: 31px"></asp:TextBox>
             <br/><br/>
             <asp:Label runat="server" Text="Quantidade:"></asp:Label>
-            <asp:TextBox ID="txtQuantidade" runat="server" style="margin-left: 13px" Width="145px"></asp:TextBox>
+            <asp:TextBox ID="txtQuantidade" runat="server" style="margin-left: 13px" Width="155px"></asp:TextBox>
             <br/><br/>
             <asp:Label runat="server" Text="Motivo:"></asp:Label>
             <br />
