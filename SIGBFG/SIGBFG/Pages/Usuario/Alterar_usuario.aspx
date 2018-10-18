@@ -9,7 +9,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
 </head>
-<body style="height: 401px">
+<body style="height: 499px">
 
     <div class=" container-fluid">
     <form id="form1" runat="server">
@@ -35,7 +35,14 @@
             <br />
             <asp:TextBox ID="txtSobrenome" runat="server" Width="179px"></asp:TextBox>
             
+             <br />
+             <br />
+            <asp:Label ID="Label4" runat="server" Text="Senha"></asp:Label>
+            
             <br />
+            <asp:TextBox ID="txtSenha" runat="server" Width="179px"></asp:TextBox>
+            
+             <br />
             <br />
             <br />
             <asp:Button CssClass="btn btn-primary" ID="Button1" runat="server" Text="Salvar" OnClick="Button1_Click" />

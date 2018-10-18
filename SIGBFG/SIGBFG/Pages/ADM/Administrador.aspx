@@ -32,13 +32,15 @@
               </div>
                 
             <div>
-                <asp:Label ID="lblBemVindo" runat="server" Font-Bold="True" Font-Size="Large" Text="Bem Vindo "></asp:Label>
+                <br />
+                <br />
+                <h1>Bem-Vindo</h1>
                 <br />
                 <br />
                 <br />
                 <br />
                 <br />
-                <asp:Label ID="lblSig" runat="server" Font-Bold="True" Font-Size="X-Large" Text="SIG BFG"></asp:Label>
+                <h2>Sistema Integrado de Gestão BFG</h2>
             </div>
     </div>
     </form>
