@@ -17,13 +17,22 @@ public partial class Paginas_Listar_usuario : System.Web.UI.Page
         DataSet ds = bd.SelectAll();
         GridView1.DataSource = ds.Tables[0].DefaultView;
         GridView1.DataBind();
+        int rows = ds.Tables[0].Rows.Count;
 
+        
     }
+
+
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        Carrega();
+        if (!Page.IsPostBack)
+        {
+            Carrega();
+        }
     }
+
+
 
     protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
     {
