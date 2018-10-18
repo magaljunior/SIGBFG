@@ -59,6 +59,10 @@
                         <ItemStyle HorizontalAlign="Center" />
                         </asp:BoundField>
 
+                        <asp:BoundField DataField="pro_ativo" HeaderText="Status">
+                        <ItemStyle HorizontalAlign="Center" />
+                        </asp:BoundField>
+
                         <asp:TemplateField HeaderText="Desativar">
                             <ItemTemplate>
                                 <asp:LinkButton ID="lbDesativar" runat="server" CommandName="Desativar"
