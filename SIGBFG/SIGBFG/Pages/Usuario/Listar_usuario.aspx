@@ -29,20 +29,21 @@
                 <br />
           
                 <br />
-        <asp:GridView ID="GridView1" runat="server" OnRowCommand="GridView1_RowCommand"  Width="100%" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black" >
+        <asp:GridView ID="GridView1" runat="server" OnRowCommand="GridView1_RowCommand"  Width="100%" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black" OnRowDataBound="GridView1_RowDataBound" >
          <Columns>
               <asp:BoundField DataField="usu_nome" HeaderText="Nome" />
              <asp:BoundField DataField="usu_sobreNome" HeaderText="Sobre nome" />
              <asp:BoundField DataField="usu_senha" HeaderText="Senha" />
              <asp:BoundField DataField="usu_ativo" HeaderText="Status" /> 
 
-             <asp:TemplateField HeaderText="Desativar">
+             <asp:TemplateField HeaderText="Desativar ou Ativar">
                     <ItemTemplate>
                         <asp:LinkButton ID="lbDesativar" runat="server" CommandName="Desativar"
                             CommandArgument='<%# Bind("usu_codigo")%>'>Desativar</asp:LinkButton>
                     </ItemTemplate>
                     <ItemStyle HorizontalAlign="Center" />
                 </asp:TemplateField>
+
              <asp:TemplateField HeaderText="Alterar">
 
                  <ItemTemplate>

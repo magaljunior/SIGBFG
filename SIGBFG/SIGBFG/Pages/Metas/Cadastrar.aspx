@@ -28,8 +28,7 @@
                     required: true
                 },
                 txtProduto: {
-                    required: true,
-                    maxlength: 11
+                    required: true
                 }
             }
         })

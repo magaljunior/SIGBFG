@@ -19,7 +19,7 @@
                      <br />
                 <a class="btn btn-primary" href="../ADM/Administrador.aspx">Inicio</a>
                 <a class="btn btn-primary" href="Cadastro_usuario.aspx">Cadastrar Usuário</a>
-                
+                <a class="btn btn-primary" href="Listar_usuario.aspx">Listar Usuário</a>
                     </div>
             <br />
         
