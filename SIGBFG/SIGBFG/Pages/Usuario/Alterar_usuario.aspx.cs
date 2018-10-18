@@ -19,6 +19,7 @@ public partial class Paginas_Alterar_usuario : System.Web.UI.Page
             Usuario usuario = bd.Select(Convert.ToInt32(Session["ID"]));
             txtNome.Text = usuario.Nome;
             txtSobrenome.Text = usuario.Sobrenome;
+            txtSenha.Text = usuario.Senha;
 
         }
 
@@ -31,6 +32,7 @@ public partial class Paginas_Alterar_usuario : System.Web.UI.Page
             Usuario usuario = bd.Select(Convert.ToInt32(Session["ID"]));
             usuario.Nome = txtNome.Text;
             usuario.Sobrenome = txtSobrenome.Text;
+            usuario.Senha = txtSenha.Text;
 
 
         if (bd.Update(usuario))

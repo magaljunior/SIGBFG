@@ -34,7 +34,7 @@
               <asp:BoundField DataField="usu_nome" HeaderText="Nome" />
              <asp:BoundField DataField="usu_sobreNome" HeaderText="Sobre nome" />
              <asp:BoundField DataField="usu_senha" HeaderText="Senha" />
-             <asp:BoundField DataField="usu_ativo" HeaderText="Ativo" /> 
+             <asp:BoundField DataField="usu_ativo" HeaderText="Status" /> 
 
              <asp:TemplateField HeaderText="Desativar">
                     <ItemTemplate>
