@@ -19,12 +19,12 @@ public partial class Paginas_Listar : System.Web.UI.Page
         {
             GridView1.DataSource = ds.Tables[0].DefaultView;
             GridView1.DataBind();
-            lblMensagem.Text = "Perda(s) encontrada(s) : " + rows.ToString();
+            lblMensagem.Text = "Usuário(s) encontrado(s) : " + rows.ToString();
             GridView1.Visible = true;
         }
         else
         {
-            lblMensagem.Text = "Nenhuma perda encontrada";
+            lblMensagem.Text = "Nenhuma usuário encontradao";
             GridView1.Visible = false;
         }
     }

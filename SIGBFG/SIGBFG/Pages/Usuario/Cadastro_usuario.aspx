@@ -15,14 +15,15 @@
 
     <title></title>
 </head>
-<body style="height: 551px">
+<body style="height: 577px">
     <br />
     <div class="container-fluid">
         <center>
-            <form id="form1" runat="server" style="font-family: Arial, Helvetica, sans-serif; font-size: large; font-weight: normal; font-style: normal">
+            <form id="form1" runat="server" style="font-family: Arial, Helvetica, sans-serif; font-size: large; font-weight: normal; font-style: normal; height: 555px;">
         <div id="logo" style="width: 100%; background-color: #000066; height:70px" >
                      <br />
-                <a class="btn btn-primary" href="../ADM/Administrador.aspx">Inicio</a><br />
+                <a class="btn btn-primary" href="../ADM/Administrador.aspx">Inicio</a>
+                <a class="btn btn-primary" href="Listar_usuario.aspx">Listar Usuários</a>
             </div>
 &nbsp;<div style="font-family: Arial, Helvetica, sans-serif; font-size: xx-large; font-weight: normal; font-style: normal; font-variant: normal" id="lbltitulo">
             &nbsp;
@@ -50,7 +51,6 @@
         <br />
         &nbsp;<asp:Button class="btn btn-primary" ID="btnSalvar" runat="server" Text="Salvar" OnClick="btnSalvar_Click" />
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button class="btn btn-primary" ID="btnEditar" runat="server" OnClick="btnEditar_Click" Text="Editar" />
         <br />
     </form>
             </center>

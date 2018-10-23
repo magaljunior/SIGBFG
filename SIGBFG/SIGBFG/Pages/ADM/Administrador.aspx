@@ -23,22 +23,24 @@
            <br />
                  <div id="logo" style="width: 100%; background-color: #000066; height:70px" >
                      <br />
-            <a class="btn btn-primary" href="../Usuario/Cadastro_usuario.aspx">Usuários</a>
+            <a class="btn btn-primary" href="../Usuario/Listar_usuario.aspx">Usuários</a>
             <a class="btn btn-primary" href="../Produtos/ListarPD.aspx">Produtos</a>
             <a class="btn btn-primary" href="../Metas/Listar.aspx">Metas</a>
             <a class="btn btn-primary" href="../Perda/Listar.aspx">Perdas</a>
-            <a class="btn btn-primary" href="../Os/Cadastrar.aspx">Ordem de Serviço</a>
+            <a class="btn btn-primary" href="../Os/Listar.aspx">Ordem de Serviço</a>
             <a class="btn btn-primary" href="../Giro/GiroEstoque.aspx">Calculadora</a>
               </div>
                 
             <div>
-                <asp:Label ID="lblBemVindo" runat="server" Font-Bold="True" Font-Size="Large" Text="Bem Vindo "></asp:Label>
+                <br />
+                <br />
+                <h1>Bem-Vindo</h1>
                 <br />
                 <br />
                 <br />
                 <br />
                 <br />
-                <asp:Label ID="lblSig" runat="server" Font-Bold="True" Font-Size="X-Large" Text="SIG BFG"></asp:Label>
+                <h2>Sistema Integrado de Gestão BFG</h2>
             </div>
     </div>
     </form>

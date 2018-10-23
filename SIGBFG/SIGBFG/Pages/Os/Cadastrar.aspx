@@ -7,7 +7,42 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link href="../../Content/bootstrap.min.css" rel="stylesheet" />
     <script src="../../Scripts/jquery-3.3.1.min.js"></script>
-    <title></title>
+    <script src="../../Scripts/jquery.mask.min.js"></script>
+    <script src="../../Scripts/Validacao/jquery.validate.min.js"></script>
+    <script src="../../Scripts/Validacao/localization/messages_pt_PT.js"></script>
+    <title>Cadastrar</title>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.data').mask('00/00/0000');
+                                    })
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#form1").validate({
+                rules: {
+                    funcionario: {
+                        required: true
+                    },
+                    produto: {
+                        required: true
+                    },
+                    quantidade: {
+                        required: true
+                    },
+                    descricao: {
+                        required: true
+                    },
+                    datainicio: {
+                        required: true
+                    },
+                    dataexpiracao: {
+                        required: true
+                    }
+                    
+                }
+            })
+                                    })
+    </script>
 </head>
 <body>
     <div class="container-fluid">
@@ -28,27 +63,27 @@
                      <br />
             
             <asp:Label ID="Label2" runat="server" Text="Funcionario: "></asp:Label>
-            <asp:TextBox ID="txtFuncionario" runat="server" Width="153px"></asp:TextBox>
+            <asp:TextBox ID="txtFuncionario" name="funcionario" runat ="server" Width="153px"></asp:TextBox>
                 <br />
             <br />
             <asp:Label ID="Label3" runat="server" Text="Produto: "></asp:Label>
-            <asp:TextBox ID="txtProduto" runat="server" Width="177px" ></asp:TextBox>
+            <asp:TextBox ID="txtProduto"  name="produto" runat="server" Width="177px" ></asp:TextBox>
                 <br />
             <br />
             <asp:Label ID="Label4" runat="server" Text="Quantidade: "></asp:Label>
-            <asp:TextBox ID="txtQuantidade" runat="server" Width="150px"></asp:TextBox>
+            <asp:TextBox ID="txtQuantidade"  name="quantidade" runat="server" Width="150px"></asp:TextBox>
                 <br />
             <br />
             <asp:Label ID="Label5" runat="server" Text="Descrição: "></asp:Label>
-            <asp:TextBox ID="txtDescricao" runat="server" Width="163px"></asp:TextBox>
+            <asp:TextBox ID="txtDescricao"  name="descricao" runat="server" Width="163px"></asp:TextBox>
                 <br />
             <br />
             <asp:Label ID="Label6" runat="server" Text="Data de Início: "></asp:Label>
-            <asp:TextBox ID="txtDatainicio" runat="server" Width="133px"></asp:TextBox>
+            <asp:TextBox ID="txtDatainicio" class="data"  name="datainicio" runat="server" Width="133px"></asp:TextBox>
                 <br />
             <br />
             <asp:Label ID="Label7" runat="server" Text="Data de Expiração: "></asp:Label>
-            <asp:TextBox ID="txtDataexpiracao" runat="server" Width="103px"></asp:TextBox>
+            <asp:TextBox ID="txtDataexpiracao" class="data"  name="dataexpiracao" runat ="server" Width="103px"></asp:TextBox>
                 <br />
             <br />
             <asp:Button CssClass="btn btn-primary" ID="btnSalvar" runat="server" OnClick="btnSalvar_Click" Text="Salvar" />
