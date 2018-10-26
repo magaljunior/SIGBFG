@@ -26,7 +26,8 @@
             <asp:Label ID="lblTitle0" runat="server" Font-Bold="True" Font-Size="X-Large" Text="Calculadora de Estoque "></asp:Label>
             <br />
             <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <br />
+&nbsp;&nbsp;&nbsp;
             <asp:Label ID="lblCodigo" runat="server" Text="Código:" Font-Bold="True"></asp:Label>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Label ID="lblProduto" runat="server" Text="Produto:" Font-Bold="True"></asp:Label>
@@ -44,37 +45,35 @@
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <br />
-                 <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <br />
+&nbsp;&nbsp;&nbsp;
             <asp:Label ID="lblEstoqueMax" runat="server" Text="Estoque:" Font-Bold="True"></asp:Label>
             <br />
 &nbsp;&nbsp;&nbsp;
             <asp:TextBox ID="txtEstoqueMaximo" runat="server" OnTextChanged="txtEstoqueMaximo_TextChanged" Width="86px"></asp:TextBox>
             <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;
-                 <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <br />
+&nbsp;&nbsp;&nbsp;
             <asp:Label ID="lblVend" runat="server" Text="Vendas:" Font-Bold="True"></asp:Label>
             <br />
 &nbsp;&nbsp;&nbsp;
             <asp:TextBox ID="txtVendas" runat="server" OnTextChanged="txtVendas_TextChanged" Width="86px"></asp:TextBox>
             <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;<br />
+            &nbsp;<br />
 &nbsp;&nbsp;&nbsp;
             <asp:Label ID="lblEstoqueAtual" runat="server" Text="Estoque Atual:" Font-Bold="True"></asp:Label>
-            &nbsp;
             <br />
             &nbsp;&nbsp;&nbsp;
             <asp:TextBox ID="txtEstoqueAtual" runat="server" OnTextChanged="txtEstoqueAtual_TextChanged" Width="86px"></asp:TextBox>
             <br />
-&nbsp;&nbsp;&nbsp;<br />
-&nbsp;
+            <br />
+&nbsp;&nbsp;&nbsp;
             <asp:Label ID="lblMinnimo" runat="server" Font-Bold="True">Estoque Mínimo:</asp:Label>
             <br />
 &nbsp;&nbsp;&nbsp;
             <asp:TextBox ID="txtEstoqueMinimo" runat="server" Width="86px"></asp:TextBox>
             <br />
-                 <br />
+            <br />
 &nbsp;&nbsp;&nbsp;
             <asp:Label ID="lblMedio" runat="server" Text="Estoque Médio:" Font-Bold="True"></asp:Label>
             <br />
@@ -89,7 +88,7 @@
             <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Calcular Giro de Estoque" Height="32px" Class="btn btn-primary" Font-Bold="True"  />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             
-                 <a class="btn btn-primary" href="../Os/Cadastrar.aspx">Gerar Ordem de Serviço</a>
+                 <a class="btn btn-primary" href="../Os/Cadastrar.aspx">Gerar Ordem de serviço</a>
             <br />
                      </center>
         </div>
