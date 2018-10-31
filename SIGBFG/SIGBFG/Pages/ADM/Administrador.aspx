@@ -7,7 +7,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
 
-    <link href="../../Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../Scripts/css/bootstrap.min.css" rel="stylesheet" />
     <script src="../../Scripts/jquery-3.3.1.min.js"></script>
     <script src="../../Scripts/bootstrap.min.js"></script>
     <script src="../../Scripts/Validacao/jquery.validate.min.js"></script>
@@ -54,17 +54,24 @@
                         display: block;
                     }
 
-        #title {
-            display: inline-block;
-        }
+                    #title {
+                        display: inline-block;
+                    }
+                    #body {
+                        width: 100%;
+                        height: 100%;
+                        background-image: url(depositphoto.jpg);
+                    }
     </style>
 </head>
 <body>
+    
 
     <div class="container-fluid">
 
-        <div style="height:150px; background-color: blue; margin-top: 20px;" class="row">
-              <div style="margin-top:50px;" id="nav">
+        <div style="margin-top: 20px;" class="row">
+             <div class="col-sm-12" style="height: 150px; background-color:blue;">
+                  <div style="margin-top:50px;" id="nav">
                          <ul>
                              <li><a class="btn btn-primary" href="Index.aspx">Página Inicial</a></li>
 
@@ -109,6 +116,7 @@
 
                              </ul>
                         </div>
+             </div>
                     </div>
 
                 <div class="row">                                   
