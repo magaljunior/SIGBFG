@@ -33,16 +33,16 @@
                 }
 
                     #nav ul li a {
-                        color: #ffff;
+                        color: #ffffff;
                         text-decoration: none;
                         font-family: arial;
-                        background: #0094ff;
+                        background: #343a40;
                         display: block;
                         padding: 10px;
                     }
 
                         #nav ul li a:hover {
-                            background: #4cff00;
+                            background: #868686;
                             color: #000000;
                         }
 
@@ -57,32 +57,32 @@
                     #title {
                         display: inline-block;
                     }
-                    #body {
-                        width: 100%;
-                        height: 100%;
-                        background-image: url(depositphoto.jpg);
-                    }
+        #body {
+            width: 100%;
+            height: 100%;
+            background-image: url(http://localhost:50742/Images/blocos.png)
+        }
     </style>
 </head>
-<body>
+<body id="body">
     
 
     <div class="container-fluid">
 
         <div style="margin-top: 20px;" class="row">
-             <div class="col-sm-12" style="height: 150px; background-color:blue;">
-                  <div style="margin-top:50px;" id="nav">
+             <div class="col-sm-11" style="position: relative; left: 50%; transform: translate(-50%); height: 70px;">
+                  <div style="margin-top:20px; position: relative; left: 50%; transform: translate(-50%);" id="nav">
                          <ul>
-                             <li><a class="btn btn-primary" href="Index.aspx">Página Inicial</a></li>
+                             <li><a class="btn btn-dak" href="Index.aspx">Página Inicial</a></li>
 
-                             <li><a class="btn btn-primary" href="#">Usuário</a>
+                             <li><a class="btn btn-dark" href="#">Usuário</a>
                                  <ul>
                                  <li> <a href="../Usuario/Cadastro_usuario.aspx">Cadastrar</a></li>
                                  <li><a href="../Usuario/Listar_usuario.aspx">Listar</a></li>
                                  </ul>
                              </li>
                              
-                             <li><a class="btn btn-primary" href="#">Produtos</a>
+                             <li><a class="btn btn-dark" href="#">Produtos</a>
                                   <ul>
                                   <li><a href="../Produtos/CadastrarPD.aspx">Cadastrar</a></li>
                                   <li><a href="../Produtos/ListarPD.aspx">Listar</a></li>
@@ -90,14 +90,14 @@
                                   </ul>   
                              </li>
 
-                             <li><a class="btn btn-primary" href="#">Metas</a>
+                             <li><a class="btn btn-dark" href="#">Metas</a>
                                      <ul>
                                      <li><a class="btn btn-primary" href="../Metas/Cadastrar.aspx">Cadastrar</a></li>
                                      <li><a href="../Metas/Listar.aspx">Listar</a></li>                                                                    
                                      </ul>
                              </li>
 
-                             <li><a class="btn btn-primary" href="#">Perdas</a>
+                             <li><a class="btn btn-dark" href="#">Perdas</a>
                                      <ul>
                                      <li><a href="../Perda/Cadastrar.aspx">Cadastrar</a></li>
                                          <li><a href="../Perda/Listar.aspx">Listar</a></li>
@@ -105,14 +105,14 @@
                                      </ul>
                              </li>
 
-                             <li><a class="btn btn-primary" href="#">Ordem Serviço</a>
+                             <li><a class="btn btn-dark" href="#">Ordem Serviço</a>
                                      <ul>
                                      <li><a href="../Os/Cadastrar.aspx">Cadastrar</a></li>
                                      <li><a href="../Os/Listar.aspx">Listar</a></li>
                                      </ul>
                              </li>
 
-                             <li><a class="btn btn-primary" href="../Giro/GiroEstoque.aspx">Calculadora</a></li>
+                             <li><a class="btn btn-dark" href="../Giro/GiroEstoque.aspx">Calculadora</a></li>
 
                              </ul>
                         </div>

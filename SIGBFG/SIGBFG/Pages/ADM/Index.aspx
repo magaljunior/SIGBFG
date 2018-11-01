@@ -6,20 +6,28 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
-    <link href="../../Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../Scripts/css/bootstrap.min.css" rel="stylesheet" />
     <script src="../../Scripts/bootstrap.min.js"></script>
     <script src="../../Scripts/jquery-3.0.0.min.js"></script>
+    <style type="text/css">
+        #body {
+            width: 100%;
+            height: 100%;
+            background-image: url(http://localhost:50742/Images/blocos.png)
+        }
+    </style>
+
     </head>
 
-<body style="height: 100%;">
+<body id="body">
     <div class="container-fluid">
 
-            <div id="logo" style="width: 100%; margin-top: 50px; background-color: #000066">
+            <div id="logo" style="width: 100%; margin-top: 50px;">
                 <center><img alt="Logo" class="auto-style2" longdesc="LogoBFG" src="../../Images/BFG.jpg" /></center>
             </div>
 
             <center>
-                <a style="margin-top: 30px;" class="btn btn-primary" href="../Login.aspx">Acesso ao Sistema</a>
+                <a style="margin-top: 30px;" class="btn btn-dark" href="../Login.aspx">Acesso ao Sistema</a>
             </center>
 
             <div>
