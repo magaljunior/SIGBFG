@@ -6,15 +6,22 @@
 <head runat="server">
     <title></title>
 
-    <link href="../../Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../Scripts/css/bootstrap.min.css" rel="stylesheet" />
     <script src="../../Scripts/jquery-3.3.1.min.js"></script>
     <script src="../../Scripts/bootstrap.min.js"></script>
     <script src="../../Scripts/Validacao/jquery.validate.min.js"></script>
     <script src="../../Scripts/Validacao/localization/messages_pt_PT.min.js"></script>
     <script src="../../Scripts/jquery.mask.min.js"></script>
+    <style type="text/css">
+        #body {
+            width: 100%;
+            height: 100%;
+            background-image: url(http://localhost:50742/Images/blocos.png)
+        }
+    </style>
 
 </head>
-<body>
+<body id="body">
 
      <div class="container-fluid">
          <center>
