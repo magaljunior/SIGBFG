@@ -32,7 +32,7 @@
                      <br />
          <a class="btn btn-dark" href="../ADM/Administrador.aspx">Inicio</a>
          <a class="btn btn-dark" href="CadastrarDespesa.aspx">Cadastrar Despesa</a>
-         <a class="btn btn-dark" href="Listar.aspx">Lista de Despesas</a>
+         <a class="btn btn-dark" href="ListarDespesa.aspx">Lista de Despesas</a>
          </div>
 
         <div class="form-group">
