@@ -53,8 +53,8 @@
         <br />
              <div id="logo" style="width: 100%; background-color: #000066; height:70px" >
                      <br />
-        <a class="btn btn-primary" href="../ADM/Administrador.aspx">Inicio</a>
-        <a class="btn btn-primary" href="Listar.aspx">Lista de Metas</a>
+        <a class="btn btn-dark" href="../ADM/Administrador.aspx">Inicio</a>
+        <a class="btn btn-dark" href="Listar.aspx">Lista de Metas</a>
                  </div>
 
         <div class="form-group">
@@ -86,7 +86,7 @@
                     <asp:TextBox ID="txtDescricao" runat="server" Height="56px" Width="246px"></asp:TextBox>
                     <br />
                     <br />
-                    <asp:Button class="btn btn-primary" ID="btnSalvar" runat="server" Text="Salvar" OnClick="btnSalvar_Click" />
+                    <asp:Button class="btn btn-dark" ID="btnSalvar" runat="server" Text="Salvar" OnClick="btnSalvar_Click" />
                     <br />
                     <br />
 

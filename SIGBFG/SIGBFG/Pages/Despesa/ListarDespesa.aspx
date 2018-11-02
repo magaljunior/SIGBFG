@@ -1,12 +1,12 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Listar.aspx.cs" Inherits="Paginas_Listar" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="ListarDespesa.aspx.cs" Inherits="Paginas_ListarDespesa" %>
 
-<!DOCTYPE html>
+<<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
 
-    <link href="../../Scripts/css/bootstrap.min.css" rel="stylesheet" />
+     <link href="../../Scripts/css/bootstrap.min.css" rel="stylesheet" />
     <script src="../../Scripts/jquery-3.3.1.min.js"></script>
     <script src="../../Scripts/bootstrap.min.js"></script>
     <script src="../../Scripts/Validacao/jquery.validate.min.js"></script>
@@ -17,8 +17,9 @@
         #body {
             width: 100%;
             height: 100%;
-            background-image: url(http://localhost:50742/Images/blocos.png)
+            background-image: url(http://localhost:52332/Images/blocos.png)
         }
+
     </style>
 
 </head>
@@ -27,10 +28,10 @@
     <div class="container-fluid">
         <center>
         <br />
-             <div id="logo" style="width: 100%; background-color: #000066; height:70px" >
+             <div id="logo" style="width: 100%; height:70px" >
                      <br />
         <a class="btn btn-dark" href="../ADM/Administrador.aspx">Inicio</a>
-        <a class="btn btn-dark" href="Cadastrar.aspx">Cadastrar Metas</a>
+        <a class="btn btn-dark" href="CadastrarDespesa.aspx">Cadastro de Despesa</a>
                  </div>
         <br />
 
@@ -39,31 +40,31 @@
             <form id="form1" runat="server">
                 <div style="height: 199px">
                     <br />
-                    <h1>Lista de Metas</h1>
+                    <h1>Lista de Despesas</h1>
                         <p>
                             <asp:Label ID="lblMensagem" runat="server"></asp:Label>
                         </p>
                     <br />
-                    <asp:GridView ID="GridView1" runat="server" OnRowCommand="GridView1_RowCommand" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" ForeColor="Black" GridLines="Vertical" Height="50px" Width="100%">
-                        <AlternatingRowStyle BackColor="#CCCCCC" />
+    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Style="margin-right: 5px" Width="100%" Height="100px" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black" OnRowCommand="GridView1_RowCommand1">
+                        
                         <Columns>
-                            <asp:BoundField DataField="met_mes" HeaderText="Mês" />
-                            <asp:BoundField DataField="met_ano" HeaderText="Ano" />
-                            <asp:BoundField DataField="met_meta" HeaderText="Meta" />
-                            <asp:BoundField DataField="met_produto" HeaderText="Produto" />
-                            <asp:BoundField DataField="met_descricao" HeaderText="Descrição" />
+                            <asp:BoundField DataField="des_data" HeaderText="Data" />
+                            <asp:BoundField DataField="des_quantidade" HeaderText="Quantidade" />
+                            <asp:BoundField DataField="des_descricao" HeaderText="Descrição" />
+                            <asp:BoundField DataField="des_valor" HeaderText="Valor" />
 
                         <asp:TemplateField HeaderText="Alterar">
                             <ItemTemplate>
                                 <asp:ImageButton ID="lbAlterar" runat="server" CommandName="Alterar" 
-                                    ImageUrl="../../Images/editar.jpg"  CommandArgument='<%# Bind("met_codigo")%>'></asp:ImageButton>
+                                    ImageUrl="../../Images/editar.jpg"  CommandArgument='<%# Bind("des_codigo")%>'></asp:ImageButton>
                             </ItemTemplate>
                         </asp:TemplateField>
 
                         <asp:TemplateField HeaderText="Excluir">
                              <ItemTemplate>     
                                     <asp:ImageButton ID="lbDeletar" runat="server" CommandName="Deletar"
-                                        ImageUrl="../../Images/del.jpg" CommandArgument='<%# Bind("met_codigo")%>'></asp:ImageButton>
+                                        ImageUrl="../Images/del.jpg" CommandArgument='<%# Bind("des_codigo")%>'></asp:ImageButton>
+
                              </ItemTemplate>
                        </asp:TemplateField>
 
