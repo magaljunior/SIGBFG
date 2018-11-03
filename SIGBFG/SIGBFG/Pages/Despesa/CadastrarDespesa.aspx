@@ -22,6 +22,37 @@
         }
 
     </style>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $("#form1").validate({
+                rules: {
+                    txtData: {
+                        required: true,
+                        
+                    },
+                    txtQuantidade: {
+                        required: true
+                    },
+                    txtDescricao: {
+                        required: true,
+                        
+                    }
+                    txtValor: {
+                        required: true,
+                    }
+                }
+            })
+
+            //MASCARA
+
+            $('#txtData').mask("dd/mm/yyyy", { reverse: true })
+            $('#txtValor').mask("000.000.000,00", { reverse: true });
+
+        })
+    </script>
+
 </head>
 
     <body id="body">
@@ -44,18 +75,18 @@
                     <br />
 
                     <asp:Label runat="server" Text="Data:"></asp:Label>
-                    <asp:TextBox ID="txtData" runat="server" Width="109px"></asp:TextBox>
+                    <asp:TextBox ID="txtData" runat="server" Width="150px"></asp:TextBox>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Label runat="server" Text="Quantidade:"></asp:Label>
-                    <asp:TextBox ID="txtQuantidade" runat="server" Width="71px"></asp:TextBox>
+                    <asp:TextBox ID="txtQuantidade" runat="server" Width="150px"></asp:TextBox>
                     <br />
                     <br />
                     <asp:Label runat="server" Text="Descrição:"></asp:Label>
-                    <asp:TextBox ID="txtDescricao" runat="server" Width="127px"></asp:TextBox>
+                    <asp:TextBox ID="txtDescricao" runat="server" Width="150px"></asp:TextBox>
                     <br />
                     <br />
                     <asp:Label runat="server" Text="Valor:"></asp:Label>
-                    <asp:TextBox ID="txtValor" runat="server" Width="105px"></asp:TextBox>
+                    <asp:TextBox ID="txtValor" runat="server" Width="150px"></asp:TextBox>
                     <br />
                     <br />
                     <asp:Button class="btn btn-dark" ID="btnSalvar" runat="server" Text="Salvar" OnClick="btnSalvar_Click" />
