@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Web.UI;
-using LoginPI.Persistencia;
+using SIGBFG.Persistencia;
 
 public partial class Pages_Login : System.Web.UI.Page
 {

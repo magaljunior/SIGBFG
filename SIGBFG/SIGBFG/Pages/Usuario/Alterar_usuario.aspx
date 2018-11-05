@@ -1,60 +1,50 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Alterar_usuario.aspx.cs" Inherits="Paginas_Alterar_usuario" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Alterar_Usuario.aspx.cs" Inherits="Pages_Usuario_Alterar_Funcionario" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <link href="../../Content/bootstrap.min.css" rel="stylesheet" />
-    <script src="../../Scripts/bootstrap.min.js"></script>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
 </head>
-<body style="height: 499px">
-
-    <div class=" container-fluid">
+<body>
     <form id="form1" runat="server">
-        <center>
-             <br />
-                <div id="logo" style="width: 100%; background-color: #000066; height:70px" >
-                     <br />
-                <a class="btn btn-primary" href="../ADM/Administrador.aspx">Inicio</a>
-                <a class="btn btn-primary" href="Cadastro_usuario.aspx">Cadastrar Usuário</a>
-                <a class="btn btn-primary" href="Listar_usuario.aspx">Listar Usuário</a>
-                    </div>
-            <br />
-        
-            <asp:Label ID="Label1" runat="server" Text="Alterar Usuário" Font-Size="X-Large" Height="44px" Width="295px"></asp:Label>
-            <br />
-            <br />
-           <asp:Label ID="Label2" runat="server" Text="Nome"></asp:Label>
-            <br />
-           <asp:TextBox ID="txtNome" runat="server"></asp:TextBox>
-            <br />
-            <br />
-            <asp:Label ID="Label3" runat="server" Text="Sobrenome"></asp:Label>
-            <br />
-            <asp:TextBox ID="txtSobrenome" runat="server" Width="179px"></asp:TextBox>
-            
-             <br />
-             <br />
-            <asp:Label ID="Label4" runat="server" Text="Senha"></asp:Label>
-            
-            <br />
-            <asp:TextBox ID="txtSenha" runat="server" Width="179px"></asp:TextBox>
-            
-             <br />
-            <br />
-            <br />
-            <asp:Button CssClass="btn btn-primary" ID="Button1" runat="server" Text="Salvar" OnClick="Button1_Click" />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-       
-    </form>
-        </center>
+    <div class="container-fluid">
+        <div class="row">
+            <div>
+                <br />
+                <a href="Cadastrar_Usuario.aspx">Cadastrar Usuários</a>
+                <a href="Listar_Usuario.aspx">Listar Usuários</a>
+                <br />
+                <h1>Alteração de Usuários</h1>
+                <asp:Label ID="Label1" runat="server" Text="Nome:"></asp:Label>
+                <asp:TextBox ID="txtNome" runat="server" style="margin-left: 12px; margin-bottom: 0px"></asp:TextBox>
+                <br />
+                <br />
+                <asp:Label ID="Label2" runat="server" Text="Email:"></asp:Label>
+                <asp:TextBox ID="txtEmail" runat="server" style="margin-left: 15px"></asp:TextBox>
+                <br />
+                <br />
+                <asp:Label ID="Label3" runat="server" Text="Senha:"></asp:Label>
+                <asp:TextBox ID="txtSenha" runat="server" style="margin-left: 10px"></asp:TextBox>
+                <br />
+                <br />
+                <asp:Label ID="Label4" runat="server" Text="Tipo:"></asp:Label>
+                <asp:DropDownList ID="txtTipo" runat="server" style="margin-left: 7px">
+                    <asp:ListItem Value="1">Administrador</asp:ListItem>
+                    <asp:ListItem Value="2">Funcionário</asp:ListItem>
+                </asp:DropDownList>
+                <br />
+                <br />
+                <asp:Button ID="btnSalvar" runat="server" OnClick="btnSalvar_Click" Text="Salvar" />
+                <br />
+                <br />
+                <asp:Label ID="lblMensagem" runat="server"></asp:Label>
+                <br />
+                <br />
+
+            </div>
         </div>
+    </div>
+    </form>
 </body>
 </html>

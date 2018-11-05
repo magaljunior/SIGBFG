@@ -3,48 +3,44 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
+using System.Web.UI.WebControls;
 using SIGBFG.Classes;
 using SIGBFG.Persistencia;
-using System.Web.UI.WebControls;
 
-public partial class Paginas_Alterar_usuario : System.Web.UI.Page
+public partial class Pages_Usuario_Alterar_Funcionario : System.Web.UI.Page
 {
-
-
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!Page.IsPostBack)
         {
-            UsuarioBD bd = new UsuarioBD();
-            Usuario usuario = bd.Select(Convert.ToInt32(Session["ID"]));
-            txtNome.Text = usuario.Nome;
-            txtSobrenome.Text = usuario.Sobrenome;
-            txtSenha.Text = usuario.Senha;
-
+            PessoaBD bd = new PessoaBD();
+            Pessoa pessoa = bd.Select(Convert.ToInt32(Session["ID"]));
+            txtNome.Text = pessoa.Nome;
+            txtEmail.Text = pessoa.Email;
+            txtSenha.Text = pessoa.Senha;
+            txtTipo.Text = pessoa.Tipo.ToString();
         }
 
-
-
+        txtNome.Focus();
     }
-    protected void Button1_Click(object sender, EventArgs e)
+
+    protected void btnSalvar_Click(object sender, EventArgs e)
+    {
+        PessoaBD bd = new PessoaBD();
+        Pessoa pessoa = bd.Select(Convert.ToInt32(Session["ID"]));
+        pessoa.Nome = txtNome.Text;
+        pessoa.Email = txtEmail.Text;
+        pessoa.Senha = txtSenha.Text;
+        pessoa.Tipo = Convert.ToInt32(txtTipo.Text);
+
+        if (bd.Update(pessoa))
         {
-            UsuarioBD bd = new UsuarioBD();
-            Usuario usuario = bd.Select(Convert.ToInt32(Session["ID"]));
-            usuario.Nome = txtNome.Text;
-            usuario.Sobrenome = txtSobrenome.Text;
-            usuario.Senha = txtSenha.Text;
-
-
-        if (bd.Update(usuario))
-            {
-                Response.Write("<script>alert('Usuário alterado com Sucesso!')</script>");
-
-            }
-            else
-            {
-                Response.Write("<script>alert('Erro ao Editar o usuário!')</script>");
-            }
-
-            //Response.Redirect("Listar_usuario.aspx");
+            lblMensagem.Text = "Usuário alterado com sucesso";
+            txtNome.Focus();
         }
+        else
+        {
+            lblMensagem.Text = "Erro ao salvar.";
+        }
+    }
 }
