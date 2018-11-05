@@ -92,7 +92,7 @@
 
                              <li><a class="btn btn-dark" href="#">Metas</a>
                                      <ul>
-                                     <li><a class="btn btn-primary" href="../Metas/Cadastrar.aspx">Cadastrar</a></li>
+                                     <li><a class="btn btn-dark" href="../Metas/Cadastrar.aspx">Cadastrar</a></li>
                                      <li><a href="../Metas/Listar.aspx">Listar</a></li>                                                                    
                                      </ul>
                              </li>
