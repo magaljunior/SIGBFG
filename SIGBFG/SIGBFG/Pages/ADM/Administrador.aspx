@@ -77,8 +77,8 @@
 
                              <li><a class="btn btn-dark" href="#">Usuário</a>
                                  <ul>
-                                 <li> <a href="../Usuario/Cadastro_usuario.aspx">Cadastrar</a></li>
-                                 <li><a href="../Usuario/Listar_usuario.aspx">Listar</a></li>
+                                 <li> <a href="../Usuario/Cadastrar_Usuario.aspx">Cadastrar</a></li>
+                                 <li><a href="../Usuario/Listar_Usuario.aspx">Listar</a></li>
                                  </ul>
                              </li>
                              

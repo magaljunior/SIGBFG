@@ -84,10 +84,10 @@ DROP TABLE IF EXISTS `met_metas`;
 CREATE TABLE `met_metas` (
   `met_codigo` int(11) NOT NULL AUTO_INCREMENT,
   `met_mes` varchar(45) NOT NULL,
-  `met_ano` varchar(45) NOT NULL,
+  `met_ano` varchar(45) DEFAULT NULL,
   `met_meta` int(11) NOT NULL,
   `met_produto` varchar(45) NOT NULL,
-  `met_descricao` varchar(45) NOT NULL,
+  `met_descricao` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`met_codigo`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -125,6 +125,32 @@ CREATE TABLE `per_perda` (
 LOCK TABLES `per_perda` WRITE;
 /*!40000 ALTER TABLE `per_perda` DISABLE KEYS */;
 /*!40000 ALTER TABLE `per_perda` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `tbl_despesas`
+--
+
+DROP TABLE IF EXISTS `tbl_despesas`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `tbl_despesas` (
+  `des_codigo` int(11) NOT NULL AUTO_INCREMENT,
+  `des_quantidade` int(11) NOT NULL,
+  `des_valor` double NOT NULL,
+  `des_data` varchar(10) NOT NULL,
+  `des_descricao` varchar(100) NOT NULL,
+  PRIMARY KEY (`des_codigo`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tbl_despesas`
+--
+
+LOCK TABLES `tbl_despesas` WRITE;
+/*!40000 ALTER TABLE `tbl_despesas` DISABLE KEYS */;
+/*!40000 ALTER TABLE `tbl_despesas` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -197,7 +223,7 @@ CREATE TABLE `tbl_pessoa` (
   `pes_senha` varchar(255) NOT NULL,
   `pes_tipo` varchar(45) NOT NULL,
   PRIMARY KEY (`pes_codigo`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -206,7 +232,7 @@ CREATE TABLE `tbl_pessoa` (
 
 LOCK TABLES `tbl_pessoa` WRITE;
 /*!40000 ALTER TABLE `tbl_pessoa` DISABLE KEYS */;
-INSERT INTO `tbl_pessoa` VALUES (7,'Sonia2','claudiadadi_damacena@hotmail.com','1234','1'),(9,'Sonia','claudiadadi_damacena@hotmail.com','1234','2');
+INSERT INTO `tbl_pessoa` VALUES (13,'Sonia','claudiadadi_damacena@hotmail.com','1234','1');
 /*!40000 ALTER TABLE `tbl_pessoa` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -300,4 +326,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-11-05 17:51:10
+-- Dump completed on 2018-11-06 11:03:31
