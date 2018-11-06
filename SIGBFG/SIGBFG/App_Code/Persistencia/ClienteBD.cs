@@ -90,7 +90,7 @@ namespace Vendas.Persistencia
         {
             System.Data.IDbConnection objConexao;
             System.Data.IDbCommand objCommand;
-            string sql = "UPDATE ven_venda SET cli_nome=?nome, cli_endereco=?endereco, cli_bairro=?bairro, cli_numero=?numero, cli_cnpj=?cnpj, cli_telefone=?telefone WHERE cli_codigo =?codigo";
+            string sql = "UPDATE cli_cliente SET cli_nome=?nome, cli_endereco=?endereco, cli_bairro=?bairro, cli_numero=?numero, cli_cnpj=?cnpj, cli_telefone=?telefone WHERE cli_codigo =?codigo";
             objConexao = Mapped.Connection();
             objCommand = Mapped.Command(sql, objConexao);
             objCommand.Parameters.Add(Mapped.Parameter("?nome", cliente.Nome));
