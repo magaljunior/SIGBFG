@@ -63,7 +63,7 @@
                         <asp:TemplateField HeaderText="Excluir">
                              <ItemTemplate>     
                                     <asp:ImageButton ID="lbDeletar" runat="server" CommandName="Deletar"
-                                        ImageUrl="../Images/del.jpg" CommandArgument='<%# Bind("des_codigo")%>'></asp:ImageButton>
+                                        ImageUrl="../../Images/del.jpg" CommandArgument='<%# Bind("des_codigo")%>'></asp:ImageButton>
 
                              </ItemTemplate>
                        </asp:TemplateField>

@@ -30,7 +30,8 @@
             <asp:TextBox ID="txtFuncionario" runat="server"   Width="189px"></asp:TextBox>
        <br />
         <asp:Label ID="Label2" runat="server" Text="Produto:"></asp:Label>
-        <asp:TextBox ID="txtProduto" runat="server" style="margin-left: 18px" Width="202px"></asp:TextBox>
+            <asp:DropDownList ID="ddlProdutos" runat="server" Height="22px" style="margin-left: 16px" Width="186px">
+            </asp:DropDownList>
         <br />
        
         <asp:Label ID="Label6" runat="server" Text="Quantidade:"></asp:Label>

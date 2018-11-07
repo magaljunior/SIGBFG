@@ -67,7 +67,8 @@
                 <br />
             <br />
             <asp:Label ID="Label3" runat="server" Text="Produto: "></asp:Label>
-            <asp:TextBox ID="txtProduto"  name="produto" runat="server" Width="177px" ></asp:TextBox>
+                   <asp:DropDownList ID="ddlProdutos" runat="server" Height="16px" style="margin-left: 0px" Width="186px">
+                   </asp:DropDownList>
                 <br />
             <br />
             <asp:Label ID="Label4" runat="server" Text="Quantidade: "></asp:Label>
@@ -84,8 +85,8 @@
             <br />
             <asp:Label ID="Label7" runat="server" Text="Data de Expiração: "></asp:Label>
             <asp:TextBox ID="txtDataexpiracao" class="data"  name="dataexpiracao" runat ="server" Width="103px"></asp:TextBox>
-                <br />
-            <br />
+                   <br />
+                   <br />
             <asp:Button CssClass="btn btn-primary" ID="btnSalvar" runat="server" OnClick="btnSalvar_Click" Text="Salvar" />
                    <br />
             <br />

@@ -82,7 +82,7 @@ namespace WebDespesa.Persistencia
         {
             System.Data.IDbConnection objConexao;
             System.Data.IDbCommand objCommand;
-            string sql = "UPDATE tbl_despesas SET des_data=?data, des_descricao=?descricao, des_valor=?valor, des_valor=?valor, WHERE des_codigo=?codigo";
+            string sql = "UPDATE tbl_despesas SET des_data=?data, des_descricao=?descricao, des_valor=?valor, des_quantidade=?quantidade WHERE des_codigo=?codigo";
             objConexao = Mapped.Connection(); objCommand = Mapped.Command(sql, objConexao);
             objCommand.Parameters.Add(Mapped.Parameter("?data", despesa.Data));
             objCommand.Parameters.Add(Mapped.Parameter("?descricao", despesa.Descricao));

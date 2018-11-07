@@ -55,7 +55,8 @@
             <br />
             <br />
             <asp:Label runat="server" Text="Produto:"></asp:Label>
-            <asp:TextBox ID="txtProduto" runat="server" Width="163px"></asp:TextBox>
+                <asp:DropDownList ID="ddlProdutos" runat="server" Height="24px" Width="191px">
+                </asp:DropDownList>
             <br />
             <br />
             <asp:Label runat="server" Text="Descrição:"></asp:Label><br />

@@ -114,6 +114,23 @@ namespace SIGBFG.Persistencia
             return true;
         }
 
+        //relatorio
+        public DataSet Relatorio()
+        {
+            DataSet ds = new DataSet();
+            System.Data.IDbConnection objConexao;
+            System.Data.IDbCommand objCommand;
+            System.Data.IDataAdapter objDataAdapter;
+            objConexao = Mapped.Connection();
+            objCommand = Mapped.Command("select tbl_produto.pro_nome, tbl_produto.pro_preco, tbl_produto.pro_quantidade, tbl_produto.pro_quantidadeMinima, tbl_os.os_funcionario, tbl_os.os_produto, tbl_os.os_quantidade, tbl_os.os_dataInicio, tbl_os.os_dataExpiracao from tbl_produto join tbl_os", objConexao);
+            objDataAdapter = Mapped.Adapter(objCommand);
+            objDataAdapter.Fill(ds);
+            objConexao.Close();
+            objCommand.Dispose();
+            objConexao.Dispose();
+            return ds;
+        }
+ 
         public OrdemServicoBD()
         {
             //

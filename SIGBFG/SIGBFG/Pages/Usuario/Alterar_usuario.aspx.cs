@@ -28,10 +28,11 @@ public partial class Pages_Usuario_Alterar_Funcionario : System.Web.UI.Page
     {
         PessoaBD bd = new PessoaBD();
         Pessoa pessoa = bd.Select(Convert.ToInt32(Session["ID"]));
+        pessoa.Codigo = Convert.ToInt32(Session["ID"]);
         pessoa.Nome = txtNome.Text;
         pessoa.Email = txtEmail.Text;
         pessoa.Senha = txtSenha.Text;
-        pessoa.Tipo = Convert.ToInt32(txtTipo.Text);
+        pessoa.Tipo = Convert.ToInt32(txtTipo.SelectedItem.Value);
 
         if (bd.Update(pessoa))
         {
