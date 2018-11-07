@@ -31,6 +31,7 @@
                 
             <asp:GridView ID="GridView1" runat="server" OnRowCommand="GridView1_RowCommand"  Width="100%" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="1" CellSpacing="2" ForeColor="Black">
          <Columns>
+              <asp:BoundField DataField="os_codigo" HeaderText="Código" />
               <asp:BoundField DataField="os_funcionario" HeaderText="Funcionário" />
              <asp:BoundField DataField="os_produto" HeaderText="Produto" />
              <asp:BoundField DataField="os_quantidade" HeaderText="Quantidade" />

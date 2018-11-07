@@ -80,10 +80,8 @@
                      <br />
             <a class="btn btn-primary" href="../ADM/Administrador.aspx">Inicio</a>
             <a class="btn btn-primary" href="Listar.aspx">Lista de Perdas</a>
-            <a class="btn btn-primary" href="TotalPerdas.aspx">Total de Perdas Cadastradas</a
+            <a class="btn btn-primary" href="TotalPerdas.aspx">Total de Perdas Cadastradas</a>
                     </div>
-
-            >
 
             <br />
                 <br />
@@ -94,7 +92,8 @@
               <asp:TextBox ID="txtOrdem" runat="server" Height="27px" style="margin-left: 16px" Width="112px"></asp:TextBox>
             <br /><br />
             <asp:Label ID="Label2" runat="server" Text="Produto:"></asp:Label>
-            <asp:TextBox ID="txtProduto" runat="server" style="margin-left: 30px" Width="146px" Height="27px"></asp:TextBox>
+                <asp:DropDownList ID="ddlProdutos" runat="server" Height="16px" style="margin-left: 13px" Width="186px">
+                </asp:DropDownList>
            
             <br />
             <br />
