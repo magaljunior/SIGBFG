@@ -150,7 +150,7 @@
 
 
 
-<body style="height: 551px">
+<body id="body">
     <form id="form1" runat="server">
         <div class="container-fluid">
             
