@@ -27,10 +27,9 @@ public partial class Paginas_Cadastrar : System.Web.UI.Page
         DataSet ds = bd.SelectAll();
 
         ddlProdutos.Items.Clear();
-        //vincula dados do ds ao componente ddl
         ddlProdutos.DataSource = ds.Tables[0].DefaultView;
-        ddlProdutos.DataTextField = "pro_nome";  ///o campo que será exibido do produto
-        ddlProdutos.DataValueField = "pro_nome";  /// o campo código do produto
+        ddlProdutos.DataTextField = "pro_nome";
+        ddlProdutos.DataValueField = "pro_nome";
         ddlProdutos.DataBind();
 
         ddlProdutos.Items.Insert(0, "Selecione");
