@@ -18,7 +18,7 @@
         #body {
             width: 100%;
             height: 100%;
-            background-image: url(http://localhost:52332/Images/blocos.png)
+            background-image: url(http://localhost:50742/Images/blocos.png)
         }
 
     </style>
@@ -77,7 +77,7 @@
                     <asp:Label runat="server" Text="Data:"></asp:Label>
                     <asp:TextBox ID="txtData" runat="server" Width="150px"></asp:TextBox>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Label runat="server" Text="Quantidade:"></asp:Label>
+                    <asp:Label runat="server" Text="Quantidade:"></asp:Label>
                     <asp:TextBox ID="txtQuantidade" runat="server" Width="150px"></asp:TextBox>
                     <br />
                     <br />
