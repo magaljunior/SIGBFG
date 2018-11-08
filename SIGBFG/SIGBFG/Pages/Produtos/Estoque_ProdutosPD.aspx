@@ -6,23 +6,31 @@
 <head runat="server">
     <title></title>
 
-    <link href="../../Content/bootstrap.min.css" rel="stylesheet" />
+    
+    <link href="../../Scripts/css/bootstrap.min.css" rel="stylesheet" />
     <script src="../../Scripts/bootstrap.min.js"></script>
     <script src="../../Scripts/jquery-3.3.1.min.js"></script>
-
+    <style type="text/css">
+        #body {
+            width: 100%;
+            height: 100%;
+            background-image: url(http://localhost:50742/Images/blocos.png)
+        }
+    </style>
 </head>
-<body style="height: 568px">
+<body id="body" style="height: 568px">
     <div class="container-fluid">
-    <center>
+    <div class="row">
+            <div style="position: relative; left: 50%; transform: translate(-50%); height: 70px;">
                 <div class="form-group">
             <form id="form1" runat="server" aria-atomic="False">
                 <div>
                     <br />
-                    <div id="logo" style="width: 100%; background-color: #000066; height:70px" >
+                    <div id="logo" style="width: 100%; height:70px" >
                      <br />
-                    <a class="btn btn-primary" href="../ADM/Administrador.aspx">Inicio</a>
-                    <a class="btn btn-primary" href="CadastrarPD.aspx">Cadastrar Produtos</a>
-                    <a class="btn btn-primary" href="ListarPD.aspx">Listar Produtos</a>
+                    <a class="btn btn-dark" href="../ADM/Administrador.aspx">Inicio</a>
+                    <a class="btn btn-dark" href="CadastrarPD.aspx">Cadastrar Produtos</a>
+                    <a class="btn btn-dark" href="ListarPD.aspx">Listar Produtos</a>
                         </div>
                     <br />
                     <br />
@@ -63,7 +71,8 @@
                 <asp:Label ID="txtTotal" runat="server"></asp:Label>
             </form>
         </div>  
-    </center>
+    </div>
+        </div>
     </div>
 </body>
 </html>

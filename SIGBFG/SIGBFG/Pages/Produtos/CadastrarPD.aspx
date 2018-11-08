@@ -26,12 +26,21 @@
     </style>
 
     <!--LINKS DE ACESSO-->
-    <link href="../../Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../Scripts/css/bootstrap.min.css" rel="stylesheet" />
     <script src="../../Scripts/jquery-3.3.1.min.js"></script>
     <script src="../../Scripts/bootstrap.min.js"></script>
     <script src="../../Scripts/Validacao/jquery.validate.min.js"></script>
     <script src="../../Scripts/Validacao/localization/messages_pt_PT.min.js"></script>
     <script src="../../Scripts/jquery.mask.min.js"></script>
+
+    <style type="text/css">
+        #body {
+            width: 100%;
+            height: 100%;
+            background-image: url(http://localhost:50742/Images/blocos.png)
+        }
+
+    </style>
 
     <!--VALIDAÇÃO-->
     <script type="text/javascript">
@@ -62,16 +71,16 @@
     </script>
 
 </head>
-<body style="height: 631px">
+<body  id="body" style="height: 631px">
     <div class="container-fluid">
-        <center>
-            <div class="form-group">
+        <div class="row">
+            <div style="position: relative; left: 50%; transform: translate(-50%); height: 70px;">
                 <br />
-                <div id="logo" style="width: 100%; background-color: #000066; height:70px" >
+                <div id="logo" style="width: 100%;  height:70px" >
                      <br />
-                        <a class="btn btn-primary" href="../ADM/Administrador.aspx">Inicio</a>
-                        <a class="btn btn-primary" href="ListarPD.aspx">Listar Produtos</a>
-                        <a class="btn btn-primary" href="Estoque_ProdutosPD.aspx">Estoque Atual de Produtos</a>
+                        <a class="btn btn-dark" href="../ADM/Administrador.aspx">Inicio</a>
+                        <a class="btn btn-dark" href="ListarPD.aspx">Listar Produtos</a>
+                        <a class="btn btn-dark" href="Estoque_ProdutosPD.aspx">Estoque Atual de Produtos</a>
                     </div>
             <form id="form1" runat="server">
                 <br />
@@ -112,13 +121,13 @@
                         <asp:TextBox ID="txtDescricao" runat="server" Height="92px" Width="270px"></asp:TextBox>
                     </p>
 
-                    <asp:Button ID="btnSalvar" class="btn btn-primary" runat="server" OnClick="btnSalvar_Click" Text="Salvar" Width="110px" />
+                    <asp:Button ID="btnSalvar" class="btn btn-dark" runat="server" OnClick="btnSalvar_Click" Text="Salvar" Width="110px" />
                     <br />
                     <br />
                 <asp:Label ID="lblMensagem" runat="server"></asp:Label>
             </form>
         </div>
-            </center>
+            </div>
     </div>
 </body>
 </html>

@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
 
     <link href="../../Scripts/css/bootstrap.min.css" rel="stylesheet" />
@@ -20,7 +20,6 @@
             height: 100%;
             background-image: url(http://localhost:52332/Images/blocos.png)
         }
-
     </style>
 
     <script type="text/javascript">
@@ -30,14 +29,14 @@
                 rules: {
                     txtData: {
                         required: true,
-                        
+
                     },
                     txtQuantidade: {
                         required: true
                     },
                     txtDescricao: {
                         required: true,
-                        
+
                     }
                     txtValor: {
                         required: true,
@@ -55,51 +54,52 @@
 
 </head>
 
-    <body id="body">
+<body id="body">
     <div class="container-fluid">
-        <center>
-        <br />
-             <div id="logo" style="width: 100%;height:70px" >
-                     <br />
-        <a class="btn btn-dark" href="../ADM/Administrador.aspx">Inicio</a>
-        <a class="btn btn-dark" href="ListarDespesa.aspx">Lista de Despesas</a>
-                 </div>
-
-        <div class="form-group">
-            <br />
-
-
-            <form id="form1" runat="server">
-                <div style="height: 349px">
-                    <h1>Cadastro de Despesas</h1>
+        <div class="row">
+            <div style="position: relative; left: 50%; transform: translate(-50%); height: 70px;">
+                <br />
+                <div id="logo" style="width: 100%; height: 70px">
                     <br />
-
-                    <asp:Label runat="server" Text="Data:"></asp:Label>
-                    <asp:TextBox ID="txtData" runat="server" Width="150px"></asp:TextBox>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Label runat="server" Text="Quantidade:"></asp:Label>
-                    <asp:TextBox ID="txtQuantidade" runat="server" Width="150px"></asp:TextBox>
-                    <br />
-                    <br />
-                    <asp:Label runat="server" Text="Descrição:"></asp:Label>
-                    <asp:TextBox ID="txtDescricao" runat="server" Width="150px"></asp:TextBox>
-                    <br />
-                    <br />
-                    <asp:Label runat="server" Text="Valor:"></asp:Label>
-                    <asp:TextBox ID="txtValor" runat="server" Width="150px"></asp:TextBox>
-                    <br />
-                    <br />
-                    <asp:Button class="btn btn-dark" ID="btnSalvar" runat="server" Text="Salvar" OnClick="btnSalvar_Click" />
-                    <br />
-                    <br />
-
-                    <asp:Label ID="lblMensagem" runat="server"></asp:Label>
+                    <a class="btn btn-dark" href="../ADM/Administrador.aspx">Inicio</a>
+                    <a class="btn btn-dark" href="ListarDespesa.aspx">Lista de Despesas</a>
                 </div>
-            </form>
 
+                <div class="form-group">
+                    <br />
+
+
+                    <form id="form1" runat="server">
+                        <div style="height: 349px">
+                            <h1>Cadastro de Despesas</h1>
+                            <br />
+
+                            <asp:Label runat="server" Text="Data:"></asp:Label>
+                            <asp:TextBox ID="txtData" runat="server" Width="150px"></asp:TextBox>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Label runat="server" Text="Quantidade:"></asp:Label>
+                            <asp:TextBox ID="txtQuantidade" runat="server" Width="150px"></asp:TextBox>
+                            <br />
+                            <br />
+                            <asp:Label runat="server" Text="Descrição:"></asp:Label>
+                            <asp:TextBox ID="txtDescricao" runat="server" Width="150px"></asp:TextBox>
+                            <br />
+                            <br />
+                            <asp:Label runat="server" Text="Valor:"></asp:Label>
+                            <asp:TextBox ID="txtValor" runat="server" Width="150px"></asp:TextBox>
+                            <br />
+                            <br />
+                            <asp:Button class="btn btn-dark" ID="btnSalvar" runat="server" Text="Salvar" OnClick="btnSalvar_Click" />
+                            <br />
+                            <br />
+
+                            <asp:Label ID="lblMensagem" runat="server"></asp:Label>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
         </div>
-
-            </center>
     </div>
 
 </body>

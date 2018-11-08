@@ -6,24 +6,31 @@
 <head runat="server">
     <title></title>
 
-    <link href="../../Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../Scripts/css/bootstrap.min.css" rel="stylesheet" />
     <script src="../../Scripts/bootstrap.min.js"></script>
     <script src="../../Scripts/jquery-3.3.1.min.js"></script>
-
+    <style type="text/css">
+        #body {
+            width: 100%;
+            height: 100%;
+            background-image: url(http://localhost:50742/Images/blocos.png)
+        }
+    </style>
 </head>
-<body style="height: 569px">
+<body id="body" style="height: 569px">
     <div class="container-fluid">
-        <center>
+        <div class="row">
+            <div style="position: relative; left: 50%; transform: translate(-50%); height: 70px;">>
                     <div class="form-group">
             <form id="form1" runat="server">
                 <div>
                     <br />
-                    <div id="logo" style="width: 100%; background-color: #000066; height:70px" >
+                    <div id="logo" style="width: 100%;  height:70px" >
                      <br />
-                    <a class="btn btn-primary" href="../ADM/Administrador.aspx">Inicio</a>
-                    <asp:Button class="btn btn-primary" ID="btnCadastrar" runat="server" OnClick="btnCadastrar_Click" Text="Cadastrar Produtos" />
-                    <asp:Button class="btn btn-primary" ID="btnListar" runat="server" OnClick="btnListar_Click" Text="Listar Produtos" />
-                    <asp:Button class="btn btn-primary" ID="btnEstoqueAtual" runat="server" OnClick="btnEstoqueAtual_Click" Text="Estoque Atual de Produtos" />
+                    <a class="btn btn-dark" href="../ADM/Administrador.aspx">Inicio</a>
+                    <asp:Button class="btn btn-dark" ID="btnCadastrar" runat="server" OnClick="btnCadastrar_Click" Text="Cadastrar Produtos" />
+                    <asp:Button class="btn btn-dark" ID="btnListar" runat="server" OnClick="btnListar_Click" Text="Listar Produtos" />
+                    <asp:Button class="btn btn-dark" ID="btnEstoqueAtual" runat="server" OnClick="btnEstoqueAtual_Click" Text="Estoque Atual de Produtos" />
                    </div>
                         <br />
                     <br />
@@ -39,7 +46,7 @@
                     <p>
                         &nbsp;</p>
                     <p>
-                        <asp:Button class="btn btn-primary" ID="btnSalvar" runat="server" OnClick="btnSalvar_Click" Text="Salvar" />
+                        <asp:Button class="btn btn-dark" ID="btnSalvar" runat="server" OnClick="btnSalvar_Click" Text="Salvar" />
                     </p>
                     <p>
                         <asp:Label ID="lblMensagem" runat="server"></asp:Label>
@@ -47,7 +54,8 @@
                 </div>
             </form>
         </div>
-        </center>
+        </div>
+            </div>
     </div>
 </body>
 </html>

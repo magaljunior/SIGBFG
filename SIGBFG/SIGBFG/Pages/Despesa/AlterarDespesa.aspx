@@ -57,7 +57,8 @@
 <body id="body">
 
      <div class="container-fluid">
-         <center>
+         <div class="row">
+            <div style="position: relative; left: 50%; transform: translate(-50%); height: 70px;">
         <br />
               <div id="logo" style="width: 100%; height:70px" >
                      <br />
@@ -101,7 +102,8 @@
         </div>
     </form>
             </div>
-             </center>
+             </div>
+             </div>
          </div>
 </body>
 </html>
