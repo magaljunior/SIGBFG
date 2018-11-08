@@ -34,13 +34,13 @@ public partial class Pages_Login : System.Web.UI.Page
         string senha = txtSenha.Text.Trim();
         if (!IsPreenchido(nome))
         {
-            lblMensagem.Text = "Preencha o nome";
+            Response.Write ("<script>alert('Preencha o Nome')</script>");
             txtNome.Focus();
             return;
         }
         if (!IsPreenchido(senha))
         {
-            lblMensagem.Text = "Preencha a senha";
+            Response.Write("<script>alert('Preencha a Senha')</script>");
             txtSenha.Focus();
             return;
         }
