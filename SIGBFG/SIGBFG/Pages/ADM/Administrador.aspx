@@ -97,6 +97,13 @@
                                      </ul>
                              </li>
 
+                             <li><a class="btn btn-dark" href="#">Despesas</a>
+                                     <ul>
+                                     <li><a class="btn btn-dark" href="../Despesa/CadastrarDespesa.aspx">Cadastrar</a></li>
+                                     <li><a href="../Despesa/ListarDespesa.aspx">Listar</a></li>                                                                    
+                                     </ul>
+                             </li>
+
                              <li><a class="btn btn-dark" href="#">Perdas</a>
                                      <ul>
                                      <li><a href="../Perda/Cadastrar.aspx">Cadastrar</a></li>
