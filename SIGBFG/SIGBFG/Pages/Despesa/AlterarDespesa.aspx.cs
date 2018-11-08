@@ -16,6 +16,7 @@ public partial class Paginas_AlterarDespesa : System.Web.UI.Page
             DespesaBD bd = new DespesaBD();
             Despesa despesa = bd.Select(Convert.ToInt32(Session["ID"]));
             txtData.Text = despesa.Data;
+            txtQuantidade.Text = despesa.Quantidade.ToString();
             txtDescricao.Text = despesa.Descricao;
             txtValor.Text = despesa.Valor.ToString();
            
@@ -39,6 +40,7 @@ public partial class Paginas_AlterarDespesa : System.Web.UI.Page
         DespesaBD bd = new DespesaBD();
         Despesa despesa = bd.Select(Convert.ToInt32(Session["ID"]));
         despesa.Data = txtData.Text;
+        despesa.Quantidade = Convert.ToInt32(txtQuantidade.Text);
         despesa.Descricao = txtDescricao.Text;
         despesa.Valor = Convert.ToDouble(txtValor.Text);
         

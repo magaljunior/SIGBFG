@@ -11,7 +11,6 @@ namespace Cadastro_Produto.Persistence
 
 public class ProdutoBD
 {
-        //métodos 
         //insert
         public bool Insert(Produto produto)
         {
@@ -59,6 +58,7 @@ public class ProdutoBD
 
             return ds;
         }
+
         //select
         public Produto Select(int id)
         {

@@ -91,7 +91,8 @@
        
          
             <asp:Label runat="server" Text="Produto:"></asp:Label>
-            <asp:TextBox ID="txtProduto" runat="server" Width="162px" style="margin-left: 31px"></asp:TextBox>
+               <asp:DropDownList ID="ddlProdutos" runat="server" Height="16px" style="margin-left: 14px" Width="177px">
+               </asp:DropDownList>
             <br/><br/>
             <asp:Label runat="server" Text="Quantidade:"></asp:Label>
             <asp:TextBox ID="txtQuantidade" runat="server" style="margin-left: 13px" Width="155px"></asp:TextBox>
