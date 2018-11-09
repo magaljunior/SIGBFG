@@ -78,6 +78,14 @@
                             <ItemStyle HorizontalAlign="Center" />
                         </asp:TemplateField>
 
+                         <asp:TemplateField HeaderText="Calcular">
+                             <ItemTemplate>     
+                                    <asp:ImageButton ID="lblCalcular" runat="server" CommandName="Calcular"
+                                        ImageUrl="../../Images/calc.jpg" CommandArgument='<%# Bind("pro_codigo")%>'></asp:ImageButton>
+                             </ItemTemplate>
+                             <ItemStyle HorizontalAlign="Center" />
+                       </asp:TemplateField>
+
                         <asp:TemplateField HeaderText="Alterar">
                             <ItemTemplate>
                                 <asp:ImageButton ID="lbAlterar" runat="server" CommandName="Alterar" 

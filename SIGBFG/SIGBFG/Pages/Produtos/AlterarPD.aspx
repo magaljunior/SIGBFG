@@ -88,7 +88,7 @@
                 </div>
                     <br />
                 <p>
-                    <asp:Label runat="server" Text="Nome:"></asp:Label>
+                    <asp:Label runat="server" Text="Nome:" ID="lblNome"></asp:Label>
                     <asp:TextBox ID="txtNome" runat="server" Style="margin-left: 23px" Width="255px"></asp:TextBox>
                     &nbsp;&nbsp;&nbsp;
                 </p>

@@ -59,6 +59,11 @@ public partial class Pages_Listar : System.Web.UI.Page
 
                 Carrega();
                 break;
+            case "Calcular":
+                codigo = Convert.ToInt32(e.CommandArgument);
+                Session["ID"] = codigo;
+                Response.Redirect("Giro/GiroEstoque.aspx");
+                break;
             case "Alterar":
                 codigo = Convert.ToInt32(e.CommandArgument);
                 Session["ID"] = codigo;
