@@ -34,13 +34,33 @@ public partial class Pages_Login : System.Web.UI.Page
         string senha = txtSenha.Text.Trim();
         if (!IsPreenchido(nome))
         {
-            Response.Write ("<script>alert('Preencha o Nome')</script>");
+            Type cstype = this.GetType();
+
+            // Get a ClientScriptManager reference from the Page class.
+            ClientScriptManager cs = Page.ClientScript;
+
+            // Check to see if the startup script is already registered.
+            if (!cs.IsStartupScriptRegistered(cstype, "PopupScript"))
+            {
+                String cstext = "alert('Preencha o Nome');";
+                cs.RegisterStartupScript(cstype, "PopupScript", cstext, true);
+            }
             txtNome.Focus();
             return;
         }
         if (!IsPreenchido(senha))
         {
-            Response.Write("<script>alert('Preencha a Senha')</script>");
+            Type cstype = this.GetType();
+
+            // Get a ClientScriptManager reference from the Page class.
+            ClientScriptManager cs = Page.ClientScript;
+
+            // Check to see if the startup script is already registered.
+            if (!cs.IsStartupScriptRegistered(cstype, "PopupScript"))
+            {
+                String cstext = "alert('Insira sua Senha');";
+                cs.RegisterStartupScript(cstype, "PopupScript", cstext, true);
+            }
             txtSenha.Focus();
             return;
         }
@@ -49,7 +69,17 @@ public partial class Pages_Login : System.Web.UI.Page
         pessoa = bd.Autentica(nome, senha);
         if (!UsuarioEncontrado(pessoa))
         {
-            lblMensagem.Text = "Usuário não encontrado";
+            Type cstype = this.GetType();
+
+            // Get a ClientScriptManager reference from the Page class.
+            ClientScriptManager cs = Page.ClientScript;
+
+            // Check to see if the startup script is already registered.
+            if (!cs.IsStartupScriptRegistered(cstype, "PopupScript"))
+            {
+                String cstext = "alert('Usuário não encontrado');";
+                cs.RegisterStartupScript(cstype, "PopupScript", cstext, true);
+            }
             txtNome.Focus();
             return;
         }

@@ -39,7 +39,8 @@
                     <asp:Button ID="btnHome" runat="server" Text="Página Inicial" class="btn btn-dark" OnClick="btnHome_Click"/>
               </center>
                                
-           <center>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <h1>Sistema Integrado de Gestão BFG</h1>
+           <center>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+               <h1>Sistema Integrado de Gestão BFG</h1> 
                      <br />
         </div>
 
