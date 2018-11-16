@@ -97,4 +97,10 @@ public partial class Pages_Estoque_Produtos : System.Web.UI.Page
             }
         }
     }
+
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        int PorcentagemEstoque = Convert.ToInt32(txtTotal.Text) * 100 / 60000;
+        txtPorcentagem.Text = PorcentagemEstoque.ToString();
+    }
 }

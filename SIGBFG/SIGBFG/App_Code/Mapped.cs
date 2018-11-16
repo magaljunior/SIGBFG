@@ -1,9 +1,11 @@
-﻿//Importa funções do MySQL
+﻿    //Importa funções do MySQL
 using MySql.Data.MySqlClient;
 //Trabalhar com Dataset
 using System.Data;
 //Permite visualizar o web.config
 using System.Configuration;
+
+using System.Data.SqlClient;
 
 
 namespace FATEC
@@ -11,6 +13,7 @@ namespace FATEC
     /// <summary>
     /// Summary description for Mapped
     /// </summary>
+
     public class Mapped
     {
         //Abrir conexao
