@@ -69,10 +69,20 @@
                 <br />
                 <h2>Total de Produtos em Estoque</h2>
                 <asp:Label ID="txtTotal" runat="server"></asp:Label>
+                <br />
+                
+                <br />
+                <asp:Button class="btn btn-dark" ID="Button1" runat="server" Text="Calcular Porcentagem em Estoque" OnClick="Button1_Click" />
+                <br />
+                <br />
+                <asp:Label ID="txtPorcentagem" runat="server"></asp:Label>
+                <br />
             </form>
         </div>  
     </div>
         </div>
     </div>
+    <p>
+        &nbsp;</p>
 </body>
 </html>
