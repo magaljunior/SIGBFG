@@ -32,7 +32,7 @@ public partial class Pages_Usuario_Alterar_Funcionario : System.Web.UI.Page
         pessoa.Nome = txtNome.Text;
         pessoa.Email = txtEmail.Text;
         pessoa.Senha = txtSenha.Text;
-        pessoa.Tipo = Convert.ToInt32(txtTipo.SelectedItem.Value);
+        pessoa.Tipo = txtTipo.SelectedItem.Value;
 
         if (bd.Update(pessoa))
         {

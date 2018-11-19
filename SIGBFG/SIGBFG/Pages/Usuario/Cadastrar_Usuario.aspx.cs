@@ -20,7 +20,7 @@ public partial class Pages_Usuario_Cadastrar_Usuario : System.Web.UI.Page
         pessoa.Nome = txtNome.Text;
         pessoa.Email = txtEmail.Text;
         pessoa.Senha = txtSenha.Text;
-        pessoa.Tipo = Convert.ToInt32(txtTipo.Text);
+        pessoa.Tipo = txtTipo.Text;
         PessoaBD bd = new PessoaBD();
         if (bd.Insert(pessoa))
         {

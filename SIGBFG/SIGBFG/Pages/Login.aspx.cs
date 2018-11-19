@@ -86,10 +86,10 @@ public partial class Pages_Login : System.Web.UI.Page
         Session["ID"] = pessoa.Codigo;
         switch (pessoa.Tipo)
         {
-            case 1:
+            case "Administrador":
                 Response.Redirect("ADM/Administrador.aspx");
                 break;
-            case 2:
+            case "Funcionário":
                 Response.Redirect("Client/Index.aspx");
                 break;
             default:

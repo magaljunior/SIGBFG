@@ -25,7 +25,7 @@ namespace SIGBFG.Persistencia
                 obj = new Pessoa();
                 obj.Nome = Convert.ToString(objDataReader["pes_nome"]);
                 obj.Email = Convert.ToString(objDataReader["pes_email"]);
-                obj.Tipo = Convert.ToInt32(objDataReader["pes_tipo"]);
+                obj.Tipo = Convert.ToString(objDataReader["pes_tipo"]);
             }
             objDataReader.Close();
             objConexao.Close();
@@ -90,7 +90,7 @@ namespace SIGBFG.Persistencia
                 obj.Nome = Convert.ToString(objDataReader["pes_nome"]);
                 obj.Email = Convert.ToString(objDataReader["pes_email"]);
                 obj.Senha = Convert.ToString(objDataReader["pes_senha"]);
-                obj.Tipo = Convert.ToInt32(objDataReader["pes_tipo"]);
+                obj.Tipo = Convert.ToString(objDataReader["pes_tipo"]);
             }
             objDataReader.Close();
             objConexao.Close();

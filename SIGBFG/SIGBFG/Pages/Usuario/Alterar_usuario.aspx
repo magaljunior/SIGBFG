@@ -133,8 +133,8 @@
                 <br />
                 <asp:Label ID="Label4" runat="server" Text="Tipo:"></asp:Label>
                 <asp:DropDownList ID="txtTipo" runat="server" style="margin-left: 7px">
-                    <asp:ListItem Value="1">Administrador</asp:ListItem>
-                    <asp:ListItem Value="2">Funcionário</asp:ListItem>
+                    <asp:ListItem Value="Administrador">Administrador</asp:ListItem>
+                    <asp:ListItem Value="Funcionário">Funcionário</asp:ListItem>
                 </asp:DropDownList>
                 <br />
                 <br />
