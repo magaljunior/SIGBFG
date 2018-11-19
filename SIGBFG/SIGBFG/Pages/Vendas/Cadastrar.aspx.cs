@@ -6,25 +6,47 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Vendas.Classes;
 using Vendas.Persistencia;
+using System.Data;
+using Cadastro_Produto.Persistence;
 
 public partial class Paginas_Cadastrar : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
         txtCliente.Focus();
+
+        if (!Page.IsPostBack)
+        {
+            CarregaDDL();
+        }
+    }
+
+    private void CarregaDDL()
+    {
+        ProdutoBD bd = new ProdutoBD();
+        DataSet ds = bd.SelectAll();
+
+        ddlProdutos.Items.Clear();
+        ddlProdutos.DataSource = ds.Tables[0].DefaultView;
+        ddlProdutos.DataTextField = "pro_nome";
+        ddlProdutos.DataValueField = "pro_nome";
+        ddlProdutos.DataBind();
+
+        ddlProdutos.Items.Insert(0, "Selecione");
     }
 
     protected void btnSalvar_Click(object sender, EventArgs e)
     {
         Venda venda = new Venda();
 
-        venda.Cliente = Convert.ToString(txtCliente.Text);
-        venda.Endereco = Convert.ToString(txtEndereco.Text);
-        venda.Bairro = Convert.ToString(txtBairro.Text);
+        venda.Cliente = txtCliente.Text;
+        venda.Endereco = txtEndereco.Text;
+        venda.Bairro = txtBairro.Text;
         venda.Numero = Convert.ToInt32(txtNumero.Text);
-        venda.Cnpj = Convert.ToString(txtCnpj.Text);
-        venda.Telefone = Convert.ToString(txtTel.Text);
-        venda.Nome = txtProduto.Text;
+        venda.Cnpj = txtCnpj.Text;
+        venda.Telefone = txtTel.Text;
+        venda.Produto = ddlProdutos.SelectedItem.Value;
+        venda.Nome = txtCliente.Text;
         venda.Quantidade = Convert.ToInt32(txtQuantidade.Text);
         venda.Valor = Convert.ToDouble(txtValor.Text);
         venda.Data = txtData.Text;
@@ -40,7 +62,7 @@ public partial class Paginas_Cadastrar : System.Web.UI.Page
             txtNumero.Text = "";
             txtCnpj.Text = "";
             txtTel.Text = "";
-            txtProduto.Text = "";
+            ddlProdutos.SelectedItem.Value = "";
             txtQuantidade.Text = "";
             txtData.Text = "";
             txtValor.Text = "";

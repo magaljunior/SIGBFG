@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
    
 <head runat="server">
-    <link href="../../Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../Scripts/css/bootstrap.min.css" rel="stylesheet" />
     <script src="../../Scripts/bootstrap.min.js"></script>
     <title></title>
 </head>
@@ -16,9 +16,11 @@
               <br />
                
 <br />
+            <a class="btn btn-dark" href="Cadastrar.aspx">Realizar Venda</a>
                 <br />
+            <br />
                 <h1>Lista de Vendas de Produtos</h1>
-              <br />
+            <br />
                 <asp:Label ID="lblMensagem" runat="server" Text="" ></asp:Label>
           
                 <br />
@@ -33,7 +35,7 @@
              <asp:BoundField DataField="ven_numero" HeaderText="Número" /> 
              <asp:BoundField DataField="ven_cnpj" HeaderText="CNPJ" /> 
              <asp:BoundField DataField="ven_telefone" HeaderText="Telefone" /> 
-             <asp:BoundField DataField="ven_nome" HeaderText="Produto" /> 
+              <asp:BoundField DataField="ven_produto" HeaderText="Produto" />
              <asp:BoundField DataField="ven_quantidade" HeaderText="Quantidade" /> 
              <asp:BoundField DataField="ven_valor" HeaderText="Valor" /> 
              <asp:BoundField DataField="ven_data" HeaderText="Data" /> 

@@ -14,7 +14,9 @@
         #body {
             width: 100%;
             height: 100%;
+            font-weight: bold;
             background-image: url(http://localhost:50742/Images/blocos.png)
+            
         }
     </style>
 </head>
@@ -67,8 +69,13 @@
                 </asp:GridView>
                 <br />
                 <br />
+                 <asp:Button class="btn btn-dark" ID="Button2" runat="server" Text="Capacidade Média 30000"/>
+                 <asp:Button class="btn btn-dark" ID="Button3" runat="server" Text="Capacidade Máxima 60000"/>
+                <br />
+                <br />
                 <h2>Total de Produtos em Estoque</h2>
                 <asp:Label ID="txtTotal" runat="server"></asp:Label>
+                <br />
                 <br />
                 
                 <br />
@@ -82,7 +89,6 @@
     </div>
         </div>
     </div>
-    <p>
-        &nbsp;</p>
+    
 </body>
 </html>

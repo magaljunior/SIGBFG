@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using Vendas.Classes;
 using Vendas.Persistencia;
 using System.Data;
+using Cadastro_Produto.Persistence;
 
 public partial class Paginas_Alterar : System.Web.UI.Page
 {
@@ -23,13 +24,30 @@ public partial class Paginas_Alterar : System.Web.UI.Page
             txtNumero.Text = venda.Numero.ToString();
             txtCnpj.Text = venda.Cnpj;
             txtTel.Text = venda.Telefone;
-            txtProduto.Text = venda.Nome;
+            ddlProdutos.Text = venda.Produto;
             txtQuantidade.Text = venda.Quantidade.ToString();
             txtValor.Text = venda.Valor.ToString();
             txtData.Text = venda.Data;
+
+            CarregaDDL();
         }
+
+        txtCliente.Focus();
     }
-              
+
+    private void CarregaDDL()
+    {
+        ProdutoBD bd = new ProdutoBD();
+        DataSet ds = bd.SelectAll();
+
+        ddlProdutos.Items.Clear();
+        ddlProdutos.DataSource = ds.Tables[0].DefaultView;
+        ddlProdutos.DataTextField = "pro_nome";
+        ddlProdutos.DataValueField = "pro_nome";
+        ddlProdutos.DataBind();
+        ddlProdutos.Items.Insert(0, "Selecione");
+    }
+
     protected void btnSalvar_Click1(object sender, EventArgs e)
     {
         {
@@ -41,10 +59,13 @@ public partial class Paginas_Alterar : System.Web.UI.Page
             venda.Numero = Convert.ToInt32(txtNumero.Text);
             venda.Cnpj = Convert.ToString(txtCnpj.Text);
             venda.Telefone = Convert.ToString(txtTel.Text);
-            venda.Nome = txtProduto.Text;
+            venda.Produto = ddlProdutos.SelectedItem.Value;
             venda.Quantidade = Convert.ToInt32(txtQuantidade.Text);
             venda.Valor = Convert.ToDouble(txtValor.Text);
             venda.Data = txtData.Text;
+
+            txtCliente.Focus();
+
             if (bd.Update(venda))
             {
                 lblMensagem.Text = "Venda alterada com sucesso";

@@ -32,6 +32,7 @@
         #body {
             width: 100%;
             height: 100%;
+            font-weight: bold;
             background-image: url(http://localhost:50742/Images/blocos.png)
         }
     </style>

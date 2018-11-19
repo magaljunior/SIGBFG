@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <link href="../../Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../Scripts/css/bootstrap.min.css" rel="stylesheet" />
     <script src="../../Scripts/jquery-3.3.1.min.js"></script>
     <script src="../../Scripts/bootstrap.min.js"></script>
     <script src="../../Scripts/Validacao/jquery.validate.min.js"></script>
@@ -61,6 +61,7 @@
 #body {
     width: 100%;
     height: 100%;
+    font-weight: bold;
     background-image: url(http://localhost:50742/Images/blocos.png)
 } 
         </style>
@@ -209,6 +210,9 @@
 
             <br />
                 <br />
+                <a class="btn btn-dark" href="Listar.aspx">Listar Vendas</a>
+          <br />
+          <br />
                 <h1>
                     <asp:Label ID="lblSaída" runat="server" Text="Venda de Produtos"></asp:Label>
                      </h1>
@@ -247,9 +251,10 @@
 
                      <asp:Label ID="lblProd" runat="server" Text="Produto:"></asp:Label>
        &nbsp;&nbsp;&nbsp;
-       <asp:TextBox ID="txtProduto" runat="server" style="margin-left: 30px" Width="155px" Height="20px"></asp:TextBox>
-           
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:DropDownList ID="ddlProdutos" runat="server" Height="35px" style="margin-left: 15px" Width="184px">
+          </asp:DropDownList>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         
                      <asp:Label ID="lblQuantidade" runat="server" Text="Quantidade:"></asp:Label>
         <asp:TextBox ID="txtQuantidade" runat="server" style="margin-left: 9px" Height="20px" Width="155px"></asp:TextBox>
@@ -274,7 +279,7 @@
             <asp:TextBox ID="txtData" runat="server" Height="20px" Width="155px" style="margin-top: 0px"></asp:TextBox>
         
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-           <asp:Button CssClass="btn btn-primary" ID="btnSalvar" runat="server" OnClick="btnSalvar_Click" Text="Novo Registro"  />
+           <asp:Button CssClass="btn btn-dark" ID="btnSalvar" runat="server" OnClick="btnSalvar_Click" Text="Novo Registro"  />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Label ID="lblMensagem" runat="server"></asp:Label>
        
