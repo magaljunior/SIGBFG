@@ -15,15 +15,12 @@ namespace CadastrarMetas.Persistencia
 {
     public class MetasBD
     {
-
-        //métodos
         //insert
-
         public bool Insert(Metas metas)
         {
             System.Data.IDbConnection objConexao;
             System.Data.IDbCommand objCommand;
-            string sql = "INSERT INTO met_metas( met_mes, met_ano, met_meta, met_produto, met_descricao) " +
+            string sql = "INSERT INTO met_meta( met_mes, met_ano, met_meta, met_produto, met_descricao) " +
                 "VALUES (?mes, ?ano, ?meta, ?produto, ?descricao)";
             objConexao = Mapped.Connection();
             objCommand = Mapped.Command(sql, objConexao);
@@ -48,7 +45,7 @@ namespace CadastrarMetas.Persistencia
             System.Data.IDbCommand objCommand;
             System.Data.IDataAdapter objDataAdapter;
             objConexao = Mapped.Connection();
-            objCommand = Mapped.Command("SELECT * FROM met_metas", objConexao);
+            objCommand = Mapped.Command("SELECT * FROM met_meta", objConexao);
             objDataAdapter = Mapped.Adapter(objCommand);
             objDataAdapter.Fill(ds);
             objConexao.Close();
@@ -65,7 +62,7 @@ namespace CadastrarMetas.Persistencia
             System.Data.IDbCommand objCommand;
             System.Data.IDataReader objDataReader;
             objConexao = Mapped.Connection();
-            objCommand = Mapped.Command("SELECT * FROM met_metas WHERE met_codigo = ?codigo", objConexao);
+            objCommand = Mapped.Command("SELECT * FROM met_meta WHERE met_codigo = ?codigo", objConexao);
             objCommand.Parameters.Add(Mapped.Parameter("?codigo", id));
             objDataReader = objCommand.ExecuteReader();
             while (objDataReader.Read())
@@ -91,7 +88,7 @@ namespace CadastrarMetas.Persistencia
         {
             System.Data.IDbConnection objConexao;
             System.Data.IDbCommand objCommand;
-            string sql = "UPDATE met_metas SET met_mes=?mes, met_ano=?ano, met_produto=?produto, met_meta=?meta, met_descricao=?descricao WHERE met_codigo=?codigo";
+            string sql = "UPDATE met_meta SET met_mes=?mes, met_ano=?ano, met_produto=?produto, met_meta=?meta, met_descricao=?descricao WHERE met_codigo=?codigo";
         objConexao = Mapped.Connection();
             objCommand = Mapped.Command(sql, objConexao);
             objCommand.Parameters.Add(Mapped.Parameter("?mes", metas.Mes));
@@ -111,7 +108,7 @@ namespace CadastrarMetas.Persistencia
         {
             System.Data.IDbConnection objConexao;
             System.Data.IDbCommand objCommand;
-            string sql = "DELETE FROM met_metas WHERE met_codigo=?codigo";
+            string sql = "DELETE FROM met_meta WHERE met_codigo=?codigo";
             objConexao = Mapped.Connection();
             objCommand = Mapped.Command(sql, objConexao);
             objCommand.Parameters.Add(Mapped.Parameter("?codigo", id));
