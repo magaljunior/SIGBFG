@@ -167,7 +167,7 @@ CREATE TABLE `met_meta` (
   `MET_DESCRICAO` varchar(255) NOT NULL,
   `MET_PRODUTO` varchar(45) NOT NULL,
   PRIMARY KEY (`MET_CODIGO`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -301,16 +301,13 @@ DROP TABLE IF EXISTS `tbl_pessoa`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `tbl_pessoa` (
-  `PES_ID` int(11) NOT NULL AUTO_INCREMENT,
+  `PES_CODIGO` int(11) NOT NULL AUTO_INCREMENT,
   `PES_NOME` varchar(255) NOT NULL,
   `PES_SENHA` varchar(255) NOT NULL,
   `PES_EMAIL` varchar(255) NOT NULL,
   `PES_TIPO` varchar(45) NOT NULL,
-  `USU_CODIGO` int(11) NOT NULL,
-  PRIMARY KEY (`PES_ID`),
-  KEY `fk_TBL_PESSOA_USU_USUARIO1_idx` (`USU_CODIGO`),
-  CONSTRAINT `fk_TBL_PESSOA_USU_USUARIO1` FOREIGN KEY (`USU_CODIGO`) REFERENCES `tbl_usuario` (`USU_CODIGO`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+  PRIMARY KEY (`PES_CODIGO`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -319,7 +316,7 @@ CREATE TABLE `tbl_pessoa` (
 
 LOCK TABLES `tbl_pessoa` WRITE;
 /*!40000 ALTER TABLE `tbl_pessoa` DISABLE KEYS */;
-INSERT INTO `tbl_pessoa` VALUES (1,'admin','admin','admin@admin.com','1',1),(2,'client','client','client@client.com','2',2);
+INSERT INTO `tbl_pessoa` VALUES (8,'Sonia','12345','claudiadadi_damacena@hotmail.com','Funcionário'),(9,'pedro','1234','claudiadadi_damacena@hotmail.com','Administrador');
 /*!40000 ALTER TABLE `tbl_pessoa` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -422,4 +419,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-11-19 14:31:22
+-- Dump completed on 2018-11-19 15:25:11
