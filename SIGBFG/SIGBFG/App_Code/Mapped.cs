@@ -1,4 +1,4 @@
-﻿    //Importa funções do MySQL
+﻿//Importa funções do MySQL
 using MySql.Data.MySqlClient;
 //Trabalhar com Dataset
 using System.Data;
@@ -6,7 +6,7 @@ using System.Data;
 using System.Configuration;
 
 using System.Data.SqlClient;
-
+using System;
 
 namespace FATEC
 {

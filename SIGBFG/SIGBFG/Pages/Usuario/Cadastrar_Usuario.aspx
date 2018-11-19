@@ -121,7 +121,7 @@
             <div class="text-center" style="margin-top:100px; position: relative; left: 50%; transform: translate(-50%);">
             <br />
             <br />
-            <h1>Cadastro de Funcionarios</h1>
+            <h1>Cadastro de Usuários</h1>
             <br />
             <asp:Label runat="server" Text="Nome:"></asp:Label>
             <asp:TextBox ID="txtNome" runat="server" style="margin-left: 17px; margin-bottom: 0px"></asp:TextBox>

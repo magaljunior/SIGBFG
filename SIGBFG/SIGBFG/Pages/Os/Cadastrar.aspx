@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <link href="../../Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../Scripts/css/bootstrap.min.css" rel="stylesheet" />
     <script src="../../Scripts/jquery-3.3.1.min.js"></script>
     <script src="../../Scripts/jquery.mask.min.js"></script>
     <script src="../../Scripts/Validacao/jquery.validate.min.js"></script>
