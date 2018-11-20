@@ -8,16 +8,19 @@ using WebSitePi.Classes;
 using WebSitePi.Persistencia;
 using Cadastro_Produto.Persistence;
 using System.Data;
+using SIGBFG.Classes;
+using SIGBFG.Persistencia;
 
 public partial class Paginas_Cadastrar : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        txtOrdem.Focus();
 
         if (!Page.IsPostBack)
         {
             CarregaDDL();
+
+            CarregaDDL2();
         }
     }
 
@@ -35,25 +38,36 @@ public partial class Paginas_Cadastrar : System.Web.UI.Page
         ddlProdutos.Items.Insert(0, "Selecione");
     }
 
+    private void CarregaDDL2()
+    {
+        MotivoBD bd = new MotivoBD();
+        DataSet ds = bd.SelectAll();
+
+        ddlMotivos.Items.Clear();
+        ddlMotivos.DataSource = ds.Tables[0].DefaultView;
+        ddlMotivos.DataTextField = "mot_motivoPerda";
+        ddlMotivos.DataValueField = "mot_motivoPerda";
+        ddlMotivos.DataBind();
+
+        ddlMotivos.Items.Insert(0, "Selecione");
+    }
+
     protected void btnSalvar_Click(object sender, EventArgs e)
     {
         Perdas perdas = new Perdas();
         perdas.Codigo = Convert.ToInt32(Session["ID"]);
-        perdas.Ordem = Convert.ToInt32(txtOrdem.Text);
         perdas.Produto = ddlProdutos.SelectedItem.Value;
         perdas.Quantidade = Convert.ToInt32(txtQuantidade.Text);
-        perdas.Motivo = txtMotivo.Text;
+        perdas.Motivo = ddlMotivos.SelectedItem.Value;
 
         PerdaBD bd = new PerdaBD();
         if (bd.Insert(perdas))
         {
             lblMensagem.Text = "Perda cadastrada com sucesso";
 
-            txtOrdem.Text = "";
             ddlProdutos.SelectedItem.Value = "";
             txtQuantidade.Text = "";
-            txtMotivo.Text = "";
-            txtOrdem.Focus();
+            ddlMotivos.SelectedItem.Value = "";
         }
         else
         {

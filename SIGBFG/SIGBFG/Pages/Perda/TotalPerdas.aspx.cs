@@ -43,8 +43,8 @@ public partial class Pages_Perda_TotalPerdas : System.Web.UI.Page
         {
             if (row.RowType == DataControlRowType.DataRow)
             {
-                if (!String.IsNullOrEmpty(row.Cells[2].Text))
-                    ValorTotal += Decimal.Parse(row.Cells[2].Text);
+                if (!String.IsNullOrEmpty(row.Cells[1].Text))
+                    ValorTotal += Decimal.Parse(row.Cells[1].Text);
             }
         }
 

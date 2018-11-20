@@ -4,20 +4,36 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <link href="../../Content/bootstrap.min.css" rel="stylesheet" />
+<title>Lista de Perdas</title>
+
+    <!--LINKS DE ACESSO-->
+    <link href="../../Scripts/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="../../Scripts/jquery-3.3.1.min.js"></script>
     <script src="../../Scripts/bootstrap.min.js"></script>
-    <title></title>
+    <script src="../../Scripts/Validacao/jquery.validate.min.js"></script>
+    <script src="../../Scripts/Validacao/localization/messages_pt_PT.min.js"></script>
+    <script src="../../Scripts/jquery.mask.min.js"></script>
+
+    <style type="text/css">
+        #body {
+            width: 100%;
+            height: 100%;
+            font-weight: bold;
+            background-image: url(http://localhost:50742/Images/blocos.png)
+        }
+
+    </style>
 </head>
-<body>
+<body id="body">
     <form id="form1" runat="server">
         <div class="container-fluid">
             <center>
               <br />
-                <div id="logo" style="width: 100%; background-color: #000066; height:70px" >
+                <div id="logo">
                      <br />
-                <a class="btn btn-primary" href="../ADM/Administrador.aspx">Inicio</a>
-                <a class="btn btn-primary" href="Cadastrar.aspx">Cadastrar Perdas</a>
-                <a class="btn btn-primary" href="TotalPerdas.aspx">Total de Perdas Cadastradas</a>
+                <a class="btn btn-dark" href="../ADM/Administrador.aspx">Inicio</a>
+                <a class="btn btn-dark" href="Cadastrar.aspx">Cadastrar Perdas</a>
+                <a class="btn btn-dark" href="TotalPerdas.aspx">Total de Perdas Cadastradas</a>
                     </div>
 <br />
                 <br />
@@ -31,7 +47,6 @@
           
      <asp:GridView ID="GridView1" runat="server" OnRowCommand="GridView1_RowCommand"  Width="100%" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black" >
          <Columns>
-              <asp:BoundField DataField="per_ordem" HeaderText="Ordem de Serviço" />
              <asp:BoundField DataField="per_produto" HeaderText="Produto" />
              <asp:BoundField DataField="per_quantidade" HeaderText="Quantidade" />
              <asp:BoundField DataField="per_motivo" HeaderText="Motivo" /> 

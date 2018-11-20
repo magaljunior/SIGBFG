@@ -167,7 +167,7 @@ CREATE TABLE `met_meta` (
   `MET_DESCRICAO` varchar(255) NOT NULL,
   `MET_PRODUTO` varchar(45) NOT NULL,
   PRIMARY KEY (`MET_CODIGO`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -193,7 +193,7 @@ CREATE TABLE `per_perda` (
   `PER_MOTIVO` varchar(255) NOT NULL,
   `PER_PRODUTO` varchar(45) NOT NULL,
   PRIMARY KEY (`PER_CODIGO`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -202,6 +202,7 @@ CREATE TABLE `per_perda` (
 
 LOCK TABLES `per_perda` WRITE;
 /*!40000 ALTER TABLE `per_perda` DISABLE KEYS */;
+INSERT INTO `per_perda` VALUES (4,'0',3,'Ocorreu trincas no processo de cura','Bloco Estrutural');
 /*!40000 ALTER TABLE `per_perda` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -263,6 +264,30 @@ LOCK TABLES `pro_produto_has_ven_venda` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `tbl_motivo`
+--
+
+DROP TABLE IF EXISTS `tbl_motivo`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `tbl_motivo` (
+  `mot_codigo` int(11) NOT NULL AUTO_INCREMENT,
+  `mot_motivoPerda` varchar(45) NOT NULL,
+  PRIMARY KEY (`mot_codigo`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tbl_motivo`
+--
+
+LOCK TABLES `tbl_motivo` WRITE;
+/*!40000 ALTER TABLE `tbl_motivo` DISABLE KEYS */;
+INSERT INTO `tbl_motivo` VALUES (3,'Ocorreu trincas no processo de cura'),(4,'Danificado pelo funcionário ao transporta-lo');
+/*!40000 ALTER TABLE `tbl_motivo` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `tbl_os`
 --
 
@@ -277,11 +302,11 @@ CREATE TABLE `tbl_os` (
   `OS_QUANTIDADE` int(11) NOT NULL,
   `OS_FUNCIONARIO` varchar(255) NOT NULL,
   `OS_DESCRICAO` varchar(255) NOT NULL,
-  `PRO_CODIGO` int(11) NOT NULL,
+  `PRO_CODIGO` int(11) DEFAULT NULL,
   PRIMARY KEY (`OS_CODIGO`),
   KEY `fk_ORD_ORDEM_PRO_PRODUTO1_idx` (`PRO_CODIGO`),
   CONSTRAINT `fk_ORD_ORDEM_PRO_PRODUTO1` FOREIGN KEY (`PRO_CODIGO`) REFERENCES `tbl_produto` (`PRO_CODIGO`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -290,6 +315,7 @@ CREATE TABLE `tbl_os` (
 
 LOCK TABLES `tbl_os` WRITE;
 /*!40000 ALTER TABLE `tbl_os` DISABLE KEYS */;
+INSERT INTO `tbl_os` VALUES (1,'Bloco Estrutural','12/31/2312','12/31/2312',1000,'Danilo','Bloco perfeito para construção de paredes',NULL);
 /*!40000 ALTER TABLE `tbl_os` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -398,7 +424,7 @@ CREATE TABLE `ven_venda` (
   `VEN_NOME` varchar(255) NOT NULL,
   `VEN_PRODUTO` varchar(45) NOT NULL,
   PRIMARY KEY (`VEN_CODIGO`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -419,4 +445,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-11-19 15:25:11
+-- Dump completed on 2018-11-20 13:42:33

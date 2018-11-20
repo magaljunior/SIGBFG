@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <link href="../../Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../Scripts/css/bootstrap.min.css" rel="stylesheet" />
     <script src="../../Scripts/jquery-3.3.1.min.js"></script>
     <script src="../../Scripts/bootstrap.min.js"></script>
     <script src="../../Scripts/Validacao/jquery.validate.min.js"></script>
@@ -12,7 +12,7 @@
     <script src="../../Scripts/jquery.mask.min.js"></script>
 
 
-    <title></title>
+    <title>Cadastro de Perdas</title>
 
         <!--VALIDAÇÃO-->
     <script type="text/javascript">
@@ -37,6 +37,16 @@
             })
         })
     </script>
+
+    <style type="text/css">
+        #body {
+            width: 100%;
+            height: 100%;
+            font-weight: bold;
+            background-image: url(http://localhost:50742/Images/blocos.png)
+        }
+
+    </style>
 
 </head>
 
@@ -71,16 +81,16 @@
 
 
 
-<body style="height: 551px">
+<body id="body">
     <form id="form1" runat="server">
         <div class="container-fluid">
             <center>
             <br />
-        <div id="logo" style="width: 100%; background-color: #000066; height:70px" >
+        <div id="logo">
                      <br />
-            <a class="btn btn-primary" href="../ADM/Administrador.aspx">Inicio</a>
-            <a class="btn btn-primary" href="Listar.aspx">Lista de Perdas</a>
-            <a class="btn btn-primary" href="TotalPerdas.aspx">Total de Perdas Cadastradas</a>
+            <a class="btn btn-dark" href="../ADM/Administrador.aspx">Inicio</a>
+            <a class="btn btn-dark" href="Listar.aspx">Lista de Perdas</a>
+            <a class="btn btn-dark" href="TotalPerdas.aspx">Total de Perdas Cadastradas</a>
                     </div>
 
             <br />
@@ -88,11 +98,8 @@
                 <h1>Perda de Produto</h1>
 
               <br />
-              <asp:Label ID="Label5" runat="server" Text="Ordem de Serviço:"></asp:Label>
-              <asp:TextBox ID="txtOrdem" runat="server" Height="27px" style="margin-left: 16px" Width="112px"></asp:TextBox>
-            <br /><br />
             <asp:Label ID="Label2" runat="server" Text="Produto:"></asp:Label>
-                <asp:DropDownList ID="ddlProdutos" runat="server" Height="16px" style="margin-left: 13px" Width="186px">
+                <asp:DropDownList ID="ddlProdutos" runat="server" Height="31px" style="margin-left: 13px" Width="244px">
                 </asp:DropDownList>
            
             <br />
@@ -107,16 +114,23 @@
             <asp:Label ID="Label4" runat="server" Text="Motivo:"></asp:Label>
 
         
+                <br />
+
+        
         <br />
 
         
-            <asp:TextBox ID="txtMotivo" runat="server" Height="50px" Width="231px" style="margin-top: 0px"></asp:TextBox>
+                <asp:DropDownList ID="ddlMotivos" runat="server" Height="31px" style="margin-left: 83px" Width="416px">
+                </asp:DropDownList>
         
             <br />
             <br/>
-           <asp:Button CssClass="btn btn-primary" ID="btnSalvar" runat="server" OnClick="btnSalvar_Click" Text="Salvar"  />
+           <asp:Button CssClass="btn btn-dark" ID="btnSalvar" runat="server" OnClick="btnSalvar_Click" Text="Salvar"  />
+                <br />
             <br/>
-        <asp:Label ID="lblMensagem" runat="server"></asp:Label></center>
+        <asp:Label ID="lblMensagem" runat="server"></asp:Label>
+                <br />
+            </center>
         </div>
     </form>
 </body>
