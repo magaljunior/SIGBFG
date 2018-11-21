@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Lista de Produtos</title>
 
     <link href="../../Scripts/css/bootstrap.min.css" rel="stylesheet" />
     <script src="../../Scripts/bootstrap.min.js"></script>
@@ -20,24 +20,19 @@
 </head>
 <body id="body" style="height: 416px">
     <div class="container-fluid">
-       <div class="row">
-            <div style="position: relative; left: 50%; transform: translate(-50%); height: 70px;">
-            <div class="form-group">
+       <center><div>
+            <div>
+            <div>
             <form id="form1" runat="server">
-                <div>
-                    <br />
-                    <div id="logo" style="width: 100%;  height:70px" >
-                     <br />
-                    <a class="btn btn-dark" href="../ADM/Administrador.aspx">Inicio</a>
+                <div style="margin-top: 20px; margin-bottom: 20px;">
+                    <a class="btn btn-dark" href="../ADM/Administrador.aspx">Página Inicial</a>
 
                     <a class="btn btn-dark" href="CadastrarPD.aspx">Cadastrar Produtos</a>
 
                     <a class="btn btn-dark" href="Estoque_ProdutosPD.aspx">Estoque Atual de Produtos</a>
                         </div>
-                    <br />
-                    <br />
-                    <h1>Lista de Produtos</h1>
-                </div>
+
+                    <h1 style="margin-bottom: 20px;">Lista de Produtos</h1>
 
                 &nbsp;<asp:Label ID="lblMensagem" runat="server"></asp:Label>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
@@ -119,6 +114,7 @@
         </div>
        </div>
            </div>
+           </center>
     </div>
 </body>
 </html>

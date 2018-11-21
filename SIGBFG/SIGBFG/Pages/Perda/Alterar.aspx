@@ -80,24 +80,23 @@
 
 
 <body id="body">
-    <form id="form1" runat="server">
+
        <div class="container-fluid">
-           <br />
-           <center> 
-        <div id="logo">
-                     <br />
-           <a class="btn btn-dark" href="../ADM/Administrador.aspx">Inicio</a>
+        <center><div style="margin-top: 20px;">
+            <form id="form1" runat="server">
+
+            <a class="btn btn-dark" href="../ADM/Administrador.aspx">Página Inicial</a>
             <a class="btn btn-dark" href="Cadastrar.aspx">Cadastrar Perdas</a>
             <a class="btn btn-dark" href="Listar.aspx">Lista de Perdas</a>
             <a class="btn btn-dark" href="TotalPerdas.aspx">Total de Perdas Cadastradas</a>
-        </div>
+                <br />
                <br />
                <h1>Alterar perda de Produto</h1>
                <br />
 
          
             <asp:Label runat="server" Text="Produto:"></asp:Label>
-               <asp:DropDownList ID="ddlProdutos" runat="server" Height="16px" style="margin-left: 14px" Width="177px">
+               <asp:DropDownList ID="ddlProdutos" runat="server" Height="27px" style="margin-left: 14px" Width="177px">
                </asp:DropDownList>
             <br/><br/>
             <asp:Label runat="server" Text="Quantidade:"></asp:Label>
@@ -106,14 +105,15 @@
             <asp:Label runat="server" Text="Motivo:"></asp:Label>
             <br />
             <br /> 
-               <asp:DropDownList ID="ddlMotivos" runat="server" Height="16px" style="margin-left: 54px" Width="451px">
+               <asp:DropDownList ID="ddlMotivos" runat="server" Height="27px" style="margin-left: 54px" Width="451px">
                </asp:DropDownList>
                <br /> <br />
             <asp:Button class="btn btn-dark" ID="btnSalvar" runat="server" Text="Alterar" OnClick="btnSalvar_Click1" />
             <br />
                 <br/>
-        <asp:Label ID="lblMensagem" runat="server"></asp:Label></center>
-        </div>
-    </form>
+        <asp:Label ID="lblMensagem" runat="server"></asp:Label>
+             </form>
+        </div></center>
+     </div>
 </body>
 </html>

@@ -21,7 +21,7 @@ public partial class Paginas_CadastrarDespesa : System.Web.UI.Page
         despesa.Quantidade = Convert.ToInt32(txtQuantidade.Text);
         despesa.Valor = Convert.ToDouble(txtValor.Text);
         despesa.Descricao = txtDescricao.Text;
-        despesa.Data = Convert.ToString(txtData.Text);
+        despesa.Data = txtData.Text;
 
         DespesaBD bd = new DespesaBD();
         if (bd.Insert(despesa))

@@ -4,22 +4,8 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
-    <style type="text/css">
-        #form1 {
-            height: 617px;
-        }
 
-        #TextArea1 {
-            height: 88px;
-            width: 276px;
-        }
-
-        #txtDescricao {
-            height: 92px;
-            width: 316px;
-        }
-    </style>
+    <title>Alteração de Produtos</title>
 
     <!--LINKS DE ACESSO-->
     <link href="../../Scripts/css/bootstrap.min.css" rel="stylesheet" />
@@ -28,6 +14,7 @@
     <script src="../../Scripts/Validacao/jquery.validate.min.js"></script>
     <script src="../../Scripts/Validacao/localization/messages_pt_BR.min.js"></script>
     <script src="../../Scripts/jquery.mask.min.js"></script>
+    
     <style type="text/css">
         #body {
             width: 100%;
@@ -67,33 +54,25 @@
     </script>
 
 </head>
-<body id="body" style="height: 620px">
+<body id="body">
     <div class="container-fluid">
-        <div class="form-group">
-            <div class="row">
-            <div style="position: relative; left: 50%; transform: translate(-50%); height: 70px;">
+            <center><div style="margin-top: 20px;">
             <form id="form1" runat="server">
-                <div>
-                    <br />
-                    <div id="logo" style="width: 100%;  height:70px" >
-                     <br />
-                    <a class="btn btn-dark" href="../ADM/Administrador.aspx">Inicio</a>
+                    <a class="btn btn-dark" href="../ADM/Administrador.aspx">Página Inicial</a>
                     <a class="btn btn-dark" href="CadastrarPD.aspx">Cadastrar Produtos</a>
                     <a class="btn btn-dark" href="ListarPD.aspx">Listar Produtos</a>
                     <a class="btn btn-dark" href="Estoque_ProdutosPD.aspx">Estoque Atual de Produtos</a>
-                        </div>
                     <br />
                     <br />
                     <h1>Alteração de Produtos</h1>
                     <br />
-                </div>
                     <br />
                 <p>
                     <asp:Label runat="server" Text="Nome:" ID="lblNome"></asp:Label>
                     <asp:TextBox ID="txtNome" runat="server" Style="margin-left: 23px" Width="255px"></asp:TextBox>
                     &nbsp;&nbsp;&nbsp;
                 </p>
-&nbsp;<asp:Label ID="Label2" runat="server" Text="Preço:"></asp:Label>
+                <asp:Label ID="Label2" runat="server" Text="Preço:"></asp:Label>
                 <asp:TextBox ID="txtPreco" runat="server" Style="margin-left: 22px" Width="157px"></asp:TextBox>
                 <br />
                 <br />
@@ -114,9 +93,7 @@
                 <br />
                 <asp:Label ID="lblMensagem" runat="server"></asp:Label>
             </form>
+        </div></center>
         </div>
-        </div>
-    </div>
-    </div>
 </body>
 </html>

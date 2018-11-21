@@ -4,12 +4,16 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Estoque de Produtos</title>
 
     
     <link href="../../Scripts/css/bootstrap.min.css" rel="stylesheet" />
-    <script src="../../Scripts/bootstrap.min.js"></script>
     <script src="../../Scripts/jquery-3.3.1.min.js"></script>
+    <script src="../../Scripts/bootstrap.min.js"></script>
+    <script src="../../Scripts/Validacao/jquery.validate.min.js"></script>
+    <script src="../../Scripts/Validacao/localization/messages_pt_BR.min.js"></script>
+    <script src="../../Scripts/jquery.mask.min.js"></script>
+
     <style type="text/css">
         #body {
             width: 100%;
@@ -20,20 +24,14 @@
         }
     </style>
 </head>
-<body id="body" style="height: 568px">
+<body id="body">
     <div class="container-fluid">
-    <div class="row">
-            <div style="position: relative; left: 50%; transform: translate(-50%); height: 70px;">
-                <div class="form-group">
+    <center><div style="margin-top: 20px;">
             <form id="form1" runat="server" aria-atomic="False">
-                <div>
-                    <br />
-                    <div id="logo" style="width: 100%; height:70px" >
-                     <br />
-                    <a class="btn btn-dark" href="../ADM/Administrador.aspx">Inicio</a>
+
+                    <a class="btn btn-dark" href="../ADM/Administrador.aspx">Página Inicial</a>
                     <a class="btn btn-dark" href="CadastrarPD.aspx">Cadastrar Produtos</a>
                     <a class="btn btn-dark" href="ListarPD.aspx">Listar Produtos</a>
-                        </div>
                     <br />
                     <br />
                     <h1>Estoque Atual de Produtos</h1>
@@ -41,7 +39,7 @@
                     <asp:Label ID="lblMensagem" runat="server"></asp:Label>
                     <br />
                     <br />
-                </div>
+
                 <asp:GridView ID="GridView1" runat="server" OnRowCommand="GridView1_RowCommand" AutoGenerateColumns="False" Height="100px" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black" Width="100%" OnRowDataBound="fotoProduto_RowDataBound">
                     <Columns>
                         <asp:BoundField DataField="pro_foto" HeaderText="Foto" />
@@ -74,20 +72,18 @@
                 <br />
                 <br />
                 <h2>Total de Produtos em Estoque</h2>
+                <br />
                 <asp:Label ID="txtTotal" runat="server"></asp:Label>
                 <br />
-                <br />
-                
                 <br />
                 <asp:Button class="btn btn-dark" ID="Button1" runat="server" Text="Calcular Porcentagem em Estoque" OnClick="Button1_Click" />
                 <br />
                 <br />
                 <asp:Label ID="txtPorcentagem" runat="server"></asp:Label>
                 <br />
+                <br />
             </form>
-        </div>  
-    </div>
-        </div>
+        </div></center>  
     </div>
     
 </body>

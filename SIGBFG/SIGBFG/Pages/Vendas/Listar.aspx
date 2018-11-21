@@ -5,17 +5,34 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
    
 <head runat="server">
+
     <link href="../../Scripts/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="../../Scripts/jquery-3.3.1.min.js"></script>
     <script src="../../Scripts/bootstrap.min.js"></script>
-    <title></title>
+    <script src="../../Scripts/Validacao/jquery.validate.min.js"></script>
+    <script src="../../Scripts/Validacao/localization/messages_pt_PT.min.js"></script>
+    <script src="../../Scripts/jquery.mask.min.js"></script>
+
+    <title>Lista de Vendas</title>
+
+    <style type="text/css">
+        #body {
+            width: 100%;
+            height: 100%;
+            font-weight: bold;
+            background-image: url(http://localhost:50742/Images/blocos.png)
+        }
+
+    </style>
+
 </head>
-<body>
-    <form id="form1" runat="server">
+
+<body id="body">
         <div class="container-fluid">
+            <center><div style="margin-top: 20px;">
             
-              <br />
-               
-<br />
+            <form id="form1" runat="server">
+            <a class="btn btn-dark" href="../ADM/Administrador.aspx">Página Inicial</a>
             <a class="btn btn-dark" href="Cadastrar.aspx">Realizar Venda</a>
                 <br />
             <br />
@@ -68,8 +85,8 @@
         </asp:GridView>
                 <br />
                 <br />
-           
+              </form>
+           </div></center>
         </div>
-    </form>
 </body>
 </html>

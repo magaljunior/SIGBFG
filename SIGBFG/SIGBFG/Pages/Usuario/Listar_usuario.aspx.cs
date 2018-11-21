@@ -18,7 +18,10 @@ public partial class Pages_Usuario_Listar_Usuario : System.Web.UI.Page
     }
     protected void Page_Load(object sender, EventArgs e)
     {
-        Carrega();
+        if (!Page.IsPostBack)
+        {
+            Carrega();
+        }
     }
 
     protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)

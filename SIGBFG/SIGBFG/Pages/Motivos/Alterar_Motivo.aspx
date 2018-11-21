@@ -3,8 +3,10 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head runat="server">
-    <title>Alterar Motivos de Perda</title>
+
+    <title>Alteração de Motivos de Perda</title>
 
     <link href="../../Scripts/css/bootstrap.min.css" rel="stylesheet" />
     <script src="../../Scripts/jquery-3.3.1.min.js"></script>
@@ -21,15 +23,17 @@
             background-image: url(http://localhost:50742/Images/blocos.png)
         }
     </style>
+
 </head>
 <body id="body">
-    <form id="form1" runat="server">
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm-12">
-                <br />
+        <center><div style="margin-top: 20px;">
+                <form id="form1" runat="server">
+
+                <a class="btn btn-dark" href="../ADM/Administrador.aspx">Página Inicial</a>
                 <a class="btn btn-dark" href="Cadastrar_Motivo.aspx">Cadastrar Motivos de Perda</a>
                 <a class="btn btn-dark" href="Listar_Motivo.aspx">Listar Motivos de Perda</a>
+
                 <br />
                 <br />
                 <h1>Alteração de Motivos de Perda</h1>
@@ -43,10 +47,8 @@
                 <br />
                 <asp:Label ID="lblMensagem" runat="server"></asp:Label>
                 <br />
-
-            </div>
+                </form>
+            </div></center>
         </div>
-    </div>
-    </form>
 </body>
 </html>

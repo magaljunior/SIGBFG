@@ -68,72 +68,43 @@
     
 
     <div class="container-fluid">
+        <center>
+                    <div style="margin-top: 20px;">
 
-        <div style="margin-top: 20px;" class="row">
-             <div class="col-sm-11" style="position: relative; left: 50%; transform: translate(-50%); height: 70px;">
-                  <div style="margin-top:20px; position: relative; left: 50%; transform: translate(-50%);" id="nav">
-                         <ul>
-                             <li><a class="btn btn-dak" href="Index.aspx">Página Inicial</a></li>
-
-                             <li><a class="btn btn-dark" href="#">Usuário</a>
-                                 <ul>
-                                 <li> <a href="../Usuario/Cadastrar_Usuario.aspx">Cadastrar</a></li>
-                                 <li><a href="../Usuario/Listar_Usuario.aspx">Listar</a></li>
-                                 </ul>
-                             </li>
+                      <a class="btn btn-dark" href="../Usuario/Cadastrar_Usuario.aspx">Usuários</a>
                              
-                             <li><a class="btn btn-dark" href="#">Produtos</a>
-                                  <ul>
-                                  <li><a href="../Produtos/CadastrarPD.aspx">Cadastrar</a></li>
-                                  <li><a href="../Produtos/ListarPD.aspx">Listar</a></li>
-                                  <li><a href="../Produtos/Estoque_ProdutosPD.aspx">Estoque de Produtos</a></li>
-                                  </ul>   
-                             </li>
+                      <a class="btn btn-dark" href="../Produtos/CadastrarPD.aspx">Produtos</a>
 
-                             <li><a class="btn btn-dark" href="#">Metas</a>
-                                     <ul>
-                                     <li><a class="btn btn-dark" href="../Metas/Cadastrar.aspx">Cadastrar</a></li>
-                                     <li><a href="../Metas/Listar.aspx">Listar</a></li>                                                                    
-                                     </ul>
-                             </li>
+                      <a class="btn btn-dark" href="../Metas/Cadastrar.aspx">Metas</a>
 
-                             <li><a class="btn btn-dark" href="#">Despesas</a>
-                                     <ul>
-                                     <li><a class="btn btn-dark" href="../Despesa/CadastrarDespesa.aspx">Cadastrar</a></li>
-                                     <li><a href="../Despesa/ListarDespesa.aspx">Listar</a></li>                                                                    
-                                     </ul>
-                             </li>
+                      <a class="btn btn-dark" href="../Despesa/CadastrarDespesa.aspx">Despesas</a>
 
-                             <li><a class="btn btn-dark" href="#">Perdas</a>
-                                     <ul>
-                                     <li><a href="../Perda/Cadastrar.aspx">Cadastrar</a></li>
-                                         <li><a href="../Perda/Listar.aspx">Listar</a></li>
-                                     <li><a href="../Perda/TotalPerdas.aspx">Total de Perdas</a></li>  
-                                     </ul>
-                             </li>
+                      <a class="btn btn-dark" href="../Perda/Cadastrar.aspx">Perdas</a>
 
-                             <li><a class="btn btn-dark" href="#">Ordem Serviço</a>
-                                     <ul>
-                                     <li><a href="../Os/Cadastrar.aspx">Cadastrar</a></li>
-                                     <li><a href="../Os/Listar.aspx">Listar</a></li>
-                                     </ul>
-                             </li>
+                      <a style="width:160px;" class="btn btn-dark" href="../Os/Cadastrar.aspx">Ordem de Serviço</a>
 
-                             <li><a class="btn btn-dark" href="../Giro/GiroEstoque.aspx">Calculadora</a></li>
+                      <a class="btn btn-dark" href="../Vendas/Cadastrar.aspx">Vendas</a>
 
-                             </ul>
-                        </div>
-             </div>
+                      <a class="btn btn-dark" href="../Motivos/Cadastrar_Motivo.aspx">Motivos</a>
+
+                      <a style="width:160px;" class="btn btn-dark" href="../Relatorios/EstoqueProdutos.aspx">Gráfico de Estoque</a>
+
+                      <a style="width:160px;" class="btn btn-dark" href="../Relatorios/Produção.aspx">Gráfico de Produção</a>
+
+                      <a class="btn btn-dark" href="../Giro/GiroEstoque.aspx">Calculadora</a>
+
                     </div>
 
-                <div class="row">                                   
-                      <div class="text-center" style="margin-top:150px; position: relative; left: 50%; transform: translate(-50%);"  id="title">
-                            <h1>Bem-Vindo</h1>
-                            <br />
+                <div>                                   
+                      <div>
+                            <h1 style="margin-top: 40px;">Bem-Vindo</h1>
                             <br />
                             <h2>Sistema Integrado de Gestão BFG</h2>
+                          <br />
+                                <img src="../../Images/BFG.jpg" />
                       </div>       
                </div>
+            </center>
         </div>
 
     </body>

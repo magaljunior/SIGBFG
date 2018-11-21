@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Alteração de Despesas</title>
 
      <link href="../../Scripts/css/bootstrap.min.css" rel="stylesheet" />
     <script src="../../Scripts/jquery-3.3.1.min.js"></script>
@@ -17,6 +17,7 @@
         #body {
             width: 100%;
             height: 100%;
+            font-weight: bold;
             background-image: url(http://localhost:50742/Images/blocos.png)
         }
 
@@ -29,25 +30,24 @@
             $("#form1").validate({
                 rules: {
                     txtData: {
-                        required: true,
-                        
+                        required: true                    
                     },
                     txtQuantidade: {
                         required: true
                     },
                     txtDescricao: {
-                        required: true,
+                        required: true
                         
-                    }
+                    },
                     txtValor: {
-                        required: true,
+                        required: true
                     }
                 }
             })
 
             //MASCARA
 
-            $('#txtData').mask("dd/mm/yyyy", { reverse: true })
+            $('#txtData').mask("00/00/0000", { reverse: true })
             $('#txtValor').mask("000.000.000,00", { reverse: true });
 
         })
@@ -55,27 +55,19 @@
 
 </head>
 <body id="body">
+<div class="container-fluid">
 
-     <div class="container-fluid">
-         <div class="row">
-            <div style="position: relative; left: 50%; transform: translate(-50%); height: 70px;">
-        <br />
-              <div id="logo" style="width: 100%; height:70px" >
-                     <br />
+         <center><div style="margin-top: 20px;">
          <a class="btn btn-dark" href="../ADM/Administrador.aspx">Inicio</a>
          <a class="btn btn-dark" href="CadastrarDespesa.aspx">Cadastrar Despesa</a>
-         <a class="btn btn-dark" href="ListarDespesa.aspx">Lista de Despesas</a>
-         </div>
-
-        <div class="form-group">
-            
+         <a class="btn btn-dark" href="ListarDespesa.aspx">Lista de Despesas</a>     
 
     <form id="form1" runat="server">
-        <div>
-
-            <div style="height: 349px">
+                    <br />
                     <h1>Alterar Despesa</h1>
                     <br />
+
+
 
                     <asp:Label runat="server" Text="Data:"></asp:Label>
                     <asp:TextBox ID="txtData" runat="server" Width="150px"></asp:TextBox>
@@ -97,13 +89,8 @@
                     <br />
 
                     <asp:Label ID="lblMensagem" runat="server"></asp:Label>
-                </div>
-
+                </form>
+             </div></center>
         </div>
-    </form>
-            </div>
-             </div>
-             </div>
-         </div>
 </body>
 </html>

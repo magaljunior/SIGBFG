@@ -3,7 +3,9 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head runat="server">
+
     <link href="../../Scripts/css/bootstrap.min.css" rel="stylesheet" />
     <script src="../../Scripts/jquery-3.3.1.min.js"></script>
     <script src="../../Scripts/bootstrap.min.js"></script>
@@ -82,16 +84,15 @@
 
 
 <body id="body">
-    <form id="form1" runat="server">
         <div class="container-fluid">
-            <center>
-            <br />
-        <div id="logo">
-                     <br />
-            <a class="btn btn-dark" href="../ADM/Administrador.aspx">Inicio</a>
+            
+            <center><div style="margin-top: 20px;">
+            
+            <form id="form1" runat="server">
+
+            <a class="btn btn-dark" href="../ADM/Administrador.aspx">Página Inicial</a>
             <a class="btn btn-dark" href="Listar.aspx">Lista de Perdas</a>
             <a class="btn btn-dark" href="TotalPerdas.aspx">Total de Perdas Cadastradas</a>
-                    </div>
 
             <br />
                 <br />
@@ -130,8 +131,8 @@
             <br/>
         <asp:Label ID="lblMensagem" runat="server"></asp:Label>
                 <br />
-            </center>
+                    </form>
+                </div></center>
         </div>
-    </form>
 </body>
 </html>

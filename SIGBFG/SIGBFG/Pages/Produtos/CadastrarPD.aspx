@@ -4,26 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
-
-    <!--ESTILO-->
-    <style type="text/css">
-        #TextArea1 {
-            height: 102px;
-            width: 304px;
-            margin-left: 80px;
-        }
-
-        #txtDescricao {
-            height: 82px;
-            width: 246px;
-            margin-top: 3px;
-        }
-
-        #form1 {
-            height: 568px;
-        }
-    </style>
+    <title>Cadastro de Produtos</title>
 
     <!--LINKS DE ACESSO-->
     <link href="../../Scripts/css/bootstrap.min.css" rel="stylesheet" />
@@ -72,17 +53,13 @@
     </script>
 
 </head>
-<body  id="body" style="height: 631px">
+<body  id="body">
     <div class="container-fluid">
-        <div class="row">
-            <div style="position: relative; left: 50%; transform: translate(-50%); height: 70px;">
-                <br />
-                <div id="logo" style="width: 100%;  height:70px" >
-                     <br />
-                        <a class="btn btn-dark" href="../ADM/Administrador.aspx">Inicio</a>
+                <center><div style="margin-top: 20px;">
+                        <a class="btn btn-dark" href="../ADM/Administrador.aspx">Página Inicial</a>
                         <a class="btn btn-dark" href="ListarPD.aspx">Listar Produtos</a>
                         <a class="btn btn-dark" href="Estoque_ProdutosPD.aspx">Estoque Atual de Produtos</a>
-                    </div>
+
             <form id="form1" runat="server">
                 <br />
 
@@ -127,8 +104,7 @@
                     <br />
                 <asp:Label ID="lblMensagem" runat="server"></asp:Label>
             </form>
-        </div>
-            </div>
+        </div></center>
     </div>
 </body>
 </html>

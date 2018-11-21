@@ -3,8 +3,10 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head runat="server">
-    <title></title>
+
+    <title>Alteração de Metas</title>
 
     <link href="../../Scripts/css/bootstrap.min.css" rel="stylesheet" />
     <script src="../../Scripts/jquery-3.3.1.min.js"></script>
@@ -12,34 +14,27 @@
     <script src="../../Scripts/Validacao/jquery.validate.min.js"></script>
     <script src="../../Scripts/Validacao/localization/messages_pt_PT.min.js"></script>
     <script src="../../Scripts/jquery.mask.min.js"></script>
+
     <style type="text/css">
         #body {
             width: 100%;
             height: 100%;
+            font-weight: bold;
             background-image: url(http://localhost:50742/Images/blocos.png)
         }
+
     </style>
 
 </head>
 <body id="body">
 
      <div class="container-fluid">
-         <center>
-        <br />
-              <div id="logo" style="width: 100%;  height:70px" >
-                     <br />
-         <a class="btn btn-dark" href="../ADM/Administrador.aspx">Inicio</a>
-         <a class="btn btn-dark" href="Cadastrar.aspx">Cadastrar Metas</a>
-         <a class="btn btn-dark" href="Listar.aspx">Lista de Metas</a>
-         </div>
-
-        <div class="form-group">
+              <center><div style="margin-top: 20px;">
+                 <a class="btn btn-dark" href="../ADM/Administrador.aspx">Página Inicial</a>
+                 <a class="btn btn-dark" href="Cadastrar.aspx">Cadastrar Metas</a>
+                 <a class="btn btn-dark" href="Listar.aspx">Lista de Metas</a>        
             
-
-    <form id="form1" runat="server">
-        <div>
-
-            <div style="height: 349px">
+            <form id="form1" runat="server">
             <br />
                 <h1>Alterar Meta</h1>
             <br />
@@ -67,11 +62,8 @@
                 <br />
             <br />
             <asp:Label ID="lblMensagem" runat="server"></asp:Label>
-    </div>
-        </div>
-    </form>
-            </div>
-             </center>
+                </form>
+            </div></center>
          </div>
-</body>
+    </body>
 </html>

@@ -3,8 +3,10 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head runat="server">
-    <title>Listar Motivos de Perda</title>
+
+    <title>Lista de Motivos de Perda</title>
 
     <link href="../../Scripts/css/bootstrap.min.css" rel="stylesheet" />
     <script src="../../Scripts/jquery-3.3.1.min.js"></script>
@@ -23,15 +25,16 @@
     </style>
 </head>
 <body id="body">
-    <form id="form1" runat="server">
+
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-sm-12">
-                    <br />
+            <center><div style="margin-top: 20px;">
+                    <form id="form1" runat="server">
+                    <a class="btn btn-dark" href="../ADM/Administrador.aspx">Página Inicial</a>
                     <a class="btn btn-dark" href="Cadastrar_Motivo.aspx">Cadastrar Motivos de Perda</a>
                     <br />
                     <br />
                     <h1>Listar Motivos de Perda</h1>
+                        <br />
                     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black" Width="100%" OnRowCommand="GridView1_RowCommand">
                         <Columns>
                             <asp:BoundField DataField="mot_motivoPerda" HeaderText="Motivo" />
@@ -63,10 +66,8 @@
                         <SortedDescendingHeaderStyle BackColor="#383838" />
                     </asp:GridView>
                     <br />
-
-                </div>
-            </div>
-        </div>
-    </form>
+                 </form>
+           </div></center>
+     </div>
 </body>
 </html>

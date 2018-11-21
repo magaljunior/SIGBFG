@@ -4,20 +4,22 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link href="../../Scripts/css/bootstrap.min.css" rel="stylesheet" />
     <script src="../../Scripts/jquery-3.3.1.min.js"></script>
     <script src="../../Scripts/jquery.mask.min.js"></script>
     <script src="../../Scripts/Validacao/jquery.validate.min.js"></script>
     <script src="../../Scripts/Validacao/localization/messages_pt_PT.js"></script>
-    <title>Cadastrar</title>
+    
+    <title>Cadastrar Ordem de Serviço</title>
+
     <script type="text/javascript">
-        $(document).ready(function(){
+        $(document).ready(function () {
             $('.data').mask('00/00/0000');
-                                    })
+        })
     </script>
     <script type="text/javascript">
-        $(document).ready(function(){
+        $(document).ready(function () {
             $("#form1").validate({
                 rules: {
                     funcionario: {
@@ -38,27 +40,36 @@
                     dataexpiracao: {
                         required: true
                     }
-                    
+
                 }
             })
-                                    })
+        })
     </script>
+
+    <style type="text/css">
+        #body {
+            width: 100%;
+            height: 100%;
+            font-weight: bold;
+            background-image: url(http://localhost:50742/Images/blocos.png)
+        }
+    </style>
 </head>
-<body>
+<body id="body">
     <div class="container-fluid">
 
-    <form id="form1" runat="server">
-        
-        
-            <center style="height: 578px">
-                   <br />
-                 <div id="logo" style="width: 100%; background-color: #000066; height:70px" >
-                     <br />
-            <a class="btn btn-primary" href="../ADM/Administrador.aspx">Inicio</a>
-            <a class="btn btn-primary" href="Listar.aspx">Lista de O.S</a>
-            </div>
-                <br />
-            <h1>Cadastro Ordem de Serviço</h1>
+        <form id="form1" runat="server">
+
+
+            <center><div style="margin-top: 20px;">
+
+                      <a class="btn btn-dark" href="../ADM/Administrador.aspx">Página Inicial</a>
+
+                      <a style="width:200px;" class="btn btn-dark" href="../Os/Listar.aspx">Listar Ordem de Serviço</a>
+
+
+                    </div>
+            <h1 style="margin-top: 40px;">Cadastro Ordem de Serviço</h1>
 
                      <br />
             
@@ -67,7 +78,7 @@
                 <br />
             <br />
             <asp:Label ID="Label3" runat="server" Text="Produto: "></asp:Label>
-                   <asp:DropDownList ID="ddlProdutos" runat="server" Height="16px" style="margin-left: 0px" Width="186px">
+                   <asp:DropDownList ID="ddlProdutos" runat="server" Height="27px" style="margin-left: 0px" Width="186px">
                    </asp:DropDownList>
                 <br />
             <br />
@@ -87,14 +98,14 @@
             <asp:TextBox ID="txtDataexpiracao" class="data"  name="dataexpiracao" runat ="server" Width="103px"></asp:TextBox>
                    <br />
                    <br />
-            <asp:Button CssClass="btn btn-primary" ID="btnSalvar" runat="server" OnClick="btnSalvar_Click" Text="Salvar" />
+            <asp:Button CssClass="btn btn-dark" ID="btnSalvar" runat="server" OnClick="btnSalvar_Click" Text="Salvar" />
                    <br />
             <br />
             <asp:Label ID="lblMensagem" runat="server"></asp:Label>
             <br />
                 </center>
-            
-    </form>
-        </div>
+
+        </form>
+    </div>
 </body>
 </html>

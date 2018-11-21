@@ -3,7 +3,9 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head runat="server">
+
 <title>Total de Perdas Cadastradas</title>
 
     <!--LINKS DE ACESSO-->
@@ -25,18 +27,14 @@
     </style>
 </head>
 <body id="body">
-    <form id="form1" runat="server">
+
         <div class="container-fluid">
-            <br />
-            <center>
-                <div id="logo">
-                     <br />
-            <a class="btn btn-dark" href="../ADM/Administrador.aspx">Inicio</a>
+         <center><div style="margin-top: 20px;">
+            <form id="form1" runat="server">
+            <a class="btn btn-dark" href="../ADM/Administrador.aspx">Página Inicial</a>
             <a class="btn btn-dark" href="Cadastrar.aspx">Cadastrar Perdas</a>
             <a class="btn btn-dark" href="Listar.aspx">Lista de Perdas</a>
-            <br />
-                    <br />
-                    </div>
+                <br />
                 <br />
                 <h1>Total de Perdas Cadastradas</h1>
             <br />
@@ -44,7 +42,7 @@
 &nbsp;<asp:Label ID="txtTotal" runat="server"></asp:Label>
             <br />
             <br />
-            <asp:Label ID="lblMensagem" runat="server"></asp:Label></center>
+            <asp:Label ID="lblMensagem" runat="server"></asp:Label>
             <br />
             <br />
             <asp:GridView ID="GridView1" runat="server" Width="100%" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black">
@@ -63,7 +61,8 @@
                 <SortedDescendingCellStyle BackColor="#CAC9C9" />
                 <SortedDescendingHeaderStyle BackColor="#383838" />
             </asp:GridView>
-        </div>
-    </form>
+           </form>
+        </div></center>
+    </div>
 </body>
 </html>

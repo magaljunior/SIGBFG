@@ -3,7 +3,9 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head runat="server">
+
 <title>Lista de Perdas</title>
 
     <!--LINKS DE ACESSO-->
@@ -25,16 +27,14 @@
     </style>
 </head>
 <body id="body">
-    <form id="form1" runat="server">
+
         <div class="container-fluid">
-            <center>
-              <br />
-                <div id="logo">
-                     <br />
+           <center><div style="margin-top: 20px;">
+                <form id="form1" runat="server">
+
                 <a class="btn btn-dark" href="../ADM/Administrador.aspx">Inicio</a>
                 <a class="btn btn-dark" href="Cadastrar.aspx">Cadastrar Perdas</a>
                 <a class="btn btn-dark" href="TotalPerdas.aspx">Total de Perdas Cadastradas</a>
-                    </div>
 <br />
                 <br />
                 <h1>Lista de Perdas de Produto</h1>
@@ -79,8 +79,8 @@
         </asp:GridView>
                 <br />
                 <br />
-            </center>
+           </form>
+               </div></center>
         </div>
-    </form>
 </body>
 </html>

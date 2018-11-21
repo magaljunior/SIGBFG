@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Relatorio.aspx.cs" Inherits="Pages_Relatorio" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="EstoqueProdutos.aspx.cs" Inherits="Pages_Relatorio" %>
 
 <!DOCTYPE html>
 

@@ -3,7 +3,9 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head runat="server">
+
     <title>Cadastro de Motivos de Perda</title>
 
     <link href="../../Scripts/css/bootstrap.min.css" rel="stylesheet" />
@@ -25,11 +27,11 @@
 
 </head>
 <body id="body">
-    <form id="form1" runat="server">
+
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm-12">
-                <br />
+        <center><div style="margin-top: 20px;">
+                <form id="form1" runat="server">
+                <a class="btn btn-dark" href="../ADM/Administrador.aspx">Página Inicial</a>
                 <a class="btn btn-dark" href="Listar_Motivo.aspx">Listar Motivos de Perda</a>
                 <br />
                 <br />
@@ -43,10 +45,8 @@
                 <br />
                 <br />
                 <asp:Label ID="lblMensagem" runat="server"></asp:Label>
-
-            </div>
-        </div>
-    </div>
-    </form>
+                </form>
+      </div></center>
+   </div>
 </body>
 </html>

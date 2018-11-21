@@ -3,8 +3,10 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head runat="server">
-    <title></title>
+
+    <title>Lista de Metas</title>
 
     <link href="../../Scripts/css/bootstrap.min.css" rel="stylesheet" />
     <script src="../../Scripts/jquery-3.3.1.min.js"></script>
@@ -17,27 +19,22 @@
         #body {
             width: 100%;
             height: 100%;
+            font-weight: bold;
             background-image: url(http://localhost:50742/Images/blocos.png)
         }
+
     </style>
 
 </head>
 <body id="body">
 
     <div class="container-fluid">
-        <center>
-        <br />
-             <div id="logo" style="width: 100%;  height:70px" >
-                     <br />
-        <a class="btn btn-dark" href="../ADM/Administrador.aspx">Inicio</a>
-        <a class="btn btn-dark" href="Cadastrar.aspx">Cadastrar Metas</a>
-                 </div>
-        <br />
+             <center><div style="margin-top: 20px;">
+                    <a class="btn btn-dark" href="../ADM/Administrador.aspx">Página Inicial</a>
+                    <a class="btn btn-dark" href="Cadastrar.aspx">Cadastrar Metas</a>
+                <br />
 
-        <div class="form-group">
-
-            <form id="form1" runat="server">
-                <div style="height: 199px">
+                <form id="form1" runat="server">
                     <br />
                     <h1>Lista de Metas</h1>
                         <p>
@@ -77,12 +74,8 @@
                         <SortedDescendingCellStyle BackColor="#CAC9C9" />
                         <SortedDescendingHeaderStyle BackColor="#383838" />
                     </asp:GridView>
-
-
-                </div>
             </form>
-        </div>
-                </center>
+        </div></center>
     </div>
 </body>
 </html>

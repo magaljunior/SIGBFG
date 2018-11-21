@@ -1,10 +1,10 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="ListarDespesa.aspx.cs" Inherits="Paginas_ListarDespesa" %>
 
-<<!DOCTYPE html>
-
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
+    
+    <head runat="server">
+    
+    <title>Lista de Despesas</title>
 
     <link href="../../Scripts/css/bootstrap.min.css" rel="stylesheet" />
     <script src="../../Scripts/jquery-3.3.1.min.js"></script>
@@ -12,33 +12,26 @@
     <script src="../../Scripts/Validacao/jquery.validate.min.js"></script>
     <script src="../../Scripts/Validacao/localization/messages_pt_PT.min.js"></script>
     <script src="../../Scripts/jquery.mask.min.js"></script>
-
+    
     <style type="text/css">
         #body {
             width: 100%;
             height: 100%;
-            background-image: url(http://localhost:52332/Images/blocos.png)
+            font-weight: bold;
+            background-image: url(http://localhost:50742/Images/blocos.png)
         }
+
     </style>
 
-</head>
-<body id="body">
-
-    <div class="container-fluid">
-        <div class="row">
-            <div style="position: relative; left: 50%; transform: translate(-50%); height: 70px;">
-                <br />
-                <div id="logo" style="width: 100%; height: 70px">
-                    <br />
-                    <a class="btn btn-dark" href="../ADM/Administrador.aspx">Inicio</a>
+   </head>
+    <body id="body">
+        <div class="container-fluid">
+                <center><div style="margin-top: 20px;">
+                    <a class="btn btn-dark" href="../ADM/Administrador.aspx">Página Inicial</a>
                     <a class="btn btn-dark" href="CadastrarDespesa.aspx">Cadastro de Despesa</a>
-                </div>
-                <br />
-
-                <div class="form-group">
 
                     <form id="form1" runat="server">
-                        <div style="height: 199px">
+
                             <br />
                             <h1>Lista de Despesas</h1>
                             <p>
@@ -71,20 +64,16 @@
                                 </Columns>
                                 <FooterStyle BackColor="#CCCCCC" />
                                 <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
-                                <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
+                                <PagerStyle BackColor="#CCCCCC" ForeColor="Black" HorizontalAlign="Left" />
+                                <RowStyle BackColor="White" />
                                 <SelectedRowStyle BackColor="#000099" Font-Bold="True" ForeColor="White" />
                                 <SortedAscendingCellStyle BackColor="#F1F1F1" />
-                                <SortedAscendingHeaderStyle BackColor="Gray" />
+                                <SortedAscendingHeaderStyle BackColor="#808080" />
                                 <SortedDescendingCellStyle BackColor="#CAC9C9" />
                                 <SortedDescendingHeaderStyle BackColor="#383838" />
                             </asp:GridView>
-
-
-                        </div>
                     </form>
-                </div>
+                </div></center>
             </div>
-        </div>
-    </div>
 </body>
 </html>
