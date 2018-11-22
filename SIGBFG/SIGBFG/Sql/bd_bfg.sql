@@ -70,30 +70,6 @@ LOCK TABLES `cus_custo` WRITE;
 UNLOCK TABLES;
 
 --
--- Table structure for table `des_despesa`
---
-
-DROP TABLE IF EXISTS `des_despesa`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `des_despesa` (
-  `DES_CODIGO` int(11) NOT NULL AUTO_INCREMENT,
-  `DES_NOME` varchar(255) NOT NULL,
-  `DES_VALOR` double NOT NULL,
-  PRIMARY KEY (`DES_CODIGO`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `des_despesa`
---
-
-LOCK TABLES `des_despesa` WRITE;
-/*!40000 ALTER TABLE `des_despesa` DISABLE KEYS */;
-/*!40000 ALTER TABLE `des_despesa` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `est_estoque`
 --
 
@@ -202,7 +178,7 @@ CREATE TABLE `per_perda` (
 
 LOCK TABLES `per_perda` WRITE;
 /*!40000 ALTER TABLE `per_perda` DISABLE KEYS */;
-INSERT INTO `per_perda` VALUES (4,'0',3,'Ocorreu trincas no processo de cura','Bloco Estrutural');
+INSERT INTO `per_perda` VALUES (5,'0',1002,'Danificado pelo funcionário ao transporta-lo','Bloco Estrutural');
 /*!40000 ALTER TABLE `per_perda` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -264,6 +240,32 @@ LOCK TABLES `pro_produto_has_ven_venda` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `tbl_despesas`
+--
+
+DROP TABLE IF EXISTS `tbl_despesas`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `tbl_despesas` (
+  `DES_CODIGO` int(11) NOT NULL AUTO_INCREMENT,
+  `DES_DATA` varchar(45) NOT NULL,
+  `DES_QUANTIDADE` int(11) NOT NULL,
+  `DES_DESCRICAO` varchar(255) DEFAULT NULL,
+  `DES_VALOR` double NOT NULL,
+  PRIMARY KEY (`DES_CODIGO`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tbl_despesas`
+--
+
+LOCK TABLES `tbl_despesas` WRITE;
+/*!40000 ALTER TABLE `tbl_despesas` DISABLE KEYS */;
+/*!40000 ALTER TABLE `tbl_despesas` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `tbl_motivo`
 --
 
@@ -274,7 +276,7 @@ CREATE TABLE `tbl_motivo` (
   `mot_codigo` int(11) NOT NULL AUTO_INCREMENT,
   `mot_motivoPerda` varchar(45) NOT NULL,
   PRIMARY KEY (`mot_codigo`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -283,7 +285,7 @@ CREATE TABLE `tbl_motivo` (
 
 LOCK TABLES `tbl_motivo` WRITE;
 /*!40000 ALTER TABLE `tbl_motivo` DISABLE KEYS */;
-INSERT INTO `tbl_motivo` VALUES (3,'Ocorreu trincas no processo de cura'),(4,'Danificado pelo funcionário ao transporta-lo');
+INSERT INTO `tbl_motivo` VALUES (5,'Danificado pelo funcionário ao transporta-lo');
 /*!40000 ALTER TABLE `tbl_motivo` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -306,7 +308,7 @@ CREATE TABLE `tbl_os` (
   PRIMARY KEY (`OS_CODIGO`),
   KEY `fk_ORD_ORDEM_PRO_PRODUTO1_idx` (`PRO_CODIGO`),
   CONSTRAINT `fk_ORD_ORDEM_PRO_PRODUTO1` FOREIGN KEY (`PRO_CODIGO`) REFERENCES `tbl_produto` (`PRO_CODIGO`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -315,7 +317,7 @@ CREATE TABLE `tbl_os` (
 
 LOCK TABLES `tbl_os` WRITE;
 /*!40000 ALTER TABLE `tbl_os` DISABLE KEYS */;
-INSERT INTO `tbl_os` VALUES (1,'Bloco Estrutural','12/31/2312','12/31/2312',1000,'Danilo','Bloco perfeito para construção de paredes',NULL);
+INSERT INTO `tbl_os` VALUES (2,'Bloco Estrutural','09/05/2018','09/05/2018',1000,'Danilo','Bloco perfeito para construção de paredes',NULL),(3,'Canaleta','12/31/3212','12/31/2313',1000,'Danilo Malaquias','compor paredes',NULL),(4,'vedação','21/11/2018','21/11/2018',7000,'Danilo','',NULL);
 /*!40000 ALTER TABLE `tbl_os` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -333,7 +335,7 @@ CREATE TABLE `tbl_pessoa` (
   `PES_EMAIL` varchar(255) NOT NULL,
   `PES_TIPO` varchar(45) NOT NULL,
   PRIMARY KEY (`PES_CODIGO`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -342,7 +344,7 @@ CREATE TABLE `tbl_pessoa` (
 
 LOCK TABLES `tbl_pessoa` WRITE;
 /*!40000 ALTER TABLE `tbl_pessoa` DISABLE KEYS */;
-INSERT INTO `tbl_pessoa` VALUES (8,'Sonia','12345','claudiadadi_damacena@hotmail.com','Funcionário'),(9,'pedro','1234','claudiadadi_damacena@hotmail.com','Administrador');
+INSERT INTO `tbl_pessoa` VALUES (8,'Sonia','12345','claudiadadi_damacena@hotmail.com','Funcionário'),(11,'pedro','1234','claudiadadi_damacena@hotmail.com','Administrador');
 /*!40000 ALTER TABLE `tbl_pessoa` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -363,7 +365,7 @@ CREATE TABLE `tbl_produto` (
   `PRO_QUANTIDADEMINIMA` varchar(45) NOT NULL,
   `PRO_ATIVO` int(1) NOT NULL,
   PRIMARY KEY (`PRO_CODIGO`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -372,7 +374,7 @@ CREATE TABLE `tbl_produto` (
 
 LOCK TABLES `tbl_produto` WRITE;
 /*!40000 ALTER TABLE `tbl_produto` DISABLE KEYS */;
-INSERT INTO `tbl_produto` VALUES (1,'Bloco Estrutural',0.9,5060,'Bloco perfeito para construção de paredes','bloco-estrutural-D_NQ_NP_718635-MLB25886747314_082017-F.jpg','3000',1),(2,'vedação',0.95,9879,'Bloco perfeito para construção de paredes 2','bloco-estrutural-D_NQ_NP_718635-MLB25886747314_082017-F.jpg','3000',1);
+INSERT INTO `tbl_produto` VALUES (1,'Bloco Estrutural',0.9,30000,'Bloco perfeito para construção de paredes','bloco-estrutural-D_NQ_NP_718635-MLB25886747314_082017-F.jpg','3000',1),(2,'vedação',0.95,10000,'Bloco perfeito para construção de paredes 2','bloco-estrutural-D_NQ_NP_718635-MLB25886747314_082017-F.jpg','3000',1),(3,'Canaleta',0.8,7000,'compor paredes','bloco-estrutural-D_NQ_NP_718635-MLB25886747314_082017-F.jpg','2000',1);
 /*!40000 ALTER TABLE `tbl_produto` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -445,4 +447,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-11-20 13:42:33
+-- Dump completed on 2018-11-21 22:12:54

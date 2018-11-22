@@ -34,10 +34,6 @@
      <form id="form1" runat="server">
         <br />
         <div class="form-group">
-             <center>
-                 <div style="margin-top: 40px;">
-                    <asp:Button ID="btnHome" runat="server" Text="Página Inicial" class="btn btn-dark" OnClick="btnHome_Click"/>
-              </center>
                                
            <center>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
                <h1>Sistema Integrado de Gestão BFG</h1> 
