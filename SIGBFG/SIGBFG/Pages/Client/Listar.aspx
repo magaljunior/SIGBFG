@@ -25,14 +25,11 @@
     <title></title>
 </head>
 <body id="body">
-    <form id="form1" runat="server">
-        <div class="container-fluid">
-            <center>
-            <br />
-                 <div id="logo" style="width: 100%;">
-                     <br />
-            <a class="btn btn-dark" href="Index.aspx">Início</a>
-                     </div>
+    <div class="container-fluid">
+        <center><div style="margin-top: 20px;">
+           <form id="form1" runat="server">
+            <a class="btn btn-dark" href="Index.aspx">Página Inicial</a>
+
             <br />
             <br />   
           
@@ -64,8 +61,8 @@
          <SortedDescendingCellStyle BackColor="#CAC9C9" />
          <SortedDescendingHeaderStyle BackColor="#383838" />
         </asp:GridView>
-            </center>
+        </form>
+        </div></center>
         </div>
-    </form>
 </body>
 </html>

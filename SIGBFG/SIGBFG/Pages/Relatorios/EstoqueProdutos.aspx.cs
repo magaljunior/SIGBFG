@@ -41,7 +41,7 @@ public partial class Pages_Relatorio : System.Web.UI.Page
         grafico = grafico + dados;
         grafico = grafico + "]);";
         grafico = grafico + "var options = {";
-        grafico = grafico + "title: 'Produtos em Estoque',";
+        grafico = grafico + "title: '',";
         grafico = grafico + "is3D: true ";
         grafico = grafico + "};";
         grafico = grafico + "var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));";

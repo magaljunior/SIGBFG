@@ -13,87 +13,30 @@
     <script src="../../Scripts/Validacao/jquery.validate.min.js"></script>
     <script src="../../Scripts/Validacao/localization/messages_pt_PT.min.js"></script>
     <script src="../../Scripts/jquery.mask.min.js"></script>
+
     <style type="text/css">
-        #nav {
-            width: 1023px;
-            margin: auto;
-            height: 237px;
-        }
-
-            #nav ul {
-                padding: 0;
-                list-style: none;
-            }
-
-                #nav ul li {
-                    float: left;
-                    text-align: center;
-                    width: 120px;
-                    margin: 1px;
-                }
-
-                    #nav ul li a {
-                        color: #ffffff;
-                        text-decoration: none;
-                        font-family: arial;
-                        background: #343a40;
-                        display: block;
-                        padding: 10px;
-                    }
-
-                        #nav ul li a:hover {
-                            background: #868686;
-                            color: #000000;
-                        }
-
-                    #nav ul li ul {
-                        display: none;
-                    }
-
-                    #nav ul li:hover ul {
-                        display: block;
-                    }
-
-                    #title {
-                        display: inline-block;
-                    }
         #body {
             width: 100%;
             height: 100%;
+            font-weight: bold;
             background-image: url(http://localhost:50742/Images/blocos.png)
         }
+
     </style>
+
 </head>
 <body id="body">
-    
-
     <div class="container-fluid">
-
-        <div style="margin-top: 20px;" class="row">
-             <div class="col-sm-11" style="position: relative; left: 50%; transform: translate(-50%); height: 70px;">
-                  <div style="margin-top:20px; position: relative; left: 50%; transform: translate(-50%);" id="nav">
-                         <ul>
-                             <li><a class="btn btn-dark" href="../ADM/Index.aspx">Página Inicial</a></li>
-
-                             <li><a class="btn btn-dark" href="#">Ordem Serviço</a>
-                                     <ul>
-                                     <a href="Listar.aspx">Listar Os</a>
-                                     </ul>
-                             </li>
-
-                             </ul>
-                        </div>
-             </div>
-                    </div>
-
-                <div class="row">                                   
-                      <div class="text-center" style="margin-top:150px; position: relative; left: 50%; transform: translate(-50%);"  id="title">
-                            <h1>Bem-Vindo</h1>
-                            <br />
-                            <br />
-                            <h2>Sistema Integrado de Gestão BFG</h2>
-                      </div>       
-               </div>
+        <center><div style="margin-top: 20px;">
+            <a class="btn btn-dark" href="Listar.aspx">Visualizar Ordem de Serviço</a>
+            <br />
+            <br />
+             <h1>Bem-Vindo</h1>
+             <br />
+             <h2>Sistema Integrado de Gestão BFG</h2>    
+             <br />
+             <img src="../../Images/BFG.jpg" />
+               </div></center>
         </div>
 
     </body>

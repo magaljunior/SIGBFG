@@ -3,9 +3,12 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head runat="server">
+
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title></title>
+
+    <title>Sistema Integrado de Gestão BFG</title>
 
     <link href="../../Scripts/css/bootstrap.min.css" rel="stylesheet" />
     <script src="../../Scripts/jquery-3.3.1.min.js"></script>
