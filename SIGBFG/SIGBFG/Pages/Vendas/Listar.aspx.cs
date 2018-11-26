@@ -11,20 +11,28 @@ public partial class Paginas_Listar : System.Web.UI.Page
         VendaBD bd = new VendaBD();
         DataSet ds = bd.SelectAll();
         int rows = ds.Tables[0].Rows.Count;
+        DataTable dt = ds.Tables[0];
+        GridView1.DataSource = ds.Tables[0].DefaultView;
+        GridView1.DataBind();
+        lblMensagem.Text = "Venda(s) encontrada(s) : " + rows.ToString();
+        GridView1.Visible = true;
+        int acumula = 0;
 
-        if (rows > 0)
+        for (int l = 0; l < dt.Rows.Count; l++)
         {
-            GridView1.DataSource = ds.Tables[0].DefaultView;
-            GridView1.DataBind();
-            lblMensagem.Text = "Venda(s) encontrada(s) : " + rows.ToString();
-            GridView1.Visible = true;
+            if (dt.Rows[l]["ven_quantidade"].ToString() != "")
+            {
+                int total = Convert.ToInt32(dt.Rows[l]["ven_quantidade"]);
+                acumula += total;
+            }
+
         }
-        else
-        {
-            lblMensagem.Text = "Nenhuma venda encontrada";
-            GridView1.Visible = false;
-        }
+        lblMensagem0.Text = "Quantidade de Produto(s) Vendido(s) : " + acumula.ToString();
+
     }
+
+
+
 
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -39,7 +47,12 @@ public partial class Paginas_Listar : System.Web.UI.Page
             int codigo = 0;
             switch (e.CommandName)
             {
-                case "Alterar":
+            case "Calcular":
+                codigo = Convert.ToInt32(e.CommandArgument);
+                Session["ID"] = codigo;
+                Response.Redirect("Giro/GiroEstoque.aspx");
+                break;
+            case "Alterar":
                     codigo = Convert.ToInt32(e.CommandArgument);
                     Session["ID"] = codigo;
                     Response.Redirect("Alterar.aspx");
