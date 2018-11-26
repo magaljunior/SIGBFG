@@ -17,10 +17,8 @@ namespace GiroEstoque.Persistencia
             System.Data.IDbConnection objConexao;
             System.Data.IDbCommand objCommand;
             string sql = "INSERT INTO giro(gir_codigo, gir_produto, gir_estoqueMaximo, gir_estoqueMinimo, gir_estoqueMedio, gir_vendas, gir_EstoqueAtual) VALUES (?codigo, ?produto, ?estoqueMaximo, ?estoqueMinimo, ?estoqueMedio, ?vendas, ?estoqueAtual)";
-
             objConexao = Mapped.Connection();
             objCommand = Mapped.Command(sql, objConexao);
-
             objCommand.Parameters.Add(Mapped.Parameter("?codigo", giro.Codigo));
             objCommand.Parameters.Add(Mapped.Parameter("?produto", giro.Produto));
             objCommand.Parameters.Add(Mapped.Parameter("?estoqueMaximo", giro.EstoqueMaximo));
