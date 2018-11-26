@@ -40,7 +40,17 @@ public partial class Pages_Cliente_CadastraCL : System.Web.UI.Page
         }
         else
         {
-            lblMensagem.Text = "Cliente não Cadastrado.";
+            Type cstype = this.GetType();
+
+            // Get a ClientScriptManager reference from the Page class.
+            ClientScriptManager cs = Page.ClientScript;
+
+            // Check to see if the startup script is already registered.
+            if (!cs.IsStartupScriptRegistered(cstype, "PopupScript"))
+            {
+                String cstext = "alert('Cliente Cadastrado Com Sucesso');";
+                cs.RegisterStartupScript(cstype, "PopupScript", cstext, true);
+            }
         }
     }
 }

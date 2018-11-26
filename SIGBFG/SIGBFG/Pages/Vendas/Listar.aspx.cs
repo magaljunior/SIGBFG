@@ -42,31 +42,31 @@ public partial class Paginas_Listar : System.Web.UI.Page
         }
     }
 
-        protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
+    protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
+    {
+        int codigo = 0;
+        switch (e.CommandName)
         {
-            int codigo = 0;
-            switch (e.CommandName)
-            {
             case "Calcular":
                 codigo = Convert.ToInt32(e.CommandArgument);
                 Session["ID"] = codigo;
                 Response.Redirect("Giro/GiroEstoque.aspx");
                 break;
             case "Alterar":
-                    codigo = Convert.ToInt32(e.CommandArgument);
-                    Session["ID"] = codigo;
-                    Response.Redirect("Alterar.aspx");
-                    break;
-                case "Deletar":
-                    codigo = Convert.ToInt32(e.CommandArgument);
-                    VendaBD bd = new VendaBD();
-                    bd.Delete(codigo);
-                    Carrega();
-                    break;
-                default:
-                    break;
-            }
+                codigo = Convert.ToInt32(e.CommandArgument);
+                Session["ID"] = codigo;
+                Response.Redirect("Alterar.aspx");
+                break;
+            case "Deletar":
+                codigo = Convert.ToInt32(e.CommandArgument);
+                VendaBD bd = new VendaBD();
+                bd.Delete(codigo);
+                Carrega();
+                break;
+            default:
+                break;
         }
+    }
 
     protected void btnCadastrar_Click(object sender, EventArgs e)
     {
