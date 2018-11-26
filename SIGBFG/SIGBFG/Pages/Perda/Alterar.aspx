@@ -43,7 +43,7 @@
             width: 100%;
             height: 100%;
             font-weight: bold;
-            background-image: url(http://localhost:50742/Images/blocos.png)
+            /*background-image: url(http://localhost:50742/Images/blocos.png)*/
         }
 
     </style>
@@ -88,7 +88,7 @@
             <a class="btn btn-dark" href="../ADM/Administrador.aspx">Página Inicial</a>
             <a class="btn btn-dark" href="Cadastrar.aspx">Cadastrar Perdas</a>
             <a class="btn btn-dark" href="Listar.aspx">Lista de Perdas</a>
-            <a class="btn btn-dark" href="TotalPerdas.aspx">Total de Perdas Cadastradas</a>
+            <a class="btn btn-dark" href="TotalPerdas.aspx">Relatório de Perdas</a>
                 <br />
                <br />
                <h1>Alterar perda de Produto</h1>

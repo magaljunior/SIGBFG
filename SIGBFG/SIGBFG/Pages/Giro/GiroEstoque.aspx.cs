@@ -36,6 +36,6 @@ public partial class Pages_GiroEstoque : System.Web.UI.Page
     protected void Button2_Click(object sender, EventArgs e)
     {
         int Tabuas = Convert.ToInt32(txtTabuas.Text) / 12 + 1;
-        txtTabuasTotal.Text = Tabuas.ToString();
+        txtTabuasTotal.Text = Tabuas.ToString() + " - Tábuas";
     }
 }

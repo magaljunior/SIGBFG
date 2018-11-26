@@ -50,6 +50,9 @@ public partial class Pages_Estoque_Produtos : System.Web.UI.Page
         }
 
         txtTotal.Text = ValorTotal.ToString("");
+
+        Porcentagem();
+
     }
 
     protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
@@ -98,9 +101,9 @@ public partial class Pages_Estoque_Produtos : System.Web.UI.Page
         }
     }
 
-    protected void Button1_Click(object sender, EventArgs e)
+    private void Porcentagem()
     {
         int PorcentagemEstoque = Convert.ToInt32(txtTotal.Text) * 100 / 60000;
-        txtPorcentagem.Text = PorcentagemEstoque.ToString();
+        txtPorcentagem.Text = PorcentagemEstoque.ToString() + "% em Estoque";
     }
 }

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Listar.aspx.cs" Inherits="Paginas_Listar"  %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Relatorio.aspx.cs" Inherits="Pages_Vendas_Relatorio" %>
 
 <!DOCTYPE html>
 
@@ -13,7 +13,11 @@
     <script src="../../Scripts/Validacao/localization/messages_pt_PT.min.js"></script>
     <script src="../../Scripts/jquery.mask.min.js"></script>
 
-    <title>Lista de Vendas</title>
+    <title>Relatório de Vendas</title>
+
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+    <asp:Literal ID="Literal1" runat="server"></asp:Literal>
 
     <style type="text/css">
         #body {
@@ -34,18 +38,17 @@
             <form id="form1" runat="server">
             <a class="btn btn-dark" href="../ADM/Administrador.aspx">Página Inicial</a>
             <a class="btn btn-dark" href="Cadastrar.aspx">Realizar Vendas</a>
-            <a class="btn btn-dark" href="Relatorio.aspx">Relatório de Vendas</a>
+            <a class="btn btn-dark" href="Listar.aspx">Listar Vendas</a>
                 <br />
             <br />
-                <h1>Lista de Vendas de Produtos</h1>
-            <br />
-                <asp:Label ID="lblMensagem" runat="server" Text="" ></asp:Label>
+                <br />
+                <h1>Relatório de Vendas</h1>
           
                 <br />
-           <asp:Label ID="lblMensagem0" runat="server" Text="" ></asp:Label>
                 <br />
           
-     <asp:GridView ID="GridView1" runat="server" OnRowCommand="GridView1_RowCommand"  Width="100%" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" >
+     <asp:GridView ID="GridView1" runat="server"  Width="100%" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" ForeColor="Black" GridLines="Vertical" >
+         <AlternatingRowStyle BackColor="#CCCCCC" />
          <Columns>
               <asp:BoundField DataField="ven_cliente" HeaderText="Nome Cliente" />
              <asp:BoundField DataField="ven_endereco" HeaderText="Rua" />
@@ -58,27 +61,10 @@
               <asp:BoundField DataField="ven_produto_quantidade" HeaderText="Produtos e Quantidade" />
              <asp:BoundField DataField="ven_valor" HeaderText="Valor" /> 
              <asp:BoundField DataField="ven_data" HeaderText="Data" /> 
-             <asp:TemplateField HeaderText="Alterar">
-                 <ItemTemplate>
-             
-                         <asp:ImageButton ID="lbAlterar" runat="server" CommandName="Alterar" ImageUrl="../../Images/editar.jpg"  CommandArgument='<%# Bind("ven_codigo")%>'></asp:ImageButton>
-
-            
-                 </ItemTemplate>
-            </asp:TemplateField>
-             <asp:TemplateField HeaderText="Excluir">
-                 <ItemTemplate>
-     
-                         <asp:ImageButton ID="lbDeletar" runat="server" CommandName="Deletar" ImageUrl="../../Images/del.jpg" CommandArgument='<%# Bind("ven_codigo")%>'></asp:ImageButton>
-
-    
-                 </ItemTemplate>
-             </asp:TemplateField>
          </Columns>
          <FooterStyle BackColor="#CCCCCC" />
          <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
-         <PagerStyle BackColor="#CCCCCC" ForeColor="Black" HorizontalAlign="Left" />
-         <RowStyle BackColor="White" />
+         <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
          <SelectedRowStyle BackColor="#000099" Font-Bold="True" ForeColor="White" />
          <SortedAscendingCellStyle BackColor="#F1F1F1" />
          <SortedAscendingHeaderStyle BackColor="#808080" />
@@ -92,3 +78,4 @@
         </div>
 </body>
 </html>
+

@@ -1,20 +1,63 @@
-﻿using Cadastro_Produto.Persistence;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
+using Cadastro_Produto.Persistence;
+using System.Configuration;
 
-public partial class Pages_Relatorio : System.Web.UI.Page
+public partial class Pages_Produtos_Relatorio : System.Web.UI.Page
 {
-    protected void Page_Load(object sender, EventArgs e)
+    private void Carrega()
     {
-        Carrega();
+        ProdutoBD bd = new ProdutoBD();
+        DataSet ds = bd.SelectAll();
+        int rows = ds.Tables[0].Rows.Count;
+
+        if (rows > 0)
+        {
+            GridView1.DataSource = ds.Tables[0].DefaultView;
+            GridView1.DataBind();
+            GridView1.Visible = true;
+        }
     }
 
-    private void Carrega()
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        if (!Page.IsPostBack)
+        {
+            Carrega();
+        }
+
+        decimal ValorTotal = 0;
+
+        foreach (GridViewRow row in GridView1.Rows)
+        {
+            if (row.RowType == DataControlRowType.DataRow)
+            {
+                if (!String.IsNullOrEmpty(row.Cells[1].Text))
+                    ValorTotal += Decimal.Parse(row.Cells[1].Text);
+            }
+        }
+
+        txtTotal.Text = ValorTotal.ToString("");
+
+        CarregaGrafico();
+    }
+
+    protected void btnCadastrar_Click1(object sender, EventArgs e)
+    {
+        Response.Redirect("CadastrarPD.aspx");
+    }
+
+    protected void btnListar_Click1(object sender, EventArgs e)
+    {
+        Response.Redirect("ListarPD.aspx");
+    }
+
+    private void CarregaGrafico()
     {
         ProdutoBD bd = new ProdutoBD();
         DataSet ds = bd.SelectAll();
@@ -30,7 +73,7 @@ public partial class Pages_Relatorio : System.Web.UI.Page
             int quantidade = Convert.ToInt32(dr["PRO_QUANTIDADE"]);
 
             dados = dados + "['" + nome + "', " + quantidade + "],";
-          
+
         }
 
         string grafico = "";
@@ -51,5 +94,6 @@ public partial class Pages_Relatorio : System.Web.UI.Page
         grafico = grafico + "</script>";
 
         Literal1.Text = grafico;
+
     }
 }

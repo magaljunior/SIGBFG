@@ -14,64 +14,6 @@ public partial class Paginas_Cadastrar : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         txtCliente.Focus();
-
-        if (!Page.IsPostBack)
-        {
-            CarregaDDL();
-        }
-    }
-
-    private void CarregaDDL()
-    {
-        ProdutoBD bd = new ProdutoBD();
-        DataSet ds = bd.SelectAll();
-
-        ddlProdutos.Items.Clear();
-        ddlProdutos.DataSource = ds.Tables[0].DefaultView;
-        ddlProdutos.DataTextField = "pro_nome";
-        ddlProdutos.DataValueField = "pro_nome";
-        ddlProdutos.DataBind();
-
-        ddlProdutos.Items.Insert(0, "Selecione");
-    }
-
-    protected void btnSalvar_Click(object sender, EventArgs e)
-    {
-        Venda venda = new Venda();
-
-        venda.Cliente = txtCliente.Text;
-        venda.Endereco = txtEndereco.Text;
-        venda.Bairro = txtBairro.Text;
-        venda.Numero = Convert.ToInt32(txtNumero.Text);
-        venda.Cnpj = txtCnpj.Text;
-        venda.Telefone = txtTel.Text;
-        venda.Produto = ddlProdutos.SelectedItem.Value;
-        venda.Nome = txtCliente.Text;
-        venda.Quantidade = Convert.ToInt32(txtQuantidade.Text);
-        venda.Valor = Convert.ToDouble(txtValor.Text);
-        venda.Data = txtData.Text;
-
-        VendaBD bd = new VendaBD();
-        if (bd.Insert(venda))
-        {
-            lblMensagem.Text = "Venda cadastrada com sucesso";
-
-            txtCliente.Text = "";
-            txtEndereco.Text = "";
-            txtBairro.Text = "";
-            txtNumero.Text = "";
-            txtCnpj.Text = "";
-            txtTel.Text = "";
-            ddlProdutos.SelectedItem.Value = "";
-            txtQuantidade.Text = "";
-            txtData.Text = "";
-            txtValor.Text = "";
-            txtCliente.Focus();
-        }
-        else
-        {
-            lblMensagem.Text = "Venda não Cadastrada.";
-        }
     }
 
     protected void LinkButton1_Click(object sender, EventArgs e)
@@ -84,5 +26,46 @@ public partial class Paginas_Cadastrar : System.Web.UI.Page
         Response.Redirect(
             "Listar.aspx"
             );
+    }
+
+    protected void btnRealizarVenda_Click(object sender, EventArgs e)
+    {
+        Venda venda = new Venda();
+
+        venda.Cliente = txtCliente.Text;
+        venda.Endereco = txtRua.Text;
+        venda.Bairro = txtBairro.Text;
+        venda.Numero = txtNumero.Text;
+        venda.Cep = txtCep.Text;
+        venda.Cnpj = txtCnpj.Text;
+        venda.Cpf = txtCpf.Text;
+        venda.Telefone = txtTelefone.Text;
+        venda.ProdutoQuantidade = txtProdutoQauntidade.Text;
+        venda.Data = txtData.Text;
+        venda.Valor = Convert.ToDouble(txtValor.Text);
+
+        VendaBD bd = new VendaBD();
+        if (bd.Insert(venda))
+        {
+            lblMensagem.Text = "Venda Realizada com sucesso";
+
+            txtCliente.Text = "";
+            txtRua.Text = "";
+            txtBairro.Text = "";
+            txtNumero.Text = "";
+            txtCep.Text = "";
+            txtCnpj.Text = "";
+            txtCpf.Text = "";
+            txtTelefone.Text = "";
+            txtProdutoQauntidade.Text = "";
+            txtData.Text = "";
+            txtValor.Text = "";
+
+            txtCliente.Focus();
+        }
+        else
+        {
+            lblMensagem.Text = "Venda não Realizada";
+        }
     }
 }

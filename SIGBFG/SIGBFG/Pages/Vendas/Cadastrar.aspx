@@ -21,8 +21,11 @@
         width: 100%;
         height: 100%;
         font-weight: bold;
-        background-image: url(http://localhost:50742/Images/blocos.png)
+        /*background-image: url(http://localhost:50742/Images/blocos.png)*/
     } 
+        #form1 {
+            height: 619px;
+        }
         </style>
         <!--VALIDAÇÃO-->
     <script type="text/javascript">
@@ -113,6 +116,7 @@
         <center><div style="margin-top: 20px;">
              <a class="btn btn-dark" href="../ADM/Administrador.aspx">Página Inicial</a>
              <a class="btn btn-dark" href="Listar.aspx">Lista de Vendas</a>
+             <a class="btn btn-dark" href="Relatorio.aspx">Relatório de Vendas</a>
             <br />
             <br />
             <h1><asp:Label ID="lblSaída" runat="server" Text="Venda de Produtos"></asp:Label></h1>
@@ -120,80 +124,59 @@
             </div></center>
        <div>
             <form id="form1" runat="server">            
-            <br />
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label ID="lblCliente" runat="server" Text="Cliente:"></asp:Label>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-            <asp:TextBox ID="txtCliente" runat="server" Width="350px" Height="27px"></asp:TextBox>
-&nbsp;<br />
-            <br />
-&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Label ID="lblEndereco" runat="server" Text="Endereço: "></asp:Label>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
-            <asp:TextBox ID="txtEndereco" runat="server" Width="350px" Height="27px"></asp:TextBox>
-&nbsp;&nbsp;&nbsp;&nbsp; <asp:Label ID="Label1" runat="server" Text="Bairro: "></asp:Label>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="txtBairro" runat="server" Width="200px" Height="27px"></asp:TextBox>
-&nbsp;&nbsp;&nbsp; <asp:Label ID="Label2" runat="server" Text="Nº."></asp:Label>
-            &nbsp;&nbsp;
-            <asp:TextBox ID="txtNumero" runat="server" Width="50px" Height="27px"></asp:TextBox>
-            <br />
-            <br />
-&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Label ID="lblCnpj" runat="server" Text="CNPJ: "></asp:Label>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="txtCnpj" runat="server" Width="155px" Height="27px"></asp:TextBox>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Label ID="lblTel" runat="server" Text="Telefone:"></asp:Label>
-&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;<asp:TextBox ID="txtTel" runat="server" Width="128px" Height="27px"></asp:TextBox>
-            <br />
-                <br />
-
-                     &nbsp;&nbsp;&nbsp;&nbsp;
-
-                     <asp:Label ID="lblProd" runat="server" Text="Produto:"></asp:Label>
-       &nbsp;&nbsp;&nbsp;
-                  
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:DropDownList ID="ddlProdutos" runat="server" Height="27px" style="margin-left: 15px" Width="184px">
-          </asp:DropDownList>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        
-                     <asp:Label ID="lblQuantidade" runat="server" Text="Quantidade:"></asp:Label>
-        <asp:TextBox ID="txtQuantidade" runat="server" style="margin-left: 9px" Height="27px" Width="155px"></asp:TextBox>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Label ID="Label3" runat="server" Text="Valor:  "></asp:Label>
-            <asp:TextBox ID="txtValor" runat="server"></asp:TextBox>
-        <br />
-
-        
-        <br />
-
-        
-                     &nbsp;&nbsp;&nbsp;
-
-        
-                     <asp:Label ID="lblData" runat="server" Text="Data de Saída:"></asp:Label>
-
-        
-            &nbsp;&nbsp;
-
-        
-            <asp:TextBox ID="txtData" runat="server" Height="27px" Width="155px" style="margin-top: 0px"></asp:TextBox>
-        
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Label ID="Label1" runat="server" Text="Cliente:"></asp:Label>
+                <asp:TextBox ID="txtCliente" runat="server" Width="541px"></asp:TextBox>
                 <br />
                 <br />
-                 <br />
-           &nbsp;&nbsp;&nbsp;
-           <asp:Button CssClass="btn btn-dark" ID="btnSalvar" runat="server" OnClick="btnSalvar_Click" Text="Novo Registro"  />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Label ID="lblMensagem" runat="server"></asp:Label>
-       
-            <br />
-            &nbsp;
-            <br/>
-            <br/>
+                <asp:Label ID="Label2" runat="server" Text="Rua:"></asp:Label>
+&nbsp;<asp:TextBox ID="txtRua" runat="server" Width="277px"></asp:TextBox>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Label ID="Label3" runat="server" Text="Número:"></asp:Label>
+&nbsp;&nbsp;
+                <asp:TextBox ID="txtNumero" runat="server"></asp:TextBox>
+                <br />
+                <br />
+                <asp:Label ID="Label4" runat="server" Text="Bairro:"></asp:Label>
+                <asp:TextBox ID="txtBairro" runat="server" Width="258px"></asp:TextBox>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Label ID="Label5" runat="server" Text="CEP:"></asp:Label>
+                <asp:TextBox ID="txtCep" runat="server"></asp:TextBox>
+                <br />
+                <br />
+                <asp:Label ID="Label6" runat="server" Text="CNPJ:"></asp:Label>
+                <asp:TextBox ID="txtCnpj" runat="server"></asp:TextBox>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Label ID="Label7" runat="server" Text="CPF:"></asp:Label>
+                <asp:TextBox ID="txtCpf" runat="server"></asp:TextBox>
+                <br />
+                <br />
+                <asp:Label ID="Label8" runat="server" Text="Telefone:"></asp:Label>
+                <asp:TextBox ID="txtTelefone" runat="server"></asp:TextBox>
+&nbsp;&nbsp;&nbsp;
+                <asp:Label ID="Label9" runat="server" Text="Valor:"></asp:Label>
+                <asp:TextBox ID="txtValor" runat="server"></asp:TextBox>
+                <br />
+                <br />
+                <asp:Label ID="Label10" runat="server" Text="Data:"></asp:Label>
+                <asp:TextBox ID="txtData" runat="server"></asp:TextBox>
+                <br />
+                <br />
+                <asp:Label ID="Label11" runat="server" Text="Produtos e Quantidade:"></asp:Label>
+                <br />
+                <br />
+                <asp:TextBox ID="txtProdutoQauntidade" runat="server" Height="96px" Width="284px"></asp:TextBox>
+                <br />
+                <br />
+                <asp:Button class="btn btn-dark" ID="btnRealizarVenda" runat="server" Text="Realizar Venda" OnClick="btnRealizarVenda_Click" />
+
+                <br />
+                <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Label ID="lblMensagem" runat="server"></asp:Label>
+                <br />
+                <br />
+
           </form>
         </div>
     </div>
