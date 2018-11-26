@@ -20,13 +20,7 @@ public partial class Pages_Perda_TotalPerdas : System.Web.UI.Page
         {
             GridView1.DataSource = ds.Tables[0].DefaultView;
             GridView1.DataBind();
-            lblMensagem.Text = "Perda(s) encontrada(s) : " + rows.ToString();
             GridView1.Visible = true;
-        }
-        else
-        {
-            lblMensagem.Text = "Nenhuma perda encontrada";
-            GridView1.Visible = false;
         }
     }
 
@@ -49,5 +43,45 @@ public partial class Pages_Perda_TotalPerdas : System.Web.UI.Page
         }
 
         txtTotal.Text = ValorTotal.ToString("");
+
+        CarregaGrafico();
+    }
+
+    private void CarregaGrafico()
+    {
+        PerdaBD bd = new PerdaBD();
+        DataSet ds = bd.SelectAll();
+
+        string dados = "";
+        //varre linhas do dataset
+        dados = dados + "['Nome', 'Quantidade'],";
+        for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+        {
+            DataRow dr = ds.Tables[0].Rows[i];
+
+            string nome = Convert.ToString(dr["PER_PRODUTO"]);
+            int quantidade = Convert.ToInt32(dr["PER_QUANTIDADE"]);
+
+            dados = dados + "['" + nome + "', " + quantidade + "],";
+        }
+
+        string grafico = "";
+        grafico = grafico + "<script type='text/javascript'>";
+        grafico = grafico + "google.load('visualization', '1', {packages:['corechart']});";
+        grafico = grafico + "function drawChart() {";
+        grafico = grafico + "var data = google.visualization.arrayToDataTable([";
+        grafico = grafico + dados;
+        grafico = grafico + "]);";
+        grafico = grafico + "var options = {";
+        grafico = grafico + "title: '',";
+        grafico = grafico + "is3D: true ";
+        grafico = grafico + "};";
+        grafico = grafico + "var chart = new google.visualization.PieChart(document.getElementById('chart_div'));";
+        grafico = grafico + "chart.draw(data, options);";
+        grafico = grafico + "}";
+        grafico = grafico + "google.setOnLoadCallback(drawChart);";
+        grafico = grafico + "</script>";
+
+        Literal1.Text = grafico;
     }
 }

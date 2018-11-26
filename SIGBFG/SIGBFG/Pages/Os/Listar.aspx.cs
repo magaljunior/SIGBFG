@@ -6,6 +6,11 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using SIGBFG.Persistencia;
 using System.Data;
+using System.Configuration;
+using System.Collections;
+using System.Web.Security;
+using System.Web.UI.WebControls.WebParts;
+using System.Web.UI.HtmlControls;
 
 public partial class Paginas_Listar : System.Web.UI.Page
 {
@@ -57,13 +62,15 @@ public partial class Paginas_Listar : System.Web.UI.Page
         }
     }
 
-
-
-
     protected void btnCadastrar_Click(object sender, EventArgs e)
     {
         Response.Redirect(
          "Cadastrar.aspx"
          );
+    }
+
+    protected void btnImprimir_Click(object sender, EventArgs e)
+    {
+        Response.Write("<script>window.print();</script>");
     }
 }

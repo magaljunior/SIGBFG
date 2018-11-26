@@ -1,10 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Estoque_ProdutosPD.aspx.cs" Inherits="Pages_Estoque_Produtos" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Relatorio.aspx.cs" Inherits="Pages_Produtos_Relatorio" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Estoque de Produtos</title>
+    <title>Relatório de Produtos em Estoque</title>
 
     
     <link href="../../Scripts/css/bootstrap.min.css" rel="stylesheet" />
@@ -37,50 +37,29 @@
                     <a class="btn btn-dark" href="../ADM/Administrador.aspx">Página Inicial</a>
                     <a class="btn btn-dark" href="CadastrarPD.aspx">Cadastrar Produtos</a>
                     <a class="btn btn-dark" href="ListarPD.aspx">Listar Produtos</a>
-                    <a class="btn btn-dark" href="Relatorio.aspx">Relatório de Produtos</a>
+                    <a class="btn btn-dark" href="Estoque_ProdutosPD.aspx">Estoque Atual de Produtos</a>
                     <br />
                     <br />
-                    <h1>Estoque Atual de Produtos</h1>
-                   
-                    <asp:Label ID="lblMensagem" runat="server"></asp:Label>
-                    <br />
+                <h1>Relatório de Produtos em Estoque</h1>
                     <br />
                     <asp:Label ID="Label1" runat="server" Text="Capacidade Média: 30000"></asp:Label>
                     <br />
                     <br />
                     <asp:Label ID="Label2" runat="server" Text="Capacidade Máxima: 60000"></asp:Label>
-                <br />
-                <br />
-                <h2>Total de Produtos em Estoque</h2>
-                <br />
-                <asp:Label ID="txtTotal" runat="server"></asp:Label>
-                <br />
-                <br />
-                <h3>Porcentagem em Estoque</h3>
-                <br />
-                <asp:Label ID="txtPorcentagem" runat="server"></asp:Label>
                     <br />
-                    <br />
+                <br />
 
-                <asp:GridView ID="GridView1" runat="server" OnRowCommand="GridView1_RowCommand" AutoGenerateColumns="False" Height="100px" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black" Width="100%" OnRowDataBound="fotoProduto_RowDataBound">
+                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Height="100px" Width="60%" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" ForeColor="Black" GridLines="Vertical">
+                    <AlternatingRowStyle BackColor="#CCCCCC" />
                     <Columns>
-                        <asp:BoundField DataField="pro_foto" HeaderText="Foto" />
                         <asp:BoundField DataField="pro_nome" HeaderText="Nome" />
                         <asp:BoundField DataField="pro_quantidade" HeaderText="Quantidade" />
                         <asp:BoundField DataField="pro_quantidadeMinima" HeaderText="Quantidade Mínima" />
 
-                        <asp:TemplateField HeaderText="Cadastrar ou Alterar">
-                            <ItemTemplate>
-                                <asp:ImageButton ID="lbAlterar" runat="server" CommandName="Alterar"
-                                    ImageUrl="../../Images/cadastrar%20ou%20alterar.png" CommandArgument='<%# Bind("pro_codigo")%>'></asp:ImageButton>
-                            </ItemTemplate>
-                        </asp:TemplateField>
-
                     </Columns>
                     <FooterStyle BackColor="#CCCCCC" />
                     <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
-                    <PagerStyle BackColor="#CCCCCC" ForeColor="Black" HorizontalAlign="Left" />
-                    <RowStyle BackColor="White" />
+                    <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
                     <SelectedRowStyle BackColor="#000099" Font-Bold="True" ForeColor="White" />
                     <SortedAscendingCellStyle BackColor="#F1F1F1" />
                     <SortedAscendingHeaderStyle BackColor="#808080" />
@@ -88,10 +67,15 @@
                     <SortedDescendingHeaderStyle BackColor="#383838" />
                 </asp:GridView>
                 <br />
+                <h2>Total de Produtos em Estoque</h2>
+                <br />
+                <asp:Label ID="txtTotal" runat="server"></asp:Label>
+                <br />
             </form>
         <br />
-        </div>
-        </center>
+        <h3>Gráfico de Produtos em Estoque</h3>
+            <div id="chart_div" style="width: 900px; height: 500px;"></div>
+        </div></center>  
     </div>
     
 </body>

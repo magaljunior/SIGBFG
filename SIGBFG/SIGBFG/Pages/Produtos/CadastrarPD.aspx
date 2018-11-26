@@ -19,7 +19,7 @@
             width: 100%;
             height: 100%;
             font-weight: bold;
-            background-image: url(http://localhost:50742/Images/blocos.png)
+            /*background-image: url(http://localhost:50742/Images/blocos.png)*/
         }
 
     </style>
@@ -59,7 +59,7 @@
                         <a class="btn btn-dark" href="../ADM/Administrador.aspx">Página Inicial</a>
                         <a class="btn btn-dark" href="ListarPD.aspx">Listar Produtos</a>
                         <a class="btn btn-dark" href="Estoque_ProdutosPD.aspx">Estoque Atual de Produtos</a>
-
+                        <a class="btn btn-dark" href="Relatorio.aspx">Relatório de Produtos</a>
             <form id="form1" runat="server">
                 <br />
 
@@ -68,7 +68,7 @@
 
                     <asp:Label ID="Label1" runat="server" Text="Nome:"></asp:Label>
                     <asp:TextBox ID="txtNome" runat="server" Style="margin-left: 18px" Width="291px"></asp:TextBox>
-
+                    
                      <br />
                      <br />
 

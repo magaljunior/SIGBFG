@@ -14,7 +14,7 @@
             width: 100%;
             height: 100%;
             font-weight: bold;
-            background-image: url(http://localhost:50742/Images/blocos.png)
+            /*background-image: url(http://localhost:50742/Images/blocos.png)*/
         }
     </style>
 </head>
@@ -30,6 +30,8 @@
                     <a class="btn btn-dark" href="CadastrarPD.aspx">Cadastrar Produtos</a>
 
                     <a class="btn btn-dark" href="Estoque_ProdutosPD.aspx">Estoque Atual de Produtos</a>
+
+                    <a class="btn btn-dark" href="Relatorio.aspx">Relatório de Produtos</a>
                         </div>
 
                     <h1 style="margin-bottom: 20px;">Lista de Produtos</h1>

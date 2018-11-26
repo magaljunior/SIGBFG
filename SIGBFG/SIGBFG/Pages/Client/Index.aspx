@@ -19,9 +19,13 @@
             width: 100%;
             height: 100%;
             font-weight: bold;
-            background-image: url(http://localhost:50742/Images/blocos.png)
+            /*background-image: url(http://localhost:50742/Images/blocos.png)*/
         }
-
+        #logoff {
+            width: 40px;
+            height: 40px;
+            float: right;
+        }
     </style>
 
 </head>
@@ -29,6 +33,7 @@
     <div class="container-fluid">
         <center><div style="margin-top: 20px;">
             <a class="btn btn-dark" href="Listar.aspx">Visualizar Ordem de Serviço</a>
+            <a href="../Login.aspx"><img title="Logoof" id="logoff" src="../../Images/Minio_Devices_and_Hardware_Bold-90-512.png" /></a>
             <br />
             <br />
              <h1>Bem-Vindo</h1>

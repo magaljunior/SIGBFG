@@ -36,4 +36,9 @@ public partial class Paginas_Listar : System.Web.UI.Page
             Carrega();
         }
     }
+
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        Response.Write("<script>window.print();</script>");
+    }
 }

@@ -11,12 +11,13 @@ namespace Vendas.Classes
         public string Cliente { get; set; }
         public string Endereco { get; set; }
         public string Bairro { get; set; }
-        public int Numero { get; set; }
+        public string Numero { get; set; }
+        public string Cep { get; set; }
         public string Cnpj { get; set; }
+        public string Cpf { get; set; }
         public string Telefone { get; set; }
-        public string Produto { get; set; }
+        public string ProdutoQuantidade { get; set; }
         public string Nome { get; set; }
-        public int Quantidade { get; set; }
         public double Valor { get; set; }
         public string Data { get; set; }
 

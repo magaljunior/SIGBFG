@@ -18,7 +18,7 @@
             width: 100%;
             height: 100%;
             font-weight: bold;
-            background-image: url(http://localhost:50742/Images/blocos.png)
+            /*background-image: url(http://localhost:50742/Images/blocos.png)*/
         }
     </style>
 </head>
@@ -31,7 +31,7 @@
                     <asp:Button class="btn btn-dark" ID="btnCadastrar" runat="server" OnClick="btnCadastrar_Click" Text="Cadastrar Produtos" />
                     <asp:Button class="btn btn-dark" ID="btnListar" runat="server" OnClick="btnListar_Click" Text="Listar Produtos" />
                     <asp:Button class="btn btn-dark" ID="btnEstoqueAtual" runat="server" OnClick="btnEstoqueAtual_Click" Text="Estoque Atual de Produtos" />
-   
+                    <a class="btn btn-dark" href="Relatorio.aspx">Relatório de Produtos</a>
                     <br />
                     <br />
                     <h1>Cadastrar ou Alterar de Estoque</h1>

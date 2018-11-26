@@ -51,7 +51,7 @@
             width: 100%;
             height: 100%;
             font-weight: bold;
-            background-image: url(http://localhost:50742/Images/blocos.png)
+            /*background-image: url(http://localhost:50742/Images/blocos.png)*/
         }
     </style>
 </head>
@@ -66,6 +66,8 @@
                       <a class="btn btn-dark" href="../ADM/Administrador.aspx">Página Inicial</a>
 
                       <a style="width:200px;" class="btn btn-dark" href="../Os/Listar.aspx">Listar Ordem de Serviço</a>
+
+                      <a style="width:225px;" class="btn btn-dark" href="../Os/Relatorio.aspx">Relatório de Produção</a>
 
 
                     </div>

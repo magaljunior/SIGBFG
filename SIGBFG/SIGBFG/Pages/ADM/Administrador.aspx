@@ -16,59 +16,24 @@
     <script src="../../Scripts/Validacao/jquery.validate.min.js"></script>
     <script src="../../Scripts/Validacao/localization/messages_pt_PT.min.js"></script>
     <script src="../../Scripts/jquery.mask.min.js"></script>
+
     <style type="text/css">
-        #nav {
-            width: 1023px;
-            margin: auto;
-            height: 237px;
-        }
-
-            #nav ul {
-                padding: 0;
-                list-style: none;
-            }
-
-                #nav ul li {
-                    float: left;
-                    text-align: center;
-                    width: 120px;
-                    margin: 1px;
-                }
-
-                    #nav ul li a {
-                        color: #ffffff;
-                        text-decoration: none;
-                        font-family: arial;
-                        background: #343a40;
-                        display: block;
-                        padding: 10px;
-                    }
-
-                        #nav ul li a:hover {
-                            background: #868686;
-                            color: #000000;
-                        }
-
-                    #nav ul li ul {
-                        display: none;
-                    }
-
-                    #nav ul li:hover ul {
-                        display: block;
-                    }
-
-                    #title {
-                        display: inline-block;
-                    }
         #body {
             width: 100%;
             height: 100%;
-            background-image: url(http://localhost:50742/Images/blocos.png)
+            /*background-image: url(http://localhost:50742/Images/blocos.png)*/
+        }
+
+        #logoff {
+            width: 40px;
+            height: 40px;
+            float: right;
         }
     </style>
+
 </head>
 <body id="body">
-    
+
 
     <div class="container-fluid">
         <center>
@@ -90,11 +55,9 @@
 
                       <a class="btn btn-dark" href="../Motivos/Cadastrar_Motivo.aspx">Motivos</a>
 
-                      <a style="width:160px;" class="btn btn-dark" href="../Relatorios/EstoqueProdutos.aspx">Gráfico de Estoque</a>
-
-                      <a style="width:160px;" class="btn btn-dark" href="../Relatorios/Produção.aspx">Gráfico de Produção</a>
-
                       <a class="btn btn-dark" href="../Giro/GiroEstoque.aspx">Calculadora</a>
+
+                      <a href="../Login.aspx"><img title="Logoof" id="logoff" src="../../Images/Minio_Devices_and_Hardware_Bold-90-512.png" /></a>
 
                     </div>
 
@@ -104,11 +67,11 @@
                             <br />
                             <h2>Sistema Integrado de Gestão BFG</h2>
                           <br />
-                                <img src="../../Images/BFG.jpg" />
+                                <img title="Blocos Frei Galvão" src="../../Images/BFG.jpg" />
                       </div>       
                </div>
             </center>
-        </div>
+    </div>
 
-    </body>
+</body>
 </html>

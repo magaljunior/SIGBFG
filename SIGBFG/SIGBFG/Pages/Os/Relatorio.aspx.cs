@@ -4,17 +4,46 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Data;
 using SIGBFG.Persistencia;
+using System.Data;
+using System.Configuration;
+using System.Collections;
+using System.Web.Security;
+using System.Web.UI.WebControls.WebParts;
+using System.Web.UI.HtmlControls;
 
-public partial class Pages_Relatorios_Produção : System.Web.UI.Page
+public partial class Paginas_Relatorio : System.Web.UI.Page
 {
-    protected void Page_Load(object sender, EventArgs e)
+    private void Carrega()
     {
-        Carrega();
+        OrdemServicoBD bd = new OrdemServicoBD();
+        DataSet ds = bd.SelectAll();
+        int rows = ds.Tables[0].Rows.Count;
+
+        if (rows > 0)
+        {
+            GridView1.DataSource = ds.Tables[0].DefaultView;
+            GridView1.DataBind();
+        }
     }
 
-    private void Carrega()
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        if (!Page.IsPostBack)
+        {
+            Carrega();
+        }
+        CarregaGrafico();
+    }
+
+    protected void btnCadastrar_Click(object sender, EventArgs e)
+    {
+        Response.Redirect(
+         "Cadastrar.aspx"
+         );
+    }
+
+    private void CarregaGrafico()
     {
         OrdemServicoBD bd = new OrdemServicoBD();
         DataSet ds = bd.SelectAll();
@@ -32,7 +61,6 @@ public partial class Pages_Relatorios_Produção : System.Web.UI.Page
             string dataExpiracao = Convert.ToString(dr["OS_DATAEXPIRACAO"]);
 
             dados = dados + "['" + nome + "', " + quantidade + ", " + dataInicial + ", " + dataExpiracao + "],";
-
         }
 
         string grafico = "";

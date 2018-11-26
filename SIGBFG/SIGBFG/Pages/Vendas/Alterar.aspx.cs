@@ -19,64 +19,19 @@ public partial class Paginas_Alterar : System.Web.UI.Page
             VendaBD bd = new VendaBD();
             Venda venda = bd.Select(Convert.ToInt32(Session["ID"]));
             txtCliente.Text = venda.Cliente;
-            txtEndereco.Text = venda.Endereco;
+            txtRua.Text = venda.Endereco;
             txtBairro.Text = venda.Bairro;
-            txtNumero.Text = venda.Numero.ToString();
+            txtNumero.Text = venda.Numero;
+            txtCep.Text = venda.Cep;
             txtCnpj.Text = venda.Cnpj;
-            txtTel.Text = venda.Telefone;
-            ddlProdutos.Text = venda.Produto;
-            txtQuantidade.Text = venda.Quantidade.ToString();
-            txtValor.Text = venda.Valor.ToString();
+            txtCpf.Text = venda.Cpf;
+            txtTelefone.Text = venda.Telefone;
+            txtProdutoQauntidade.Text = venda.ProdutoQuantidade;
             txtData.Text = venda.Data;
-
-            CarregaDDL();
+            txtValor.Text = venda.Valor.ToString();
         }
 
         txtCliente.Focus();
-    }
-
-    private void CarregaDDL()
-    {
-        ProdutoBD bd = new ProdutoBD();
-        DataSet ds = bd.SelectAll();
-
-        ddlProdutos.Items.Clear();
-        ddlProdutos.DataSource = ds.Tables[0].DefaultView;
-        ddlProdutos.DataTextField = "pro_nome";
-        ddlProdutos.DataValueField = "pro_nome";
-        ddlProdutos.DataBind();
-        ddlProdutos.Items.Insert(0, "Selecione");
-    }
-
-    protected void btnSalvar_Click1(object sender, EventArgs e)
-    {
-        {
-            VendaBD bd = new VendaBD();
-            Venda venda = bd.Select(Convert.ToInt32(Session["ID"]));
-            venda.Cliente = Convert.ToString(txtCliente.Text);
-            venda.Endereco = Convert.ToString(txtEndereco.Text);
-            venda.Bairro = Convert.ToString(txtBairro.Text);
-            venda.Numero = Convert.ToInt32(txtNumero.Text);
-            venda.Cnpj = Convert.ToString(txtCnpj.Text);
-            venda.Telefone = Convert.ToString(txtTel.Text);
-            venda.Produto = ddlProdutos.SelectedItem.Value;
-            venda.Quantidade = Convert.ToInt32(txtQuantidade.Text);
-            venda.Valor = Convert.ToDouble(txtValor.Text);
-            venda.Data = txtData.Text;
-
-            txtCliente.Focus();
-
-            if (bd.Update(venda))
-            {
-                lblMensagem.Text = "Venda alterada com sucesso";
-                txtCliente.Focus();
-            }
-            else
-            {
-                lblMensagem.Text = "Não foi possível Alterar Venda.";
-            }
-
-        }
     }
 
     protected void btnCadastrar_Click(object sender, EventArgs e)
@@ -96,6 +51,38 @@ public partial class Paginas_Alterar : System.Web.UI.Page
     protected void txtCliente_TextChanged(object sender, EventArgs e)
     {
 
+    }
+
+    protected void btnAlterarVenda_Click(object sender, EventArgs e)
+    {
+        {
+            VendaBD bd = new VendaBD();
+            Venda venda = bd.Select(Convert.ToInt32(Session["ID"]));
+            venda.Cliente = txtCliente.Text;
+            venda.Endereco = txtRua.Text;
+            venda.Bairro = txtBairro.Text;
+            venda.Numero = txtNumero.Text;
+            venda.Cep = txtCep.Text;
+            venda.Cnpj = txtCnpj.Text;
+            venda.Cpf = txtCpf.Text;
+            venda.Telefone = txtTelefone.Text;
+            venda.ProdutoQuantidade = txtProdutoQauntidade.Text;
+            venda.Valor = Convert.ToDouble(txtValor.Text);
+            venda.Data = txtData.Text;
+
+            txtCliente.Focus();
+
+            if (bd.Update(venda))
+            {
+                lblMensagem.Text = "Venda alterada com sucesso";
+                txtCliente.Focus();
+            }
+            else
+            {
+                lblMensagem.Text = "Não foi possível Alterar Venda.";
+            }
+
+        }
     }
 }
 
