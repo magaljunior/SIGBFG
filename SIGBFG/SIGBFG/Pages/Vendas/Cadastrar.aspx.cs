@@ -41,6 +41,7 @@ public partial class Paginas_Cadastrar : System.Web.UI.Page
         venda.Cpf = txtCpf.Text;
         venda.Telefone = txtTelefone.Text;
         venda.ProdutoQuantidade = txtProdutoQauntidade.Text;
+        venda.QuantidadeTotal = Convert.ToInt32(txtQuantidadeTotal.Text);
         venda.Data = txtData.Text;
         venda.Valor = Convert.ToDouble(txtValor.Text);
 
@@ -58,6 +59,7 @@ public partial class Paginas_Cadastrar : System.Web.UI.Page
             txtCpf.Text = "";
             txtTelefone.Text = "";
             txtProdutoQauntidade.Text = "";
+            txtQuantidadeTotal.Text = "";
             txtData.Text = "";
             txtValor.Text = "";
 

@@ -42,7 +42,10 @@
                 <asp:Label ID="lblMensagem" runat="server" Text="" ></asp:Label>
           
                 <br />
+          
+                <br />
            <asp:Label ID="lblMensagem0" runat="server" Text="" ></asp:Label>
+                <br />
                 <br />
           
      <asp:GridView ID="GridView1" runat="server" OnRowCommand="GridView1_RowCommand"  Width="100%" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" >
@@ -56,6 +59,7 @@
               <asp:BoundField DataField="ven_cpf" HeaderText="CPF" />
              <asp:BoundField DataField="ven_telefone" HeaderText="Telefone" /> 
               <asp:BoundField DataField="ven_produto_quantidade" HeaderText="Produtos e Quantidade" />
+              <asp:BoundField DataField="ven_quantidade_total" HeaderText="Quantidade Total" />
              <asp:BoundField DataField="ven_valor" HeaderText="Valor" /> 
              <asp:BoundField DataField="ven_data" HeaderText="Data" /> 
              <asp:TemplateField HeaderText="Alterar">

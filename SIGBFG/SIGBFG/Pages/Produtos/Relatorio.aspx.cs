@@ -45,6 +45,8 @@ public partial class Pages_Produtos_Relatorio : System.Web.UI.Page
         txtTotal.Text = ValorTotal.ToString("");
 
         CarregaGrafico();
+
+        Porcentagem();
     }
 
     protected void btnCadastrar_Click1(object sender, EventArgs e)
@@ -95,5 +97,11 @@ public partial class Pages_Produtos_Relatorio : System.Web.UI.Page
 
         Literal1.Text = grafico;
 
+    }
+
+    private void Porcentagem()
+    {
+        int PorcentagemEstoque = Convert.ToInt32(txtTotal.Text) * 100 / 60000;
+        txtPorcentagem.Text = PorcentagemEstoque.ToString() + "% em Estoque.";
     }
 }

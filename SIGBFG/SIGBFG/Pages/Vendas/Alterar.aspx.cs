@@ -27,6 +27,7 @@ public partial class Paginas_Alterar : System.Web.UI.Page
             txtCpf.Text = venda.Cpf;
             txtTelefone.Text = venda.Telefone;
             txtProdutoQauntidade.Text = venda.ProdutoQuantidade;
+            txtQuantidadeTotal.Text = venda.QuantidadeTotal.ToString();
             txtData.Text = venda.Data;
             txtValor.Text = venda.Valor.ToString();
         }
@@ -67,6 +68,7 @@ public partial class Paginas_Alterar : System.Web.UI.Page
             venda.Cpf = txtCpf.Text;
             venda.Telefone = txtTelefone.Text;
             venda.ProdutoQuantidade = txtProdutoQauntidade.Text;
+            venda.QuantidadeTotal = Convert.ToInt32(txtQuantidadeTotal.Text);
             venda.Valor = Convert.ToDouble(txtValor.Text);
             venda.Data = txtData.Text;
 

@@ -42,10 +42,13 @@
                     <br />
                 <h1>Relatório de Produtos em Estoque</h1>
                     <br />
-                    <asp:Label ID="Label1" runat="server" Text="Capacidade Média: 30000"></asp:Label>
+                    <asp:Label ID="Label1" runat="server" Text="Capacidade Média: 30000."></asp:Label>
                     <br />
                     <br />
-                    <asp:Label ID="Label2" runat="server" Text="Capacidade Máxima: 60000"></asp:Label>
+                    <asp:Label ID="Label2" runat="server" Text="Capacidade Máxima: 60000."></asp:Label>
+                    <br />
+                    <br />
+                    <asp:Label ID="txtPorcentagem" runat="server"></asp:Label>
                     <br />
                 <br />
 

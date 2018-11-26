@@ -45,6 +45,11 @@
                 <h1>Relatório de Vendas</h1>
           
                 <br />
+                <asp:Label ID="lblMensagem" runat="server"></asp:Label>
+          
+                <br />
+          
+                <br />
                 <br />
           
      <asp:GridView ID="GridView1" runat="server"  Width="100%" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" ForeColor="Black" GridLines="Vertical" >
@@ -59,6 +64,7 @@
               <asp:BoundField DataField="ven_cpf" HeaderText="CPF" />
              <asp:BoundField DataField="ven_telefone" HeaderText="Telefone" /> 
               <asp:BoundField DataField="ven_produto_quantidade" HeaderText="Produtos e Quantidade" />
+              <asp:BoundField DataField="ven_quantidade_total" HeaderText="Quantidade Total" />
              <asp:BoundField DataField="ven_valor" HeaderText="Valor" /> 
              <asp:BoundField DataField="ven_data" HeaderText="Data" /> 
          </Columns>
@@ -72,11 +78,12 @@
          <SortedDescendingHeaderStyle BackColor="#383838" />
         </asp:GridView>
                 <br />
-                <asp:Label ID="txtTotal" runat="server"></asp:Label>
+                <br />
+                <asp:Label ID="lblMensagem0" runat="server"></asp:Label>
                 <br />
                 <br />
-                <asp:Label ID="lblGrafico" runat="server" Text="Gráfico de Vendas"></asp:Label>
                 <br />
+                <h2>Gráfico de Vendas</h2>
 
                  <div id="chart_div" style="width: 900px; height: 500px;"></div>
               </form>

@@ -20,9 +20,9 @@ public partial class Paginas_Listar : System.Web.UI.Page
 
         for (int l = 0; l < dt.Rows.Count; l++)
         {
-            if (dt.Rows[l]["ven_quantidade"].ToString() != "")
+            if (dt.Rows[l]["VEN_QUANTIDADE_TOTAL"].ToString() != "")
             {
-                int total = Convert.ToInt32(dt.Rows[l]["ven_quantidade"]);
+                int total = Convert.ToInt32(dt.Rows[l]["VEN_QUANTIDADE_TOTAL"]);
                 acumula += total;
             }
 

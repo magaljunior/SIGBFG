@@ -21,6 +21,24 @@ public partial class Pages_Vendas_Relatorio : System.Web.UI.Page
             GridView1.DataBind();
             GridView1.Visible = true;
         }
+
+        DataTable dt = ds.Tables[0];
+        GridView1.DataSource = ds.Tables[0].DefaultView;
+        GridView1.DataBind();
+        lblMensagem.Text = "Venda(s) encontrada(s) : " + rows.ToString();
+        GridView1.Visible = true;
+        int acumula = 0;
+
+        for (int l = 0; l < dt.Rows.Count; l++)
+        {
+            if (dt.Rows[l]["VEN_QUANTIDADE_TOTAL"].ToString() != "")
+            {
+                int total = Convert.ToInt32(dt.Rows[l]["VEN_QUANTIDADE_TOTAL"]);
+                acumula += total;
+            }
+
+        }
+        lblMensagem0.Text = "Quantidade de Produto(s) Vendido(s) : " + acumula.ToString();
     }
 
     protected void Page_Load(object sender, EventArgs e)
@@ -29,18 +47,6 @@ public partial class Pages_Vendas_Relatorio : System.Web.UI.Page
         {
             Carrega();
         }
-        decimal ValorTotal = 0;
-
-        foreach (GridViewRow row in GridView1.Rows)
-        {
-            if (row.RowType == DataControlRowType.DataRow)
-            {
-                if (!String.IsNullOrEmpty(row.Cells[1].Text))
-                    ValorTotal += Decimal.Parse(row.Cells[1].Text);
-            }
-        }
-
-        txtTotal.Text = ValorTotal.ToString("");
 
         CarregaGrafico();
     }
@@ -61,13 +67,13 @@ public partial class Pages_Vendas_Relatorio : System.Web.UI.Page
 
         string dados = "";
         //varre linhas do dataset
-        dados = dados + "['Nome', 'Quantidade'],";
+        dados = dados + "['Nome', 'Quantidade Total'],";
         for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
         {
             DataRow dr = ds.Tables[0].Rows[i];
 
-            string nome = Convert.ToString(dr["VEN_PRODUTO"]);
-            int quantidade = Convert.ToInt32(dr["VEN_QUANTIDADE"]);
+            string nome = Convert.ToString(dr["VEN_PRODUTO_QUANTIDADE"]);
+            int quantidade = Convert.ToInt32(dr["VEN_QUANTIDADE_TOTAL"]);
 
             dados = dados + "['" + nome + "', " + quantidade + "],";
 
@@ -91,7 +97,5 @@ public partial class Pages_Vendas_Relatorio : System.Web.UI.Page
         grafico = grafico + "</script>";
 
         Literal1.Text = grafico;
-
     }
-}
 }

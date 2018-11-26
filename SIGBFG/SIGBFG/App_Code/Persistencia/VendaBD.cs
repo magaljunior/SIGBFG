@@ -15,7 +15,7 @@ namespace Vendas.Persistencia
             //insert
             System.Data.IDbConnection objConexao;
             System.Data.IDbCommand objCommand;
-            string sql = "INSERT INTO ven_venda(ven_codigo, ven_cliente, ven_endereco, ven_bairro, ven_numero, ven_cep, ven_cnpj, ven_cpf, ven_telefone, ven_produto_quantidade, ven_nome, ven_valor, ven_data) VALUES (?codigo, ?cliente, ?endereco, ?bairro, ?numero, ?cep, ?cnpj, ?cpf, ?telefone, ?produtoQuantidade, ?nome, ?valor, ?data)";
+            string sql = "INSERT INTO ven_venda(ven_codigo, ven_cliente, ven_endereco, ven_bairro, ven_numero, ven_cep, ven_cnpj, ven_cpf, ven_telefone, ven_produto_quantidade, ven_quantidade_total, ven_nome, ven_valor, ven_data) VALUES (?codigo, ?cliente, ?endereco, ?bairro, ?numero, ?cep, ?cnpj, ?cpf, ?telefone, ?produtoQuantidade, ?quantidadeTotal, ?nome, ?valor, ?data)";
 
             objConexao = Mapped.Connection();
             objCommand = Mapped.Command(sql, objConexao);
@@ -29,6 +29,7 @@ namespace Vendas.Persistencia
             objCommand.Parameters.Add(Mapped.Parameter("?cpf", venda.Cpf));
             objCommand.Parameters.Add(Mapped.Parameter("?telefone", venda.Telefone));
             objCommand.Parameters.Add(Mapped.Parameter("?produtoQuantidade", venda.ProdutoQuantidade));
+            objCommand.Parameters.Add(Mapped.Parameter("?quantidadeTotal", venda.QuantidadeTotal));
             objCommand.Parameters.Add(Mapped.Parameter("?nome", venda.Nome));
             objCommand.Parameters.Add(Mapped.Parameter("?valor", venda.Valor));
             objCommand.Parameters.Add(Mapped.Parameter("?data", venda.Data));
@@ -87,6 +88,7 @@ namespace Vendas.Persistencia
                 obj.Telefone = Convert.ToString(objDataReader["ven_telefone"]);
                 obj.Nome = Convert.ToString(objDataReader["ven_nome"]);
                 obj.ProdutoQuantidade = Convert.ToString(objDataReader["ven_produto_quantidade"]);
+                obj.QuantidadeTotal = Convert.ToInt32(objDataReader["ven_quantidade_total"]);
                 obj.Valor = Convert.ToDouble(objDataReader["ven_valor"]);
                 obj.Data = Convert.ToString(objDataReader["ven_data"]);
             }
@@ -103,7 +105,7 @@ namespace Vendas.Persistencia
         {
             System.Data.IDbConnection objConexao;
             System.Data.IDbCommand objCommand;
-            string sql = "UPDATE ven_venda SET ven_cliente=?cliente, ven_endereco=?endereco, ven_bairro=?bairro, ven_numero=?numero, ven_cep=?cep, ven_cnpj=?cnpj, ven_cpf=?cpf, ven_telefone=?telefone, ven_produto_quantidade=?produtoQuantidade, ven_nome=?nome, ven_valor=?valor, ven_data=?data WHERE ven_codigo =?codigo";
+            string sql = "UPDATE ven_venda SET ven_cliente=?cliente, ven_endereco=?endereco, ven_bairro=?bairro, ven_numero=?numero, ven_cep=?cep, ven_cnpj=?cnpj, ven_cpf=?cpf, ven_telefone=?telefone, ven_produto_quantidade=?produtoQuantidade, ven_quantidade_total=?quantidadeTotal, ven_nome=?nome, ven_valor=?valor, ven_data=?data WHERE ven_codigo =?codigo";
             objConexao = Mapped.Connection(); objCommand = Mapped.Command(sql, objConexao);
             objCommand.Parameters.Add(Mapped.Parameter("?cliente", venda.Cliente));
             objCommand.Parameters.Add(Mapped.Parameter("?endereco", venda.Endereco));
@@ -114,6 +116,7 @@ namespace Vendas.Persistencia
             objCommand.Parameters.Add(Mapped.Parameter("?cpf", venda.Cpf));
             objCommand.Parameters.Add(Mapped.Parameter("?telefone", venda.Telefone));
             objCommand.Parameters.Add(Mapped.Parameter("?produtoQuantidade", venda.ProdutoQuantidade));
+            objCommand.Parameters.Add(Mapped.Parameter("?quantidadeTotal", venda.QuantidadeTotal));
             objCommand.Parameters.Add(Mapped.Parameter("?nome", venda.Nome));
             objCommand.Parameters.Add(Mapped.Parameter("?valor", venda.Valor));
             objCommand.Parameters.Add(Mapped.Parameter("?data", venda.Data));
