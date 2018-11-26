@@ -169,7 +169,7 @@ CREATE TABLE `per_perda` (
   `PER_MOTIVO` varchar(255) NOT NULL,
   `PER_PRODUTO` varchar(45) NOT NULL,
   PRIMARY KEY (`PER_CODIGO`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -178,7 +178,7 @@ CREATE TABLE `per_perda` (
 
 LOCK TABLES `per_perda` WRITE;
 /*!40000 ALTER TABLE `per_perda` DISABLE KEYS */;
-INSERT INTO `per_perda` VALUES (5,'0',4,'Danificado pelo funcionário ao transporta-lo','Bloco Estrutural'),(6,'0',3,'Ocorreu trincas no processo de cura','vedação');
+INSERT INTO `per_perda` VALUES (5,'0',8,'Danificado pelo funcionário ao transporta-lo','Bloco Estrutural'),(6,'0',3,'Ocorreu trincas no processo de cura','vedação'),(7,'0',2,'Ocorreu trincas no processo de cura','Canaleta');
 /*!40000 ALTER TABLE `per_perda` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -317,7 +317,7 @@ CREATE TABLE `tbl_os` (
 
 LOCK TABLES `tbl_os` WRITE;
 /*!40000 ALTER TABLE `tbl_os` DISABLE KEYS */;
-INSERT INTO `tbl_os` VALUES (7,'Bloco Estrutural','25/11/2018','25/11/2018',1000,'Danilo','Bloco perfeito para construção de paredes',NULL),(8,'Canaleta','24/11/2018','24/11/2018',4000,'Felipe','compor paredes',NULL),(9,'Canaleta','21/11/2018','21/11/2018',4500,'Felipe','excelente para compor paredes',NULL);
+INSERT INTO `tbl_os` VALUES (7,'Bloco Estrutural','25/11/2018','25/11/2018',1000,'Danilo','Bloco perfeito para construção de paredes',NULL),(9,'Canaleta','21/11/2018','21/11/2018',4500,'Felipe','excelente para compor paredes',NULL);
 /*!40000 ALTER TABLE `tbl_os` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -374,7 +374,7 @@ CREATE TABLE `tbl_produto` (
 
 LOCK TABLES `tbl_produto` WRITE;
 /*!40000 ALTER TABLE `tbl_produto` DISABLE KEYS */;
-INSERT INTO `tbl_produto` VALUES (1,'Bloco Estrutural',0.9,30000,'Bloco perfeito para construção de paredes','bloco-estrutural-D_NQ_NP_718635-MLB25886747314_082017-F.jpg','3000',1),(2,'vedação',0.95,10000,'Bloco perfeito para construção de paredes 2','bloco-estrutural-D_NQ_NP_718635-MLB25886747314_082017-F.jpg','3000',1),(3,'Canaleta',0.8,9500,'compor paredes','bloco-estrutural-D_NQ_NP_718635-MLB25886747314_082017-F.jpg','2000',1);
+INSERT INTO `tbl_produto` VALUES (1,'Bloco Estrutural',0.9,30000,'Bloco perfeito para construção de paredes','bloco-estrutural-D_NQ_NP_718635-MLB25886747314_082017-F.jpg','3000',1),(3,'Canaleta',0.8,9500,'compor paredes','bloco-estrutural-D_NQ_NP_718635-MLB25886747314_082017-F.jpg','2000',1);
 /*!40000 ALTER TABLE `tbl_produto` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -426,8 +426,9 @@ CREATE TABLE `ven_venda` (
   `VEN_PRODUTO_QUANTIDADE` varchar(255) NOT NULL,
   `VEN_CEP` varchar(45) NOT NULL,
   `VEN_CPF` varchar(45) DEFAULT NULL,
+  `VEN_QUANTIDADE_TOTAL` int(11) NOT NULL,
   PRIMARY KEY (`VEN_CODIGO`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -436,7 +437,7 @@ CREATE TABLE `ven_venda` (
 
 LOCK TABLES `ven_venda` WRITE;
 /*!40000 ALTER TABLE `ven_venda` DISABLE KEYS */;
-INSERT INTO `ven_venda` VALUES (9,'Pedro','09052018','Rua Ipê, N 130, Bairro Da Cruz, 153','Cruz','153','4578942356','94992789239',1000,'','Estrutural: 2000, Canaleta: 4300','12605280','');
+INSERT INTO `ven_venda` VALUES (10,'Pedro','09052018','Rua Ipê, N 130, Bairro Da Cruz, 153','Cruz','153','4578942356','94992789239',1000,'','Estrutural: 2000, Canaleta: 5300','','',7300),(11,'José Malaquias','09052018','Rua José Pinke','Olaria','200','4578942356','94992789239',1000,'','Vedação: 6650, Meio Vedação: 2200.','12605280','4578942356',8850);
 /*!40000 ALTER TABLE `ven_venda` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -449,4 +450,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-11-26  1:00:33
+-- Dump completed on 2018-11-26 15:48:04
