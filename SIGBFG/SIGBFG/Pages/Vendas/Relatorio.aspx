@@ -72,10 +72,18 @@
          <SortedDescendingHeaderStyle BackColor="#383838" />
         </asp:GridView>
                 <br />
+                <asp:Label ID="txtTotal" runat="server"></asp:Label>
                 <br />
+                <br />
+                <asp:Label ID="lblGrafico" runat="server" Text="Gráfico de Vendas"></asp:Label>
+                <br />
+
+                 <div id="chart_div" style="width: 900px; height: 500px;"></div>
               </form>
            </div></center>
         </div>
-</body>
+    
+           
+        </body>
 </html>
 
