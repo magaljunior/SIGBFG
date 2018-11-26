@@ -56,11 +56,11 @@
             display: inline-block;
         }
 
-        #body {
+       /* #body {
             width: 100%;
             height: 100%;
             background-image: url(http://localhost:50742/Images/blocos.png)
-        }
+        }*/
     </style>
     <!--VALIDAÇÃO-->
     <script type="text/javascript">
