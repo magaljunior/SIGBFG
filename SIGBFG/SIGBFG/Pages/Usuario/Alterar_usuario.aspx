@@ -25,6 +25,31 @@
 
     </style>
 
+    <!--VALIDAÇÃO-->
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $("#form1").validate({
+                rules: {
+                    txtNome: {
+                        required: true,
+                        minlength: 3,
+                        maxlength: 100
+                    },
+                    txtEmail: {
+                        required: true
+                    },
+                    txtSenha: {
+                        required: true
+                    },
+                    txtTipo: {
+                        required: true
+                    }
+                }
+            })
+        })
+    </script>
+
 </head>
 <body id="body">
     <form id="form1" runat="server">

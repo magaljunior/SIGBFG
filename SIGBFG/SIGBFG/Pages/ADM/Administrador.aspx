@@ -40,6 +40,8 @@
                     <div style="margin-top: 20px;">
 
                       <a class="btn btn-dark" href="../Usuario/Cadastrar_Usuario.aspx">Usuários</a>
+
+                      <a class="btn btn-dark" href="../CadCliente/CadastraCL.aspx">Clientes</a>
                              
                       <a class="btn btn-dark" href="../Produtos/CadastrarPD.aspx">Produtos</a>
 

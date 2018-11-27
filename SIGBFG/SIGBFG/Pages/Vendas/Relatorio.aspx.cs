@@ -72,7 +72,7 @@ public partial class Pages_Vendas_Relatorio : System.Web.UI.Page
         {
             DataRow dr = ds.Tables[0].Rows[i];
 
-            string nome = Convert.ToString(dr["VEN_PRODUTO_QUANTIDADE"]);
+            string nome = Convert.ToString(dr["VEN_CLIENTE"] + " - ") + Convert.ToString(dr["VEN_PRODUTO_QUANTIDADE"]);
             int quantidade = Convert.ToInt32(dr["VEN_QUANTIDADE_TOTAL"]);
 
             dados = dados + "['" + nome + "', " + quantidade + "],";

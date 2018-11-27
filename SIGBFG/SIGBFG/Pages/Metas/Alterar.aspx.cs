@@ -18,7 +18,7 @@ public partial class Paginas_Alterar : System.Web.UI.Page
         {
             MetasBD bd = new MetasBD();
             Metas metas = bd.Select(Convert.ToInt32(Session["ID"]));
-            txtMes.Text = metas.Mes;
+            ddlMes.Text = metas.Mes;
             txtAno.Text = metas.Ano;
             txtMeta.Text = metas.Meta.ToString();
             ddlProdutos.Text = metas.Produto;
@@ -50,7 +50,7 @@ public partial class Paginas_Alterar : System.Web.UI.Page
         MetasBD bd = new MetasBD();
         Metas metas = bd.Select(Convert.ToInt32(Session["ID"]));
         metas.Codigo = Convert.ToInt32(Session["ID"]);
-        metas.Mes = txtMes.Text;
+        metas.Mes = ddlMes.SelectedValue;
         metas.Ano = txtAno.Text;
         metas.Meta = Convert.ToInt32(txtMeta.Text);
         metas.Produto = ddlProdutos.SelectedItem.Value;

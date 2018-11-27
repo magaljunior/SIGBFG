@@ -4,19 +4,38 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
- <link href="../../Content/bootstrap.min.css" rel="stylesheet" />
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="../../Scripts/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="../../Scripts/jquery-3.3.1.min.js"></script>
     <script src="../../Scripts/bootstrap.min.js"></script>
-    <title></title>
+    <script src="../../Scripts/Validacao/jquery.validate.min.js"></script>
+    <script src="../../Scripts/Validacao/localization/messages_pt_PT.min.js"></script>
+    <script src="../../Scripts/jquery.mask.min.js"></script>
+
+    <title>Lista de Clientes Cadastrados</title>
+
+    <style type="text/css">
+        #body {
+        width: 100%;
+        height: 100%;
+        font-weight: bold;
+        /*background-image: url(http://localhost:50742/Images/blocos.png)*/
+        } 
+    </style>
+
 </head>
-<body>
-    <form id="form1" runat="server">
+<body id="body">
         <div class="container-fluid">
-            
-              <br />
-               
-<br />
-                <br />
-                <h1>Lista de Cadastro de Clientes</h1>
+            <center><div style="margin-top: 20px">
+                <form id="form1" runat="server">
+
+                <a class="btn btn-dark" href="../ADM/Administrador.aspx">Página Inicial</a>
+                <a class="btn btn-dark" href="CadastraCL.aspx">Cadastrar Clientes</a>
+                    <br/>
+                    <br />
+
+                <h1>Lista de Clientes Cadastrados</h1>
               <br />
                 <asp:Label ID="lblMensagem" runat="server" Text="" ></asp:Label>
           
@@ -62,9 +81,9 @@
         </asp:GridView>
                 <br />
                 <br />
-           
+               </form>
+            </div></center>
         </div>
-    </form>
 </body>
 </html>
 

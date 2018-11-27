@@ -39,7 +39,22 @@
                 <h1>Alterar Meta</h1>
             <br />
             <asp:Label runat="server" Text="Mês:"></asp:Label>
-            <asp:TextBox ID="txtMes" runat="server" Width="110px"></asp:TextBox>
+            &nbsp;
+                <asp:DropDownList ID="ddlMes" runat="server" Height="30px" Width="142px">
+                    <asp:ListItem>Janeiro</asp:ListItem>
+                    <asp:ListItem>Fevereiro</asp:ListItem>
+                    <asp:ListItem>Março</asp:ListItem>
+                    <asp:ListItem>Abril</asp:ListItem>
+                    <asp:ListItem>Maio</asp:ListItem>
+                    <asp:ListItem>Junho</asp:ListItem>
+                    <asp:ListItem>Julho</asp:ListItem>
+                    <asp:ListItem>Agosto</asp:ListItem>
+                    <asp:ListItem>Setembro</asp:ListItem>
+                    <asp:ListItem>Outubro</asp:ListItem>
+                    <asp:ListItem>Novembro</asp:ListItem>
+                    <asp:ListItem>Dezembro</asp:ListItem>
+                </asp:DropDownList>
+&nbsp;
                 &nbsp
             <asp:Label runat="server" Text="Ano:"></asp:Label>
             <asp:TextBox ID="txtAno" runat="server" Width="95px"></asp:TextBox>

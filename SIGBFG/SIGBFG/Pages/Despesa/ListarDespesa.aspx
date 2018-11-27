@@ -44,7 +44,7 @@
                                     <asp:BoundField DataField="des_data" HeaderText="Data" />
                                     <asp:BoundField DataField="des_quantidade" HeaderText="Quantidade" />
                                     <asp:BoundField DataField="des_descricao" HeaderText="Descrição" />
-                                    <asp:BoundField DataField="des_valor" HeaderText="Valor" />
+                                    <asp:BoundField DataField="des_valor" HeaderText="Valor R$" />
 
                                     <asp:TemplateField HeaderText="Alterar">
                                         <ItemTemplate>

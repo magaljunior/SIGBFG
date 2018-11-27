@@ -50,7 +50,7 @@
             //MASCARA
 
             $('#txtData').mask("00/00/0000", { reverse: true })
-            $('#txtValor').mask("000.000.000,00", { reverse: true });
+            $('#txtValor').mask("000.000.000,00", { reverse: true })
 
         })
     </script>
@@ -81,7 +81,7 @@
                     <asp:TextBox ID="txtDescricao" runat="server" Width="150px"></asp:TextBox>
                     <br />
                     <br />
-                    <asp:Label runat="server" Text="Valor:"></asp:Label>
+                    <asp:Label runat="server" Text="Valor R$:"></asp:Label>
                     <asp:TextBox ID="txtValor" runat="server" Width="150px"></asp:TextBox>
                     <br />
                     <br />

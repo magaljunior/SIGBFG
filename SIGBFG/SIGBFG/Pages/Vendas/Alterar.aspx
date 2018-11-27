@@ -25,38 +25,51 @@
 
     </style>
 
-    <!--VALIDAÇÃO-->
+        <!--VALIDAÇÃO-->
     <script type="text/javascript">
         $(document).ready(function () {
 
             $("#form1").validate({
                 rules: {
+                    
                     txtCliente: {
                         required: true
                     },
-                    txtEndereco: {
+                     txtRua: {
                         required: true
                     },
-                    txtBairro: {
+                      txtBairro: {
                         required: true
                     },
-                    txtNumero: {
+                       txtNumero: {
                         required: true
                     },
-                    txtCnpj: {
+                        txtCnpj: {
                         required: true
                     },
-                    txtTel: {
+                         txtTelefone: {
                         required: true
                     },
                     txtQuantidade: {
                         required: true,
                         maxlength: 11
                     },
-                    txtValor: {
+                     txtValor: {
                         required: true
                     },
                     txtData: {
+                        required: true
+                    },
+                    txtCep: {
+                        required: true
+                    }, 
+                    txtCpf: {
+                        required: true
+                    },
+                    txtProdutoQauntidade: {
+                        required: true
+                    },
+                    txtQuantidadeTotal: {
                         required: true
                     }
                 }
@@ -102,6 +115,13 @@
                 }
             }
         })
+            //MASCARA
+            $('#txtValor').mask("000.000.000,00", { reverse: true })
+            $('#txtTelefone').mask('(00) 00000-0000');
+            $('#txtCnpj').mask('00.000.000/0000-00', { reverse: true });
+            $('#txtData').mask('00/00/0000');
+            $('#txtCep').mask('00000-000');
+            $('#txtCpf').mask('000.000.000-00', {reverse: true});
     })
 </script>
 
@@ -153,7 +173,7 @@
                 <asp:Label ID="Label8" runat="server" Text="Telefone:"></asp:Label>
                 <asp:TextBox ID="txtTelefone" runat="server"></asp:TextBox>
 &nbsp;&nbsp;&nbsp;
-                <asp:Label ID="Label9" runat="server" Text="Valor:"></asp:Label>
+                <asp:Label ID="Label9" runat="server" Text="Valor R$:"></asp:Label>
                 <asp:TextBox ID="txtValor" runat="server"></asp:TextBox>
                 <br />
                 <br />

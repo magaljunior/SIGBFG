@@ -22,6 +22,37 @@
         }
     </style>
 
+            <!--VALIDAÇÃO-->
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $("#form1").validate({
+                rules: {
+                    
+                    txtFuncionario: {
+                        required: true
+                    },
+                     ddlProdutos: {
+                        required: true
+                    },
+                      txtQuantidade: {
+                        required: true
+                    },
+                        txtDataInicio: {
+                        required: true
+                    },
+                         txtDataExpiracao: {
+                        required: true
+                    }
+                }
+            })
+
+        //MASCARA
+            $('#txtDataInicio').mask('00/00/0000');
+            $('#txtDataExpiracao').mask('00/00/0000');
+        })
+    </script>
+
 </head>
 <body id="body">
     <form id="form1" runat="server">
@@ -34,6 +65,8 @@
                       <a style="width:225px;" class="btn btn-dark" href="../Os/Cadastrar.aspx">Cadastrar Ordem de Serviço</a>
 
                       <a style="width:200px;" class="btn btn-dark" href="../Os/Listar.aspx">Listar Ordem de Serviço</a>
+
+                      <a style="width:225px;" class="btn btn-dark" href="../Os/Relatorio.aspx">Relatório de Produção</a>
 
                    </div>
             <br />

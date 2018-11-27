@@ -80,7 +80,7 @@
                     <asp:TextBox ID="txtDescricao" runat="server" Width="150px"></asp:TextBox>
                     <br />
                     <br />
-                    <asp:Label runat="server" Text="Valor:"></asp:Label>
+                    <asp:Label runat="server" Text="Valor R$:"></asp:Label>
                     <asp:TextBox ID="txtValor" runat="server" Width="150px"></asp:TextBox>
                     <br />
                     <br />

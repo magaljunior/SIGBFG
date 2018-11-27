@@ -13,36 +13,34 @@
     
     <title>Cadastrar Ordem de Serviço</title>
 
+        <!--VALIDAÇÃO-->
     <script type="text/javascript">
         $(document).ready(function () {
-            $('.data').mask('00/00/0000');
-        })
-    </script>
-    <script type="text/javascript">
-        $(document).ready(function () {
+
             $("#form1").validate({
                 rules: {
-                    funcionario: {
+                    
+                    txtFuncionario: {
                         required: true
                     },
-                    produto: {
+                     ddlProdutos: {
                         required: true
                     },
-                    quantidade: {
+                      txtQuantidade: {
                         required: true
                     },
-                    descricao: {
+                        txtDatainicio: {
                         required: true
                     },
-                    datainicio: {
-                        required: true
-                    },
-                    dataexpiracao: {
+                         txtDataexpiracao: {
                         required: true
                     }
-
                 }
             })
+
+        //MASCARA
+            $('#txtDatainicio').mask('00/00/0000');
+            $('#txtDataexpiracao').mask('00/00/0000');
         })
     </script>
 

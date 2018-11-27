@@ -12,27 +12,78 @@
     <script src="../../Scripts/Validacao/localization/messages_pt_PT.min.js"></script>
     <script src="../../Scripts/jquery.mask.min.js"></script>
 
-    <title></title>
+    <title>Cadastro de Clientes</title>
+
+    <style type="text/css">
+        #body {
+        width: 100%;
+        height: 100%;
+        font-weight: bold;
+        /*background-image: url(http://localhost:50742/Images/blocos.png)*/
+        } 
+    </style>
+
+    <!--VALIDAÇÃO-->
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $("#form1").validate({
+                rules: {
+                    
+                    txtNome: {
+                        required: true
+                    },
+                     txtEnd: {
+                        required: true
+                    },
+                      txtBairro: {
+                        required: true
+                    },
+                       txtNumero: {
+                        required: true
+                    },
+                        txtCnpj: {
+                        required: true
+                    },
+                         txtTel: {
+                        required: true
+                    }
+                }
+            })
+
+        //MASCARA
+
+            $('#txtTel').mask('(00) 00000-0000');
+            $('#txtCnpj').mask('00.000.000/0000-00', { reverse: true });
+        })
+    </script>
+
 </head>
 <body id="body">
-    <form id="form1" runat="server">
         <div class="container-fluid">
             <center><div style="margin-top: 20px;">
+
                     <a class="btn btn-dark" href="../ADM/Administrador.aspx">Página Inicial</a>
                     <a class="btn btn-dark" href="ListarCL.aspx">Listar Cliente</a>
                     
             <br />
             <br />
-        <asp:Label ID="lblTitulo" runat="server" Text="Cadastrar Cliente" Font-Bold="True" Font-Overline="False" Font-Size="XX-Large" ForeColor="Black"></asp:Label>
+        <form id="form1" runat="server">
+        <h1>Cadastro de Clientes</h1>
+            <br />
                     <p>
             <asp:Label ID="lblNome" runat="server" Text="Nome: "></asp:Label>
             &nbsp;&nbsp;&nbsp;&nbsp;
             <asp:TextBox ID="txtNome" runat="server" Width="350px"></asp:TextBox>
         </p>
         <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Label ID="lblEnd" runat="server" Text="Endereço: "></asp:Label>
             <asp:TextBox ID="txtEnd" runat="server" Width="350px"></asp:TextBox>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </p>
+                    <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Label ID="Label1" runat="server" Text="Bairro: "></asp:Label>
             &nbsp;&nbsp;&nbsp;&nbsp;
             <asp:TextBox ID="txtBairro" runat="server" Width="200px"></asp:TextBox>
@@ -44,17 +95,19 @@
             <asp:Label ID="lblCnpj" runat="server" Text="CNPJ: "></asp:Label>
             &nbsp;&nbsp;&nbsp;&nbsp;
             <asp:TextBox ID="txtCnpj" runat="server" Width="155px"></asp:TextBox>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </p>
+                    <p>
             <asp:Label ID="Label3" runat="server" Text="Telefone: "></asp:Label>
             <asp:TextBox ID="txtTel" runat="server" Width="155px"></asp:TextBox>
       </p>
-        <center>
             <br />
         <asp:Button class="btn btn-dark" ID="btnCadastrar" runat="server" OnClick="btnCadastrar_Click" Text="Cadastrar" />
         <br />
             <br />
         <asp:Label ID="lblMensagem" runat="server"></asp:Label>
-        </center>
+            <br />
     </form>
+       </div></center>
+  </div>
 </body>
 </html>

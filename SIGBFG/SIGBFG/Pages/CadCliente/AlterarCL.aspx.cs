@@ -41,7 +41,7 @@ public partial class Paginas_Alterar : System.Web.UI.Page
            
             if (bd.Update(cliente))
             {
-                lblMensagem.Text = "Venda alterada com sucesso";
+                lblMensagem.Text = "Cliente alterado com sucesso";
                 txtCliente.Focus();
             }
             else

@@ -50,17 +50,15 @@ public partial class Paginas_Relatorio : System.Web.UI.Page
 
         string dados = "";
         //varre linhas do dataset
-        dados = dados + "['Nome', 'Quantidade', 'Data Inicial', 'Data Expiração'],";
+        dados = dados + "['Nome', 'Quantidade'],";
         for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
         {
             DataRow dr = ds.Tables[0].Rows[i];
 
-            string nome = Convert.ToString(dr["OS_PRODUTO"]);
+            string nome = Convert.ToString(dr["OS_FUNCIONARIO"] + " - ") + Convert.ToString(dr["OS_PRODUTO"] + " - ") + Convert.ToString(dr["OS_DATAINICIO"] + " - ") + Convert.ToString(dr["OS_DATAEXPIRACAO"]);
             int quantidade = Convert.ToInt32(dr["OS_QUANTIDADE"]);
-            string dataInicial = Convert.ToString(dr["OS_DATAINICIO"]);
-            string dataExpiracao = Convert.ToString(dr["OS_DATAEXPIRACAO"]);
 
-            dados = dados + "['" + nome + "', " + quantidade + ", " + dataInicial + ", " + dataExpiracao + "],";
+            dados = dados + "['" + nome + "', " + quantidade + "],";
         }
 
         string grafico = "";

@@ -60,7 +60,7 @@
              <asp:BoundField DataField="ven_telefone" HeaderText="Telefone" /> 
               <asp:BoundField DataField="ven_produto_quantidade" HeaderText="Produtos e Quantidade" />
               <asp:BoundField DataField="ven_quantidade_total" HeaderText="Quantidade Total" />
-             <asp:BoundField DataField="ven_valor" HeaderText="Valor" /> 
+             <asp:BoundField DataField="ven_valor" HeaderText="Valor R$" /> 
              <asp:BoundField DataField="ven_data" HeaderText="Data" /> 
              <asp:TemplateField HeaderText="Alterar">
                  <ItemTemplate>
