@@ -59,7 +59,7 @@
 
                       <a class="btn btn-dark" href="../Giro/GiroEstoque.aspx">Calculadora</a>
 
-                      <a href="../Login.aspx"><img title="Logoof" id="logoff" src="../../Images/Minio_Devices_and_Hardware_Bold-90-512.png" /></a>
+                      <a style="float: right" class="btn btn-dark" href="../Login.aspx">Logoff</a>
 
                     </div>
 
