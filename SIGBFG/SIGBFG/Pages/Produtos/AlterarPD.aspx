@@ -40,7 +40,7 @@
                     },
                     txtQuantidadeMinima: {
                         required: true,
-                        maxlength: 11
+                        number: true
                     }
                 }
             })
@@ -60,9 +60,7 @@
             <form id="form1" runat="server">
                     <a class="btn btn-dark" href="../ADM/Administrador.aspx">Página Inicial</a>
                     <a class="btn btn-dark" href="CadastrarPD.aspx">Cadastrar Produtos</a>
-                    <a class="btn btn-dark" href="ListarPD.aspx">Listar Produtos</a>
-                    <a class="btn btn-dark" href="Estoque_ProdutosPD.aspx">Estoque Atual de Produtos</a>
-                    <a class="btn btn-dark" href="Relatorio.aspx">Relatório de Produtos</a>
+                    <a class="btn btn-dark" href="ListarPD.aspx">Listar Produtos</a>&nbsp;&nbsp;
                     <br />
                     <br />
                     <h1>Alteração de Produtos</h1>

@@ -16,29 +16,23 @@
 
     <title>Cadastro de Perdas</title>
 
-        <!--VALIDAÇÃO-->
-    <script type="text/javascript">
-        $(document).ready(function () {
+    <!--VALIDAÇÃO-->
+<script type="text/javascript">
+    $(document).ready(function () {
 
-            $("#form1").validate({
-                rules: {
-                    txtOrdem: {
-                        required: true,
-                    },
-                    txtProduto: {
-                        required: true
-                    },
-                    txtQuantidade: {
-                        required: true,
-                        maxlength: 11
-                    },
-                    txtMotivo: {
-                        required: true
-                    }
+        $("#form1").validate({
+            rules: {
+
+                txtQuantidade: {
+                    required: true,
+                    number: true
                 }
-            })
+            }
         })
-    </script>
+
+
+    })
+</script>
 
     <style type="text/css">
         #body {
@@ -51,37 +45,6 @@
     </style>
 
 </head>
-
-
-    <!--VALIDAÇÃO-->
-<script type="text/javascript">
-    $(document).ready(function () {
-
-        $("#form1").validate({
-            rules: {
-                txtOrdem: {
-                    required: true,
-                },
-                txtQuantidade: {
-                    required: true
-                },
-                txtProduto: {
-                    required: true,
-                    maxlength: 11
-                },
-                txtMotivo: {
-                    required: true,
-                    minlength: 10
-                }
-            }
-        })
-
-
-    })
-</script>
-
-
-
 
 <body id="body">
         <div class="container-fluid">

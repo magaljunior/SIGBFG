@@ -74,6 +74,7 @@ namespace Vendas.Persistencia
                 obj.Nome = Convert.ToString(objDataReader["cli_nome"]);
                 obj.Endereco = Convert.ToString(objDataReader["cli_endereco"]);
                 obj.Numero = Convert.ToInt32(objDataReader["cli_numero"]);
+                obj.Bairro = Convert.ToString(objDataReader["cli_bairro"]);
                 obj.CNPJ = Convert.ToString(objDataReader["cli_cnpj"]);
                 obj.Telefone = Convert.ToString(objDataReader["cli_telefone"]);
             }

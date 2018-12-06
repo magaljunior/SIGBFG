@@ -18,31 +18,31 @@ public partial class Pages_Os_Alterar : System.Web.UI.Page
             OrdemServicoBD bd = new OrdemServicoBD();
             OrdemServico ordemServico = bd.Select(Convert.ToInt32(Session["ID"]));
             txtFuncionario.Text = ordemServico.Funcionario;
-            ddlProdutos.Text = ordemServico.Produto;
-            txtQuantidade.Text = ordemServico.Quantidade.ToString();
+            //ddlProdutos.Text = ordemServico.Produto;
+            //txtQuantidade.Text = ordemServico.Quantidade.ToString();
             txtDataInicio.Text = ordemServico.DataInicio;
             txtDataExpiracao.Text = ordemServico.DataExpiracao;
             txtDescricao.Text = ordemServico.Descricao;
 
-            CarregaDDL();
+            //CarregaDDL();
         }
 
         txtFuncionario.Focus();
     }
 
 
-    private void CarregaDDL()
-    {
-        ProdutoBD bd = new ProdutoBD();
-        DataSet ds = bd.SelectAll();
+    //private void CarregaDDL()
+    //{
+    //    ProdutoBD bd = new ProdutoBD();
+    //    DataSet ds = bd.SelectAll();
 
-        ddlProdutos.Items.Clear();
-        ddlProdutos.DataSource = ds.Tables[0].DefaultView;
-        ddlProdutos.DataTextField = "pro_nome";
-        ddlProdutos.DataValueField = "pro_nome";
-        ddlProdutos.DataBind();
-        ddlProdutos.Items.Insert(0, "Selecione");
-    }
+    //    ddlProdutos.Items.Clear();
+    //    ddlProdutos.DataSource = ds.Tables[0].DefaultView;
+    //    ddlProdutos.DataTextField = "pro_nome";
+    //    ddlProdutos.DataValueField = "pro_nome";
+    //    ddlProdutos.DataBind();
+    //    ddlProdutos.Items.Insert(0, "Selecione");
+    //}
 
     protected void btnSalvar_Click(object sender, EventArgs e)
     {
@@ -50,8 +50,8 @@ public partial class Pages_Os_Alterar : System.Web.UI.Page
         OrdemServico ordemServico = bd.Select(Convert.ToInt32(Session["ID"]));
         ordemServico.Codigo = Convert.ToInt32(Session["ID"]);
         ordemServico.Funcionario = txtFuncionario.Text;
-        ordemServico.Produto = ddlProdutos.SelectedItem.Value;
-        ordemServico.Quantidade = Convert.ToInt32(txtQuantidade.Text);
+        //ordemServico.Produto = ddlProdutos.SelectedItem.Value;
+        //ordemServico.Quantidade = Convert.ToInt32(txtQuantidade.Text);
         ordemServico.DataInicio = txtDataInicio.Text;
         ordemServico.DataExpiracao = txtDataExpiracao.Text;
         ordemServico.Descricao = txtDescricao.Text;

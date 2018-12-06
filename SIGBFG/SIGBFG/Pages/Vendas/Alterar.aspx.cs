@@ -11,6 +11,19 @@ using Cadastro_Produto.Persistence;
 
 public partial class Paginas_Alterar : System.Web.UI.Page
 {
+    //private void CarregaDDL()
+    //{
+    //    ProdutoBD bd = new ProdutoBD();
+    //    DataSet ds = bd.SelectAll();
+
+    //    ddlProdutos.Items.Clear();
+    //    ddlProdutos.DataSource = ds.Tables[0].DefaultView;
+    //    ddlProdutos.DataTextField = "pro_nome";
+    //    ddlProdutos.DataValueField = "pro_nome";
+    //    ddlProdutos.DataBind();
+
+    //    ddlProdutos.Items.Insert(0, "Selecione");
+    //}
 
     protected void Page_Load (object sender, EventArgs e)
     {
@@ -26,10 +39,12 @@ public partial class Paginas_Alterar : System.Web.UI.Page
             txtCnpj.Text = venda.Cnpj;
             txtCpf.Text = venda.Cpf;
             txtTelefone.Text = venda.Telefone;
-            txtProdutoQauntidade.Text = venda.ProdutoQuantidade;
-            txtQuantidadeTotal.Text = venda.QuantidadeTotal.ToString();
+            //ddlProdutos.Text = venda.Produto;
+            //txtQuantidade.Text = venda.Quantidade.ToString();
             txtData.Text = venda.Data;
             txtValor.Text = venda.Valor.ToString();
+
+            //CarregaDDL();
         }
 
         txtCliente.Focus();
@@ -49,11 +64,6 @@ public partial class Paginas_Alterar : System.Web.UI.Page
            );
     }
 
-    protected void txtCliente_TextChanged(object sender, EventArgs e)
-    {
-
-    }
-
     protected void btnAlterarVenda_Click(object sender, EventArgs e)
     {
         {
@@ -67,8 +77,8 @@ public partial class Paginas_Alterar : System.Web.UI.Page
             venda.Cnpj = txtCnpj.Text;
             venda.Cpf = txtCpf.Text;
             venda.Telefone = txtTelefone.Text;
-            venda.ProdutoQuantidade = txtProdutoQauntidade.Text;
-            venda.QuantidadeTotal = Convert.ToInt32(txtQuantidadeTotal.Text);
+            //venda.Produto = ddlProdutos.SelectedItem.Value;
+            //venda.Quantidade = Convert.ToInt32(txtQuantidade.Text);
             venda.Valor = Convert.ToDouble(txtValor.Text);
             venda.Data = txtData.Text;
 

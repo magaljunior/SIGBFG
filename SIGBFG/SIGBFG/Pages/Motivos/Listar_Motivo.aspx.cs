@@ -20,8 +20,12 @@ public partial class Pages_Motivos_Listar_Motivo : System.Web.UI.Page
     {
         MotivoBD bd = new MotivoBD();
         DataSet ds = bd.SelectAll();
+        int rows = ds.Tables[0].Rows.Count;
+        DataTable dt = ds.Tables[0];
         GridView1.DataSource = ds.Tables[0].DefaultView;
         GridView1.DataBind();
+        lblMensagem.Text = "Motivo(s) encontrado(s) : " + rows.ToString();
+        GridView1.Visible = true;
     }
 
     protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)

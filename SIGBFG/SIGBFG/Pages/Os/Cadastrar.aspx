@@ -27,13 +27,16 @@
                         required: true
                     },
                       txtQuantidade: {
-                        required: true
+                          required: true,
+                          number: true
                     },
                         txtDatainicio: {
-                        required: true
+                            required: true,
+                            date: true
                     },
                          txtDataexpiracao: {
-                        required: true
+                             required: true,
+                             date: true
                     }
                 }
             })

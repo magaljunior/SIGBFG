@@ -36,13 +36,17 @@
                         required: true
                     },
                       txtQuantidade: {
-                        required: true
+                          required: true,
+                          number: true
                     },
                         txtDataInicio: {
-                        required: true
+                            required: true,
+                            date: true
+
                     },
                          txtDataExpiracao: {
-                        required: true
+                             required: true,
+                             date: true
                     }
                 }
             })
@@ -80,18 +84,7 @@
             <asp:TextBox ID="txtFuncionario" runat="server"   Width="189px"></asp:TextBox>
                     <br />
        <br />
-        <asp:Label ID="Label2" runat="server" Text="Produto:"></asp:Label>
-            <asp:DropDownList ID="ddlProdutos" runat="server" Height="27px" style="margin-left: 16px" Width="186px">
-            </asp:DropDownList>
-                    <br />
-        <br />
-       
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-       
-        <asp:Label ID="Label6" runat="server" Text="Quantidade:"></asp:Label>
-        <asp:TextBox ID="txtQuantidade" runat="server" style="margin-left: 23px" Width="172px"></asp:TextBox>
-                    <br />
-        <br />
+                    &nbsp;&nbsp;
 
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 

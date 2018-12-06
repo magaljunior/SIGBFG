@@ -45,6 +45,8 @@
                              
                       <a class="btn btn-dark" href="../Produtos/CadastrarPD.aspx">Produtos</a>
 
+                      <a class="btn btn-dark" href="../Estoque/Estoque_ProdutosPD.aspx">Estoque</a>
+
                       <a class="btn btn-dark" href="../Metas/Cadastrar.aspx">Metas</a>
 
                       <a class="btn btn-dark" href="../Despesa/CadastrarDespesa.aspx">Despesas</a>
@@ -67,7 +69,7 @@
                       <div>
                             <h1 style="margin-top: 40px;">Bem-Vindo</h1>
                             <br />
-                            <h2>Sistema Integrado de Gestão BFG</h2>
+                            <h1>Sistema Integrado de Gestão BFG</h1>
                           <br />
                                 <img title="Blocos Frei Galvão" src="../../Images/BFG.jpg" />
                       </div>       

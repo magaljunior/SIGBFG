@@ -5,6 +5,8 @@ using System.Web;
 using FATEC;
 using System.Data;
 using SIGBFG.Classes;
+using Cadastro_Produto.Persistence;
+using Cadastro_Produto.Classes;
 
 namespace SIGBFG.Persistencia
 {
@@ -25,12 +27,19 @@ namespace SIGBFG.Persistencia
             objCommand.Parameters.Add(Mapped.Parameter("?dataInicio", ordemServico.DataInicio));
             objCommand.Parameters.Add(Mapped.Parameter("?dataExpiracao", ordemServico.DataExpiracao));
             objCommand.Parameters.Add(Mapped.Parameter("?descricao", ordemServico.Descricao));
+
             objCommand.ExecuteNonQuery();
             objConexao.Close();
             objCommand.Dispose();
             objConexao.Dispose();
+
+            ProdutoBD bd = new ProdutoBD();
+            Produto produto = bd.Select(ordemServico.Produto);
+            bd.UpdateQuantidade(produto.Codigo, ordemServico.Quantidade, 1);
+
             return true;
         }
+
         //selectall
         public DataSet SelectAll()
         {
@@ -95,6 +104,7 @@ namespace SIGBFG.Persistencia
             objConexao.Close();
             objCommand.Dispose();
             objConexao.Dispose();
+
             return true;
         }
         //delete

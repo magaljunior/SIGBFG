@@ -34,6 +34,8 @@
                     <br />
                     <br />
                     <h1>Lista de Usuários</h1>
+                        <asp:Label ID="lblMensagem" runat="server"></asp:Label>
+                        <br />
                     <br />
                     <asp:GridView ID="GridView1" runat="server" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black" Height="110px" Width="100%" OnRowCommand="GridView1_RowCommand" AutoGenerateColumns="False">
                         <Columns>

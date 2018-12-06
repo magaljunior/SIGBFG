@@ -10,6 +10,7 @@
     <script src="../../Scripts/jquery-3.3.1.min.js"></script>
     <script src="../../Scripts/bootstrap.min.js"></script>
     <script src="../../Scripts/Validacao/jquery.validate.min.js"></script>
+        <script src="../../Scripts/Validacao/additional-methods.js"></script>
     <script src="../../Scripts/Validacao/localization/messages_pt_PT.min.js"></script>
     <script src="../../Scripts/jquery.mask.min.js"></script>
    
@@ -27,6 +28,7 @@
             height: 619px;
         }
         </style>
+
         <!--VALIDAÇÃO-->
     <script type="text/javascript">
         $(document).ready(function () {
@@ -44,13 +46,14 @@
                         required: true
                     },
                        txtNumero: {
-                        required: true
+                           required: true,
+                           number: true
                     },
                         txtCnpj: {
-                        required: true
+                            cnpj: true
                     },
                          txtTelefone: {
-                        required: true
+                         required: true
                     },
                     txtQuantidade: {
                         required: true,
@@ -60,19 +63,22 @@
                         required: true
                     },
                     txtData: {
-                        required: true
+                        required: true,
+                        date: true
                     },
                     txtCep: {
-                        required: true
+                        required: true,
+                        postalcodeBR: true
                     }, 
                     txtCpf: {
-                        required: true
+                        cpf: true
                     },
                     txtProdutoQauntidade: {
                         required: true
                     },
                     txtQuantidadeTotal: {
-                        required: true
+                        required: true,
+                        number: true
                     }
                 }
             })
@@ -140,13 +146,13 @@
                 <asp:TextBox ID="txtData" runat="server"></asp:TextBox>
                 <br />
                 <br />
-                <asp:Label ID="Label11" runat="server" Text="Produtos e Quantidade:"></asp:Label>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Label ID="Label12" runat="server" Text="Quantidade Total:"></asp:Label>
-                <asp:TextBox ID="txtQuantidadeTotal" runat="server"></asp:TextBox>
+                <asp:Label ID="Label11" runat="server" Text="Produto:"></asp:Label>
+                &nbsp;&nbsp;&nbsp;<asp:DropDownList ID="ddlProdutos" runat="server" Width="263px">
+                </asp:DropDownList>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Label ID="Label12" runat="server" Text="Quantidade:"></asp:Label>
+                <asp:TextBox ID="txtQuantidade" runat="server" Width="141px"></asp:TextBox>
                 <br />
-                <br />
-                <asp:TextBox ID="txtProdutoQauntidade" runat="server" Height="96px" Width="284px"></asp:TextBox>
                 <br />
                 <br />
                 <asp:Button class="btn btn-dark" ID="btnRealizarVenda" runat="server" Text="Realizar Venda" OnClick="btnRealizarVenda_Click" />

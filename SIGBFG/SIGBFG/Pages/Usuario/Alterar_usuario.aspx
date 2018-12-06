@@ -25,7 +25,7 @@
 
     </style>
 
-    <!--VALIDAÇÃO-->
+        <!--VALIDAÇÃO-->
     <script type="text/javascript">
         $(document).ready(function () {
 
@@ -34,13 +34,15 @@
                     txtNome: {
                         required: true,
                         minlength: 3,
-                        maxlength: 100
+                        maxlength: 20
                     },
                     txtEmail: {
-                        required: true
+                        required: true, 
+                        email: true
                     },
                     txtSenha: {
-                        required: true
+                        required: true,
+                        minlength: 8
                     },
                     txtTipo: {
                         required: true

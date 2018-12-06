@@ -40,7 +40,7 @@
                     },
                     txtQuantidadeMinima: {
                         required: true,
-                        maxlength: 11
+                        number: true
                     }
                 }
             })
@@ -57,9 +57,7 @@
     <div class="container-fluid">
                 <center><div style="margin-top: 20px;">
                         <a class="btn btn-dark" href="../ADM/Administrador.aspx">Página Inicial</a>
-                        <a class="btn btn-dark" href="ListarPD.aspx">Listar Produtos</a>
-                        <a class="btn btn-dark" href="Estoque_ProdutosPD.aspx">Estoque Atual de Produtos</a>
-                        <a class="btn btn-dark" href="Relatorio.aspx">Relatório de Produtos</a>
+                        <a class="btn btn-dark" href="ListarPD.aspx">Listar Produtos</a>&nbsp;&nbsp;
             <form id="form1" runat="server">
                 <br />
 

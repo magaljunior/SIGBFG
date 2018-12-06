@@ -10,6 +10,7 @@
     <script src="../../Scripts/jquery-3.3.1.min.js"></script>
     <script src="../../Scripts/bootstrap.min.js"></script>
     <script src="../../Scripts/Validacao/jquery.validate.min.js"></script>
+    <script src="../../Scripts/Validacao/additional-methods.js"></script>
     <script src="../../Scripts/Validacao/localization/messages_pt_PT.min.js"></script>
     <script src="../../Scripts/jquery.mask.min.js"></script>
 
@@ -42,13 +43,14 @@
                         required: true
                     },
                        txtNumero: {
-                        required: true
+                           required: true,
+                           number: true
                     },
                         txtCnpj: {
-                        required: true
+                            cnpj: true
                     },
                          txtTelefone: {
-                        required: true
+                         required: true
                     },
                     txtQuantidade: {
                         required: true,
@@ -58,19 +60,23 @@
                         required: true
                     },
                     txtData: {
-                        required: true
+                        required: true,
+                        date: true
                     },
                     txtCep: {
-                        required: true
+                        required: true,
+                        postalcodeBR: true
                     }, 
                     txtCpf: {
-                        required: true
+                        required: true,
+                        cpf: true
                     },
                     txtProdutoQauntidade: {
                         required: true
                     },
                     txtQuantidadeTotal: {
-                        required: true
+                        required: true,
+                        number: true
                     }
                 }
             })
@@ -180,14 +186,6 @@
                 <asp:Label ID="Label10" runat="server" Text="Data:"></asp:Label>
                 <asp:TextBox ID="txtData" runat="server"></asp:TextBox>
                 <br />
-                <br />
-                <asp:Label ID="Label11" runat="server" Text="Produtos e Quantidade:"></asp:Label>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <asp:Label ID="Label13" runat="server" Text="Quantidade Total:"></asp:Label>
-                            <asp:TextBox ID="txtQuantidadeTotal" runat="server"></asp:TextBox>
-                <br />
-                <br />
-                            <asp:TextBox ID="txtProdutoQauntidade" runat="server" Height="96px" Width="284px"></asp:TextBox>
                             <br />
                 <br />
                             <asp:Button CssClass="btn btn-dark" ID="btnAlterarVenda" runat="server" Text="Alterar Venda" OnClick="btnAlterarVenda_Click" />

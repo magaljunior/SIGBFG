@@ -13,16 +13,22 @@ public partial class Pages_Usuario_Listar_Usuario : System.Web.UI.Page
     {
         PessoaBD bd = new PessoaBD();
         DataSet ds = bd.SelectAll();
+        int rows = ds.Tables[0].Rows.Count;
+        DataTable dt = ds.Tables[0];
         GridView1.DataSource = ds.Tables[0].DefaultView;
         GridView1.DataBind();
+        lblMensagem.Text = "Usuário(s) encontrado(s) : " + rows.ToString();
+        GridView1.Visible = true;
     }
+
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!Page.IsPostBack)
         {
             Carrega();
         }
-    }
+    }
+
 
     protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
     {

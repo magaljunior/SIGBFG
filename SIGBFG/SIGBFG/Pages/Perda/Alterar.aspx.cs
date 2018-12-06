@@ -20,28 +20,28 @@ public partial class Paginas_Alterar : System.Web.UI.Page
         {
             PerdaBD bd = new PerdaBD();
             Perdas perdas = bd.Select(Convert.ToInt32(Session["ID"]));
-            ddlProdutos.Text = perdas.Produto;
-            txtQuantidade.Text = perdas.Quantidade.ToString();
+            //ddlProdutos.Text = perdas.Produto;
+            //txtQuantidade.Text = perdas.Quantidade.ToString();
             ddlMotivos.Text = perdas.Motivo;
 
-            CarregaDDL();
+            //CarregaDDL();
 
             CarregaDDL2();
         }
     }
 
-    private void CarregaDDL()
-    {
-        ProdutoBD bd = new ProdutoBD();
-        DataSet ds = bd.SelectAll();
+    //private void CarregaDDL()
+    //{
+    //    ProdutoBD bd = new ProdutoBD();
+    //    DataSet ds = bd.SelectAll();
 
-        ddlProdutos.Items.Clear();
-        ddlProdutos.DataSource = ds.Tables[0].DefaultView;
-        ddlProdutos.DataTextField = "pro_nome";
-        ddlProdutos.DataValueField = "pro_nome";
-        ddlProdutos.DataBind();
-        ddlProdutos.Items.Insert(0, "Selecione");
-    }
+    //    ddlProdutos.Items.Clear();
+    //    ddlProdutos.DataSource = ds.Tables[0].DefaultView;
+    //    ddlProdutos.DataTextField = "pro_nome";
+    //    ddlProdutos.DataValueField = "pro_nome";
+    //    ddlProdutos.DataBind();
+    //    ddlProdutos.Items.Insert(0, "Selecione");
+    //}
 
     private void CarregaDDL2()
     {
@@ -62,8 +62,8 @@ public partial class Paginas_Alterar : System.Web.UI.Page
             PerdaBD bd = new PerdaBD();
             Perdas perdas = bd.Select(Convert.ToInt32(Session["ID"]));
             perdas.Codigo = Convert.ToInt32(Session["ID"]);
-            perdas.Produto = ddlProdutos.SelectedItem.Value;
-            perdas.Quantidade = Convert.ToInt32(txtQuantidade.Text);
+            //perdas.Produto = ddlProdutos.SelectedItem.Value;
+            //perdas.Quantidade = Convert.ToInt32(txtQuantidade.Text);
             perdas.Motivo = ddlMotivos.SelectedItem.Value;
             if (bd.Update(perdas))
             {

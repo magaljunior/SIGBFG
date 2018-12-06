@@ -63,8 +63,8 @@
              <asp:BoundField DataField="ven_cnpj" HeaderText="CNPJ" /> 
               <asp:BoundField DataField="ven_cpf" HeaderText="CPF" />
              <asp:BoundField DataField="ven_telefone" HeaderText="Telefone" /> 
-              <asp:BoundField DataField="ven_produto_quantidade" HeaderText="Produtos e Quantidade" />
-              <asp:BoundField DataField="ven_quantidade_total" HeaderText="Quantidade Total" />
+              <asp:BoundField DataField="ven_produto" HeaderText="Produto" />
+              <asp:BoundField DataField="ven_quantidade" HeaderText="Quantidade" />
              <asp:BoundField DataField="ven_valor" HeaderText="Valor" /> 
              <asp:BoundField DataField="ven_data" HeaderText="Data" /> 
          </Columns>

@@ -9,6 +9,7 @@
     <script src="../../Scripts/jquery-3.3.1.min.js"></script>
     <script src="../../Scripts/bootstrap.min.js"></script>
     <script src="../../Scripts/Validacao/jquery.validate.min.js"></script>
+        <script src="../../Scripts/Validacao/additional-methods.js"></script>
     <script src="../../Scripts/Validacao/localization/messages_pt_PT.min.js"></script>
     <script src="../../Scripts/jquery.mask.min.js"></script>
 
@@ -23,7 +24,7 @@
         } 
     </style>
 
-    <!--VALIDAÇÃO-->
+   <!--VALIDAÇÃO-->
     <script type="text/javascript">
         $(document).ready(function () {
 
@@ -40,10 +41,12 @@
                         required: true
                     },
                        txtNumero: {
-                        required: true
+                           required: true,
+                           number: true
                     },
                         txtCnpj: {
-                        required: true
+                            required: true,
+                            cnpj: true
                     },
                          txtTel: {
                         required: true

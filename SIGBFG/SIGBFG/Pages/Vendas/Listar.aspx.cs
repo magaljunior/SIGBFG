@@ -20,9 +20,9 @@ public partial class Paginas_Listar : System.Web.UI.Page
 
         for (int l = 0; l < dt.Rows.Count; l++)
         {
-            if (dt.Rows[l]["VEN_QUANTIDADE_TOTAL"].ToString() != "")
+            if (dt.Rows[l]["VEN_QUANTIDADE"].ToString() != "")
             {
-                int total = Convert.ToInt32(dt.Rows[l]["VEN_QUANTIDADE_TOTAL"]);
+                int total = Convert.ToInt32(dt.Rows[l]["VEN_QUANTIDADE"]);
                 acumula += total;
             }
 
@@ -30,9 +30,6 @@ public partial class Paginas_Listar : System.Web.UI.Page
         lblMensagem0.Text = "Quantidade de Produto(s) Vendido(s) : " + acumula.ToString();
 
     }
-
-
-
 
     protected void Page_Load(object sender, EventArgs e)
     {

@@ -89,7 +89,7 @@ public partial class Pages_Produtos_Relatorio : System.Web.UI.Page
         grafico = grafico + "title: '',";
         grafico = grafico + "is3D: true ";
         grafico = grafico + "};";
-        grafico = grafico + "var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));";
+        grafico = grafico + "var chart = new google.visualization.PieChart(document.getElementById('chart_div'));";
         grafico = grafico + "chart.draw(data, options);";
         grafico = grafico + "}";
         grafico = grafico + "google.setOnLoadCallback(drawChart);";

@@ -10,13 +10,18 @@ using WebDespesa.Persistencia;
 
 public partial class Paginas_ListarDespesa : System.Web.UI.Page
 {
-    private void Carrega()
+private void Carrega()
     {
         DespesaBD bd = new DespesaBD();
         DataSet ds = bd.SelectAll();
+        int rows = ds.Tables[0].Rows.Count;
+        DataTable dt = ds.Tables[0];
         GridView1.DataSource = ds.Tables[0].DefaultView;
         GridView1.DataBind();
+        lblMensagem.Text = "Despesa(s) encontrada(s) : " + rows.ToString();
+        GridView1.Visible = true;
     }
+
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!Page.IsPostBack)

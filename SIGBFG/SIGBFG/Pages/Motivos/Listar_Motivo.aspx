@@ -34,6 +34,8 @@
                     <br />
                     <br />
                     <h1>Listar Motivos de Perda</h1>
+                        <asp:Label ID="lblMensagem" runat="server"></asp:Label>
+                        <br />
                         <br />
                     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black" Width="100%" OnRowCommand="GridView1_RowCommand">
                         <Columns>

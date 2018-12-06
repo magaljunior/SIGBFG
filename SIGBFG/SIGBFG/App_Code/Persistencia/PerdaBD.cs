@@ -5,6 +5,8 @@ using System.Web;
 using FATEC;
 using WebSitePi.Classes;
 using System.Data;
+using Cadastro_Produto.Classes;
+using Cadastro_Produto.Persistence;
 
 namespace WebSitePi.Persistencia
 {
@@ -12,7 +14,6 @@ namespace WebSitePi.Persistencia
     {
         public bool Insert(Perdas perdas)
         {
-            //métodos 
             //insert
             System.Data.IDbConnection objConexao;
             System.Data.IDbCommand objCommand;
@@ -30,6 +31,10 @@ namespace WebSitePi.Persistencia
             objConexao.Close();
             objCommand.Dispose();
             objConexao.Dispose();
+
+            ProdutoBD bd = new ProdutoBD();
+            Produto produto = bd.Select(perdas.Produto);
+            bd.UpdateQuantidade(produto.Codigo, perdas.Quantidade, 0);
 
             return true;
         }
@@ -89,7 +94,7 @@ namespace WebSitePi.Persistencia
             System.Data.IDbConnection objConexao;
             System.Data.IDbCommand objCommand;
             string sql = "UPDATE per_perda SET per_ordem=?ordem, per_produto=?produto, per_quantidade=?quantidade, per_motivo=?motivo WHERE per_codigo =?codigo";
- objConexao = Mapped.Connection();
+            objConexao = Mapped.Connection();
             objCommand = Mapped.Command(sql, objConexao);
             objCommand.Parameters.Add(Mapped.Parameter("?ordem", perdas.Ordem));
             objCommand.Parameters.Add(Mapped.Parameter("?produto", perdas.Produto));
@@ -100,6 +105,7 @@ namespace WebSitePi.Persistencia
             objConexao.Close();
             objCommand.Dispose();
             objConexao.Dispose();
+
             return true;
         }
 
@@ -119,14 +125,13 @@ namespace WebSitePi.Persistencia
             objCommand.Dispose();
             objConexao.Dispose();
             return true;
-        }
+        }
+
 
         //construtor
         public PerdaBD()
         {
-            //
-            // TODO: Add constructor logic here
-            //
+
         }
     }
 }

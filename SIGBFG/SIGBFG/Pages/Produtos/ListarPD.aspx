@@ -27,11 +27,7 @@
                 <div style="margin-top: 20px; margin-bottom: 20px;">
                     <a class="btn btn-dark" href="../ADM/Administrador.aspx">Página Inicial</a>
 
-                    <a class="btn btn-dark" href="CadastrarPD.aspx">Cadastrar Produtos</a>
-
-                    <a class="btn btn-dark" href="Estoque_ProdutosPD.aspx">Estoque Atual de Produtos</a>
-
-                    <a class="btn btn-dark" href="Relatorio.aspx">Relatório de Produtos</a>
+                    <a class="btn btn-dark" href="CadastrarPD.aspx">Cadastrar Produtos</a>&nbsp;&nbsp;
                         </div>
 
                     <h1 style="margin-bottom: 20px;">Lista de Produtos</h1>
@@ -54,9 +50,6 @@
                         <ItemStyle HorizontalAlign="Center" />
                         </asp:BoundField>
                         <asp:BoundField DataField="pro_quantidadeMinima" HeaderText="Quantidade Minima" >
-                        <ItemStyle HorizontalAlign="Center" />
-                        </asp:BoundField>
-                        <asp:BoundField DataField="pro_quantidade" HeaderText="Quantidade" >
                         <ItemStyle HorizontalAlign="Center" />
                         </asp:BoundField>
                         <asp:BoundField DataField="pro_descricao" HeaderText="Descrição" >

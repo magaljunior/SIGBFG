@@ -95,6 +95,74 @@ public class ProdutoBD
 
             return obj;
         }
+
+        //select
+        public Produto Select(string nome)
+        {
+            Produto obj = null;
+
+            System.Data.IDbConnection objConexao;
+            System.Data.IDbCommand objCommand;
+            System.Data.IDataReader objDataReader;
+
+            objConexao = Mapped.Connection();
+            objCommand = Mapped.Command("SELECT * FROM tbl_produto WHERE pro_nome = ?nome", objConexao);
+            objCommand.Parameters.Add(Mapped.Parameter("?nome", nome));
+
+            objDataReader = objCommand.ExecuteReader();
+            while (objDataReader.Read())
+            {
+                obj = new Produto();
+                obj.Codigo = Convert.ToInt32(objDataReader["pro_codigo"]);
+                obj.Nome = Convert.ToString(objDataReader["pro_nome"]);
+                obj.Preco = Convert.ToDouble(objDataReader["pro_preco"]);
+                obj.QuantidadeMinima = Convert.ToInt32(objDataReader["pro_quantidadeMinima"]);
+                obj.Quantidade = Convert.ToInt32(objDataReader["pro_quantidade"]);
+                obj.Descricao = Convert.ToString(objDataReader["pro_descricao"]);
+                obj.Foto = Convert.ToString(objDataReader["pro_foto"]);
+                obj.Ativo = Convert.ToBoolean(objDataReader["pro_ativo"]);
+            }
+
+            objDataReader.Close();
+            objConexao.Close();
+
+            objCommand.Dispose();
+            objConexao.Dispose();
+            objDataReader.Dispose();
+
+            return obj;
+        }
+
+        //update
+        public bool UpdateQuantidade(int Produto, int Quantidade, int operacao)
+        {
+            System.Data.IDbConnection objConexao;
+            System.Data.IDbCommand objCommand;
+            string sql = "";
+
+            if (operacao == 1)
+            {
+                sql = "UPDATE tbl_produto SET pro_quantidade=pro_quantidade + ?quantidade WHERE pro_codigo=?codigo";
+            }
+            else
+            {
+                sql = "UPDATE tbl_produto SET pro_quantidade=pro_quantidade - ?quantidade WHERE pro_codigo=?codigo";
+            }
+
+            objConexao = Mapped.Connection();
+            objCommand = Mapped.Command(sql, objConexao);
+
+            objCommand.Parameters.Add(Mapped.Parameter("?quantidade", Quantidade));
+            objCommand.Parameters.Add(Mapped.Parameter("?codigo", Produto));
+
+            objCommand.ExecuteNonQuery();
+            objConexao.Close();
+            objCommand.Dispose();
+            objConexao.Dispose();
+
+            return true;
+        }
+
         //update
         public bool Update(Produto produto)
         {

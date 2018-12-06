@@ -46,8 +46,8 @@
                         <Columns>
                             <asp:BoundField DataField="met_mes" HeaderText="Mês" />
                             <asp:BoundField DataField="met_ano" HeaderText="Ano" />
-                            <asp:BoundField DataField="met_meta" HeaderText="Meta" />
                             <asp:BoundField DataField="met_produto" HeaderText="Produto" />
+                            <asp:BoundField DataField="met_meta" HeaderText="Quantidade" />
                             <asp:BoundField DataField="met_descricao" HeaderText="Descrição" />
 
                         <asp:TemplateField HeaderText="Alterar">

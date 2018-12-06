@@ -14,11 +14,25 @@ public partial class Paginas_Cadastrar : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         txtCliente.Focus();
+
+        if (!Page.IsPostBack)
+        {
+            CarregaDDL();
+        }
     }
 
-    protected void LinkButton1_Click(object sender, EventArgs e)
+    private void CarregaDDL()
     {
+        ProdutoBD bd = new ProdutoBD();
+        DataSet ds = bd.SelectAll();
 
+        ddlProdutos.Items.Clear();
+        ddlProdutos.DataSource = ds.Tables[0].DefaultView;
+        ddlProdutos.DataTextField = "pro_nome";
+        ddlProdutos.DataValueField = "pro_nome";
+        ddlProdutos.DataBind();
+
+        ddlProdutos.Items.Insert(0, "Selecione");
     }
 
     protected void Button1_Click(object sender, EventArgs e)
@@ -40,8 +54,8 @@ public partial class Paginas_Cadastrar : System.Web.UI.Page
         venda.Cnpj = txtCnpj.Text;
         venda.Cpf = txtCpf.Text;
         venda.Telefone = txtTelefone.Text;
-        venda.ProdutoQuantidade = txtProdutoQauntidade.Text;
-        venda.QuantidadeTotal = Convert.ToInt32(txtQuantidadeTotal.Text);
+        venda.Produto = ddlProdutos.SelectedItem.Value;
+        venda.Quantidade = Convert.ToInt32(txtQuantidade.Text);
         venda.Data = txtData.Text;
         venda.Valor = Convert.ToDouble(txtValor.Text);
 
@@ -58,8 +72,8 @@ public partial class Paginas_Cadastrar : System.Web.UI.Page
             txtCnpj.Text = "";
             txtCpf.Text = "";
             txtTelefone.Text = "";
-            txtProdutoQauntidade.Text = "";
-            txtQuantidadeTotal.Text = "";
+            ddlProdutos.SelectedItem.Value = "";
+            txtQuantidade.Text = "";
             txtData.Text = "";
             txtValor.Text = "";
 

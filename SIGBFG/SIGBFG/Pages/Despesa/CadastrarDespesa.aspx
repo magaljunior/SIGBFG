@@ -12,6 +12,7 @@
     <script src="../../Scripts/jquery-3.3.1.min.js"></script>
     <script src="../../Scripts/bootstrap.min.js"></script>
     <script src="../../Scripts/Validacao/jquery.validate.min.js"></script>
+    <script src="../../Scripts/Validacao/additional-methods.js"></script>
     <script src="../../Scripts/Validacao/localization/messages_pt_PT.min.js"></script>
     <script src="../../Scripts/jquery.mask.min.js"></script>
 
@@ -31,11 +32,13 @@
             $("#form1").validate({
                 rules: {
                     txtData: {
-                        required: true
+                        required: true,
+                        date: true
                         
                     },
                     txtQuantidade: {
-                        required: true
+                        required: true,
+                        number: true
                     },
                     txtDescricao: {
                         required: true

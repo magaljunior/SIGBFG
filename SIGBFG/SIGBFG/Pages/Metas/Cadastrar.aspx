@@ -36,7 +36,8 @@
                     required: true,
                 },
                 txtMeta: {
-                    required: true
+                    required: true,
+                    number: true
                 },
                 txtProduto: {
                     required: true
@@ -78,13 +79,13 @@
                     <asp:TextBox ID="txtAno" runat="server" Width="71px"></asp:TextBox>
                     <br />
                     <br />
-                    <asp:Label runat="server" Text="Meta:"></asp:Label>
-                    <asp:TextBox ID="txtMeta" runat="server" Width="127px"></asp:TextBox>
-                    <br />
-                    <br />
                     <asp:Label runat="server" Text="Produto:"></asp:Label>
                     <asp:DropDownList ID="ddlProdutos" runat="server" Height="30px" Width="141px">
                     </asp:DropDownList>
+                    <br />
+                    <br />
+                    <asp:Label runat="server" Text="Quantidade:"></asp:Label>
+                    <asp:TextBox ID="txtMeta" runat="server" Width="127px"></asp:TextBox>
                     <br />
                     <br />
                     <asp:Label runat="server" Text="Descrição:"></asp:Label>

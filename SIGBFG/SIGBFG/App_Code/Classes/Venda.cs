@@ -16,8 +16,8 @@ namespace Vendas.Classes
         public string Cnpj { get; set; }
         public string Cpf { get; set; }
         public string Telefone { get; set; }
-        public string ProdutoQuantidade { get; set; }
-        public int QuantidadeTotal { get; set; }
+        public string Produto { get; set; }
+        public int Quantidade { get; set; }
         public string Nome { get; set; }
         public double Valor { get; set; }
         public string Data { get; set; }

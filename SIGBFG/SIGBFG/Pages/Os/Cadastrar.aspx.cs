@@ -38,8 +38,10 @@ public partial class Paginas_Cadastrar : System.Web.UI.Page
     protected void btnSalvar_Click(object sender, EventArgs e)
     {
         OrdemServico ordemServico = new OrdemServico();
+        Estoque estoque = new Estoque();
         ordemServico.Codigo = Convert.ToInt32(Session["ID"]);
-        ordemServico.Funcionario = txtFuncionario.Text;        ordemServico.Produto = ddlProdutos.SelectedItem.Value;
+        ordemServico.Funcionario = txtFuncionario.Text;
+        ordemServico.Produto = ddlProdutos.SelectedItem.Value;
         ordemServico.Quantidade = Convert.ToInt32(txtQuantidade.Text);
         ordemServico.DataInicio = txtDatainicio.Text;
         ordemServico.DataExpiracao = txtDataexpiracao.Text;

@@ -31,9 +31,9 @@ public partial class Pages_Vendas_Relatorio : System.Web.UI.Page
 
         for (int l = 0; l < dt.Rows.Count; l++)
         {
-            if (dt.Rows[l]["VEN_QUANTIDADE_TOTAL"].ToString() != "")
+            if (dt.Rows[l]["VEN_QUANTIDADE"].ToString() != "")
             {
-                int total = Convert.ToInt32(dt.Rows[l]["VEN_QUANTIDADE_TOTAL"]);
+                int total = Convert.ToInt32(dt.Rows[l]["VEN_QUANTIDADE"]);
                 acumula += total;
             }
 
@@ -67,13 +67,13 @@ public partial class Pages_Vendas_Relatorio : System.Web.UI.Page
 
         string dados = "";
         //varre linhas do dataset
-        dados = dados + "['Nome', 'Quantidade Total'],";
+        dados = dados + "['Nome', 'Quantidade'],";
         for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
         {
             DataRow dr = ds.Tables[0].Rows[i];
 
-            string nome = Convert.ToString(dr["VEN_CLIENTE"] + " - ") + Convert.ToString(dr["VEN_PRODUTO_QUANTIDADE"]);
-            int quantidade = Convert.ToInt32(dr["VEN_QUANTIDADE_TOTAL"]);
+            string nome = Convert.ToString(dr["VEN_CLIENTE"] + " - ") + Convert.ToString(dr["VEN_PRODUTO"]);
+            int quantidade = Convert.ToInt32(dr["VEN_QUANTIDADE"]);
 
             dados = dados + "['" + nome + "', " + quantidade + "],";
 
@@ -90,7 +90,7 @@ public partial class Pages_Vendas_Relatorio : System.Web.UI.Page
         grafico = grafico + "title: '',";
         grafico = grafico + "is3D: true ";
         grafico = grafico + "};";
-        grafico = grafico + "var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));";
+        grafico = grafico + "var chart = new google.visualization.PieChart(document.getElementById('chart_div'));";
         grafico = grafico + "chart.draw(data, options);";
         grafico = grafico + "}";
         grafico = grafico + "google.setOnLoadCallback(drawChart);";

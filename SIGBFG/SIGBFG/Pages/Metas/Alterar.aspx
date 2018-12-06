@@ -25,6 +25,29 @@
 
     </style>
 
+    <!--VALIDAÇÃO-->
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $("#form1").validate({
+            rules: {
+                txtMes: {
+                    required: true,
+                },
+                txtMeta: {
+                    required: true,
+                    number: true
+                },
+                txtProduto: {
+                    required: true
+                }
+            }
+        })
+
+
+    })
+</script>
+
 </head>
 <body id="body">
 
@@ -60,7 +83,7 @@
             <asp:TextBox ID="txtAno" runat="server" Width="95px"></asp:TextBox>
             <br />
             <br />
-            <asp:Label runat="server" Text="Meta:"></asp:Label>
+            <asp:Label runat="server" Text="Quantidade:"></asp:Label>
             <asp:TextBox ID="txtMeta" runat="server" ></asp:TextBox>
             <br />
             <br />

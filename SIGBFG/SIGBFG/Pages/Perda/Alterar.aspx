@@ -13,29 +13,23 @@
 
      <title>Alteração de Perdas</title>
 
-            <!--VALIDAÇÃO-->
-    <script type="text/javascript">
-        $(document).ready(function () {
+    <!--VALIDAÇÃO-->
+<script type="text/javascript">
+    $(document).ready(function () {
 
-            $("#form1").validate({
-                rules: {
-                    txtOrdem: {
-                        required: true,
-                    },
-                    txtProduto: {
-                        required: true
-                    },
-                    txtQuantidade: {
-                        required: true,
-                        maxlength: 11
-                    },
-                    txtMotivo: {
-                        required: true
-                    }
+        $("#form1").validate({
+            rules: {
+
+                txtQuantidade: {
+                    required: true,
+                    number: true
                 }
-            })
+            }
         })
-    </script>
+
+
+    })
+</script>
 
 
     <style type="text/css">
@@ -92,16 +86,6 @@
                 <br />
                <br />
                <h1>Alterar perda de Produto</h1>
-               <br />
-
-         
-            <asp:Label runat="server" Text="Produto:"></asp:Label>
-               <asp:DropDownList ID="ddlProdutos" runat="server" Height="27px" style="margin-left: 14px" Width="177px">
-               </asp:DropDownList>
-            <br/><br/>
-            <asp:Label runat="server" Text="Quantidade:"></asp:Label>
-            <asp:TextBox ID="txtQuantidade" runat="server" style="margin-left: 13px" Width="155px"></asp:TextBox>
-            <br/><br/>
             <asp:Label runat="server" Text="Motivo:"></asp:Label>
             <br />
             <br /> 

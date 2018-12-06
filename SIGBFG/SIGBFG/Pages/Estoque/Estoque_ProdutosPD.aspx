@@ -35,8 +35,6 @@
             <form id="form1" runat="server" aria-atomic="False">
 
                     <a class="btn btn-dark" href="../ADM/Administrador.aspx">Página Inicial</a>
-                    <a class="btn btn-dark" href="CadastrarPD.aspx">Cadastrar Produtos</a>
-                    <a class="btn btn-dark" href="ListarPD.aspx">Listar Produtos</a>
                     <a class="btn btn-dark" href="Relatorio.aspx">Relatório de Produtos</a>
                     <br />
                     <br />
@@ -51,12 +49,12 @@
                     <asp:Label ID="Label2" runat="server" Text="Capacidade Máxima: 60000"></asp:Label>
                 <br />
                 <br />
-                <h2>Total de Produtos em Estoque</h2>
+                <h3>Total de Produtos</h3>
                 <br />
                 <asp:Label ID="txtTotal" runat="server"></asp:Label>
                 <br />
                 <br />
-                <h3>Porcentagem em Estoque</h3>
+                <h3>Porcentagem</h3>
                 <br />
                 <asp:Label ID="txtPorcentagem" runat="server"></asp:Label>
                     <br />
@@ -67,14 +65,6 @@
                         <asp:BoundField DataField="pro_foto" HeaderText="Foto" />
                         <asp:BoundField DataField="pro_nome" HeaderText="Nome" />
                         <asp:BoundField DataField="pro_quantidade" HeaderText="Quantidade" />
-                        <asp:BoundField DataField="pro_quantidadeMinima" HeaderText="Quantidade Mínima" />
-
-                        <asp:TemplateField HeaderText="Cadastrar ou Alterar">
-                            <ItemTemplate>
-                                <asp:ImageButton ID="lbAlterar" runat="server" CommandName="Alterar"
-                                    ImageUrl="../../Images/cadastrar%20ou%20alterar.png" CommandArgument='<%# Bind("pro_codigo")%>'></asp:ImageButton>
-                            </ItemTemplate>
-                        </asp:TemplateField>
 
                     </Columns>
                     <FooterStyle BackColor="#CCCCCC" />

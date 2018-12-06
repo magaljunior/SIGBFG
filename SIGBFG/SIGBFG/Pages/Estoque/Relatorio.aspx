@@ -34,21 +34,13 @@
     <center><div style="margin-top: 20px;">
             <form id="form1" runat="server" aria-atomic="False">
 
-                    <a class="btn btn-dark" href="../ADM/Administrador.aspx">Página Inicial</a>
-                    <a class="btn btn-dark" href="CadastrarPD.aspx">Cadastrar Produtos</a>
-                    <a class="btn btn-dark" href="ListarPD.aspx">Listar Produtos</a>
-                    <a class="btn btn-dark" href="Estoque_ProdutosPD.aspx">Estoque Atual de Produtos</a>
+                    <a class="btn btn-dark" href="../ADM/Administrador.aspx">Página Inicial</a>&nbsp;<a class="btn btn-dark" href="Estoque_ProdutosPD.aspx">Estoque Atual de Produtos</a>
                     <br />
                     <br />
                 <h1>Relatório de Produtos em Estoque</h1>
                     <br />
-                    <asp:Label ID="Label1" runat="server" Text="Capacidade Média: 30000."></asp:Label>
-                    <br />
-                    <br />
-                    <asp:Label ID="Label2" runat="server" Text="Capacidade Máxima: 60000."></asp:Label>
-                    <br />
-                    <br />
                     <asp:Label ID="txtPorcentagem" runat="server"></asp:Label>
+                    <br />
                     <br />
                 <br />
 
@@ -70,7 +62,8 @@
                     <SortedDescendingHeaderStyle BackColor="#383838" />
                 </asp:GridView>
                 <br />
-                <h2>Total de Produtos em Estoque</h2>
+                <label>Total de Produtos</label>
+                    <br />
                 <br />
                 <asp:Label ID="txtTotal" runat="server"></asp:Label>
                 <br />
