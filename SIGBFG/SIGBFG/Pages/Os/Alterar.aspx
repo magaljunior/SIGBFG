@@ -41,12 +41,12 @@
                     },
                         txtDataInicio: {
                             required: true,
-                            date: true
+
 
                     },
                          txtDataExpiracao: {
                              required: true,
-                             date: true
+
                     }
                 }
             })

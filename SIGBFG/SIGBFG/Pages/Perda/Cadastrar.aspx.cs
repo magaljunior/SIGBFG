@@ -59,6 +59,7 @@ public partial class Paginas_Cadastrar : System.Web.UI.Page
         perdas.Produto = ddlProdutos.SelectedItem.Value;
         perdas.Quantidade = Convert.ToInt32(txtQuantidade.Text);
         perdas.Motivo = ddlMotivos.SelectedItem.Value;
+        perdas.Data = txtData.Text;
 
         PerdaBD bd = new PerdaBD();
         if (bd.Insert(perdas))
@@ -68,11 +69,16 @@ public partial class Paginas_Cadastrar : System.Web.UI.Page
             ddlProdutos.SelectedItem.Value = "";
             txtQuantidade.Text = "";
             ddlMotivos.SelectedItem.Value = "";
+            txtData.Text = "";
         }
         else
         {
             lblMensagem.Text = "Erro ao salvar.";
         }
+
+        CarregaDDL();
+
+        CarregaDDL2();
     }
 
     protected void LinkButton1_Click(object sender, EventArgs e)

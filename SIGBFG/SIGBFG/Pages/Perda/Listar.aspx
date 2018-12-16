@@ -50,6 +50,7 @@
              <asp:BoundField DataField="per_produto" HeaderText="Produto" />
              <asp:BoundField DataField="per_quantidade" HeaderText="Quantidade" />
              <asp:BoundField DataField="per_motivo" HeaderText="Motivo" /> 
+             <asp:BoundField DataField="per_data" HeaderText="Data" />
              <asp:TemplateField HeaderText="Alterar">
                  <ItemTemplate>
              

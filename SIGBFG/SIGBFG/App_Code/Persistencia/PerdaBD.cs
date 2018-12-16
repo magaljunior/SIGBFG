@@ -17,7 +17,7 @@ namespace WebSitePi.Persistencia
             //insert
             System.Data.IDbConnection objConexao;
             System.Data.IDbCommand objCommand;
-            string sql = "INSERT INTO per_perda(per_ordem, per_produto, per_quantidade, per_motivo) VALUES (?ordem, ?produto, ?quantidade, ?motivo)";
+            string sql = "INSERT INTO per_perda(per_ordem, per_produto, per_quantidade, per_motivo, per_data) VALUES (?ordem, ?produto, ?quantidade, ?motivo, ?data)";
 
             objConexao = Mapped.Connection();
             objCommand = Mapped.Command(sql, objConexao);
@@ -26,6 +26,7 @@ namespace WebSitePi.Persistencia
             objCommand.Parameters.Add(Mapped.Parameter("?produto", perdas.Produto));
             objCommand.Parameters.Add(Mapped.Parameter("?quantidade", perdas.Quantidade));
             objCommand.Parameters.Add(Mapped.Parameter("?motivo", perdas.Motivo));
+            objCommand.Parameters.Add(Mapped.Parameter("?data", perdas.Data));
 
             objCommand.ExecuteNonQuery();
             objConexao.Close();
@@ -60,6 +61,26 @@ namespace WebSitePi.Persistencia
 
                 return ds;
             }
+
+        //SelectPeriodo
+        public DataSet SelectPeriodo(string dataInicio, string dataFinal)
+        {
+            DataSet ds = new DataSet();
+            System.Data.IDbConnection objConexao;
+            System.Data.IDbCommand objCommand;
+            System.Data.IDataAdapter objDataAdapter;
+            objConexao = Mapped.Connection();
+            objCommand = Mapped.Command("SELECT * FROM per_perda WHERE per_data BETWEEN (?dataInicio) AND (?dataFinal)", objConexao);
+            objDataAdapter = Mapped.Adapter(objCommand);
+            objCommand.Parameters.Add(Mapped.Parameter("?dataInicio", dataInicio));
+            objCommand.Parameters.Add(Mapped.Parameter("?dataFinal", dataFinal));
+            objDataAdapter.Fill(ds);
+            objConexao.Close();
+            objCommand.Dispose();
+            objConexao.Dispose();
+            return ds;
+        }
+
         //select
         public Perdas Select(int id)
         {
@@ -79,6 +100,7 @@ namespace WebSitePi.Persistencia
                 obj.Produto = Convert.ToString(objDataReader["per_produto"]);
                 obj.Quantidade = Convert.ToInt32(objDataReader["per_quantidade"]);
                 obj.Motivo = Convert.ToString(objDataReader["per_motivo"]);
+                obj.Data = Convert.ToString(objDataReader["per_data"]);
             }
             objDataReader.Close();
             objConexao.Close();
@@ -93,7 +115,7 @@ namespace WebSitePi.Persistencia
         {
             System.Data.IDbConnection objConexao;
             System.Data.IDbCommand objCommand;
-            string sql = "UPDATE per_perda SET per_ordem=?ordem, per_produto=?produto, per_quantidade=?quantidade, per_motivo=?motivo WHERE per_codigo =?codigo";
+            string sql = "UPDATE per_perda SET per_ordem=?ordem, per_produto=?produto, per_quantidade=?quantidade, per_motivo=?motivo, per_data=?data WHERE per_codigo =?codigo";
             objConexao = Mapped.Connection();
             objCommand = Mapped.Command(sql, objConexao);
             objCommand.Parameters.Add(Mapped.Parameter("?ordem", perdas.Ordem));
@@ -101,6 +123,7 @@ namespace WebSitePi.Persistencia
             objCommand.Parameters.Add(Mapped.Parameter("?quantidade", perdas.Quantidade));
             objCommand.Parameters.Add(Mapped.Parameter("?motivo", perdas.Motivo));
             objCommand.Parameters.Add(Mapped.Parameter("?codigo", perdas.Codigo));
+            objCommand.Parameters.Add(Mapped.Parameter("?data", perdas.Data));
             objCommand.ExecuteNonQuery();
             objConexao.Close();
             objCommand.Dispose();

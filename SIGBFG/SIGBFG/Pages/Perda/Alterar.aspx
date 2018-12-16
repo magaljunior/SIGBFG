@@ -14,20 +14,34 @@
      <title>Alteração de Perdas</title>
 
     <!--VALIDAÇÃO-->
+      <!--VALIDAÇÃO-->
 <script type="text/javascript">
     $(document).ready(function () {
 
         $("#form1").validate({
             rules: {
-
+                txtOrdem: {
+                    required: true,
+                },
                 txtQuantidade: {
                     required: true,
                     number: true
+                },
+                txtProduto: {
+                    required: true,
+                    maxlength: 11
+                },
+                txtMotivo: {
+                    required: true,
+                    minlength: 10
+                },
+                txtData: {
+                    required: true
                 }
             }
         })
 
-
+         $('#txtData').mask('00/00/0000');
     })
 </script>
 
@@ -43,35 +57,6 @@
     </style>
 
 </head>
-
-
-      <!--VALIDAÇÃO-->
-<script type="text/javascript">
-    $(document).ready(function () {
-
-        $("#form1").validate({
-            rules: {
-                txtOrdem: {
-                    required: true,
-                },
-                txtQuantidade: {
-                    required: true
-                },
-                txtProduto: {
-                    required: true,
-                    maxlength: 11
-                },
-                txtMotivo: {
-                    required: true,
-                    minlength: 10
-                }
-            }
-        })
-
-
-    })
-</script>
-
 
 <body id="body">
 
@@ -91,6 +76,10 @@
             <br /> 
                <asp:DropDownList ID="ddlMotivos" runat="server" Height="27px" style="margin-left: 54px" Width="451px">
                </asp:DropDownList>
+                <br />
+                <br />
+                <asp:Label ID="Label1" runat="server" Text="Data:"></asp:Label>
+                <asp:TextBox ID="txtData" runat="server" Width="132px"></asp:TextBox>
                <br /> <br />
             <asp:Button class="btn btn-dark" ID="btnSalvar" runat="server" Text="Alterar" OnClick="btnSalvar_Click1" />
             <br />

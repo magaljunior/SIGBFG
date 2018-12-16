@@ -35,7 +35,7 @@
 <body id="body">
 
 
-    <div class="container-fluid">
+    <div class="col-sm-12 container-fluid">
         <center>
                     <div style="margin-top: 20px;">
 

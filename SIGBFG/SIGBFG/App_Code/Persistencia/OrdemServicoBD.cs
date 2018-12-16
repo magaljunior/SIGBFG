@@ -56,6 +56,26 @@ namespace SIGBFG.Persistencia
             objConexao.Dispose();
             return ds;
         }
+
+        //SelectPeriodo
+        public DataSet SelectPeriodo(string dataInicio, string dataFinal)
+        {
+            DataSet ds = new DataSet();
+            System.Data.IDbConnection objConexao;
+            System.Data.IDbCommand objCommand;
+            System.Data.IDataAdapter objDataAdapter;
+            objConexao = Mapped.Connection();
+            objCommand = Mapped.Command("SELECT * FROM tbl_os WHERE OS_DATAINICIO BETWEEN (?dataInicio) AND (?dataFinal)", objConexao);
+            objDataAdapter = Mapped.Adapter(objCommand);
+            objCommand.Parameters.Add(Mapped.Parameter("?dataInicio", dataInicio));
+            objCommand.Parameters.Add(Mapped.Parameter("?dataFinal", dataFinal));
+            objDataAdapter.Fill(ds);
+            objConexao.Close();
+            objCommand.Dispose();
+            objConexao.Dispose();
+            return ds;
+        }
+
         //select
         public OrdemServico Select(int id)
         {

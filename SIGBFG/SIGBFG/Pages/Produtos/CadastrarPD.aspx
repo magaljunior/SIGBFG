@@ -70,9 +70,9 @@
                      <br />
                      <br />
 
-                    <asp:Label ID="Label2" runat="server" Text="Preço:"></asp:Label>
+                    <asp:Label ID="Label2" runat="server" Text="Preço R$:"></asp:Label>
 
-                    <asp:TextBox ID="txtPreco" runat="server" Style="margin-left: 107px" Width="212px" Height="27px"></asp:TextBox>
+                    <asp:TextBox ID="txtPreco" runat="server" Style="margin-left: 79px" Width="212px" Height="27px"></asp:TextBox>
 
                     <br />
 

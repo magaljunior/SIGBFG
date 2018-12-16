@@ -46,14 +46,10 @@
                         <asp:BoundField DataField="pro_nome" HeaderText="Nome" >
                         <ItemStyle HorizontalAlign="Center" />
                         </asp:BoundField>
-                        <asp:BoundField DataField="pro_preco" HeaderText="Preço" >
+                        <asp:BoundField DataField="pro_preco" HeaderText="Preço R$" >
                         <ItemStyle HorizontalAlign="Center" />
                         </asp:BoundField>
                         <asp:BoundField DataField="pro_quantidadeMinima" HeaderText="Quantidade Minima" >
-                        <ItemStyle HorizontalAlign="Center" />
-                        </asp:BoundField>
-                        <asp:BoundField DataField="pro_descricao" HeaderText="Descrição" >
-
                         <ItemStyle HorizontalAlign="Center" />
                         </asp:BoundField>
 
@@ -104,6 +100,9 @@
                     <SortedDescendingCellStyle BackColor="#CAC9C9" />
                     <SortedDescendingHeaderStyle BackColor="#383838" />
                 </asp:GridView>
+
+                <br />
+                <br />
 
             </form>
         </div>

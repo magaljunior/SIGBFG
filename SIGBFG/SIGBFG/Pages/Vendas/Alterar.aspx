@@ -60,8 +60,7 @@
                         required: true
                     },
                     txtData: {
-                        required: true,
-                        date: true
+                        required: true
                     },
                     txtCep: {
                         required: true,

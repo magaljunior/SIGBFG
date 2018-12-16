@@ -17,6 +17,7 @@ namespace SIGBFG.Classes
         public string DataExpiracao { get; set; }
         public string Descricao { get; set; }
 
+
         public Estoque Estoque { get; set; }
 
         public OrdemServico()

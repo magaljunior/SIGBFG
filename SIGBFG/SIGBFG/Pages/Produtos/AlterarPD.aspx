@@ -71,7 +71,7 @@
                     <asp:TextBox ID="txtNome" runat="server" Style="margin-left: 23px" Width="255px"></asp:TextBox>
                     &nbsp;&nbsp;&nbsp;
                 </p>
-                <asp:Label ID="Label2" runat="server" Text="Preço:"></asp:Label>
+                <asp:Label ID="Label2" runat="server" Text="Preço R$:"></asp:Label>
                 <asp:TextBox ID="txtPreco" runat="server" Style="margin-left: 22px" Width="157px"></asp:TextBox>
                 <br />
                 <br />

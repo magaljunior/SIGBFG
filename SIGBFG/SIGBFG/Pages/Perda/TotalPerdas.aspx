@@ -26,6 +26,22 @@
 
     </style>
 
+            <!--VALIDAÇÃO-->
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $("#form1").validate({
+                rules: {
+
+                }
+            })
+
+        //MASCARA
+            $('#dataInicio').mask('00/00/0000');
+            $('#dataFinal').mask('00/00/0000');
+        })
+    </script>
+
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 
     <asp:Literal ID="Literal1" runat="server"></asp:Literal>
@@ -52,6 +68,7 @@
                 <Columns>
                     <asp:BoundField DataField="per_produto" HeaderText="Produto" />
                     <asp:BoundField DataField="per_quantidade" HeaderText="Quantidade" />
+                    <asp:BoundField DataField="per_data" HeaderText="Data" />
                 </Columns>
                 <FooterStyle BackColor="#CCCCCC" />
                 <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
@@ -62,9 +79,24 @@
                 <SortedDescendingCellStyle BackColor="#CAC9C9" />
                 <SortedDescendingHeaderStyle BackColor="#383838" />
             </asp:GridView>
-           </form>
+                <br />
+
+                <h2>Gerar Gráfico por Período</h2>
+                <br />
+                <asp:Label ID="Label2" runat="server" Text="Data Inicial:"></asp:Label>
+                <asp:TextBox ID="dataInicio" runat="server" Width="132px"></asp:TextBox>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Label runat="server" Text="Data Final:"></asp:Label>
+                <asp:TextBox ID="dataFinal" runat="server" Width="132px"></asp:TextBox>
+                <asp:Button CssClass="btn btn-dark" ID="btnGrafico" runat="server" Text="Gerar Gráfico" OnClick="btnGrafico_Click" />
+             <br />
              <br />
                 <h1>Gráfico de Perdas</h1>
+                <br />
+                <asp:Button class="btn btn-dark" ID="Button1" runat="server" Text="Gerar Gráfico Total" OnClick="Button1_Click" />
+           </form>
+             <br />
+
            <div id="chart_div" style="margin-top: 20px; width: 900px; height: 500px;"></div>
         </div></center>
     </div>

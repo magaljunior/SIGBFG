@@ -21,16 +21,33 @@
     <style type="text/css">
         #body {
             width: 100%;
-            height: 100%;
+            height: 1628px;
             font-weight: bold;
             /*background-image: url(http://localhost:50742/Images/blocos.png)*/
         }
     </style>
+
+      <!--VALIDAÇÃO-->
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $("#form1").validate({
+                rules: {
+                    
+                }
+            })
+
+        //MASCARA
+            $('#dataInicio').mask('00/00/0000');
+            $('#dataFinal').mask('00/00/0000');
+        })
+    </script>
+
 </head>
 <body id="body">
     <form id="form1" runat="server">
         <div class="container-fluid">
-            <center>
+            <center style="height: 1092px">
                     <div style="margin-top: 20px;">
 
                       <a class="btn btn-dark" href="../ADM/Administrador.aspx">Página Inicial</a>
@@ -68,10 +85,28 @@
         </asp:GridView>
                 <br />
                 <br />
+
+                <h2>Gerar Gráfico por Período</h2>
+                <br />
+                    <asp:Label runat="server" Text="Data Inicial:"></asp:Label>
+                    <asp:TextBox ID="dataInicio" runat="server" Width="132px"></asp:TextBox>
+&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:Label ID="Label1" runat="server" Text="Data Final:"></asp:Label>
+                    <asp:TextBox ID="dataFinal" runat="server" Width="132px"></asp:TextBox>
+                    <asp:Button CssClass="btn btn-dark" ID="btnGrafico0" runat="server" OnClick="btnGrafico_Click" Text="Gerar Gráfico" />
+                    <br />
+                    <br />
+
                 <h1>Gráfico de Produtividade</h1>
+                <br />
+                    <asp:Button CssClass="btn btn-dark" ID="Button1" runat="server" Text="Gerar Gráfico Total" OnClick="Button1_Click" />
+                <br />
+
+
                 <div id="chart_div" style="margin-top: 20px; width: 900px; height: 500px;"></div>
                     <br />
                 <br />
+
             </center>
         </div>
     </form>

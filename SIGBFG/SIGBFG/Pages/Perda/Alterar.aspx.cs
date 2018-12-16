@@ -23,6 +23,7 @@ public partial class Paginas_Alterar : System.Web.UI.Page
             //ddlProdutos.Text = perdas.Produto;
             //txtQuantidade.Text = perdas.Quantidade.ToString();
             ddlMotivos.Text = perdas.Motivo;
+            txtData.Text = perdas.Data;
 
             //CarregaDDL();
 
@@ -65,6 +66,8 @@ public partial class Paginas_Alterar : System.Web.UI.Page
             //perdas.Produto = ddlProdutos.SelectedItem.Value;
             //perdas.Quantidade = Convert.ToInt32(txtQuantidade.Text);
             perdas.Motivo = ddlMotivos.SelectedItem.Value;
+            perdas.Data = txtData.Text;
+
             if (bd.Update(perdas))
             {
                 lblMensagem.Text = "Perda alterada com sucesso";

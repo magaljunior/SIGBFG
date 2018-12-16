@@ -12,8 +12,9 @@ public class Perdas
     public string Produto { get; set; }
     public int Quantidade { get; set; }
     public string Motivo { get; set; }
+    public string Data { get; set; }
 
-    public Perdas()
+        public Perdas()
     {
 
     }

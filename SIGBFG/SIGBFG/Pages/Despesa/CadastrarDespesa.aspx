@@ -33,7 +33,7 @@
                 rules: {
                     txtData: {
                         required: true,
-                        date: true
+
                         
                     },
                     txtQuantidade: {

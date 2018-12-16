@@ -32,11 +32,11 @@
                     },
                         txtDatainicio: {
                             required: true,
-                            date: true
+
                     },
                          txtDataexpiracao: {
                              required: true,
-                             date: true
+
                     }
                 }
             })

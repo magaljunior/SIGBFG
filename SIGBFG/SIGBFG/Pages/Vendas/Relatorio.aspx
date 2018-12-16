@@ -29,6 +29,22 @@
 
     </style>
 
+          <!--VALIDAÇÃO-->
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $("#form1").validate({
+                rules: {
+                    
+                }
+            })
+
+        //MASCARA
+            $('#dataInicio').mask('00/00/0000');
+            $('#dataFinal').mask('00/00/0000');
+        })
+    </script>
+
 </head>
 
 <body id="body">
@@ -82,8 +98,20 @@
                 <asp:Label ID="lblMensagem0" runat="server"></asp:Label>
                 <br />
                 <br />
+
+                <h2>Gerar Gráfico por Período</h2>
+                <asp:Label ID="Label1" runat="server" Text="Data Inicial:"></asp:Label>
+                <asp:TextBox ID="dataInicio" runat="server" Width="132px"></asp:TextBox>
+&nbsp;&nbsp;
+                <asp:Label ID="Label2" runat="server" Text="Data Final:"></asp:Label>
+                <asp:TextBox ID="dataFinal" runat="server" Width="132px"></asp:TextBox>
+                <asp:Button CssClass="btn btn-dark" ID="btnGrafico" runat="server" Text="Gerar Gráfico" OnClick="btnGrafico_Click" />
+                <br />
                 <br />
                 <h2>Gráfico de Vendas</h2>
+                <br />
+                <asp:Button CssClass="btn btn-dark" ID="btnGraficoTotal" runat="server" Text="Gerar Gráfico Total" OnClick="btnGraficoTotal_Click" />
+                <br />
 
                  <div id="chart_div" style="width: 900px; height: 500px;"></div>
               </form>

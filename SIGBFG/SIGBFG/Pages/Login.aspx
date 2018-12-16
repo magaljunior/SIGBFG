@@ -29,7 +29,7 @@
     </style>
 </head>
 <body id="body">
-    <div class="container-fluid">
+    <div class="col-sm-12 container-fluid">
 
      <form id="form1" runat="server">
         <br />

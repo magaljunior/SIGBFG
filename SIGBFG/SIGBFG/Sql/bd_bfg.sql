@@ -1,3 +1,5 @@
+CREATE DATABASE  IF NOT EXISTS `bd_bfg` /*!40100 DEFAULT CHARACTER SET latin1 */;
+USE `bd_bfg`;
 -- MySQL dump 10.13  Distrib 5.6.41, for Win64 (x86_64)
 --
 -- Host: localhost    Database: bd_bfg
@@ -31,7 +33,7 @@ CREATE TABLE `cli_cliente` (
   `CLI_CNPJ` varchar(255) NOT NULL,
   `CLI_TELEFONE` varchar(255) NOT NULL,
   PRIMARY KEY (`CLI_CODIGO`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -110,7 +112,7 @@ CREATE TABLE `met_meta` (
   `MET_DESCRICAO` varchar(255) NOT NULL,
   `MET_PRODUTO` varchar(45) NOT NULL,
   PRIMARY KEY (`MET_CODIGO`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -135,8 +137,9 @@ CREATE TABLE `per_perda` (
   `PER_QUANTIDADE` int(11) NOT NULL,
   `PER_MOTIVO` varchar(255) NOT NULL,
   `PER_PRODUTO` varchar(45) NOT NULL,
+  `per_data` varchar(45) NOT NULL,
   PRIMARY KEY (`PER_CODIGO`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -145,6 +148,7 @@ CREATE TABLE `per_perda` (
 
 LOCK TABLES `per_perda` WRITE;
 /*!40000 ALTER TABLE `per_perda` DISABLE KEYS */;
+INSERT INTO `per_perda` VALUES (5,'0',4,'Ocorreu trincas no processo de cura','MV10 - MEIO BLOCO DE VEDAÇÃO 09X19X19','11/12/2018'),(6,'0',5,'Danificado pelo funcionário ao transporta-lo','V12 - BLOCO DE VEDAÇÃO  DE 11,5X19X39','12/12/2018'),(7,'0',6,'Ocorreu trincas no processo de cura','VF15 - BLOCO DE VEDAÇÃO COM FUNDO 14X19X39','10/12/2018');
 /*!40000 ALTER TABLE `per_perda` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -219,7 +223,7 @@ CREATE TABLE `tbl_despesas` (
   `DES_DESCRICAO` varchar(255) DEFAULT NULL,
   `DES_VALOR` double NOT NULL,
   PRIMARY KEY (`DES_CODIGO`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -274,7 +278,7 @@ CREATE TABLE `tbl_motivo` (
   `mot_codigo` int(11) NOT NULL AUTO_INCREMENT,
   `mot_motivoPerda` varchar(45) NOT NULL,
   PRIMARY KEY (`mot_codigo`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -283,6 +287,7 @@ CREATE TABLE `tbl_motivo` (
 
 LOCK TABLES `tbl_motivo` WRITE;
 /*!40000 ALTER TABLE `tbl_motivo` DISABLE KEYS */;
+INSERT INTO `tbl_motivo` VALUES (2,'Danificado pelo funcionário ao transporta-lo'),(3,'Ocorreu trincas no processo de cura');
 /*!40000 ALTER TABLE `tbl_motivo` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -302,7 +307,7 @@ CREATE TABLE `tbl_os` (
   `OS_FUNCIONARIO` varchar(255) NOT NULL,
   `OS_DESCRICAO` varchar(255) NOT NULL,
   PRIMARY KEY (`OS_CODIGO`)
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -311,6 +316,7 @@ CREATE TABLE `tbl_os` (
 
 LOCK TABLES `tbl_os` WRITE;
 /*!40000 ALTER TABLE `tbl_os` DISABLE KEYS */;
+INSERT INTO `tbl_os` VALUES (1,'MV10 - MEIO BLOCO DE VEDAÇÃO 09X19X19','10/12/2018','12/12/2018',4000,'Danilo','Bloco perfeito para construção de paredes'),(2,'V12 - BLOCO DE VEDAÇÃO  DE 11,5X19X39','12/12/2018','12/12/2018',3000,'Felipe','excelente para compor paredes'),(3,'VF15 - BLOCO DE VEDAÇÃO COM FUNDO 14X19X39','12/12/2018','12/12/2018',10000,'Pedro','Bloco perfeito para construção de paredes');
 /*!40000 ALTER TABLE `tbl_os` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -328,7 +334,7 @@ CREATE TABLE `tbl_pessoa` (
   `PES_EMAIL` varchar(255) NOT NULL,
   `PES_TIPO` varchar(45) NOT NULL,
   PRIMARY KEY (`PES_CODIGO`)
-) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -337,6 +343,7 @@ CREATE TABLE `tbl_pessoa` (
 
 LOCK TABLES `tbl_pessoa` WRITE;
 /*!40000 ALTER TABLE `tbl_pessoa` DISABLE KEYS */;
+INSERT INTO `tbl_pessoa` VALUES (1,'pedro','12345678','pedrosantos0509@gmail.com','Administrador');
 /*!40000 ALTER TABLE `tbl_pessoa` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -352,12 +359,12 @@ CREATE TABLE `tbl_produto` (
   `PRO_NOME` varchar(255) NOT NULL,
   `PRO_PRECO` double NOT NULL,
   `PRO_QUANTIDADE` int(11) NOT NULL,
-  `PRO_DESCRICAO` varchar(255) NOT NULL,
+  `PRO_DESCRICAO` varchar(255) DEFAULT NULL,
   `PRO_FOTO` varchar(255) NOT NULL DEFAULT 'DEFAULT NULL',
   `PRO_QUANTIDADEMINIMA` varchar(45) NOT NULL,
   `PRO_ATIVO` int(1) NOT NULL,
   PRIMARY KEY (`PRO_CODIGO`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -366,7 +373,7 @@ CREATE TABLE `tbl_produto` (
 
 LOCK TABLES `tbl_produto` WRITE;
 /*!40000 ALTER TABLE `tbl_produto` DISABLE KEYS */;
-INSERT INTO `tbl_produto` VALUES (7,'Bloco Estrutural',0.89,3000,'excelente para compor paredes','bloco-estrutural-D_NQ_NP_718635-MLB25886747314_082017-F.jpg','2000',1),(8,'Bloco Canaleta',0.75,1000,'excelente para compor paredes','bloco-canaleta-de-concreto-19x19x39-produto.jpg','2000',1);
+INSERT INTO `tbl_produto` VALUES (11,'MV10 - MEIO BLOCO DE VEDAÇÃO 09X19X19',0.94,3688,'','Meio Bloco Vedação - Dimensão 9 X 19 X 19.jpg','2000',1),(12,'V12 - BLOCO DE VEDAÇÃO  DE 11,5X19X39',1.47,2890,'','Bloco Vedação - Dimensão - 11,5 X 19 X 39.jpg','2000',1),(13,'VF15 - BLOCO DE VEDAÇÃO COM FUNDO 14X19X39',1.7,9838,'','Bloco Vedação - Dimensão - 14 X 19 X 39.jpg','2000',1),(14,'V15 - BLOCO DE VEDAÇÃO 14X19X39',1.7,0,'','Bloco Vedação - Dimensão - 14 X 19 X 39.jpg','2000',1),(15,'MV15 - MEIO BLOCO DE VEDAÇÃO 14X19X19',1.42,0,'','Meio Bloco Vedação e Estrutural - Dimensão 14 X 19 X 19.jpg','2000',1),(16,'V20 - BLOCO DE VEDAÇÃO 19X19X39',2.1,0,'','Bloco Vedação - Dimensão - 19 X 19 X 39.jpg','2000',1),(17,'MV20 - MEIO BLOCO DE VEDAÇÃO 19X19X19',1.75,0,'','Meio Bloco Vedação e Estrutural - Dimensão 19 X 19 X 19.jpg','2000',1),(18,'E15 - BLOCO ESTRUTURAL 14X19X39',2.1,0,'','Bloco Estrutural - Dimensão - 14 X 19 X 39.jpg','2000',1),(19,'ME15 - MEIO BLOCO ESTRUTURAL 14X19X19',1.75,0,'','Bloco Estrutural - Dimensão - 14 X 19 X 39.jpg','2000',1),(20,'E20 - BLOCO ESTRUTURAL 19X19X39',2.35,0,'','Bloco Estrutural - Dimensão - 19 X 19 X 39.jpg','2000',1),(21,'ME20 - MEIO BLOCO ESTRUTURAL 19x19X19',1.96,0,'','Bloco Estrutural - Dimensão - 19 X 19 X 39.jpg','2000',1),(22,'C10 - CANALETA 09X19X39',1.7,0,'','Bloco Canaleta - 9 X 19 X 39.jpg','2000',1),(23,'C12 - CANALETA 11,5X19X39',1.9,0,'','Bloco Canaleta - 11,5 X 19 X 19.jpg','2000',1),(24,'C15 - CANALETA 14X19X39',2.11,0,'','Bloco Canaleta - 14 X 19 X 39.jpg','2000',1),(25,'C20 - CANALETA 19X19X39',2.65,0,'','Bloco Canaleta - 19 X 19 X 39.jpg','2000',1),(29,'V10 - BLOCO DE VEDAÇÃO 09X19X39',1.35,0,'','Bloco Canaleta - 9 X 19 X 39.jpg','2000',1);
 /*!40000 ALTER TABLE `tbl_produto` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -420,7 +427,7 @@ CREATE TABLE `ven_venda` (
   `VEN_CPF` varchar(45) DEFAULT NULL,
   `VEN_QUANTIDADE` int(11) NOT NULL,
   PRIMARY KEY (`VEN_CODIGO`)
-) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -429,6 +436,7 @@ CREATE TABLE `ven_venda` (
 
 LOCK TABLES `ven_venda` WRITE;
 /*!40000 ALTER TABLE `ven_venda` DISABLE KEYS */;
+INSERT INTO `ven_venda` VALUES (1,'Pedro','10/12/2018','Rua Ipê, N 130, Bairro Da Cruz, 153','Cruz','153','30.757.851/0001-44','(94) 99278-9239',400,NULL,'MV10 - MEIO BLOCO DE VEDAÇÃO 09X19X19','12606-480','025.109.402-28',300),(2,'José Malaquias','12/12/2018','Rua Ipê, N 130, Bairro Da Cruz, 153','Cruz','153','30.757.851/0001-44','(94) 99278-9239',200,NULL,'V12 - BLOCO DE VEDAÇÃO  DE 11,5X19X39','12606-480','025.109.402-28',100),(3,'Pedro Santos','12/12/2018','Rua Quarenta E Sete, Jardim São Paulo','Cruz','1030','30.757.851/0001-44','(94) 99140-2999',400,NULL,'VF15 - BLOCO DE VEDAÇÃO COM FUNDO 14X19X39','08465-312','025.109.402-28',150);
 /*!40000 ALTER TABLE `ven_venda` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -441,4 +449,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-12-06 15:12:05
+-- Dump completed on 2018-12-16 15:09:46

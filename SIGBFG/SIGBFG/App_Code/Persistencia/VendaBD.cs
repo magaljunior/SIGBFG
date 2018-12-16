@@ -69,6 +69,26 @@ namespace Vendas.Persistencia
 
                 return ds;
             }
+
+        //SelectPeriodo
+        public DataSet SelectPeriodo(string dataInicio, string dataFinal)
+        {
+            DataSet ds = new DataSet();
+            System.Data.IDbConnection objConexao;
+            System.Data.IDbCommand objCommand;
+            System.Data.IDataAdapter objDataAdapter;
+            objConexao = Mapped.Connection();
+            objCommand = Mapped.Command("SELECT * FROM ven_venda WHERE VEN_DATA BETWEEN (?dataInicio) AND (?dataFinal)", objConexao);
+            objDataAdapter = Mapped.Adapter(objCommand);
+            objCommand.Parameters.Add(Mapped.Parameter("?dataInicio", dataInicio));
+            objCommand.Parameters.Add(Mapped.Parameter("?dataFinal", dataFinal));
+            objDataAdapter.Fill(ds);
+            objConexao.Close();
+            objCommand.Dispose();
+            objConexao.Dispose();
+            return ds;
+        }
+
         //select
         public Venda Select(int id)
         {

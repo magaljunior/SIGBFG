@@ -31,8 +31,7 @@
             $("#form1").validate({
                 rules: {
                     txtData: {
-                        required: true,
-                        date: true
+
                     },
                     txtQuantidade: {
                         required: true,

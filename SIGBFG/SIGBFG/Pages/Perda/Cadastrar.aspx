@@ -10,6 +10,7 @@
     <script src="../../Scripts/jquery-3.3.1.min.js"></script>
     <script src="../../Scripts/bootstrap.min.js"></script>
     <script src="../../Scripts/Validacao/jquery.validate.min.js"></script>
+    <script src="../../Scripts/Validacao/additional-methods.js"></script>
     <script src="../../Scripts/Validacao/localization/messages_pt_PT.min.js"></script>
     <script src="../../Scripts/jquery.mask.min.js"></script>
 
@@ -26,11 +27,14 @@
                 txtQuantidade: {
                     required: true,
                     number: true
+                },
+                txtData: {
+                    required: true
                 }
             }
         })
 
-
+        $('#txtData').mask('00/00/0000');
     })
 </script>
 
@@ -86,6 +90,11 @@
         
                 <asp:DropDownList ID="ddlMotivos" runat="server" Height="31px" style="margin-left: 83px" Width="416px">
                 </asp:DropDownList>
+        
+                <br />
+                <br />
+                <asp:Label runat="server" Text="Data:"></asp:Label>
+                <asp:TextBox ID="txtData" runat="server" Width="132px"></asp:TextBox>
         
             <br />
             <br/>
